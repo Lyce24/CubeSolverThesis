@@ -1,0 +1,96 @@
+F2 U L' B' D' U2 N 
+   UUF
+   UUF
+   FFF
+BBLDDDRRRURR
+DLLDFFLRULBB
+DFFLRULBBDLL
+   UDB
+   UDR
+   BBR
+Generation 1: Best Fitness = 28
+Generation 2: Best Fitness = 29
+Generation 3: Best Fitness = 29
+Generation 4: Best Fitness = 29
+Generation 5: Best Fitness = 30
+Generation 6: Best Fitness = 30
+Generation 7: Best Fitness = 34
+Generation 8: Best Fitness = 34
+Generation 9: Best Fitness = 35
+Generation 10: Best Fitness = 35
+Generation 11: Best Fitness = 35
+Generation 12: Best Fitness = 35
+Generation 13: Best Fitness = 36
+Generation 14: Best Fitness = 36
+Generation 15: Best Fitness = 36
+Generation 16: Best Fitness = 36
+Generation 17: Best Fitness = 36
+Generation 18: Best Fitness = 36
+Generation 19: Best Fitness = 36
+Generation 20: Best Fitness = 36
+Generation 21: Best Fitness = 36
+Generation 22: Best Fitness = 36
+Generation 23: Best Fitness = 36
+Generation 24: Best Fitness = 36
+Generation 25: Best Fitness = 36
+Generation 26: Best Fitness = 36
+Generation 27: Best Fitness = 36
+Generation 28: Best Fitness = 36
+Generation 29: Best Fitness = 36
+Generation 30: Best Fitness = 36
+Generation 31: Best Fitness = 36
+Generation 32: Best Fitness = 36
+Generation 33: Best Fitness = 39
+Generation 34: Best Fitness = 39
+Generation 35: Best Fitness = 39
+Generation 36: Best Fitness = 39
+Generation 37: Best Fitness = 39
+Generation 38: Best Fitness = 39
+Generation 39: Best Fitness = 39
+Generation 40: Best Fitness = 39
+Generation 41: Best Fitness = 39
+Generation 42: Best Fitness = 39
+Generation 43: Best Fitness = 39
+Generation 44: Best Fitness = 39
+Generation 45: Best Fitness = 39
+Generation 46: Best Fitness = 39
+Generation 47: Best Fitness = 39
+Generation 48: Best Fitness = 39
+Generation 49: Best Fitness = 42
+Generation 50: Best Fitness = 42
+Generation 51: Best Fitness = 42
+Generation 52: Best Fitness = 42
+Generation 53: Best Fitness = 42
+Generation 54: Best Fitness = 42
+Generation 55: Best Fitness = 42
+Generation 56: Best Fitness = 42
+Generation 57: Best Fitness = 42
+Generation 58: Best Fitness = 42
+Generation 59: Best Fitness = 42
+Generation 60: Best Fitness = 42
+Generation 61: Best Fitness = 42
+Generation 62: Best Fitness = 42
+Generation 63: Best Fitness = 42
+Generation 64: Best Fitness = 42
+Generation 65: Best Fitness = 42
+Generation 66: Best Fitness = 42
+Generation 67: Best Fitness = 42
+Generation 68: Best Fitness = 42
+Generation 69: Best Fitness = 42
+Generation 70: Best Fitness = 42
+Generation 71: Best Fitness = 42
+Generation 72: Best Fitness = 42
+Generation 73: Best Fitness = 42
+Generation 74: Best Fitness = 42
+Generation 75: Best Fitness = 42
+Generation 76: Best Fitness = 42
+Generation 77: Best Fitness = 42
+Generation 78: Best Fitness = 42
+Generation 79: Best Fitness = 42
+Generation 80: Best Fitness = 42
+Generation 81: Best Fitness = 42
+Generation 82: Best Fitness = 42
+Generation 83: Best Fitness = 42
+Generation 84: Best Fitness = 42
+Solution found!
+D N U2 B L U' F2 
