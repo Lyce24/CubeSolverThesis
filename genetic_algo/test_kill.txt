@@ -1,96 +1,1102 @@
-F2 U L' B' D' U2 N 
+U2 F2 F L U' U F' U2 R F2 
+   DDD
    UUF
+   BRR
+LLRDUUFLLBFF
+LLRDFFRRLBBD
+UUBUFFLRRDBR
+   LUU
+   BDB
+   BDF
+
+L2 B2 D2 R D' L2 N B F2 F' 
+   RRF
    UUF
-   FFF
-BBLDDDRRRURR
-DLLDFFLRULBB
-DFFLRULBBDLL
-   UDB
-   UDR
+   RRF
+FBDBBLDRDRUU
+DLFLFFURDRBB
+BLFLUUBFDBBL
+   ULR
+   DDD
+   ULL
+
+B L' R U L' B2 D' U' N U2 
+   LDB
+   FUL
+   FRL
+BRRUBDFBRDLU
+RLUBFDRRFUBU
+BFLDDDFLLULU
    BBR
-Generation 1: Best Fitness = 28
-Generation 2: Best Fitness = 29
-Generation 3: Best Fitness = 29
-Generation 4: Best Fitness = 29
-Generation 5: Best Fitness = 30
-Generation 6: Best Fitness = 30
-Generation 7: Best Fitness = 34
-Generation 8: Best Fitness = 34
-Generation 9: Best Fitness = 35
-Generation 10: Best Fitness = 35
-Generation 11: Best Fitness = 35
-Generation 12: Best Fitness = 35
-Generation 13: Best Fitness = 36
-Generation 14: Best Fitness = 36
-Generation 15: Best Fitness = 36
-Generation 16: Best Fitness = 36
-Generation 17: Best Fitness = 36
-Generation 18: Best Fitness = 36
-Generation 19: Best Fitness = 36
-Generation 20: Best Fitness = 36
-Generation 21: Best Fitness = 36
-Generation 22: Best Fitness = 36
-Generation 23: Best Fitness = 36
-Generation 24: Best Fitness = 36
-Generation 25: Best Fitness = 36
-Generation 26: Best Fitness = 36
-Generation 27: Best Fitness = 36
-Generation 28: Best Fitness = 36
-Generation 29: Best Fitness = 36
-Generation 30: Best Fitness = 36
-Generation 31: Best Fitness = 36
-Generation 32: Best Fitness = 36
-Generation 33: Best Fitness = 39
-Generation 34: Best Fitness = 39
-Generation 35: Best Fitness = 39
-Generation 36: Best Fitness = 39
-Generation 37: Best Fitness = 39
-Generation 38: Best Fitness = 39
-Generation 39: Best Fitness = 39
-Generation 40: Best Fitness = 39
-Generation 41: Best Fitness = 39
-Generation 42: Best Fitness = 39
-Generation 43: Best Fitness = 39
-Generation 44: Best Fitness = 39
-Generation 45: Best Fitness = 39
-Generation 46: Best Fitness = 39
-Generation 47: Best Fitness = 39
-Generation 48: Best Fitness = 39
-Generation 49: Best Fitness = 42
-Generation 50: Best Fitness = 42
-Generation 51: Best Fitness = 42
-Generation 52: Best Fitness = 42
-Generation 53: Best Fitness = 42
-Generation 54: Best Fitness = 42
-Generation 55: Best Fitness = 42
-Generation 56: Best Fitness = 42
-Generation 57: Best Fitness = 42
-Generation 58: Best Fitness = 42
-Generation 59: Best Fitness = 42
-Generation 60: Best Fitness = 42
-Generation 61: Best Fitness = 42
-Generation 62: Best Fitness = 42
-Generation 63: Best Fitness = 42
-Generation 64: Best Fitness = 42
-Generation 65: Best Fitness = 42
-Generation 66: Best Fitness = 42
-Generation 67: Best Fitness = 42
-Generation 68: Best Fitness = 42
-Generation 69: Best Fitness = 42
-Generation 70: Best Fitness = 42
-Generation 71: Best Fitness = 42
-Generation 72: Best Fitness = 42
-Generation 73: Best Fitness = 42
-Generation 74: Best Fitness = 42
-Generation 75: Best Fitness = 42
-Generation 76: Best Fitness = 42
-Generation 77: Best Fitness = 42
-Generation 78: Best Fitness = 42
-Generation 79: Best Fitness = 42
-Generation 80: Best Fitness = 42
-Generation 81: Best Fitness = 42
-Generation 82: Best Fitness = 42
-Generation 83: Best Fitness = 42
-Generation 84: Best Fitness = 42
-Solution found!
-D N U2 B L U' F2 
+   DDF
+   RUF
+
+R U B R' F' B' B2 B B R' 
+   UUL
+   UUU
+   BBL
+FFURUUBRBDLL
+LLFRFBDRRDBB
+DLFRFURDDLBB
+   DLF
+   DDF
+   RRF
+
+R2 D R B L2 N B2 B R' L' 
+   BLD
+   BUD
+   DUL
+UUBRFBDRRFFL
+BLLUFBRRRFBD
+ULFULLFFBRRL
+   RDD
+   BDD
+   FUU
+
+F2 U2 B2 L D' U2 L L U2 N 
+   FDB
+   BUU
+   BUU
+RRRDBLFFURBD
+RLLDFFLRLBBU
+LLLBRLFFURRB
+   UDD
+   UDD
+   DFF
+
+B' F B' B2 B2 L2 U' L' R' D 
+   DUB
+   BUB
+   BDU
+FRRDLLFLLURR
+BLLUFLFRRDBD
+RBDBDDLFUBUU
+   LFF
+   UDR
+   FFR
+
+U B2 L' B2 F2 U' D2 B D R2 
+   UFR
+   UUD
+   UFD
+LLLFLLBBUFUB
+ULRFFRURLDBB
+DBRBRRUFFRRF
+   DDB
+   LDD
+   LBD
+
+N R2 L' F2 D2 U' B2 R2 R' R2 
+   DUR
+   UUU
+   FFD
+RBULLFLLFDFB
+RLRBFDFRLBBF
+DRRFBUBLLBRL
+   UDR
+   UDD
+   BDU
+
+B' F R F' L2 L2 L' L' B' B2 
+   URU
+   DUF
+   RRU
+FLDBDRBUBLUL
+LLDBFFRRRBBB
+DLDBFFRUURFF
+   LDD
+   UDB
+   LLF
+
+U' R' L' D' B F D2 L2 L2 L' 
+   FRU
+   RUB
+   LLL
+LFBDDDFRRBDU
+LLBDFLURBLBF
+BURFUULFFRUR
+   UBB
+   RDD
+   DFD
+
+B B R2 F N F2 D' R N B' 
+   FRR
+   UUF
+   LLR
+LLUBBUFDDBBU
+DLUFFUBRDBBL
+FFFDRUBRBLDD
+   LUR
+   LDF
+   RRD
+
+L2 R2 B L' D2 D B' U R' B2 
+   UDR
+   UUF
+   DDF
+FFBRRLDRFDBL
+FLLUFLDRBUBL
+RFBRRLDRULLU
+   UUB
+   DDB
+   FBB
+
+R2 B' L' N B L N U2 U' R' 
+   BBL
+   UUF
+   DDF
+UFBRRULRBDLL
+DLLFFUBRRUBB
+ULLFFDFRRUUF
+   DDR
+   DDB
+   RLB
+
+F L L2 L' F' F2 N U' R' U 
+   RUU
+   DUU
+   DBB
+DLLBRRDRRBBF
+DLRFFLBRRDBF
+DLRFFLBLLUBF
+   UUU
+   UDF
+   LDF
+
+L2 F2 D' N L' R' L F' B2 L2 
+   RUU
+   UUB
+   LRL
+DFFUUUBRFRLF
+DLBDFRDRLFBF
+BLBDFLDLLFBU
+   RRB
+   DDB
+   RUD
+
+D' R2 F2 D' U' L2 F B L R' 
+   LRL
+   BUF
+   FLF
+UDDRBLDDUBFF
+BLFUFDRRLDBU
+UUDRFLDUUBBF
+   BLB
+   RDL
+   RRR
+
+D' F D2 D' U2 F2 R U L2 R' 
+   UUF
+   DUU
+   DRU
+LLLBDLFLDRRB
+ULLBFLFRRBBF
+UFDRBFDFFUBR
+   BUL
+   DDR
+   BDR
+
+B R F D' B' L L' R' L L' 
+   LUU
+   UUB
+   LLB
+DLDFFURRFRBB
+DLDFFFRRBLBL
+LDDFDLUURBUU
+   RBF
+   RDF
+   BRD
+
+N B B2 B2 F2 D2 R' D B2 U' 
+   BBB
+   FUD
+   FUD
+ULLDLRFFRDDL
+LLRFFURRUBBD
+RFFLRDBBUBBU
+   UDL
+   UDL
+   FRR
+
+U F2 L D2 R' D' F2 B2 R L2 
+   LDL
+   DUU
+   DFU
+BBRFLLFFDFRU
+BLRFFURRRBBU
+RLRFFBLLBDLB
+   UDD
+   BDD
+   UUR
+
+D D2 F F2 D L U2 B' B2 U' 
+   RBB
+   RUU
+   LUU
+DBUBRRBBDLLF
+RLLUFRDRDBBF
+BUURFUFFFDDR
+   FDL
+   FDL
+   DLL
+
+B B2 F' N B B' D2 N F R' 
+   LLF
+   UUB
+   UUB
+DLRBFLUUULBB
+DLRBFURRLDBB
+DRRBFURRRDFF
+   DDF
+   DDF
+   LLF
+
+U R B' L2 D' B' L R2 D' L 
+   LLB
+   DUB
+   RUU
+BFUFRLFUURFU
+RLUFFBLRRDBB
+FLLDRRDLBDDL
+   BFF
+   DDU
+   DBR
+
+B N F2 L U L' B2 B2 B F' 
+   LDD
+   UUR
+   BLL
+BLRDFFUBLBBU
+BLURFFURLBBU
+LLDFFFURUBDD
+   RRR
+   DDD
+   FFR
+
+B B' B2 R L2 B B2 U F L' 
+   BDL
+   FUL
+   URD
+DDBLBRFFFULR
+FLLUFRFRDBBU
+BUBLDDLLFUUU
+   DRF
+   BDB
+   RRR
+
+U2 B2 B' R' D2 D2 U U L2 D 
+   DUU
+   DUU
+   RRL
+LLUFBFURRBBF
+LLUFFULRRDBF
+DBLDDDRFULRR
+   BBB
+   LDD
+   FFB
+
+L' N R L2 R F2 B D' F' N 
+   RRR
+   BUD
+   LLD
+DLFUUFLRUFFF
+ULDFFRURDBBB
+BFUBBLBDDBLR
+   RRU
+   UDL
+   DFL
+
+L' U R' F U' R2 L' B2 F2 D 
+   LDR
+   FUF
+   FBU
+DDRUUBLRDBBB
+ULRDFBLRLFBR
+FRFLLRDFBRDL
+   UUF
+   BDU
+   DLU
+
+U' R B2 F L2 B' D L2 R R' 
+   BDB
+   LUF
+   LLB
+RBBDFLURRDFU
+FLURFLURDBBU
+FLLFBFUDDFRU
+   DUR
+   DDR
+   LBR
+
+D2 R' D2 B2 L2 U B' R' F2 B' 
+   UUU
+   UUR
+   RDD
+LFUFFBRFLFBB
+LLBDFDLRLFBB
+FLFDRRURLDDD
+   LBB
+   UDU
+   RRB
+
+F' U B2 D2 L' F' B' N L D 
+   FFF
+   FUU
+   DDB
+LLBRFLUBDRRU
+RLUFFLURDBBB
+BBFUUUBDLFLD
+   RRR
+   LDR
+   LDD
+
+U' N U F2 D2 R' R2 F F' D 
+   UUF
+   UUF
+   DDB
+LLRFFDLLLDBB
+LLRFFDLRRUBB
+UFFLRRBBURRR
+   UDD
+   UDD
+   BBF
+
+R F F L' L' D2 B R' U' N 
+   FFB
+   RUD
+   RDD
+LUUFLLBFLUUU
+ULLBFFRRLUBB
+FRRUBDLLRBDD
+   BDF
+   BDF
+   RRD
+
+L' U' D2 R' R L' D2 F U' U2 
+   LDL
+   RUU
+   RUU
+DDDBFFRRFULB
+BLDFFLFRRBBU
+LLRUFLFLRDBU
+   BRD
+   BDU
+   BDF
+
+L' L' F2 B' L' U' R B R2 L' 
+   RFB
+   UUB
+   RFU
+DLDBRLFUURDF
+FLDBFBRRRDBL
+RULFFULLLDDU
+   DUB
+   RDB
+   FLB
+
+N F' R U2 B' F U B2 F2 R 
+   URD
+   UUF
+   LRF
+RFUBDDRLBRUF
+RLUBFBRRBLBF
+BLLFLUFDBRDD
+   DUL
+   DDB
+   LFU
+
+B R2 D' L' F F' R D' L2 N 
+   URB
+   UUB
+   LUR
+LRDFFUFDDLBB
+FLLUFLBRRDBD
+BLLURRDLRUUR
+   FFF
+   FDD
+   DBB
+
+D F' F' L R B2 B2 F2 U U 
+   LUR
+   FUB
+   LUR
+FLBDBDBLFDFD
+BLFDFULRRUBD
+RRLULULRRURU
+   FDB
+   FDB
+   FDB
+
+U U F F2 F L R' F D F2 
+   BUB
+   BUB
+   LFF
+LLUBLLDRRDFD
+LLUBFFDRRDBD
+DBFUUUBUUFRR
+   RRR
+   DDL
+   FFL
+
+U' B' R2 F' F' R' U' D R R2 
+   LFL
+   LUU
+   LUR
+UBBDBFDFDFRF
+DLURFDFRLUBB
+UBBDLBRRRFLB
+   RDU
+   RDD
+   LFU
+
+L U F2 B2 D' R2 D B2 D L2 
+   BUF
+   DUB
+   DDB
+UBBRFDLLULBL
+RLLUFDLRRBBF
+RFDLLBRRRFRF
+   FFU
+   UDU
+   DDU
+
+U R B' L2 F2 L R' D2 F2 U 
+   DFR
+   BUL
+   ULU
+FUBLURBBUFLR
+FLRFFDLRRBBU
+DDUFFDLRRBRL
+   LDF
+   BDD
+   BUD
+
+D F U' N U' B' R' N B2 B 
+   DDD
+   UUF
+   UUF
+FRRBBULLBRRR
+RLDLFULRLBBB
+FBDLFULULDDR
+   FRB
+   DDF
+   UFB
+
+N F U2 L2 U U2 D' F' R2 L' 
+   LUF
+   LUD
+   DUU
+DDRFFRBBRULB
+FLFRFBRRDRBL
+FDFLBLBBDRRL
+   ULU
+   FDU
+   DUB
+
+R' F2 F' R2 D' D' D' R' B F2 
+   DUU
+   UUF
+   DDD
+RLRFLLBUFRRB
+ULRFFFDRBRBB
+UBBRFFDRLUBB
+   ULL
+   DDD
+   LLF
+
+D2 F' U L' R R2 B B B L 
+   RFB
+   FUB
+   RUL
+BDUFRUBRDLRD
+LLUFFUBRULBB
+RRUFFUBDFDDF
+   LLR
+   DDB
+   DLL
+
+U2 D' B D U2 R' R U U' L 
+   DUU
+   FUU
+   BRL
+LULUBFURRBBF
+BLLUFFRRDLBL
+FLDBFFRRRBBR
+   LDD
+   FDD
+   UDD
+
+R' N L' R' U F2 U2 R' L2 R' 
+   DDD
+   BUU
+   BFU
+FLLULFRRBRFR
+RLLUFFRRLDBB
+UBLDRBRFDLBL
+   BDU
+   UDU
+   FDF
+
+B' B2 D F' N U' R2 D N U 
+   RRR
+   UUU
+   DDB
+ULRFFLURDBBB
+ULUFFBDRDLBB
+URDBBUFFDLFF
+   LLL
+   DDL
+   RRF
+
+F F' F' B2 U L L' U' R2 B 
+   DDD
+   UUD
+   RRU
+LLUFFBLRRFFF
+DLUFFBLRUBBB
+DLUFFBLRUBBB
+   LLD
+   DDU
+   RRR
+
+R L' F B2 N B' R2 B' N R2 
+   FUR
+   FUF
+   LLF
+LLBDDDRRBUBU
+LLDFFURRDBBU
+LLBDDURRBUFD
+   RRF
+   BDB
+   FUL
+
+F' B' L2 N D R' L2 D2 R F 
+   RLL
+   RUU
+   BUB
+FBDLFURRUBBU
+DLDRFFRRUBBB
+DDFLDRBFFDLR
+   ULD
+   FDL
+   FUL
+
+L2 B L2 L F' F' B2 B D2 D 
+   ULL
+   BUU
+   DDF
+BLRFFLDRBDDR
+LLRFFULRRBBF
+FFULRRBBFLUR
+   BDD
+   UDD
+   UBU
+
+D2 D' D2 R' F L' F2 U2 U R2 
+   LBU
+   UUF
+   RRR
+DBFDDDBRFRRB
+LLUFFDBRFDBU
+LLUFFFDUUBLU
+   LLL
+   BDR
+   BDR
+
+L N R' L2 L D2 B' F' U N 
+   RUR
+   RUL
+   LBL
+UUBDRUBBUFLB
+DLUFFBDRUBBF
+DRUFFDFLBDDF
+   LLR
+   FDD
+   LRR
+
+F R2 F2 R' B N U B N F' 
+   LDD
+   RUR
+   LRD
+UFDFDRFULBBF
+ULFUFFLRLBBL
+ULFUBBDDLBBR
+   RRR
+   DDF
+   BUU
+
+D' D F B' R' B' D U2 R U' 
+   BUD
+   LUD
+   BBD
+DFLUULBBRFRR
+RLDFFRFRLUBB
+RDRFLFLLDLUB
+   UDU
+   RDB
+   UFF
+
+R' U' L F' U' D L R' B U2 
+   FBU
+   DUD
+   BUU
+URRDBBLLRBLR
+ULRBFRURFRBF
+RUDBLFLDLFDF
+   LFU
+   LDF
+   DBD
+
+N R L' F2 N D L' L' R U' 
+   DDR
+   UUD
+   BDB
+BBLUBURFFDLL
+RLLUFUFRRFBD
+RLLULFDRRFRD
+   FBL
+   FDU
+   BBU
+
+D' D F2 D2 R' U' L' L B' U' 
+   UDD
+   LUU
+   LUU
+RBFUBBLLRFFF
+ULRFFURRBRBF
+BRRBBDLLBRDD
+   DDF
+   DDF
+   LLU
+
+F2 B' U2 D N R' F' N F R2 
+   DDB
+   UUF
+   LLR
+LRUBBUFLDLFF
+DLRFFUFRLUBB
+BBBDLUFURDRU
+   RDL
+   RDB
+   RDF
+
+R R U' L L' R U' U' U2 F2 
+   DDL
+   UUB
+   FDD
+FBRUFFLRFURR
+LLRUFFLRFUBB
+LLRULLBRBDBB
+   BUU
+   DDF
+   DDR
+
+U2 B N L2 R' B L F N R2 
+   FRD
+   BUF
+   ULR
+DRFRDBURBRDL
+RLDFFBLRUBBU
+UUBUUDFDLDFL
+   LLR
+   FDB
+   FLB
+
+L' N B' R D F D U U F' 
+   LLB
+   FUF
+   BUL
+FRLUFBDLRDDD
+DLLUFBRRRUBB
+UUFULLUDDFFR
+   RBF
+   BDR
+   BDR
+
+R R' F B' D' D B F' R' L 
+   BUB
+   BUB
+   BUB
+LLLUFURRRDBD
+LLLUFURRRDBD
+LLLUFURRRDBD
+   FDF
+   FDF
+   FDF
+
+U2 L2 U2 U2 B2 U2 U D' D2 B2 
+   DDD
+   DUU
+   DDD
+FBBRLLBBFLRR
+LLLBFFRRRBBF
+BFFLRRFFBRLL
+   UUU
+   UDD
+   UUU
+
+F R' R F2 L2 U2 L R2 U F 
+   FFF
+   UUR
+   RRB
+RBBUURDFRUUD
+LLLFFRDRDFBU
+LLDBBDLLUFBU
+   LRF
+   BDD
+   BDL
+
+L U2 L' D U2 R2 B' R B2 N 
+   DRR
+   BUB
+   BUF
+BLLUFULRBUFL
+FLLFFULRDRBD
+FBURLFDUDRUD
+   FDL
+   DDB
+   RRB
+
+F R D L' U D2 R2 B F L 
+   BRL
+   DUB
+   UBR
+LFBLDUFLFUDD
+FLFLFUFRDLBR
+FBBDUBRBRDUL
+   RRU
+   RDU
+   DLF
+
+L D' F2 L D' D' N U' R2 R 
+   UUD
+   UUB
+   LDF
+BBFULDRRBRRR
+FLLBFDRRRFBD
+LBDLLDBLRFFU
+   FFL
+   DDU
+   BUU
+
+R' L' N D D2 R' R L2 D B 
+   RRR
+   DUB
+   BUB
+BFDLFURRFDDD
+ULLUFURRDBBB
+FLDLLLURBUDR
+   FFF
+   BDF
+   ULL
+
+R' U' L' U2 U L2 N F D B' 
+   DLL
+   BUU
+   RBD
+FLBUUBRLBDDR
+FLDFFLFRUFBR
+DBBURFUUUFDF
+   LBR
+   DDR
+   LRL
+
+D' D2 B D2 R R' D2 L2 B2 U 
+   LDB
+   UUL
+   UUU
+BFFRRLFBRDBU
+DLUBFFRRLFBR
+DLUBLLFFBLBR
+   RDD
+   UDD
+   FRD
+
+L2 L B' U' D D' D2 L2 F L2 
+   DUU
+   LUU
+   LDR
+RUUBBFDFFRRB
+RLLDFLFRUBBB
+LRUBFLFLLDFF
+   RRD
+   DDB
+   UDB
+
+L' R R2 U R2 U' N U' D B2 
+   FUB
+   FUU
+   FFF
+LRRULLDFRDBU
+RLLDFDRRLUBU
+UBULLLDFRDRR
+   BBB
+   DDD
+   BBF
+
+B' N R' U2 F' F R2 B' R' B 
+   FLL
+   BUF
+   BLL
+UUURBUBUFUUR
+DLLFFFRRRUBB
+DLLFFFRRDBBB
+   DDD
+   DDD
+   RRL
+
+R2 L2 L2 D' L U D L' F' B' 
+   UFB
+   UUU
+   FRU
+LLDRBLFBRDUB
+DLDRFLFRBLBB
+UFBRDDBRLFFF
+   ULL
+   DDU
+   RRD
+
+L2 D' F R2 F R L' D U' R 
+   RBU
+   UUU
+   RFB
+DBDBRLURRBLF
+LLFDFRBRRDBD
+RLDLLBLBFLUU
+   FFD
+   UDD
+   FFU
+
+U2 R' U2 R' R2 U F2 U2 R' B2 
+   LDD
+   UUU
+   FBF
+BBULRDRRLBBU
+RLRFFUFRLBBD
+RLURLBDLLFFB
+   FUR
+   DDF
+   UDD
+
+U R2 R2 F' R' N B' D' F D2 
+   LLF
+   UUB
+   RUU
+DFFDRRBRULBB
+DLFDFFRRULBB
+LDLFLURFRBUU
+   DDF
+   RDL
+   BBD
+
+U2 F D' F2 L U2 B D2 U' R' 
+   BBD
+   RUL
+   RUF
+LBUFLDRDBRLD
+DLRUFUFRUBBR
+DBBRRUFDLBFF
+   UFL
+   DDF
+   LLU
+
+N N U L2 F' R' R2 F' B' R2 
+   FLD
+   DUB
+   URD
+ULLFDRFRLBFR
+DLRFFLURLBBB
+LFBRRFDDBDUU
+   UUL
+   UDF
+   BBR
+
+R U L' F2 L2 U2 B2 L2 D R' 
+   RDL
+   FUD
+   LUD
+DLFULBRRDFBF
+FLRUFBLRRFBU
+DFLBBFULUBRL
+   UUR
+   DDD
+   BBR
+
+L' B U N N R2 U U B2 B 
+   FUB
+   DUU
+   DFF
+LRRFLLDFLUBU
+LLLDFBDRURBU
+RLLDFUBBURFD
+   BDR
+   BDR
+   BRF
+
+L2 L2 L B' U' D2 L' B F F2 
+   FUL
+   UUU
+   URD
+ULBLFBRFFUBR
+ULBLFBRRDFBR
+FDBRDDFLBLLL
+   URR
+   BDF
+   DDD
+
+D' F U' B' F D' F' B R2 D 
+   UUD
+   UUR
+   UUF
+BBBLLRUBRFRR
+LLDRFFDRDBBB
+LLLFFDRFDBFF
+   DUB
+   DDR
+   ULL
+
+R F' F F2 D B' F L' B' L2 
+   LLD
+   RUF
+   FRR
+UBRUDDBRLBUF
+BLRUFFDRLBBD
+FDRUFFDFLBBD
+   BLL
+   LDU
+   RUU
+
+L2 L F U N R' B2 U L2 B' 
+   FDD
+   BUD
+   BBB
+LLRDRLUBRFFU
+FLRDFUBRLDBL
+LRFDFUBUFUUB
+   LRR
+   UDF
+   DLR
+
+R' L D2 B B R L R2 B N 
+   LLL
+   DUD
+   UUU
+DRLFFFRLDFFB
+DLLBFBRRUBBF
+DLLBBBRRDFFB
+   UDU
+   UDU
+   RRR
+
+B' R D' D' D2 L B R B B 
+   LLD
+   BUD
+   BUR
+BDDLFBURBRDU
+RLLUFBURLBBF
+RLLUFLFRFUUF
+   FDD
+   FDB
+   DRR
+
+N B2 D R2 L' U' N F U2 F 
+   UBB
+   UUD
+   DDR
+FFLBLFDBLUUL
+LLLBFFDRRFBU
+RRUBLFDRRFRD
+   RFL
+   BDU
+   BDU
+
+D F2 B2 U2 B' U2 B' D2 D U' 
+   FUR
+   UUR
+   UUB
+RBBLLDLBBURD
+LLRFFFLRDRBB
+FFFLFDRLLFBR
+   UDB
+   UDD
+   UDD
+
+U' B2 U2 R B2 U' F F' F2 U 
+   RUU
+   DUF
+   DDF
+UFFLBDRRFRRB
+BLRDFFLRRBBU
+RLBLFBULFLLD
+   DUL
+   DDB
+   BUU
+
+D L2 L' R B2 N R2 D L D2 
+   FDR
+   UUB
+   UUR
+DRRBFDBRFDRL
+BLLBFDBRFDBU
+ULDBRFULLBLL
+   LFR
+   DDU
+   FFU
+
+F' R2 B F F B U2 U F B 
+   FLL
+   DUL
+   RRF
+LBDBBDRFUBBU
+DLRFFLURUBBR
+DLRFFRURLFFL
+   UUB
+   DDU
+   BDD
+
+D2 R' R' L R N B R2 D' D2 
+   LLF
+   BUF
+   BUR
+FLLUFDBRRUDD
+ULLUFFDRRUBB
+UDDFLLUBDBRR
+   RFF
+   RDD
+   BBL
+
+F2 N L' R2 F B2 F U2 B' U' 
+   LFD
+   LUD
+   LDB
+DFFURLUBFLRB
+ULRBFDLRUFBB
+FLRBFURRUBUD
+   DDF
+   BDU
+   RLR
+
+L F U' R2 R N L L R' F 
+   RUR
+   FUD
+   BLL
+DLURDDFRUFRF
+DLRFFLBRUFBF
+DBLBBBDUUFBL
+   URR
+   UDL
+   BDL
+
+F F F R L L F D D2 R 
+   LUB
+   DUF
+   LLR
+ULUBBBURDLBF
+ULLFFDBRDFBF
+DDLFRRFRDFLB
+   DBU
+   RDU
+   RUR
+
+Success rate: 60%
+Average generations: 183.68333333333334

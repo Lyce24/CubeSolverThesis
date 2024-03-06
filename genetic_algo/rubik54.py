@@ -2,8 +2,7 @@ from enum import IntEnum
 import random
 import concurrent.futures
 import time
-
-output_file = 'test.txt'
+import numpy as np
 
 class Facelet(IntEnum):
     """""
@@ -197,6 +196,15 @@ move_dict = {
     Move.B1: "B",
     Move.B2: "B2",
     Move.B3: "B'"
+}
+
+color_dict = {
+    0 : [1, 0, 0, 0, 0, 0],
+    1 : [0, 1, 0, 0, 0, 0],
+    2 : [0, 0, 1, 0, 0, 0],
+    3 : [0, 0, 0, 1, 0, 0],
+    4 : [0, 0, 0, 0, 1, 0],
+    5 : [0, 0, 0, 0, 0, 1]
 }
 
 class FaceCube:
@@ -451,7 +459,7 @@ class FaceCube:
     def randomize(self):
         """Randomize the facelet cube."""
         scramble_move = []
-        for _ in range(20):
+        for _ in range(25):
             scramble_move.append(random.choice(list(Move)))
         self.move_list(scramble_move)
         scramble_string = ""
@@ -470,3 +478,35 @@ class FaceCube:
             scramble_string += move_dict[move] + " "
         return scramble_string
     
+    def is_solved(self):
+        """Check if the facelet cube is solved."""
+        for i in range(6):
+            for j in range(9):
+                if self.f[i * 9] != self.f[i * 9 + j]:
+                    return False
+        return True
+    
+    def convert_nnet_input(self):
+        temp_list = []
+        
+        for i in range(54):
+            if self.f[i] == 0:
+                temp_list.append(0)
+            elif self.f[i] == 1:
+                temp_list.append(3)
+            elif self.f[i] == 2:
+                temp_list.append(2)
+            elif self.f[i] == 3:
+                temp_list.append(5)
+            elif self.f[i] == 4:
+                temp_list.append(1)
+            elif self.f[i] == 5:
+                temp_list.append(4)
+        
+        temp_list = temp_list[0:9] + temp_list[36:45] + temp_list[18:27] + temp_list[9:18]+ temp_list[45:54] + temp_list[27:36]
+        color_list = [color_dict[i] for i in temp_list]
+        nnet_input = np.array(color_list).reshape(1, -1)[0]
+        return nnet_input
+        
+    def copy(self):
+        return np.array(self.f)

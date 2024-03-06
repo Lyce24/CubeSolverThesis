@@ -5,9 +5,9 @@ import os
 
 
 def evaluate(net, games, batch_size, weight, scramble_depths, max_times, date_time):
-    if not os.path.exists(f"analysis/result/{str(date_time)}"):
-        os.makedirs(f"analysis/result/{str(date_time)}")
-    sys.stdout = open(f"analysis/result/{str(date_time)}/result.txt", "w")
+    if not os.path.exists(f"analysis/result"):
+        os.makedirs(f"analysis/result")
+    sys.stdout = open(f"analysis/result/result.txt", "w")
     states = []
     results = [[],[],[],[]]  # "accuracy", "mean_iteration", "mean_node", "mean_sol_len"
     for depth in scramble_depths:

@@ -116,5 +116,4 @@ def clear_seq(seq):
 
 
 if __name__=="__main__":
-    print(f"Solved Cube Represantation:\n{solved}")
-    print(f"Cube State Shape:\n{solved.shape}")
+    print(scramble_with_list(get_solved(),[5]))

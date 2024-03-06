@@ -22,7 +22,7 @@ if __name__ == "__main__":
     conf = SolveConfig(args.ini_path)
 
     net = getNetwork(conf.network_type)
-    device = torch.device("cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     net = net(54*6).to(device)
     net.load_state_dict(torch.load(conf.heuristic_path, map_location=device))
     games = int(args.games)
