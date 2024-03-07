@@ -3,8 +3,8 @@ import numpy as np
 from torch import nn
 from random import randrange
 
-from utils.pytorch_models import ResnetModel
-from .environment_abstract import Environment, State
+# from utils.pytorch_models import ResnetModel
+from environment_abstract import Environment, State
 
 
 class Cube3State(State):

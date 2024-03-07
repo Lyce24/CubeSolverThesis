@@ -130,24 +130,19 @@ class Edge(IntEnum):
 
 class Move(IntEnum):
     """The moves in the faceturn metric. Not to be confused with the names of the facelet positions in class Facelet."""
-    U1 = 0
-    U2 = 1
-    U3 = 2
-    R1 = 3
-    R2 = 4
-    R3 = 5
-    F1 = 6
-    F2 = 7
-    F3 = 8
-    D1 = 9
-    D2 = 10
-    D3 = 11
-    L1 = 12
-    L2 = 13
-    L3 = 14
-    B1 = 15
-    B2 = 16
-    B3 = 17
+    U1 = 0 # U(p) face clockwise
+    U3 = 1 # U(p) face counter-clockwise
+    R1 = 2
+    R3 = 3
+    F1 = 4
+    F3 = 5
+    D1 = 6
+    D3 = 7
+    L1 = 8
+    L3 = 9
+    B1 = 10
+    B3 = 11
+    N = -1  # Null move
 
 
 class BS(IntEnum):
@@ -179,23 +174,18 @@ edgeColor = [[Color.U, Color.R], [Color.U, Color.F], [Color.U, Color.L], [Color.
 
 move_dict = {
     Move.U1: "U",
-    Move.U2: "U2",
     Move.U3: "U'",
     Move.R1: "R",
-    Move.R2: "R2",
     Move.R3: "R'",
     Move.F1: "F",
-    Move.F2: "F2",
     Move.F3: "F'",
     Move.D1: "D",
-    Move.D2: "D2",
     Move.D3: "D'",
     Move.L1: "L",
-    Move.L2: "L2",
     Move.L3: "L'",
     Move.B1: "B",
-    Move.B2: "B2",
-    Move.B3: "B'"
+    Move.B3: "B'",
+    Move.N: "N"
 }
 
 color_dict = {
@@ -238,9 +228,6 @@ class FaceCube:
             self.f[Facelet.R1:Facelet.R4] = self.f[Facelet.B1:Facelet.B4]
             self.f[Facelet.B1:Facelet.B4] = self.f[Facelet.L1:Facelet.L4]
             self.f[Facelet.L1:Facelet.L4] = temp
-        elif move == Move.U2:
-            self.move(Move.U1)
-            self.move(Move.U1)
         elif move == Move.U3:
             self.move(Move.U1)
             self.move(Move.U1)
@@ -252,9 +239,6 @@ class FaceCube:
             
             # adjacent faces
             self.f[Facelet.U3], self.f[Facelet.U6], self.f[Facelet.U9], self.f[Facelet.F3], self.f[Facelet.F6], self.f[Facelet.F9], self.f[Facelet.D3], self.f[Facelet.D6], self.f[Facelet.D9], self.f[Facelet.B7], self.f[Facelet.B4], self.f[Facelet.B1] = self.f[Facelet.F3], self.f[Facelet.F6], self.f[Facelet.F9], self.f[Facelet.D3], self.f[Facelet.D6], self.f[Facelet.D9], self.f[Facelet.B7], self.f[Facelet.B4], self.f[Facelet.B1], self.f[Facelet.U3], self.f[Facelet.U6], self.f[Facelet.U9]
-        elif move == Move.R2:
-            self.move(Move.R1)
-            self.move(Move.R1)
         elif move == Move.R3:
             self.move(Move.R1)
             self.move(Move.R1)
@@ -266,9 +250,6 @@ class FaceCube:
             
             # adjacent faces
             self.f[Facelet.U7], self.f[Facelet.U8], self.f[Facelet.U9], self.f[Facelet.R1], self.f[Facelet.R4], self.f[Facelet.R7], self.f[Facelet.D1], self.f[Facelet.D2], self.f[Facelet.D3], self.f[Facelet.L3], self.f[Facelet.L6], self.f[Facelet.L9] = self.f[Facelet.L9], self.f[Facelet.L6], self.f[Facelet.L3], self.f[Facelet.U7], self.f[Facelet.U8], self.f[Facelet.U9], self.f[Facelet.R7], self.f[Facelet.R4], self.f[Facelet.R1], self.f[Facelet.D1], self.f[Facelet.D2], self.f[Facelet.D3]
-        elif move == Move.F2:
-            self.move(Move.F1)
-            self.move(Move.F1)
         elif move == Move.F3:
             self.move(Move.F1)
             self.move(Move.F1)
@@ -285,9 +266,6 @@ class FaceCube:
             self.f[Facelet.L7], self.f[Facelet.L8], self.f[Facelet.L9] = self.f[Facelet.B7], self.f[Facelet.B8], self.f[Facelet.B9]
             self.f[Facelet.B7], self.f[Facelet.B8], self.f[Facelet.B9] = self.f[Facelet.R7], self.f[Facelet.R8], self.f[Facelet.R9]
             self.f[Facelet.R7], self.f[Facelet.R8], self.f[Facelet.R9] = temp
-        elif move == Move.D2:
-            self.move(Move.D1)
-            self.move(Move.D1)
         elif move == Move.D3:
             self.move(Move.D1)
             self.move(Move.D1)
@@ -304,9 +282,6 @@ class FaceCube:
             self.f[Facelet.B9], self.f[Facelet.B6], self.f[Facelet.B3] = self.f[Facelet.D1], self.f[Facelet.D4], self.f[Facelet.D7]
             self.f[Facelet.D1], self.f[Facelet.D4], self.f[Facelet.D7] = self.f[Facelet.F1], self.f[Facelet.F4], self.f[Facelet.F7]
             self.f[Facelet.F1], self.f[Facelet.F4], self.f[Facelet.F7] = temp
-        elif move == Move.L2:
-            self.move(Move.L1)
-            self.move(Move.L1)
         elif move == Move.L3:
             self.move(Move.L1)
             self.move(Move.L1)
@@ -323,13 +298,16 @@ class FaceCube:
             self.f[Facelet.R3], self.f[Facelet.R6], self.f[Facelet.R9] = self.f[Facelet.D9], self.f[Facelet.D8], self.f[Facelet.D7]
             self.f[Facelet.D9], self.f[Facelet.D8], self.f[Facelet.D7] = self.f[Facelet.L7], self.f[Facelet.L4], self.f[Facelet.L1]
             self.f[Facelet.L7], self.f[Facelet.L4], self.f[Facelet.L1] = temp
-        elif move == Move.B2:
-            self.move(Move.B1)
-            self.move(Move.B1)
         elif move == Move.B3:
             self.move(Move.B1)
             self.move(Move.B1)
             self.move(Move.B1)
+        
+        elif move == Move.N:
+            return
+        
+        else:
+            raise ValueError('Invalid move: ' + str(move))
         
     def _rotate_face(self, face):
         """Rotate a face clockwise."""
@@ -406,6 +384,18 @@ class FaceCube:
     def convert_move(self, s):
         """Convert a move string to a move."""
         s = s.split(' ')
+        print(s)
+        for move in s:
+            if len(move) == 2:
+                if move[1] == "2":
+                    # recall the move's place
+                    move_idx = s.index(move)
+                    single_move = move[0]
+                    # remove the original 180 degree move
+                    s.remove(move)
+                    # insert 2 single move in its place
+                    s.insert(move_idx, single_move)
+                    s.insert(move_idx, single_move)
         return_list = []
         for move in s:
             return_list.append(self.__convert_single_move(move))
@@ -414,38 +404,26 @@ class FaceCube:
     def __convert_single_move(self, s):
         if s == 'U':
             return Move.U1
-        elif s == 'U2':
-            return Move.U2
         elif s == 'U\'':
             return Move.U3
         elif s == 'R':
             return Move.R1
-        elif s == 'R2':
-            return Move.R2
         elif s == 'R\'':
             return Move.R3
         elif s == 'F':
             return Move.F1
-        elif s == 'F2':
-            return Move.F2
         elif s == 'F\'':
             return Move.F3
         elif s == 'D':
             return Move.D1
-        elif s == 'D2':
-            return Move.D2
         elif s == 'D\'':
             return Move.D3
         elif s == 'L':
             return Move.L1
-        elif s == 'L2':
-            return Move.L2
         elif s == 'L\'':
             return Move.L3
         elif s == 'B':
             return Move.B1
-        elif s == 'B2':
-            return Move.B2
         elif s == 'B\'':
             return Move.B3
         else:
@@ -486,7 +464,7 @@ class FaceCube:
                     return False
         return True
     
-    def convert_nnet_input(self):
+    def convert_mlp_input(self):
         temp_list = []
         
         for i in range(54):
@@ -510,3 +488,56 @@ class FaceCube:
         
     def copy(self):
         return np.array(self.f)
+    
+    
+    def convert_res_input(self):
+        
+        temp_list = []
+        for i in range(54):
+            if self.f[i] == 0:
+                temp_list.append(0)
+            elif self.f[i] == 1:
+                temp_list.append(3)
+            elif self.f[i] == 2:
+                temp_list.append(5)
+            elif self.f[i] == 3:
+                temp_list.append(1)
+            elif self.f[i] == 4:
+                temp_list.append(2)
+            elif self.f[i] == 5:
+                temp_list.append(4)
+                
+        temp_list = temp_list[0:9] + temp_list[27:36] + temp_list[36:45] + temp_list[9:18]+ temp_list[45:54] + temp_list[18:27]
+        
+        ans_list = []
+        
+        for i in range(6):
+            for element in self.rotate_90(temp_list[i*9:i*9+9]):
+                ans_list.append(element)
+        
+        return np.array(ans_list, dtype=np.uint8)
+        
+    def rotate_90(self, vector):
+
+        # for every 6 face (9 entries in self.f)
+        test_list = [] 
+        test_list.append(vector[6])
+        test_list.append(vector[3])
+        test_list.append(vector[0])
+        test_list.append(vector[7])
+        test_list.append(vector[4])
+        test_list.append(vector[1])
+        test_list.append(vector[8])
+        test_list.append(vector[5])
+        test_list.append(vector[2])
+        
+        return test_list
+    
+    def to_colorcube(self):
+        pass
+    
+if __name__ == "__main__":
+    cube = FaceCube()
+    print(cube.convert_move("U2"))
+    cube.move_list(cube.convert_move("R2 F2 L2 U F2 U2 L2 D F2 U2 B2 L' U' B U' F L D' U L2 F'"))
+    print(cube.to_2dstring())
