@@ -85,7 +85,7 @@ if __name__ == "__main__":
         """torch.cuda.empty_cache()
         if torch.cuda.is_available():
             torch.cuda.synchronize()"""
-        print(f"Iteration : {index}")
+            
         with torch.no_grad():
             x, y, weights = generate_states_by_ADI(config,generator,device)
    

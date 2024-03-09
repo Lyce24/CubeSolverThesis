@@ -1,0 +1,4 @@
+Scramble length: 15
+Population size: 3000
+Number of generations: 1000
+Sequence length: 20

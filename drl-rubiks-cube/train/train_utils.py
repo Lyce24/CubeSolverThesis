@@ -2,69 +2,16 @@ import numpy as np
 import torch
 from random import randint
 from keras.utils.np_utils import to_categorical
-from cube import get_solved,idxs
+from cube.cube import get_solved,idxs
 
-'''
-batch_size=1000
-scramble_depth=30
-report_batches=100
-include_first=True
-weight_type=learn_first_close
-'''
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-import torch.nn
-from torch import nn
-
-
-class Net(nn.Module):
-    def __init__(self, input_size):
-        super().__init__()
-        self.input_size = input_size
-        self.body = nn.Sequential(
-            nn.Linear(self.input_size, 1056),
-            nn.ReLU(),
-            nn.Linear(1056, 3888),
-            nn.ReLU(),
-            nn.Linear(3888, 1104),
-            nn.ReLU(),
-            nn.Linear(1104, 576),
-            nn.ReLU(),
-            nn.Linear(576,1)
-        )
-
-        for m in self.modules():
-            if isinstance(m,torch.nn.Linear):
-                nn.init.xavier_normal_(m.weight)
-                if m.bias is not None:
-                    m.bias.detach().zero_()
-
-    def forward(self, batch):
-        x = batch.reshape((-1, self.input_size))
-        body_out = self.body(x)
-        return body_out
-
-    def clone(self):
-        new_state_dict = {}
-        for kw, v in self.state_dict().items():
-            new_state_dict[kw] = v.clone()
-        new_net = Net(self.input_size)
-        new_net.load_state_dict(new_state_dict)
-        return new_net
-    
-nnet = Net(54*6).to(device)
 
 def generate_states_by_ADI(conf, nnet, device):
-    # times = 10000//30
-    times = 1
-    states, depths = generate_move_seq(times,1, True)
-    print(states.shape, depths.shape)
-    print(states)
-    print(depths)
+    times = conf.batch_size//conf.scramble_depth
+    states, depths = generate_move_seq(times,conf.scramble_depth,conf.include_first)
+
     val_targets = explore_states(states,nnet,device).to(device)
     states = torch.from_numpy(to_categorical(states)).to(device)
-    weights = get_weigths(depths,"learn_first_close").to(device)
+    weights = get_weigths(depths,conf.weight_type).to(device)
     return states.detach(),val_targets.detach(),weights.detach()
 
 
@@ -165,12 +112,3 @@ def get_weigths(depths, type):
         return 1/(torch.from_numpy(depths)/2)
     else:
         return torch.from_numpy(depths)
-
-x, y, weight = generate_states_by_ADI(None,nnet,device)
-print(x.shape, y.shape, weight.shape)
-
-# print head of the data
-print(x[:5])
-print(y[:5])
-print(weight[:5])
-

@@ -1,0 +1,13 @@
+Mixed Genetic Algorithm with DRL
+Scrambled cube: F' U D' D' L U B F L U R U F' L' U' B' D' B 
+Scrambled cube:    DLF
+   FUL
+   FUU
+LRULBBLDRUBF
+LLDBFFDRFUBU
+UUFRLBDRLDDR
+   DFR
+   RDB
+   BRB
+
+Solving...
