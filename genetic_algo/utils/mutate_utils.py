@@ -5,6 +5,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rubik54 import Move
 import random
 
+single_move = [
+    Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3
+]
+
 inverse_moves = {
     Move.U1 : Move.U3,
     Move.R1 : Move.R3,
@@ -20,28 +24,164 @@ inverse_moves = {
     Move.B3 : Move.B1
 }
 
+groups = {
+    Move.U1 : "UD",
+    Move.R1 : "LR",
+    Move.F1 : "FB",
+    Move.D1 : "UD",
+    Move.L1 : "LR",
+    Move.B1 : "FB",
+    Move.U3 : "UD",
+    Move.R3 : "LR",
+    Move.F3 : "FB",
+    Move.D3 : "UD",
+    Move.L3 : "LR",
+    Move.B3 : "FB"
+}
 
-def prevent_moves(move_sequence, last_move, allowable_moves):
-    allowed_moves = list(Move)  # Start with all moves allowed
-    
+def get_last_move(move_sequence):
+    # select the last move in the sequence other than the null move. Return both the last move and the index to it
+    # Otherwise, return the null move
+    for move in (reversed(move_sequence)):
+        if move != Move.N:
+            return move
+    return Move.N
+
+def get_first_move(move_sequence):
+    # select the first move in the sequence other than the null move. Return both the first move and the index to it
+    # Otherwise, return the null move
+    for move in (move_sequence):
+        if move != Move.N:
+            return move
+    return Move.N
+
+# Helper functions not provided:
+def get_move_group(move):
+    # Return the group number for the given move
+    return groups[move]
+
+
+def prevent_moves_pre(move_sequence, last_move, allowed_moves):
+
     allowed_moves.remove(inverse_moves[last_move])
-    if len(move_sequence) > 1 and move_sequence[-2] == last_move:
-        allowed_moves.remove(last_move)
+    
+    temp = [move for move in move_sequence if move != Move.N]
+    subsequence = []
+    last_group = get_move_group(last_move)
+    for move in reversed(temp):
+        if get_move_group(move) == last_group:
+            subsequence.append(move)
+        else:
+            break
+        
+    pair_map = {}
+    
+    if last_group == "UD":
+        pair_map = {Move.U1 : 0, Move.D1 : 0}
+    elif last_group == "LR":
+        pair_map = {Move.L1 : 0, Move.R1 : 0}
+    else:
+        pair_map = {Move.F1 : 0, Move.B1 : 0}
+        
+    for move in subsequence:
+        if move in pair_map:
+            pair_map[move] += 1
+        if inverse_moves[move] in pair_map:
+            pair_map[inverse_moves[move]] -= 1
+            
+    for i in pair_map:
+        if pair_map[i] % 4 == 3:
+            if i in allowed_moves:
+                allowed_moves.remove(i)
+        elif pair_map[i] % 4 == 1:
+            if inverse_moves[i] in allowed_moves:
+                allowed_moves.remove(inverse_moves[i])
+
     return allowed_moves
 
-# Prevention algorithm function
-def get_allowed_mutations(move_sequence):    
+
+def get_allowed_mutations_pre(move_sequence):
     
     allowed_moves = list(Move)  # Start with all moves allowed
-
-    if not move_sequence or move_sequence[-1] == Move.N:
+    
+    if not move_sequence:
         allowed_moves.remove(Move.N)  # Exclude the null move
-        # If the sequence is empty or ends with a null move, all moves are allowed
         return allowed_moves
     
-    last_move = move_sequence[-1]
-    allowed_moves = prevent_moves(move_sequence, last_move, allowed_moves)
+    last_move = get_last_move(move_sequence)
+    
+    if last_move == Move.N:
+        allowed_moves.remove(Move.N)  # Exclude the null move
+        return allowed_moves
+    
+    allowed_moves = prevent_moves_pre(move_sequence, last_move, allowed_moves)
     return allowed_moves
+
+def prevent_moves_post(move_sequence, first_move, allowed_moves):
+
+    allowed_moves.remove(inverse_moves[first_move])
+    
+    temp = [move for move in move_sequence if move != Move.N]
+    subsequence = []
+    last_group = get_move_group(first_move)
+    for move in temp:
+        if get_move_group(move) == last_group:
+            subsequence.append(move)
+        else:
+            break
+        
+    pair_map = {}
+    
+    if last_group == "UD":
+        pair_map = {Move.U1 : 0, Move.D1 : 0}
+    elif last_group == "LR":
+        pair_map = {Move.L1 : 0, Move.R1 : 0}
+    else:
+        pair_map = {Move.F1 : 0, Move.B1 : 0}
+        
+    for move in subsequence:
+        if move in pair_map:
+            pair_map[move] += 1
+        if inverse_moves[move] in pair_map:
+            pair_map[inverse_moves[move]] -= 1
+            
+    for i in pair_map:
+        if pair_map[i] % 4 == 3:
+            if i in allowed_moves:
+                allowed_moves.remove(i)
+        elif pair_map[i] % 4 == 1:
+            if inverse_moves[i] in allowed_moves:
+                allowed_moves.remove(inverse_moves[i])
+
+    return allowed_moves
+
+
+def get_allowed_mutations_post(move_sequence):
+    
+    allowed_moves = list(Move)  # Start with all moves allowed
+    
+    if not move_sequence:
+        allowed_moves.remove(Move.N)  # Exclude the null move
+        return allowed_moves
+    
+    first_move = get_first_move(move_sequence)
+    
+    if first_move == Move.N:
+        allowed_moves.remove(Move.N)  # Exclude the null move
+        return allowed_moves
+    
+    allowed_moves = prevent_moves_post(move_sequence, first_move, allowed_moves)
+    return allowed_moves
+        
+# Prevention algorithm function
+def get_allowed_mutations(move_sequence1, move_sequence2): 
+    # Get the allowed mutations for the first move group
+    allowed_moves1 = get_allowed_mutations_pre(move_sequence1)
+    # Get the allowed mutations for the second move group
+    allowed_moves2 = get_allowed_mutations_post(move_sequence2)
+    # Return the intersection of the two sets
+    return list(set(allowed_moves1) & set(allowed_moves2))
+
 
 
 def single_point_mutate(individual):

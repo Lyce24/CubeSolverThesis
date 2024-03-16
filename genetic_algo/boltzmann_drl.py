@@ -67,30 +67,33 @@ def generate_individual():
     # individual = simplify_individual(individual)
     return individual
 
-# def simplify_individual(individual):
-#     # Remove inverses and apply the new logic for simplification
-#     i = 0
-#     while i < len(individual):
-#         # Check for four same moves in a row
-#         if i < len(individual) - 3 and individual[i] == individual[i+1] == individual[i+2] == individual[i+3]:
-#             del individual[i:i+4]
-#             continue  # Continue checking from the current position
+def simplify_individual(individual):
+    # remove all N move from the sequence
+    individual = [move for move in individual if move != Move.N]
+    
+    # Remove inverses and apply the new logic for simplification
+    i = 0
+    while i < len(individual):
+        # Check for four same moves in a row
+        if i < len(individual) - 3 and individual[i] == individual[i+1] == individual[i+2] == individual[i+3]:
+            del individual[i:i+4]
+            continue  # Continue checking from the current position
 
-#         # Check for three same moves in a row
-#         if i < len(individual) - 2 and individual[i] == individual[i+1] == individual[i+2]:
-#             # Replace three moves with their inverse
-#             individual[i] = inverse_moves[individual[i]]
-#             del individual[i+1:i+3]
-#             continue
+        # Check for three same moves in a row
+        if i < len(individual) - 2 and individual[i] == individual[i+1] == individual[i+2]:
+            # Replace three moves with their inverse
+            individual[i] = inverse_moves[individual[i]]
+            del individual[i+1:i+3]
+            continue
 
-#         # Remove a move followed immediately by its inverse
-#         if i < len(individual) - 1 and individual[i+1] == inverse_moves.get(individual[i], ''):
-#             del individual[i:i+2]
-#             i = max(i - 1, 0)  # Step back to check for further simplifications
-#             continue
-#         i += 1
+        # Remove a move followed immediately by its inverse
+        if i < len(individual) - 1 and individual[i+1] == inverse_moves.get(individual[i], ''):
+            del individual[i:i+2]
+            i = max(i - 1, 0)  # Step back to check for further simplifications
+            continue
+        i += 1
 
-#     return individual
+    return individual
 
 
 def compute_fitness(scrambled_str, individual, model, nnet):
@@ -223,9 +226,9 @@ def genetic_algorithm_with_plot(scrambled_str, model):
     best_solution_found = ""
     index = 0
     
-    initial_temperature = 100
+    initial_temperature = 75.6
     temperature = initial_temperature
-    cooling_rate = 0.90
+    cooling_rate = 0.9073
     
     solved = False
     
@@ -240,7 +243,7 @@ def genetic_algorithm_with_plot(scrambled_str, model):
         best_fitnesses.append(best_fitness)
         
         best_solution_found = ""
-        for move in best_individual:
+        for move in simplify_individual(best_individual):
             best_solution_found += move_dict[move] + " "
         
         # ax.clear()
@@ -297,19 +300,20 @@ def genetic_algorithm_with_plot(scrambled_str, model):
     # plt.savefig(f"GA/DRL_loss.png")
     # plt.ioff()
     # plt.show()
-    
-    return solved, index
+    print("Best solution found:", best_solution_found)
+    return solved, index, best_solution_found
     
 # Run the GA
 if __name__ == "__main__":
-    POPULATION_SIZE = 2000
-    NUM_GENERATIONS = 100
+    POPULATION_SIZE = 4205
+    NUM_GENERATIONS = 270
     MUTATION_RATE = 0.40
-    SEQUENCE_LENGTH = 13
+    SEQUENCE_LENGTH = 23
     output_file = "GA/output_boltzmann.drl.txt"
     
     success = 0
     total_gen = 0
+    sol_length = 0
     for i in range(100):
         print("Test", i+1)
     
@@ -320,16 +324,18 @@ if __name__ == "__main__":
         # print("Scrambled cube:", test_cube.to_2dstring())
         # print("Scrambled cube:", scramble_str)
         # print("Solving...")
-        succeed, generations =  genetic_algorithm_with_plot(test_cube.to_string(), "resnet")
+        succeed, generations,best_sol =  genetic_algorithm_with_plot(test_cube.to_string(), "resnet")
         if succeed:
             success += 1
             total_gen += generations
+            sol_length += len(best_sol.split())
         
         if i == 0:
             continue
         
         print("Success:", success)
-        print("Average generations:", total_gen/success, "\n")
+        print("Average generations:", total_gen/success, "Best solution length:", sol_length/success)
             
     print("Success rate:", success, "%")
     print("Average generations:", total_gen/success)
+    print("Average solution length:", sol_length/success)

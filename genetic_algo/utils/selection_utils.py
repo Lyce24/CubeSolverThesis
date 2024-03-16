@@ -55,7 +55,6 @@ def apply_filter_1(moves):
 def apply_filter_2(moves):
     # Split the subsequence into sets of moves for one face
     
-    penalties = 0
     last_group = get_move_group(moves[-1])
     
     if last_group == "UD":
@@ -87,7 +86,6 @@ def apply_filter_2(moves):
     return total_pairs
 
 
-
 def phase2_filters(moves):
     filter_count = 0
     
@@ -102,4 +100,3 @@ def phase2_filters(moves):
     
     
     return 1 if filter_count == 0 else filter_count
-

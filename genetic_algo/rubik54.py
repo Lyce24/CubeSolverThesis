@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from utils.cube_utils import Facelet, Color, Corner, Edge, Move, BS, cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict
+from utils.cube_utils import Facelet, Color, Corner, Edge, Move, cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict, Phase2Move
 
 class Cube:
     """Represent a cube on the facelet level with 54 colored facelets."""
@@ -58,6 +58,7 @@ class Cube:
             self.f[Facelet.R1:Facelet.R4] = self.f[Facelet.B1:Facelet.B4]
             self.f[Facelet.B1:Facelet.B4] = self.f[Facelet.L1:Facelet.L4]
             self.f[Facelet.L1:Facelet.L4] = temp
+            
         elif move == Move.U3:
             self.move(Move.U1)
             self.move(Move.U1)
@@ -128,6 +129,7 @@ class Cube:
             self.f[Facelet.R3], self.f[Facelet.R6], self.f[Facelet.R9] = self.f[Facelet.D9], self.f[Facelet.D8], self.f[Facelet.D7]
             self.f[Facelet.D9], self.f[Facelet.D8], self.f[Facelet.D7] = self.f[Facelet.L7], self.f[Facelet.L4], self.f[Facelet.L1]
             self.f[Facelet.L7], self.f[Facelet.L4], self.f[Facelet.L1] = temp
+            
         elif move == Move.B3:
             self.move(Move.B1)
             self.move(Move.B1)
@@ -135,6 +137,30 @@ class Cube:
         
         elif move == Move.N:
             return
+        
+        # elif move == Move.U2:
+        #     self.move(Move.U1)
+        #     self.move(Move.U1)
+            
+        # elif move == Move.R2:
+        #     self.move(Move.R1)
+        #     self.move(Move.R1)
+            
+        # elif move == Move.F2:
+        #     self.move(Move.F1)
+        #     self.move(Move.F1)
+            
+        # elif move == Move.D2:
+        #     self.move(Move.D1)
+        #     self.move(Move.D1)
+            
+        # elif move == Move.L2:
+        #     self.move(Move.L1)
+        #     self.move(Move.L1)
+            
+        # elif move == Move.B2:
+        #     self.move(Move.B1)
+        #     self.move(Move.B1)
         
         else:
             raise ValueError('Invalid move: ' + str(move))
@@ -229,6 +255,7 @@ class Cube:
         for move in s:
             return_list.append(self.__convert_single_move(move))
         return return_list
+
     
     def __convert_single_move(self, s):
         if s == 'U':
@@ -255,6 +282,18 @@ class Cube:
             return Move.B1
         elif s == 'B\'':
             return Move.B3
+        # elif s == 'U2':
+        #     return Move.U2
+        # elif s == 'R2':
+        #     return Move.R2
+        # elif s == 'F2':
+        #     return Move.F2
+        # elif s == 'D2':
+        #     return Move.D2
+        # elif s == 'L2':
+        #     return Move.L2
+        # elif s == 'B2':
+        #     return Move.B2
         else:
             return None
     
@@ -362,9 +401,6 @@ class Cube:
         
         return test_list
     
-    def to_colorcube(self):
-        pass
-    
     def get_phase1_state(self):
         """Return a cubie representation of the facelet cube."""
         self.cp = [-1] * 8  # invalidate corner and edge permutation
@@ -408,3 +444,14 @@ class Cube:
             if self.eo[i] != 0:
                 return False
         return True
+    
+    def phase2_randomize_n(self, n):
+        """Randomize the facelet cube n times."""
+        scramble_move = []
+        for _ in range(n):
+            scramble_move.append(random.choice(list(Phase2Move)))
+        self.move_list(scramble_move)
+        scramble_string = ""
+        for move in scramble_move:
+            scramble_string += move_dict[move] + " "
+        return scramble_string

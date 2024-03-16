@@ -1,4 +1,4 @@
-from rubik54 import Cube, Move, move_dict, Phase2Move
+from rubik54 import Cube, move_dict, Phase2Move
 import random
 import matplotlib.pyplot as plt
 import torch
@@ -16,18 +16,14 @@ print("Using device:", device)
 
 
 inverse_moves = {
-    Move.U1 : Move.U3,
-    Move.R1 : Move.R3,
-    Move.F1 : Move.F3,
-    Move.D1 : Move.D3,
-    Move.L1 : Move.L3,
-    Move.B1 : Move.B3,
-    Move.U3 : Move.U1,
-    Move.R3 : Move.R1,
-    Move.F3 : Move.F1,
-    Move.D3 : Move.D1,
-    Move.L3 : Move.L1,
-    Move.B3 : Move.B1
+    Phase2Move.U1 : Phase2Move.U3,
+    Phase2Move.U3 : Phase2Move.U1,
+    Phase2Move.R2 : Phase2Move.R2,
+    Phase2Move.F2 : Phase2Move.F2,
+    Phase2Move.D1 : Phase2Move.D3,
+    Phase2Move.D3 : Phase2Move.D1,
+    Phase2Move.L2 : Phase2Move.L2,
+    Phase2Move.B2 : Phase2Move.B2
 }
 
 
@@ -63,7 +59,7 @@ def load_model(model_type):
     
 def generate_individual():
     """Generate a random individual solution."""
-    individual = [random.choice(list(Move)) for _ in range(SEQUENCE_LENGTH)]
+    individual = [random.choice(list(Phase2Move)) for _ in range(SEQUENCE_LENGTH)]
     return individual
 
 def simplify_individual(individual):
@@ -166,19 +162,45 @@ def crossover(parent1, parent2):
 
 
 def mutate(individual):
-    # Randomly choose a gene (mutation point) to mutate
-    gene_to_mutate = random.randint(0, SEQUENCE_LENGTH - 1)
+    mutation_type = random.choice(['swap', 'scramble', 'invert', 'insert', 'delete'])
     
-    # Get the moves performed so far up to the mutation point
-    move_sequence_up_to_point = individual[:gene_to_mutate]
+    if mutation_type == 'swap':
+        # Swap two moves in the sequence
+        if len(individual) > 1:
+            idx1, idx2 = random.sample(range(len(individual)), 2)
+            individual[idx1], individual[idx2] = individual[idx2], individual[idx1]
     
-    # Get the list of allowed moves for the mutation based on the last move group
-    allowed_moves = get_allowed_mutations(move_sequence_up_to_point)
- 
-    # Apply a valid mutation from the allowed moves
-    individual[gene_to_mutate] = random.choice(allowed_moves)
-
+    elif mutation_type == 'scramble':
+        # Scramble a subset of the sequence
+        if len(individual) > 1:
+            start, end = sorted(random.sample(range(len(individual)), 2))
+            individual[start:end] = random.sample(individual[start:end], len(individual[start:end]))
+    
+    elif mutation_type == 'invert':
+        # Invert a subset of the sequence
+        if len(individual) > 1:
+            start, end = sorted(random.sample(range(len(individual)), 2))
+            individual[start:end] = individual[start:end][::-1]
+    
+    elif mutation_type == 'insert':
+        # Insert a random move at a random position
+        count = random.randint(1, 4)
+        
+        for _ in range(count):
+            idx = random.randint(0, len(individual))
+            move = random.choice(list(Phase2Move))
+            individual.insert(idx, move)
+    
+    elif mutation_type == 'delete':
+        # Delete a random move
+        if len(individual) > 1:
+            idx = random.randint(0, len(individual) - 1)
+            del individual[idx]
+    
+    # individual = simplify_individual(individual)
+    
     return individual
+
 
 
 def kill_by_rank(population, scrambled_str, model, nnet, survival_rate=0.7):
@@ -221,7 +243,7 @@ def simplify_individual(individual):
     
     temp = []
     for i in individual:
-        if i != Move.N:
+        if i != Phase2Move.N:
             temp.append(i)
     
     individual = temp    
@@ -285,11 +307,11 @@ def genetic_algorithm(scrambled_str, model, mode = "normal", verbose = False):
         if best_fitness == 54:
             # with open(output_file, 'a') as f:
             #     f.write("Solution found!\n")
-                print("Solution found!")
-                print(f"Best solution found: {best_solution_found} in {index + 1} generations.\n")
+            print("Solution found!")
+            print(f"Best solution found: {best_solution_found} in {index + 1} generations.\n")
                 # f.write(f"Best solution found: {best_solution_found} in {index + 1} generations.\n")
-                success = True
-                break
+            success = True
+            break
         if verbose:
             print(f"Generation {index + 1}: Best Fitness = {best_fitness}, Best Solution = {best_solution_found}")
         index += 1
@@ -345,8 +367,10 @@ def test_100(scramble_length):
 if __name__ == "__main__":
     POPULATION_SIZE = 3000
     NUM_GENERATIONS = 1000
-    SEQUENCE_LENGTH = 20
+    SEQUENCE_LENGTH = 23
     output_file = "GA/baseline/20_3000_1000_filters_15.txt"
+    
+    # create output file if not exists
     
     # with open(output_file, 'w') as f:
     #     f.write("Scramble length: 100\n")
@@ -356,7 +380,6 @@ if __name__ == "__main__":
         
     scramble_cube = Cube()
     scramble_str = scramble_cube.phase2_randomize_n(100)
-    print(scramble_cube.check_phase1_solved())
     #     f.write(f"Scrambled cube: {scramble_str}\n")
     #     f.write("Scrambled cube:\n" + scramble_cube.to_2dstring() + "\n")
     #     f.write("Solving...\n")
