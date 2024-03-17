@@ -1,6 +1,6 @@
 from rubik54 import Cube
 import random
-from utils.cube_utils import Move, move_dict
+from utils.cube_utils import Move
 import numpy as np
 from bayes_opt import BayesianOptimization
 from utils.mutate_utils import get_allowed_mutations, simplify_individual
@@ -149,37 +149,19 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
     total_gen = 0
     total_len = 0
     
-    with open("scrambled.txt", "r") as f:
-        lines = f.readlines()
-        for i, line in enumerate(lines):
-            test_cube = line.split("\n")[0]
-            print(f"Running test {i + 1}")
-            
-            succeed, generations, sol_length = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
-            if succeed:
+    for _ in range(100):
+        cube = Cube()
+        cube.randomize_n(100)
+        test_cube = cube.to_string()
+        
+        succeed, generations, sol_length = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
+        if succeed:
                 success += 1
                 total_gen += generations
                 total_len += sol_length
-        
-            print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}")
-    
-    print(f"Avg Generations: {total_gen / success}")
-    print(f"Avg Solution Length: {total_len / success}")
-    print(f"Success Rate: {success / 100}")
-    
+            
     # return the success rate
     return success / 100
-
-"""
-    POPULATION_SIZE = 4205
-    NUM_GENERATIONS = 270
-    SEQUENCE_LENGTH = 23
-    initial_temperature = 75.6
-    cooling_rate = 0.9073
-"""
-
-
-test(4205, 270, 23, 75.6, 0.9073)
 
 def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
     POPULATION_SIZE = int(POPULATION_SIZE)
@@ -190,25 +172,33 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
     
     return test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
 
-# # Define the BayesianOptimization object
-# pbounds = {
-#     "POPULATION_SIZE": (1000, 6000),
-#     "NUM_GENERATIONS": (100, 400),
-#     "SEQUENCE_LENGTH": (10, 30),
-#     "TEMPERATURE": (0, 100),
-#     "COOLING_RATE": (0.9, 0.99)
-# }
+"""
+    POPULATION_SIZE = 4205
+    NUM_GENERATIONS = 270
+    SEQUENCE_LENGTH = 23
+    initial_temperature = 75.6
+    cooling_rate = 0.9073
+"""
 
-# optimizer = BayesianOptimization(
-#     f=function_to_be_optimized,
-#     pbounds=pbounds,
-#     verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
-#     random_state=1,
-# )
+# Define the BayesianOptimization object
+pbounds = {
+    "POPULATION_SIZE": (1000, 6000),
+    "NUM_GENERATIONS": (100, 300),
+    "SEQUENCE_LENGTH": (10, 30),
+    "TEMPERATURE": (0, 100),
+    "COOLING_RATE": (0.9, 0.99)
+}
 
-# optimizer.maximize(
-#     init_points=10,
-#     n_iter=10,
-# )
+optimizer = BayesianOptimization(
+    f=function_to_be_optimized,
+    pbounds=pbounds,
+    verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
+    random_state=1,
+)
 
-# print(optimizer.max)
+optimizer.maximize(
+    init_points=65,
+    n_iter=35,
+)
+
+print(optimizer.max)
