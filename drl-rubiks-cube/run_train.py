@@ -41,8 +41,6 @@ if __name__ == "__main__":
     with open(f"models/{name}/tmp/info.json", "r") as json_file:
         info = json.load(json_file)
 
-
-
     step_idx = 0
     writer = SummaryWriter()
 

@@ -3,19 +3,17 @@ import random
 from utils.cube_utils import Move, move_dict
 import numpy as np
 from bayes_opt import BayesianOptimization
-from utils.mutate_utils import get_allowed_mutations
-
+from utils.mutate_utils import get_allowed_mutations, simplify_individual
 
 def generate_individual(SEQUENCE_LENGTH):
     """Generate a random individual solution."""
     individual = [random.choice(list(Move)) for _ in range(SEQUENCE_LENGTH)]
-    # individual = simplify_individual(individual)
-    return individual
+    return (individual)
 
 
 def compute_fitness_phase1(scrambled_str, individual):
     """Compute the fitness of an individual solution."""
-        
+    
     cube = Cube()
     cube.from_string(scrambled_str)
     cube.move_list(individual)
@@ -72,7 +70,7 @@ def mutate(individual):
     # Apply a valid mutation from the allowed moves
     individual[gene_to_mutate] = random.choice(allowed_moves)
 
-    return individual
+    return (individual)
 
 
 def boltzmann_selection(population, scored_population, temperature):
@@ -96,8 +94,8 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
     population = [generate_individual(SEQUENCE_LENGTH) for _ in range(POPULATION_SIZE)]
     
     best_fitnesses = []
-    best_solution_found = ""
     index = 0
+    sol_length = 0
     
     initial_temperature = TEMPERATURE
     temperature = initial_temperature
@@ -113,12 +111,12 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         best_individual = [individual for individual, score in scored_population if score == best_fitness][0]
         best_fitnesses.append(best_fitness)
         
-        best_solution_found = ""
-        for move in best_individual:
-            best_solution_found += move_dict[move] + " "
                 
         if best_fitness == 20:
                 solved = True
+                best_individual = simplify_individual(best_individual)
+                best_individual = [move for move in best_individual if move != Move.N]
+                sol_length = len(best_individual)
                 break
                 
         selected_population = boltzmann_selection(population, scored_population, temperature)
@@ -144,33 +142,44 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
     else:
         pass
     
-    return solved, index
+    return solved, index, sol_length
 
 def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
     success = 0
     total_gen = 0
-    for i in range(100):
-        print(f"Running test {i + 1}")
-        test_cube = Cube()
-        test_cube.randomize_n(100)
+    total_len = 0
+    
+    with open("scrambled.txt", "r") as f:
+        lines = f.readlines()
+        for i, line in enumerate(lines):
+            test_cube = line.split("\n")[0]
+            print(f"Running test {i + 1}")
+            
+            succeed, generations, sol_length = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
+            if succeed:
+                success += 1
+                total_gen += generations
+                total_len += sol_length
         
-        succeed, generations =  genetic_algorithm(test_cube.to_string(), POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
-        if succeed:
-            success += 1
-            total_gen += generations
-        
-        print(f"Success: {success}, Generations: {generations}")
+            print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}")
     
     print(f"Avg Generations: {total_gen / success}")
+    print(f"Avg Solution Length: {total_len / success}")
+    print(f"Success Rate: {success / 100}")
+    
     # return the success rate
     return success / 100
 
 """
     POPULATION_SIZE = 4205
     NUM_GENERATIONS = 270
-    MUTATION_RATE = 0.40
     SEQUENCE_LENGTH = 23
+    initial_temperature = 75.6
+    cooling_rate = 0.9073
 """
+
+
+test(4205, 270, 23, 75.6, 0.9073)
 
 def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
     POPULATION_SIZE = int(POPULATION_SIZE)
@@ -181,25 +190,25 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
     
     return test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
 
-# Define the BayesianOptimization object
-pbounds = {
-    "POPULATION_SIZE": (1000, 6000),
-    "NUM_GENERATIONS": (100, 400),
-    "SEQUENCE_LENGTH": (10, 30),
-    "TEMPERATURE": (0, 100),
-    "COOLING_RATE": (0.9, 0.99)
-}
+# # Define the BayesianOptimization object
+# pbounds = {
+#     "POPULATION_SIZE": (1000, 6000),
+#     "NUM_GENERATIONS": (100, 400),
+#     "SEQUENCE_LENGTH": (10, 30),
+#     "TEMPERATURE": (0, 100),
+#     "COOLING_RATE": (0.9, 0.99)
+# }
 
-optimizer = BayesianOptimization(
-    f=function_to_be_optimized,
-    pbounds=pbounds,
-    verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
-    random_state=1,
-)
+# optimizer = BayesianOptimization(
+#     f=function_to_be_optimized,
+#     pbounds=pbounds,
+#     verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
+#     random_state=1,
+# )
 
-optimizer.maximize(
-    init_points=10,
-    n_iter=10,
-)
+# optimizer.maximize(
+#     init_points=10,
+#     n_iter=10,
+# )
 
-print(optimizer.max)
+# print(optimizer.max)

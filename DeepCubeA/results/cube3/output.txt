@@ -1,4 +1,0 @@
-device: cuda:0, devices: [0, 1], on_gpu: True
-<function get_heuristic_fn.<locals>.heuristic_fn at 0x7f871f4f6e50>
-Times - pop: 1.06, expand: 17.69, check: 7.98, heur: 27.66, add: 1.69, itr: 56.09, num_itrs: 28
-State: 0, SolnCost: 22.00, # Moves: 22, # Nodes Gen: 2,894,352, Time: 56.17

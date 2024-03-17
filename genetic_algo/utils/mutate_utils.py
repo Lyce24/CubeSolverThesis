@@ -9,6 +9,24 @@ single_move = [
     Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3
 ]
 
+double_move_to_single_moves = {
+    Move.U2 : Move.U1,
+    Move.R2 : Move.R1,
+    Move.F2 : Move.F1,
+    Move.D2 : Move.D1,
+    Move.L2 : Move.L1,
+    Move.B2 : Move.B1
+}
+
+double_move = {
+    Move.U1 : Move.U2,
+    Move.R1 : Move.R2,
+    Move.F1 : Move.F2,
+    Move.D1 : Move.D2,
+    Move.L1 : Move.L2,
+    Move.B1 : Move.B2
+}
+
 inverse_moves = {
     Move.U1 : Move.U3,
     Move.R1 : Move.R3,
@@ -21,7 +39,13 @@ inverse_moves = {
     Move.F3 : Move.F1,
     Move.D3 : Move.D1,
     Move.L3 : Move.L1,
-    Move.B3 : Move.B1
+    Move.B3 : Move.B1,
+    Move.U2 : Move.U2,
+    Move.R2 : Move.R2,
+    Move.F2 : Move.F2,
+    Move.D2 : Move.D2,
+    Move.L2 : Move.L2,
+    Move.B2 : Move.B2
 }
 
 groups = {
@@ -36,7 +60,13 @@ groups = {
     Move.F3 : "FB",
     Move.D3 : "UD",
     Move.L3 : "LR",
-    Move.B3 : "FB"
+    Move.B3 : "FB",
+    Move.U2 : "UD",
+    Move.R2 : "LR",
+    Move.F2 : "FB",
+    Move.D2 : "UD",
+    Move.L2 : "LR",
+    Move.B2 : "FB"
 }
 
 def get_last_move(move_sequence):
@@ -63,8 +93,6 @@ def get_move_group(move):
 
 def prevent_moves_pre(move_sequence, last_move, allowed_moves):
 
-    allowed_moves.remove(inverse_moves[last_move])
-    
     temp = [move for move in move_sequence if move != Move.N]
     subsequence = []
     last_group = get_move_group(last_move)
@@ -86,6 +114,8 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
     for move in subsequence:
         if move in pair_map:
             pair_map[move] += 1
+        if move in double_move_to_single_moves and double_move_to_single_moves[move] in pair_map:
+            pair_map[double_move_to_single_moves[move]] += 2
         if inverse_moves[move] in pair_map:
             pair_map[inverse_moves[move]] -= 1
             
@@ -93,6 +123,9 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
         if pair_map[i] % 4 == 3:
             if i in allowed_moves:
                 allowed_moves.remove(i)
+        elif pair_map[i] % 4 == 2:
+            if double_move[i] in allowed_moves:
+                allowed_moves.remove(double_move[i])
         elif pair_map[i] % 4 == 1:
             if inverse_moves[i] in allowed_moves:
                 allowed_moves.remove(inverse_moves[i])
@@ -118,8 +151,6 @@ def get_allowed_mutations_pre(move_sequence):
     return allowed_moves
 
 def prevent_moves_post(move_sequence, first_move, allowed_moves):
-
-    allowed_moves.remove(inverse_moves[first_move])
     
     temp = [move for move in move_sequence if move != Move.N]
     subsequence = []
@@ -142,6 +173,8 @@ def prevent_moves_post(move_sequence, first_move, allowed_moves):
     for move in subsequence:
         if move in pair_map:
             pair_map[move] += 1
+        if move in double_move_to_single_moves and double_move_to_single_moves[move] in pair_map:
+            pair_map[double_move_to_single_moves[move]] += 2
         if inverse_moves[move] in pair_map:
             pair_map[inverse_moves[move]] -= 1
             
@@ -149,6 +182,9 @@ def prevent_moves_post(move_sequence, first_move, allowed_moves):
         if pair_map[i] % 4 == 3:
             if i in allowed_moves:
                 allowed_moves.remove(i)
+        elif pair_map[i] % 4 == 2:
+            if double_move[i] in allowed_moves:
+                allowed_moves.remove(double_move[i])
         elif pair_map[i] % 4 == 1:
             if inverse_moves[i] in allowed_moves:
                 allowed_moves.remove(inverse_moves[i])
@@ -236,3 +272,102 @@ def random_mutate(individual):
             del individual[idx]
     
     return individual
+
+
+def simplify_individual(individual):
+    # record null move positions
+    null_moves = []
+    for i in range(len(individual)):
+        if individual[i] == Move.N:
+            null_moves.append(i)
+    
+    # remove the null moves
+    individual = [move for move in individual if move != Move.N]
+
+    # Simplify the sequence by removing redundant moves
+    i = 0
+    while i < len(individual) - 1:
+
+        # Identify the group of the current move
+        first_move = individual[i]
+        last_group = get_move_group(first_move)
+        
+        # Initialize the subsequence with the current move
+        subsequence = [first_move]
+        
+        # Use j to find the length of the subsequence
+        j = i + 1
+        while j < len(individual) and get_move_group(individual[j]) == last_group:
+            subsequence.append(individual[j])
+            j += 1
+        
+        # Calculate subsequence length
+        subsequence_length = j - i
+            
+        
+        if subsequence_length == 1:
+            i += 1
+            continue
+            
+        # Remove redundant moves
+        pair_map = {}
+    
+        if last_group == "UD":
+            pair_map = {Move.U1 : 0, Move.D1 : 0}
+        elif last_group == "LR":
+            pair_map = {Move.L1 : 0, Move.R1 : 0}
+        else:
+            pair_map = {Move.F1 : 0, Move.B1 : 0}
+            
+        for move in subsequence:
+            if move in pair_map:
+                pair_map[move] += 1
+            if move in double_move_to_single_moves and double_move_to_single_moves[move] in pair_map:
+                pair_map[double_move_to_single_moves[move]] += 2
+            if inverse_moves[move] in pair_map:
+                pair_map[inverse_moves[move]] -= 1
+                    
+        # Insert the first one or two moves at the beginning of the subsequence
+        # and make the rest of the subsequence null moves.
+        for index, move in enumerate(pair_map):
+            if pair_map[move] % 4 == 1:
+                individual[i + index] = move
+            elif pair_map[move] % 4 == 2:
+                individual[i + index] = double_move[move]
+            elif pair_map[move] % 4 == 3:
+                individual[i + index] = inverse_moves[move]
+            elif pair_map[move] % 4 == 0:
+                individual[i + index] = Move.N
+                    
+        rest_of_subsequence = subsequence_length - 2
+        
+        for index in range(rest_of_subsequence):
+            individual[i + 2 + index] = Move.N
+        
+        
+        # Skip over the processed subsequence in the next iteration
+        i += subsequence_length
+        
+ 
+            
+    # reinsert the null moves
+    for i in null_moves:
+        individual.insert(i, Move.N)
+        
+    return individual
+
+if __name__ == "__main__":
+    # Test the mutation functions
+    
+    length = 0
+    
+    for i in range(1000):
+        individual = [random.choice(list(Move)) for _ in range(23)]
+        print(individual)
+        new_individual = simplify_individual(individual)
+        print(len(new_individual) == 23)
+        print(new_individual)
+        temp = [move for move in new_individual if move != Move.N]
+        length += len(temp)
+    
+    print(length / 1000)

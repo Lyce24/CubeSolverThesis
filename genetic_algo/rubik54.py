@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from utils.cube_utils import Facelet, Color, Corner, Edge, Move, cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict, Phase2Move
+from utils.cube_utils import Facelet, Color, Corner, Edge, Move, cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict, phase2_move
 
 class Cube:
     """Represent a cube on the facelet level with 54 colored facelets."""
@@ -138,29 +138,29 @@ class Cube:
         elif move == Move.N:
             return
         
-        # elif move == Move.U2:
-        #     self.move(Move.U1)
-        #     self.move(Move.U1)
+        elif move == Move.U2:
+            self.move(Move.U1)
+            self.move(Move.U1)
             
-        # elif move == Move.R2:
-        #     self.move(Move.R1)
-        #     self.move(Move.R1)
+        elif move == Move.R2:
+            self.move(Move.R1)
+            self.move(Move.R1)
             
-        # elif move == Move.F2:
-        #     self.move(Move.F1)
-        #     self.move(Move.F1)
+        elif move == Move.F2:
+            self.move(Move.F1)
+            self.move(Move.F1)
             
-        # elif move == Move.D2:
-        #     self.move(Move.D1)
-        #     self.move(Move.D1)
+        elif move == Move.D2:
+            self.move(Move.D1)
+            self.move(Move.D1)
             
-        # elif move == Move.L2:
-        #     self.move(Move.L1)
-        #     self.move(Move.L1)
+        elif move == Move.L2:
+            self.move(Move.L1)
+            self.move(Move.L1)
             
-        # elif move == Move.B2:
-        #     self.move(Move.B1)
-        #     self.move(Move.B1)
+        elif move == Move.B2:
+            self.move(Move.B1)
+            self.move(Move.B1)
         
         else:
             raise ValueError('Invalid move: ' + str(move))
@@ -240,17 +240,17 @@ class Cube:
     def convert_move(self, s):
         """Convert a move string to a move."""
         s = s.split(' ')
-        for move in s:
-            if len(move) == 2:
-                if move[1] == "2":
-                    # recall the move's place
-                    move_idx = s.index(move)
-                    single_move = move[0]
-                    # remove the original 180 degree move
-                    s.remove(move)
-                    # insert 2 single move in its place
-                    s.insert(move_idx, single_move)
-                    s.insert(move_idx, single_move)
+        # for move in s:
+        #     if len(move) == 2:
+        #         if move[1] == "2":
+        #             # recall the move's place
+        #             move_idx = s.index(move)
+        #             single_move = move[0]
+        #             # remove the original 180 degree move
+        #             s.remove(move)
+        #             # insert 2 single move in its place
+        #             s.insert(move_idx, single_move)
+        #             s.insert(move_idx, single_move)
         return_list = []
         for move in s:
             return_list.append(self.__convert_single_move(move))
@@ -282,18 +282,18 @@ class Cube:
             return Move.B1
         elif s == 'B\'':
             return Move.B3
-        # elif s == 'U2':
-        #     return Move.U2
-        # elif s == 'R2':
-        #     return Move.R2
-        # elif s == 'F2':
-        #     return Move.F2
-        # elif s == 'D2':
-        #     return Move.D2
-        # elif s == 'L2':
-        #     return Move.L2
-        # elif s == 'B2':
-        #     return Move.B2
+        elif s == 'U2':
+            return Move.U2
+        elif s == 'R2':
+            return Move.R2
+        elif s == 'F2':
+            return Move.F2
+        elif s == 'D2':
+            return Move.D2
+        elif s == 'L2':
+            return Move.L2
+        elif s == 'B2':
+            return Move.B2
         else:
             return None
     
@@ -449,7 +449,8 @@ class Cube:
         """Randomize the facelet cube n times."""
         scramble_move = []
         for _ in range(n):
-            scramble_move.append(random.choice(list(Phase2Move)))
+            scramble_move.append(random.choice(list(phase2_move)))
+            
         self.move_list(scramble_move)
         scramble_string = ""
         for move in scramble_move:
