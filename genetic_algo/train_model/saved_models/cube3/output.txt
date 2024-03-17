@@ -12402,3 +12402,24 @@ Itr: 300, lr: 1.00E-03, loss: 1.36E-03, targ_ctg: 0.97, nnet_ctg: 0.96, Time: 28
 Itr: 400, lr: 1.00E-03, loss: 1.60E-03, targ_ctg: 0.97, nnet_ctg: 0.96, Time: 26.62
 Itr: 500, lr: 1.00E-03, loss: 1.01E-03, targ_ctg: 0.96, nnet_ctg: 0.98, Time: 26.62
 Itr: 600, lr: 1.00E-03, loss: 1.17E-03, targ_ctg: 0.96, nnet_ctg: 0.98, Time: 26.60
+device: cuda:0, devices: [0], on_gpu: True
+Updating cost-to-go with value iteration
+0.02% (Total time: 3.93)
+11.12% (Total time: 58.42)
+22.24% (Total time: 109.54)
+33.33% (Total time: 159.31)
+44.45% (Total time: 209.66)
+55.55% (Total time: 258.44)
+66.67% (Total time: 308.92)
+77.76% (Total time: 361.66)
+88.88% (Total time: 414.92)
+100.00% (Total time: 462.87)
+Cost-to-go (mean/min/max): 0.96/0.00/1.00
+Training model for update number 0 for 5000 iterations
+Itr: 0, lr: 1.00E-03, loss: 1.51E+00, targ_ctg: 0.96, nnet_ctg: 0.01, Time: 13.20
+Itr: 100, lr: 1.00E-03, loss: 3.64E-03, targ_ctg: 0.96, nnet_ctg: 0.95, Time: 27.88
+Itr: 200, lr: 1.00E-03, loss: 2.50E-03, targ_ctg: 0.96, nnet_ctg: 0.96, Time: 28.95
+Itr: 300, lr: 1.00E-03, loss: 2.14E-03, targ_ctg: 0.96, nnet_ctg: 0.97, Time: 27.65
+Itr: 400, lr: 1.00E-03, loss: 1.75E-03, targ_ctg: 0.97, nnet_ctg: 0.95, Time: 26.66
+Itr: 500, lr: 1.00E-03, loss: 2.25E-03, targ_ctg: 0.96, nnet_ctg: 0.94, Time: 28.51
+Itr: 600, lr: 1.00E-03, loss: 1.72E-03, targ_ctg: 0.96, nnet_ctg: 0.95, Time: 28.00

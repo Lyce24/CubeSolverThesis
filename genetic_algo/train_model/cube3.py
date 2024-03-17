@@ -3,9 +3,9 @@ import numpy as np
 from torch import nn
 from random import randrange
 
-# from utils.pytorch_models import ResnetModel
 from environment_abstract import Environment, State
 from pytorch_models import ResnetModel
+
 
 class Cube3State(State):
     __slots__ = ['colors', 'hash']
@@ -25,7 +25,8 @@ class Cube3State(State):
 
 
 class Cube3(Environment):
-    phase2_moves: List[str] = ['U', 'D', 'U-1', 'D-1', "U2", "D2", "L2", "R2", "B2", "F2"]
+    phase2_move = ["U-1", "U1", "D-1", "D1", "U2", "D2", "L2", "R2", "B2", "F2"]
+    phase2_move_rev = ["U1", "U-1", "D1", "D-1", "U2", "D2", "L2", "R2", "B2", "F2"]
     
     moves: List[str] = ["%s%i" % (f, n) for f in ['U', 'D', 'L', 'R', 'B', 'F'] for n in [-1, 1]]
     moves_rev: List[str] = ["%s%i" % (f, n) for f in ['U', 'D', 'L', 'R', 'B', 'F'] for n in [1, -1]]
@@ -49,15 +50,15 @@ class Cube3(Environment):
 
     def next_state(self, states: List[Cube3State], action: int) -> Tuple[List[Cube3State], List[float]]:
         states_np = np.stack([x.colors for x in states], axis=0)
-        states_next_np, transition_costs = self._move_np(states_np, action)
+        states_next_np, transition_costs = self._phase2_move_np(states_np, action)
 
         states_next: List[Cube3State] = [Cube3State(x) for x in list(states_next_np)]
-
+        
         return states_next, transition_costs
 
     def prev_state(self, states: List[Cube3State], action: int) -> List[Cube3State]:
-        move: str = self.moves[action]
-        move_rev_idx: int = np.where(np.array(self.moves_rev) == np.array(move))[0][0]
+        move: str = self.phase2_move[action]
+        move_rev_idx: int = np.where(np.array(self.phase2_move_rev) == np.array(move))[0][0]
 
         return self.next_state(states, move_rev_idx)[0]
 
@@ -87,7 +88,7 @@ class Cube3(Environment):
         return representation
 
     def get_num_moves(self) -> int:
-        return len(self.moves)
+        return len(self.phase2_move)
 
     def get_nnet_model(self) -> nn.Module:
         state_dim: int = (self.cube_len ** 2) * 6
@@ -119,7 +120,7 @@ class Cube3(Environment):
             idxs: np.ndarray = np.random.choice(idxs, subset_size)
 
             move: int = randrange(num_env_moves)
-            states_np[idxs], _ = self._move_np(states_np[idxs], move)
+            states_np[idxs], _ = self._phase2_move_np(states_np[idxs], move)
 
             num_back_moves[idxs] = num_back_moves[idxs] + 1
             moves_lt[idxs] = num_back_moves[idxs] < scramble_nums[idxs]
@@ -148,7 +149,7 @@ class Cube3(Environment):
             # next state
             states_next_np: np.ndarray
             tc_move: List[float]
-            states_next_np, tc_move = self._move_np(states_np, move_idx)
+            states_next_np, tc_move = self._phase2_move_np(states_np, move_idx)
 
             # transition cost
             tc[:, move_idx] = np.array(tc_move)
@@ -160,6 +161,45 @@ class Cube3(Environment):
         tc_l: List[np.ndarray] = [tc[i] for i in range(num_states)]
 
         return states_exp, tc_l
+    
+    # [U-1, U1, D-1, D1, U2, D2, L2, R2, B2, F2]
+    def _phase2_move_np(self, states_np: np.ndarray, action: int):
+        if action == 0: # U-1
+            return self._move_np(states_np, 0)
+        
+        elif action == 1: # U1
+            return self._move_np(states_np, 1)
+        
+        elif action == 2: # D-1
+            return self._move_np(states_np, 2)
+        
+        elif action == 3: # D1
+            return self._move_np(states_np, 3)
+        
+        elif action == 4: # U2
+            temp, _ = self._move_np(states_np, 0)
+            return self._move_np(temp, 0)
+        
+        elif action == 5: # D2
+            temp, _ = self._move_np(states_np, 2)
+            return self._move_np(temp, 2)
+        
+        elif action == 6: # L2
+            temp, _ = self._move_np(states_np, 4)
+            return self._move_np(temp, 4)
+        
+        elif action == 7: # R2
+            temp, _ = self._move_np(states_np, 6)
+            return self._move_np(temp, 6)
+        
+        elif action == 8: # B2
+            temp, _ = self._move_np(states_np, 8)
+            return self._move_np(temp, 8)
+        
+        elif action == 9: # F2
+            temp, _ = self._move_np(states_np, 10)
+            return self._move_np(temp, 10)
+            
 
     def _move_np(self, states_np: np.ndarray, action: int):
         action_str: str = self.moves[action]
@@ -168,7 +208,6 @@ class Cube3(Environment):
         states_next_np[:, self.rotate_idxs_new[action_str]] = states_np[:, self.rotate_idxs_old[action_str]]
 
         transition_costs: List[float] = [1.0 for _ in range(states_np.shape[0])]
-
         return states_next_np, transition_costs
 
     def _get_adj(self) -> None:
@@ -255,3 +294,18 @@ class Cube3(Environment):
                     rotate_idxs_old[move] = np.concatenate((rotate_idxs_old[move], [flat_idx_old]))
 
         return rotate_idxs_new, rotate_idxs_old
+
+if __name__ == "__main__":
+
+    env = Cube3()
+
+    test_move = 9
+
+
+    print(env.moves[test_move])
+    cube3state = env.generate_goal_states(1)
+    
+
+    cube3test, tran = env.next_state(cube3state, test_move)
+    print(tran)
+    print(env.state_to_nnet_input(cube3test))
