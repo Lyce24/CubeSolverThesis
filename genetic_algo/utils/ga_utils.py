@@ -461,12 +461,12 @@ def boltzmann_selection(population, scored_population, temperature):
         offset = abs(min_fitness) + 1  # Ensure all scores are positive and non-zero
         adjusted_scores = [score + offset for score in fitness_scores]
     else:
-        adjusted_scores = fitness_scores
+        adjusted_scores = [score - min_fitness + 1 for score in fitness_scores]
 
     # Calculate selection probabilities using the Boltzmann formula
     exp_values = np.exp(np.array(adjusted_scores) / temperature)
     probabilities = exp_values / np.sum(exp_values)
-
+    
     # Select new population based on calculated probabilities
     selected_indices = np.random.choice(len(population), size=len(population), replace=True, p=probabilities)
     new_population = [population[i] for i in selected_indices]

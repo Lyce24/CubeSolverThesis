@@ -79,7 +79,6 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         
         index += 1
     
-    
     return solved, index, sol_length
 
 def test_single(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):

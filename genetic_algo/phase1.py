@@ -4,7 +4,6 @@ from utils.cube_utils import Move
 from bayes_opt import BayesianOptimization
 from utils.ga_utils import boltzmann_selection, mutate, compute_fitness,generate_individual, simplify_individual, \
                             crossover, two_point_crossover, uniform_crossover
-import time
 
 # Main GA Loop
 def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
@@ -77,7 +76,7 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
                 success += 1
                 total_gen += generations
                 total_len += sol_length
-                # cube.move_list(best_individual)
+    #             cube.move_list(best_individual)
                 
     #     print(f"Success: {succeed}, Generations: {generations}, Solution Length: {sol_length}, Phase 1 Check: {cube.check_phase1_solved()}")
     
