@@ -66,7 +66,7 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
     total_phase2_score = 0
     
     for i in range(100):
-        # print("Iteration: ", i + 1)
+        print("Iteration: ", i + 1)
         cube = Cube()
         cube.randomize_n(100)
         test_cube = cube.to_string()
@@ -76,14 +76,14 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
                 success += 1
                 total_gen += generations
                 total_len += sol_length
-    #             cube.move_list(best_individual)
+                cube.move_list(best_individual)
                 
-    #     print(f"Success: {succeed}, Generations: {generations}, Solution Length: {sol_length}, Phase 1 Check: {cube.check_phase1_solved()}")
+        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Phase 1 Check: {cube.check_phase1_solved()}")
     
-    # print("Success rate: ", success / 100)
-    # print("Average generations: ", total_gen / success)
-    # print("Average solution length: ", total_len / success)
-    # print("Average phase 2 score: ", total_phase2_score / success)
+    print("Success rate: ", success / 100)
+    print("Average generations: ", total_gen / success)
+    print("Average solution length: ", total_len / success)
+    print("Average phase 2 score: ", total_phase2_score / success)
 
     # return the success rate
     return success / 100
@@ -106,7 +106,7 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
     cooling_rate = 0.989
 """ 
 
-# test(2402, 249, 25, 10.32, 0.989)
+test(2402, 249, 25, 10.32, 0.989)
 
 # Define the BayesianOptimization object
 pbounds = {
