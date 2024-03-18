@@ -26,7 +26,7 @@ class Cube:
         :param eo: edge orientation
         """
         if cp is None:
-            self.cp = [Corner(i) for i in range(8)]  # You may not put this as the default two lines above!
+            self.cp = [Corner(i) for i in range(8)]
         else:
             self.cp = cp[:]
         if co is None:
@@ -437,11 +437,14 @@ class Cube:
     
     def check_phase1_solved(self):
         """Check if the cubie representation of the facelet cube is solved."""
+        
+        co, eo = self.get_phase1_state()
+        
         for i in range(8):
-            if self.co[i] != 0:
+            if co[i] != 0:
                 return False
         for i in range(12):
-            if self.eo[i] != 0:
+            if eo[i] != 0:
                 return False
         return True
     
