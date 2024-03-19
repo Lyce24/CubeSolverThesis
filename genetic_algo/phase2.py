@@ -1,7 +1,7 @@
 from rubik54 import Cube
 import random
 from bayes_opt import BayesianOptimization
-from utils.cube_utils import Move
+from utils.cube_utils import Move, move_dict
 from utils.ga_utils import boltzmann_selection, mutate, compute_fitness, \
                             crossover, generate_individual, load_model, \
                             simplify_individual, elitism, kill_by_rank, \
@@ -52,20 +52,20 @@ def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SE
         while len(new_population) < (POPULATION_SIZE - elite_size):
             
             """ with prevention algorithm """
-            child1, child2 = random.sample(selected_population, 2)
-            # Mutate children and add them to the new population with simplification
-            new_population.append(simplify_individual(mutate(child1, 2)))
-            if len(new_population) < len(population):
-                new_population.append(simplify_individual(mutate(child2, 2)))
+            # child1, child2 = random.sample(selected_population, 2)
+            # # Mutate children and add them to the new population with simplification
+            # new_population.append(simplify_individual(mutate(child1, 2)))
+            # if len(new_population) < len(population):
+            #     new_population.append(simplify_individual(mutate(child2, 2)))
             
             """ without prevention algorithm """
-            # parent1, parent2 = random.sample(selected_population, 2)
-            # child1, child2 = uniform_crossover(parent1, parent2)
+            parent1, parent2 = random.sample(selected_population, 2)
+            child1, child2 = crossover(parent1, parent2)
             
-            # # Mutate children and add them to the new population
-            # new_population.append(mutate(child1, 1))
-            # if len(new_population) < len(population):
-            #     new_population.append(mutate(child2, 1))
+            # Mutate children and add them to the new population
+            new_population.append(mutate(child1, 2))
+            if len(new_population) < len(population):
+                new_population.append(mutate(child2, 2))
         
         for i in elite_individuals:
             new_population.append(i)
@@ -83,8 +83,8 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
     total_gen = 0
     total_len = 0
     
-    for _ in range(100):
-        # print("Iteration: ", i + 1)
+    for i in range(100):
+        print("Iteration: ", i + 1)
         cube = Cube()
         cube.phase2_randomize_n(100)
         test_cube = cube.to_string()
@@ -95,17 +95,23 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
                 total_gen += generations
                 total_len += sol_length
                 cube.move_list(best_individual)
+        
+        best_sol = ""
+        for move in best_individual:
+            if move != Move.N:
+                best_sol += move_dict[move] + " "
                 
-    #     print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Solved: {cube.is_solved()}")
+        print(f"Best Solution: {best_sol}")
+        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Solved: {cube.is_solved()}")
     
-    # print("Success rate: ", success / 100)
-    # print("Average generations: ", total_gen / success)
-    # print("Average solution length: ", total_len / success)
+    print("Success rate: ", success / 100)
+    print("Average generations: ", total_gen / success)
+    print("Average solution length: ", total_len / success)
 
     # return the success rate
     return success - (total_len / success)
 
-# test(3000, 1000, 23, 7, 0.007)
+# test(4000, 1000, 23, 7, 0.007)
 
 
 def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
@@ -122,7 +128,7 @@ pbounds = {
     "POPULATION_SIZE": (1000, 5000),
     "NUM_GENERATIONS": (100, 300),
     "SEQUENCE_LENGTH": (10, 30),
-    "TournamentSize": (2, 7),
+    "TournamentSize": (2, 8),
     "EliteRate": (0.003, 0.009)
 }
 

@@ -437,7 +437,6 @@ class Cube:
         """Return a score for the phase1 state of the facelet cube."""
         score = 0
         
-    
         self.get_phase1_state()
         
         # calculate how many pieces is in the correct position
@@ -451,12 +450,12 @@ class Cube:
                 
         score += total
         
-        correct_eo = 8
+        correct_ep = 8
         for i in range(0, 8):
             if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
-                correct_eo -= 1
+                correct_ep -= 1
                 
-        score += correct_eo
+        score += correct_ep
         
         return score
     
@@ -476,6 +475,26 @@ class Cube:
                 return False
         return True
     
+    def get_eo_score(self):
+
+        total = 0
+        
+        self.get_phase1_state()
+        
+        for i in range(12):
+            if self.eo[i] == 0:
+                total += 1
+                
+        return total
+    
+    def check_edge_orientated(self):
+        self.get_phase1_state()
+        
+        for i in range(12):
+            if self.eo[i] != 0:
+                return False
+        return True
+    
     def phase2_randomize_n(self, n):
         """Randomize the facelet cube n times."""
         scramble_move = []
@@ -487,12 +506,23 @@ class Cube:
         for move in scramble_move:
             scramble_string += move_dict[move] + " "
         return scramble_string
+    
+
 
 if __name__ == '__main__':
     c = Cube()
     
-    c.phase2_randomize_n(100)
+    G1_Move = [
+        Move.F2, Move.B2, Move.L2, Move.R2, Move.U2, Move.D2, Move.L1, Move.L3, Move.R1, Move.R3, Move.U1, Move.U3, Move.D1, Move.D3
+    ]
     
-    print(c.get_phase1_state())
-    print(c.get_slice())
-    
+    for i in range(100):
+        
+        scramble_list = []
+        for i in range(100):
+            scramble_list.append(random.choice(G1_Move))
+        
+        c.move_list(scramble_list)
+        
+        print(c.get_edge_permutation() == 8)
+        

@@ -1,6 +1,6 @@
 from rubik54 import Cube
 import random
-from utils.cube_utils import Move
+from utils.cube_utils import Move, move_dict
 # from bayes_opt import BayesianOptimization
 from utils.ga_utils import boltzmann_selection, mutate, compute_fitness,generate_individual, simplify_individual, \
                             crossover, two_point_crossover, uniform_crossover, tournament_selection, elitism, kill_by_rank
@@ -40,36 +40,41 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         new_population = []        
         
         # Elitism: carry over top performers unchanged
-        elite_individuals = elitism(scored_population, 0.007)
+        elite_individuals = elitism(scored_population, 0.005)
                  
         # selected_population = kill_by_rank(scored_population, 0.5)
-        # selected_population = tournament_selection(population, scored_population, 3)
-        selected_population = boltzmann_selection(population, scored_population, temperature)
+        selected_population = tournament_selection(population, scored_population, 3)
+        # selected_population = boltzmann_selection(population, scored_population, temperature)
 
         elite_size = len(elite_individuals)
 
         while len(new_population) < (POPULATION_SIZE - elite_size):
             
             """ with prevention algorithm """
-            child1, child2 = random.sample(selected_population, 2)
-            # Mutate children and add them to the new population with simplification
-            new_population.append(simplify_individual(mutate(child1, 1)))
-            if len(new_population) < len(population):
-                new_population.append(simplify_individual(mutate(child2, 1)))
+            # child1, child2 = random.sample(selected_population, 2)
+            # # Mutate children and add them to the new population with simplification
+            # new_population.append(simplify_individual(mutate(child1, 1)))
+            # if len(new_population) < len(population):
+            #     new_population.append(simplify_individual(mutate(child2, 1)))
             
             """ without prevention algorithm """
-            # parent1, parent2 = random.sample(selected_population, 2)
-            # child1, child2 = uniform_crossover(parent1, parent2)
+            parent1, parent2 = random.sample(selected_population, 2)
+            child1, child2 = crossover(parent1, parent2)
             
-            # # Mutate children and add them to the new population
-            # new_population.append(mutate(child1, 1))
-            # if len(new_population) < len(population):
-            #     new_population.append(mutate(child2, 1))
+            # Mutate children and add them to the new population
+            new_population.append(mutate(child1, 1))
+            if len(new_population) < len(population):
+                new_population.append(mutate(child2, 1))
         
         for i in elite_individuals:
             new_population.append(i)
         
-        print(f"Generation {index} completed, Best Fitness: {best_fitness}")
+        best_sol = ""
+        for i in best_individual:
+            best_sol += move_dict[i] + " "
+        
+        
+        print(f"Generation {index} completed, Best Fitness: {best_fitness}, Best Solution: {best_sol}")
         
         # Update temperature
         temperature *= cooling_rate
@@ -86,7 +91,7 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
     for i in range(100):
         print("Iteration: ", i + 1)
         cube = Cube()
-        cube.randomize_n(100)
+        print(cube.randomize_n(20))
         test_cube = cube.to_string()
         
         succeed, generations, sol_length, best_individual = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
@@ -96,7 +101,7 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
                 total_len += sol_length
                 cube.move_list(best_individual)
                 
-        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Slice: {cube.get_slice()}")
+        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Slice: {cube.check_edge_orientated()}")
     
     print("Success rate: ", success / 100)
     print("Average generations: ", total_gen / success)
@@ -123,7 +128,7 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
     cooling_rate = 0.989
 """ 
 
-test(4000, 1000, 23, 89, 0.989)
+test(4000, 1000, 23, 90, 0.989)
 
 # # Define the BayesianOptimization object
 # pbounds = {
