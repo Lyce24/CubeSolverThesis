@@ -476,7 +476,7 @@ def boltzmann_selection(population, scored_population, temperature):
     return new_population
 
 
-def tournament_selection(population, scored_population, tournament_rate=0.01):
+def tournament_selection(population, scored_population, tournament_rate=0.001):
     """Select individuals using tournament selection."""
     winners = []
     
