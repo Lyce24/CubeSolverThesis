@@ -43,8 +43,8 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         elite_individuals = elitism(scored_population, 0.005)
                  
         # selected_population = kill_by_rank(scored_population, 0.5)
-        selected_population = tournament_selection(population, scored_population, 3)
-        # selected_population = boltzmann_selection(population, scored_population, temperature)
+        # selected_population = tournament_selection(population, scored_population, 3)
+        selected_population = boltzmann_selection(population, scored_population, temperature)
 
         elite_size = len(elite_individuals)
 
@@ -128,7 +128,7 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
     cooling_rate = 0.989
 """ 
 
-test(4000, 1000, 23, 90, 0.989)
+test(2402, 1000, 25, 10.32, 0.989)
 
 # # Define the BayesianOptimization object
 # pbounds = {

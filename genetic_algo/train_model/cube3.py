@@ -25,8 +25,10 @@ class Cube3State(State):
 
 
 class Cube3(Environment):
-    phase2_move = ["U-1", "U1", "D-1", "D1", "U2", "D2", "L2", "R2", "B2", "F2"]
-    phase2_move_rev = ["U1", "U-1", "D1", "D-1", "U2", "D2", "L2", "R2", "B2", "F2"]
+    phase2_move = ["U-1", "U1", "D-1", "D1", "L-1", "L1", "R-1", "R1",
+                   "U2", "D2", "L2", "R2", "B2", "F2"]
+    phase2_move_rev = ["U1", "U-1", "D1", "D-1", "L1", "L-1", "R1", "R-1",
+                    "U2", "D2", "L2", "R2", "B2", "F2"]
     
     moves: List[str] = ["%s%i" % (f, n) for f in ['U', 'D', 'L', 'R', 'B', 'F'] for n in [-1, 1]]
     moves_rev: List[str] = ["%s%i" % (f, n) for f in ['U', 'D', 'L', 'R', 'B', 'F'] for n in [1, -1]]
@@ -162,7 +164,7 @@ class Cube3(Environment):
 
         return states_exp, tc_l
     
-    # [U-1, U1, D-1, D1, U2, D2, L2, R2, B2, F2]
+    # ["U-1", "U1", "D-1", "D1", "L-1", "L1", "R-1", "R1", "U2", "D2", "L2", "R2", "B2", "F2"]
     def _phase2_move_np(self, states_np: np.ndarray, action: int):
         if action == 0: # U-1
             return self._move_np(states_np, 0)
@@ -176,27 +178,39 @@ class Cube3(Environment):
         elif action == 3: # D1
             return self._move_np(states_np, 3)
         
-        elif action == 4: # U2
+        elif action == 4: # L-1
+            return self._move_np(states_np, 4)
+        
+        elif action == 5: # L1
+            return self._move_np(states_np, 5)
+        
+        elif action == 6: # R-1
+            return self._move_np(states_np, 6)
+        
+        elif action == 7: # R1
+            return self._move_np(states_np, 7)
+        
+        elif action == 8: # U2
             temp, _ = self._move_np(states_np, 0)
             return self._move_np(temp, 0)
         
-        elif action == 5: # D2
+        elif action == 9: # D2
             temp, _ = self._move_np(states_np, 2)
             return self._move_np(temp, 2)
         
-        elif action == 6: # L2
+        elif action == 10: # L2
             temp, _ = self._move_np(states_np, 4)
             return self._move_np(temp, 4)
         
-        elif action == 7: # R2
+        elif action == 11: # R2
             temp, _ = self._move_np(states_np, 6)
             return self._move_np(temp, 6)
         
-        elif action == 8: # B2
+        elif action == 12: # B2
             temp, _ = self._move_np(states_np, 8)
             return self._move_np(temp, 8)
         
-        elif action == 9: # F2
+        elif action == 13: # F2
             temp, _ = self._move_np(states_np, 10)
             return self._move_np(temp, 10)
             

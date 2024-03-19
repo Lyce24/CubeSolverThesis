@@ -396,9 +396,9 @@ def compute_fitness(scrambled_str, individual, phase, nnet = None):
     cube.move_list(individual)
     
     if phase == 1:
-        phase1_score = cube.get_phase1_score()
+        phase1_score = cube.get_eo_score()
         
-        if cube.check_phase1_solved():
+        if cube.check_edge_orientated():
             return 100
                 
         return phase1_score

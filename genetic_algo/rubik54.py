@@ -507,6 +507,7 @@ class Cube:
             scramble_string += move_dict[move] + " "
         return scramble_string
     
+    
 
 
 if __name__ == '__main__':
@@ -524,5 +525,5 @@ if __name__ == '__main__':
         
         c.move_list(scramble_list)
         
-        print(c.get_edge_permutation() == 8)
+        print(c.get_eo_score() == 12)
         
