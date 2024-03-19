@@ -6,17 +6,17 @@ class Cube:
     """Represent a cube on the facelet level with 54 colored facelets."""
     def __init__(self, cp=None, co=None, ep=None, eo=None):
         self.f = []
-        for i in range(9):
+        for _ in range(9):
             self.f.append(Color.U)
-        for i in range(9):
+        for _ in range(9):
             self.f.append(Color.R)
-        for i in range(9):
+        for _ in range(9):
             self.f.append(Color.F)
-        for i in range(9):
+        for _ in range(9):
             self.f.append(Color.D)
-        for i in range(9):
+        for _ in range(9):
             self.f.append(Color.L)
-        for i in range(9):
+        for _ in range(9):
             self.f.append(Color.B)
     
         """
@@ -431,20 +431,62 @@ class Cube:
                         self.f[edgeFacelet[i][1]] == edgeColor[j][0]:
                     self.ep[i] = j
                     self.eo[i] = 1
-                    break
-        return self.co, self.eo
+                    break    
     
+    def get_phase1_score(self):
+        """Return a score for the phase1 state of the facelet cube."""
+        score = 0
+        
+    
+        self.get_phase1_state()
+        
+        # calculate how many pieces is in the correct position
+        total = 0
+        for i in range(8):
+            if self.co[i] == 0:
+                total += 1
+        for i in range(12):
+            if self.eo[i] == 0:
+                total += 1
+                
+        score += total
+        
+        correct_eo = 8
+        for i in range(0, 8):
+            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
+                correct_eo -= 1
+                
+        score += correct_eo
+        
+        return score
+    
+    def get_slice(self):
+        """Get the location of the UD-slice edges FR,FL,BL and BR ignoring their permutation.
+            0<= slice < 495 in phase 1, slice = 0 in phase 2."""
+        
+        correct = 8
+        
+        self.get_phase1_state()
+        
+        for i in range(0, 8):
+            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
+                correct -= 1
+            
+        return correct
     
     def check_phase1_solved(self):
         """Check if the cubie representation of the facelet cube is solved."""
         
-        co, eo = self.get_phase1_state()
+        self.get_phase1_state()
         
         for i in range(8):
-            if co[i] != 0:
+            if self.co[i] != 0:
                 return False
         for i in range(12):
-            if eo[i] != 0:
+            if self.eo[i] != 0:
+                return False
+        for i in range(0, 8):
+            if self.ep[i] not in [0, 1, 2, 3, 4, 5, 6, 7, 8]:
                 return False
         return True
     
@@ -459,3 +501,12 @@ class Cube:
         for move in scramble_move:
             scramble_string += move_dict[move] + " "
         return scramble_string
+
+if __name__ == '__main__':
+    c = Cube()
+    
+    c.phase2_randomize_n(100)
+    
+    print(c.get_phase1_state())
+    print(c.get_slice())
+    

@@ -396,21 +396,12 @@ def compute_fitness(scrambled_str, individual, phase, nnet = None):
     cube.move_list(individual)
     
     if phase == 1:
-        co, eo = cube.get_phase1_state()
+        phase1_score = cube.get_phase1_score()
         
         if cube.check_phase1_solved():
-            return 20
-        
-        # calculate how many pieces is in the correct position
-        total = 0
-        for i in range(8):
-            if co[i] == 0:
-                total += 1
-        for i in range(12):
-            if eo[i] == 0:
-                total += 1
+            return 100
                 
-        return total
+        return phase1_score
     elif phase == 2:
         """Compute the fitness of an individual solution."""
         if cube.is_solved():
@@ -426,6 +417,9 @@ def compute_fitness(scrambled_str, individual, phase, nnet = None):
             solved_cube = Cube()
             # Apply the sequence of moves from the individual to a new cube
             cube.move_list(individual)
+            
+            if cube.is_solved():
+                return 100
             
             # Compare each subface to the solved state
             correct_subfaces = sum(1 for i in range(54) if cube.f[i] == solved_cube.f[i])

@@ -1,7 +1,7 @@
 from rubik54 import Cube
 import random
 from utils.cube_utils import Move
-from bayes_opt import BayesianOptimization
+# from bayes_opt import BayesianOptimization
 from utils.ga_utils import boltzmann_selection, mutate, compute_fitness,generate_individual, simplify_individual, \
                             crossover, two_point_crossover, uniform_crossover
 
@@ -29,7 +29,7 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         best_individual = [individual for individual, score in scored_population if score == best_fitness][0]
         best_fitnesses.append(best_fitness)
                         
-        if best_fitness == 20:
+        if best_fitness == 100:
                 solved = True
                 best_individual = simplify_individual(best_individual)
                 best_individual = [move for move in best_individual if move != Move.N]
@@ -63,7 +63,6 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
     success = 0
     total_gen = 0
     total_len = 0
-    total_phase2_score = 0
     
     for i in range(100):
         print("Iteration: ", i + 1)
@@ -78,12 +77,11 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
                 total_len += sol_length
                 cube.move_list(best_individual)
                 
-        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Phase 1 Check: {cube.check_phase1_solved()}")
+        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Slice: {cube.get_slice()}")
     
     print("Success rate: ", success / 100)
     print("Average generations: ", total_gen / success)
     print("Average solution length: ", total_len / success)
-    print("Average phase 2 score: ", total_phase2_score / success)
 
     # return the success rate
     return success / 100
@@ -108,25 +106,25 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
 
 test(2402, 249, 25, 10.32, 0.989)
 
-# Define the BayesianOptimization object
-pbounds = {
-    "POPULATION_SIZE": (1000, 5000),
-    "NUM_GENERATIONS": (100, 300),
-    "SEQUENCE_LENGTH": (10, 30),
-    "TEMPERATURE": (0, 100),
-    "COOLING_RATE": (0.9, 0.99)
-}
+# # Define the BayesianOptimization object
+# pbounds = {
+#     "POPULATION_SIZE": (1000, 5000),
+#     "NUM_GENERATIONS": (100, 300),
+#     "SEQUENCE_LENGTH": (10, 30),
+#     "TEMPERATURE": (0, 100),
+#     "COOLING_RATE": (0.9, 0.99)
+# }
 
-optimizer = BayesianOptimization(
-    f=function_to_be_optimized,
-    pbounds=pbounds,
-    verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
-    random_state=1,
-)
+# optimizer = BayesianOptimization(
+#     f=function_to_be_optimized,
+#     pbounds=pbounds,
+#     verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
+#     random_state=1,
+# )
 
-optimizer.maximize(
-    init_points=65,
-    n_iter=35,
-)
+# optimizer.maximize(
+#     init_points=65,
+#     n_iter=35,
+# )
 
-print(optimizer.max)
+# print(optimizer.max)
