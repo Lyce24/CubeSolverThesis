@@ -460,20 +460,6 @@ class Cube:
         
         return score
     
-    def get_slice(self):
-        """Get the location of the UD-slice edges FR,FL,BL and BR ignoring their permutation.
-            0<= slice < 495 in phase 1, slice = 0 in phase 2."""
-        
-        correct = 8
-        
-        self.get_phase1_state()
-        
-        for i in range(0, 8):
-            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
-                correct -= 1
-            
-        return correct
-    
     def check_phase1_solved(self):
         """Check if the cubie representation of the facelet cube is solved."""
         
@@ -486,7 +472,7 @@ class Cube:
             if self.eo[i] != 0:
                 return False
         for i in range(0, 8):
-            if self.ep[i] not in [0, 1, 2, 3, 4, 5, 6, 7, 8]:
+            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
                 return False
         return True
     

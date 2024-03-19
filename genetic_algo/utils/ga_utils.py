@@ -19,7 +19,7 @@ def load_model():
 
     state_dim = 54
     nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
-    model = "saved_models/model_state_dict.pt"
+    model = "saved_models/phase2.pt"
 
     state_dict = torch.load(model, map_location=device)
     # remove module prefix
@@ -470,11 +470,12 @@ def boltzmann_selection(population, scored_population, temperature):
     return new_population
 
 
-def tournament_selection(population, scored_population, tournament_rate=0.001):
+def tournament_selection(population, scored_population, tournament_size = 2):
     """Select individuals using tournament selection."""
     winners = []
     
-    tournament_size = int(len(population) * tournament_rate)
+    if tournament_size < 2:
+        raise ValueError("Tournament size must be at least 2")
     
     while len(winners) < len(population):
         tournament = random.sample(scored_population, tournament_size)

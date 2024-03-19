@@ -9,18 +9,13 @@ from utils.ga_utils import boltzmann_selection, mutate, compute_fitness, \
                             two_point_crossover
 
 # Main GA Loop
-def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
+def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
     population = [generate_individual(SEQUENCE_LENGTH, 2) for _ in range(POPULATION_SIZE)]
     
     best_fitnesses = []
     best_individual = []
     index = 0
     sol_length = 0
-    
-    initial_temperature = TEMPERATURE
-    temperature = initial_temperature
-    cooling_rate = COOLING_RATE
-    
         
     solved = False
     
@@ -46,10 +41,10 @@ def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SE
         new_population = []        
         
         # Elitism: carry over top performers unchanged
-        elite_individuals = elitism(scored_population, 0.007)
+        elite_individuals = elitism(scored_population, EliteRate)
                  
         # selected_population = kill_by_rank(scored_population, 0.5)
-        selected_population = tournament_selection(population, scored_population, 0.001)
+        selected_population = tournament_selection(population, scored_population, TournamentSize)
         # selected_population = boltzmann_selection(population, scored_population, temperature)
 
         elite_size = len(elite_individuals)
@@ -59,9 +54,9 @@ def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SE
             """ with prevention algorithm """
             child1, child2 = random.sample(selected_population, 2)
             # Mutate children and add them to the new population with simplification
-            new_population.append(simplify_individual(mutate(child1, 1)))
+            new_population.append(simplify_individual(mutate(child1, 2)))
             if len(new_population) < len(population):
-                new_population.append(simplify_individual(mutate(child2, 1)))
+                new_population.append(simplify_individual(mutate(child2, 2)))
             
             """ without prevention algorithm """
             # parent1, parent2 = random.sample(selected_population, 2)
@@ -78,24 +73,69 @@ def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SE
         # Integrate elite individuals back into the population
         population = new_population
         
-        # Update temperature
-        temperature *= cooling_rate
-        
         index += 1
     
     return solved, index, sol_length, best_individual
 
-def test_single(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
-    cube = Cube()
-    cube.phase2_randomize_n(30)
-    test_cube = cube.to_string()
-    print("Running test")
-    succeed, generations, sol_length, _ = genetic_algorithm_phase2(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
-    print(f"Success: {succeed}, Generations: {generations}, Solution Length: {sol_length}")
+
+def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
+    success = 0
+    total_gen = 0
+    total_len = 0
     
-    return succeed
+    for _ in range(100):
+        # print("Iteration: ", i + 1)
+        cube = Cube()
+        cube.phase2_randomize_n(100)
+        test_cube = cube.to_string()
+        
+        succeed, generations, sol_length, best_individual = genetic_algorithm_phase2(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate)
+        if succeed:
+                success += 1
+                total_gen += generations
+                total_len += sol_length
+                cube.move_list(best_individual)
+                
+    #     print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Solved: {cube.is_solved()}")
+    
+    # print("Success rate: ", success / 100)
+    # print("Average generations: ", total_gen / success)
+    # print("Average solution length: ", total_len / success)
 
-def test100(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE):
-    pass
+    # return the success rate
+    return success - (total_len / success)
 
-test_single(8000, 200, 23, 100, 0.989)
+# test(3000, 1000, 23, 7, 0.007)
+
+
+def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
+    POPULATION_SIZE = int(POPULATION_SIZE)
+    NUM_GENERATIONS = int(NUM_GENERATIONS)
+    SEQUENCE_LENGTH = int(SEQUENCE_LENGTH)
+    TournamentSize = int(TournamentSize)
+    EliteRate = float(EliteRate)
+    
+    return test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate)
+
+# Define the BayesianOptimization object
+pbounds = {
+    "POPULATION_SIZE": (1000, 5000),
+    "NUM_GENERATIONS": (100, 300),
+    "SEQUENCE_LENGTH": (10, 30),
+    "TournamentSize": (2, 7),
+    "EliteRate": (0.003, 0.009)
+}
+
+optimizer = BayesianOptimization(
+    f=function_to_be_optimized,
+    pbounds=pbounds,
+    verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
+    random_state=1,
+)
+
+optimizer.maximize(
+    init_points=65,
+    n_iter=35,
+)
+
+print(optimizer.max)
