@@ -301,28 +301,38 @@ class Cube:
         """Perform a list of moves on the facelet cube."""
         for move in move_list:
             self.move(move)
-            
-    def randomize(self):
-        """Randomize the facelet cube."""
+                
+    def randomize_n(self, n):
+        """Randomize the facelet cube n times."""
         scramble_move = []
-        for _ in range(25):
-            scramble_move.append(random.choice(list(Move)))
+        allowed_moves = list(Move)
+        allowed_moves.remove(Move.N)
+        
+        while len(scramble_move) < n:
+            scramble_move.append(random.choice(allowed_moves))
+            
         self.move_list(scramble_move)
         scramble_string = ""
         for move in scramble_move:
             scramble_string += move_dict[move] + " "
         return scramble_string
     
-    def randomize_n(self, n):
+
+    def phase2_randomize_n(self, n):
         """Randomize the facelet cube n times."""
         scramble_move = []
-        for _ in range(n):
-            scramble_move.append(random.choice(list(Move)))
+        allowed_moves = list(phase2_move)
+        allowed_moves.remove(Move.N)
+        
+        while len(scramble_move) < n:
+            scramble_move.append(random.choice(allowed_moves))
+            
         self.move_list(scramble_move)
         scramble_string = ""
         for move in scramble_move:
             scramble_string += move_dict[move] + " "
         return scramble_string
+    
     
     def is_solved(self):
         """Check if the facelet cube is solved."""
@@ -357,6 +367,9 @@ class Cube:
     def copy(self):
         return np.array(self.f)
     
+    
+    def get_possible_moves(self):
+        return [Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3, Move.U2, Move.R2, Move.F2, Move.D2, Move.L2, Move.B2]
     
     def convert_res_input(self):
         
@@ -432,32 +445,7 @@ class Cube:
                     self.ep[i] = j
                     self.eo[i] = 1
                     break    
-    
-    def get_phase1_score(self):
-        """Return a score for the phase1 state of the facelet cube."""
-        score = 0
-        
-        self.get_phase1_state()
-        
-        # calculate how many pieces is in the correct position
-        total = 0
-        for i in range(8):
-            if self.co[i] == 0:
-                total += 1
-        for i in range(12):
-            if self.eo[i] == 0:
-                total += 1
                 
-        score += total
-        
-        correct_ep = 8
-        for i in range(0, 8):
-            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
-                correct_ep -= 1
-                
-        score += correct_ep
-        
-        return score
     
     def check_phase1_solved(self):
         """Check if the cubie representation of the facelet cube is solved."""
@@ -485,7 +473,15 @@ class Cube:
             if self.eo[i] == 0:
                 total += 1
                 
+        correct_ep = 8
+        for i in range(0, 8):
+            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
+                correct_ep -= 1
+                
+        total += correct_ep
+                
         return total
+    
     
     def check_edge_orientated(self):
         self.get_phase1_state()
@@ -493,37 +489,19 @@ class Cube:
         for i in range(12):
             if self.eo[i] != 0:
                 return False
+        
+        for i in range(0, 8):
+            if self.ep[i] in [Edge.FR, Edge.FL, Edge.BL, Edge.BR]:
+                return False
+            
         return True
     
-    def phase2_randomize_n(self, n):
-        """Randomize the facelet cube n times."""
-        scramble_move = []
-        for _ in range(n):
-            scramble_move.append(random.choice(list(phase2_move)))
-            
-        self.move_list(scramble_move)
-        scramble_string = ""
-        for move in scramble_move:
-            scramble_string += move_dict[move] + " "
-        return scramble_string
+ 
     
-    
-
-
 if __name__ == '__main__':
     c = Cube()
     
-    G1_Move = [
-        Move.F2, Move.B2, Move.L2, Move.R2, Move.U2, Move.D2, Move.L1, Move.L3, Move.R1, Move.R3, Move.U1, Move.U3, Move.D1, Move.D3
-    ]
-    
-    for i in range(100):
+    c.move_list([Move.R1])
         
-        scramble_list = []
-        for i in range(100):
-            scramble_list.append(random.choice(G1_Move))
-        
-        c.move_list(scramble_list)
-        
-        print(c.get_eo_score() == 12)
+    print(c.get_phase1_score())
         

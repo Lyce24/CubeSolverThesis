@@ -2,9 +2,9 @@ from rubik54 import Cube
 import random
 from bayes_opt import BayesianOptimization
 from utils.cube_utils import Move, move_dict
-from utils.ga_utils import boltzmann_selection, mutate, compute_fitness, \
+from utils.test_utils import boltzmann_selection, mutate, compute_fitness, \
                             crossover, generate_individual, \
-                            simplify_individual, elitism, kill_by_rank, \
+                            elitism, kill_by_rank, \
                             tournament_selection, uniform_crossover, \
                             two_point_crossover
                             
@@ -16,7 +16,6 @@ import re
 
 # Genetic Algorithm Parameters
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print("Using device:", device)
 
 # load model
 def load_model():
@@ -59,12 +58,13 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         best_fitness = max(score for _, score in scored_population)
         best_individual = [individual for individual, score in scored_population if score == best_fitness][0]
         best_fitnesses.append(best_fitness)
+
         
         print(f"Generation {index} completed, Best Fitness: {best_fitness}")
         
         if best_fitness == 100:
             solved = True
-            best_individual = simplify_individual(best_individual)
+            best_individual = (best_individual)
             best_individual = [move for move in best_individual if move != Move.N]
             sol_length = len(best_individual)
             break
@@ -83,20 +83,20 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         while len(new_population) < (POPULATION_SIZE - elite_size):
             
             """ with prevention algorithm """
-            child1, child2 = random.sample(selected_population, 2)
-            # Mutate children and add them to the new population with simplification
-            new_population.append(simplify_individual(mutate(child1, 1)))
-            if len(new_population) < len(population):
-                new_population.append(simplify_individual(mutate(child2, 1)))
+            # child1, child2 = random.sample(selected_population, 2)
+            # # Mutate children and add them to the new population with simplification
+            # new_population.append(simplify_individual(mutate(child1, 1)))
+            # if len(new_population) < len(population):
+            #     new_population.append(simplify_individual(mutate(child2, 1)))
             
             """ without prevention algorithm """
-            # parent1, parent2 = random.sample(selected_population, 1)
-            # child1, child2 = crossover(parent1, parent2)
+            parent1, parent2 = random.sample(selected_population, 2)
+            child1, child2 = uniform_crossover(parent1, parent2)
             
-            # # Mutate children and add them to the new population
-            # new_population.append(mutate(child1, 2))
-            # if len(new_population) < len(population):
-            #     new_population.append(mutate(child2, 2))
+            # Mutate children and add them to the new population
+            new_population.append((mutate(child1, 1)))
+            if len(new_population) < len(population):
+                new_population.append((mutate(child2, 1)))
         
         for i in elite_individuals:
             new_population.append(i)
@@ -117,7 +117,7 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
     for i in range(100):
         print("Iteration: ", i + 1)
         cube = Cube()
-        cube.randomize_n(100)
+        print(cube.randomize_n(100))
         test_cube = cube.to_string()
         
         succeed, generations, sol_length, best_individual = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate)
@@ -142,7 +142,8 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
     # return the success rate
     return success - (total_len / success)
 
-test(4000, 1000, 25, 3, 0.007)
+if __name__ == "__main__":
+    test(8000, 1000, 100, 3, 0.005)
 
 
 # def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):

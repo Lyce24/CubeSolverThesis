@@ -19,7 +19,7 @@ def load_model():
 
     state_dim = 54
     nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
-    model = "saved_models/phase2.pt"
+    model = "saved_models/model_state_dict.pt"
 
     state_dict = torch.load(model, map_location=device)
     # remove module prefix
@@ -39,23 +39,10 @@ single_move = [
     Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3
 ]
 
-double_move_to_single_moves = {
-    Move.U2 : Move.U1,
-    Move.R2 : Move.R1,
-    Move.F2 : Move.F1,
-    Move.D2 : Move.D1,
-    Move.L2 : Move.L1,
-    Move.B2 : Move.B1
-}
+single_move_v2 = [
+    Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3, Move.N
+]
 
-double_move = {
-    Move.U1 : Move.U2,
-    Move.R1 : Move.R2,
-    Move.F1 : Move.F2,
-    Move.D1 : Move.D2,
-    Move.L1 : Move.L2,
-    Move.B1 : Move.B2
-}
 
 inverse_moves = {
     Move.U1 : Move.U3,
@@ -69,13 +56,7 @@ inverse_moves = {
     Move.F3 : Move.F1,
     Move.D3 : Move.D1,
     Move.L3 : Move.L1,
-    Move.B3 : Move.B1,
-    Move.U2 : Move.U2,
-    Move.R2 : Move.R2,
-    Move.F2 : Move.F2,
-    Move.D2 : Move.D2,
-    Move.L2 : Move.L2,
-    Move.B2 : Move.B2
+    Move.B3 : Move.B1
 }
 
 groups = {
@@ -144,8 +125,6 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
     for move in subsequence:
         if move in pair_map:
             pair_map[move] += 1
-        if move in double_move_to_single_moves and double_move_to_single_moves[move] in pair_map:
-            pair_map[double_move_to_single_moves[move]] += 2
         if inverse_moves[move] in pair_map:
             pair_map[inverse_moves[move]] -= 1
             
@@ -153,9 +132,6 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
         if pair_map[i] % 4 == 3:
             if i in allowed_moves:
                 allowed_moves.remove(i)
-        elif pair_map[i] % 4 == 2:
-            if double_move[i] in allowed_moves:
-                allowed_moves.remove(double_move[i])
         elif pair_map[i] % 4 == 1:
             if inverse_moves[i] in allowed_moves:
                 allowed_moves.remove(inverse_moves[i])
@@ -165,7 +141,7 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
 
 def get_allowed_mutations_pre(move_sequence):
     
-    allowed_moves = list(Move)  # Start with all moves allowed
+    allowed_moves = list(single_move_v2)  # Start with all moves allowed
     
     if not move_sequence:
         allowed_moves.remove(Move.N)  # Exclude the null move
@@ -203,8 +179,6 @@ def prevent_moves_post(move_sequence, first_move, allowed_moves):
     for move in subsequence:
         if move in pair_map:
             pair_map[move] += 1
-        if move in double_move_to_single_moves and double_move_to_single_moves[move] in pair_map:
-            pair_map[double_move_to_single_moves[move]] += 2
         if inverse_moves[move] in pair_map:
             pair_map[inverse_moves[move]] -= 1
             
@@ -212,9 +186,6 @@ def prevent_moves_post(move_sequence, first_move, allowed_moves):
         if pair_map[i] % 4 == 3:
             if i in allowed_moves:
                 allowed_moves.remove(i)
-        elif pair_map[i] % 4 == 2:
-            if double_move[i] in allowed_moves:
-                allowed_moves.remove(double_move[i])
         elif pair_map[i] % 4 == 1:
             if inverse_moves[i] in allowed_moves:
                 allowed_moves.remove(inverse_moves[i])
@@ -224,7 +195,7 @@ def prevent_moves_post(move_sequence, first_move, allowed_moves):
 
 def get_allowed_mutations_post(move_sequence):
     
-    allowed_moves = list(Move)  # Start with all moves allowed
+    allowed_moves = list(single_move_v2)  # Start with all moves allowed
     
     if not move_sequence:
         allowed_moves.remove(Move.N)  # Exclude the null move
@@ -248,103 +219,11 @@ def get_allowed_mutations(move_sequence1, move_sequence2):
     # Return the intersection of the two sets
     return list(set(allowed_moves1) & set(allowed_moves2))
 
-def get_allowed_mutations_phase2(move_sequence1, move_sequence2):
-    """
-    U, U', U2, D, D', D2, R2, L2, F2, B2
-    """
-    # Get the allowed mutations for the first move group
-    allowed_moves1 = get_allowed_mutations_pre(move_sequence1)
-    # Get the allowed mutations for the second move group
-    allowed_moves2 = get_allowed_mutations_post(move_sequence2)
-    
-    # Return the intersection of the two sets
-    return list(set(allowed_moves1) & set(allowed_moves2) & set(phase2_move))
-
-def simplify_individual(individual):
-    # record null move positions
-    null_moves = []
-    for i in range(len(individual)):
-        if individual[i] == Move.N:
-            null_moves.append(i)
-    
-    # remove the null moves
-    individual = [move for move in individual if move != Move.N]
-
-    # Simplify the sequence by removing redundant moves
-    i = 0
-    while i < len(individual) - 1:
-
-        # Identify the group of the current move
-        first_move = individual[i]
-        last_group = get_move_group(first_move)
-        
-        # Initialize the subsequence with the current move
-        subsequence = [first_move]
-        
-        # Use j to find the length of the subsequence
-        j = i + 1
-        while j < len(individual) and get_move_group(individual[j]) == last_group:
-            subsequence.append(individual[j])
-            j += 1
-        
-        # Calculate subsequence length
-        subsequence_length = j - i
-            
-        
-        if subsequence_length == 1:
-            i += 1
-            continue
-            
-        # Remove redundant moves
-        pair_map = {}
-    
-        if last_group == "UD":
-            pair_map = {Move.U1 : 0, Move.D1 : 0}
-        elif last_group == "LR":
-            pair_map = {Move.L1 : 0, Move.R1 : 0}
-        else:
-            pair_map = {Move.F1 : 0, Move.B1 : 0}
-            
-        for move in subsequence:
-            if move in pair_map:
-                pair_map[move] += 1
-            if move in double_move_to_single_moves and double_move_to_single_moves[move] in pair_map:
-                pair_map[double_move_to_single_moves[move]] += 2
-            if inverse_moves[move] in pair_map:
-                pair_map[inverse_moves[move]] -= 1
-                    
-        # Insert the first one or two moves at the beginning of the subsequence
-        # and make the rest of the subsequence null moves.
-        for index, move in enumerate(pair_map):
-            if pair_map[move] % 4 == 1:
-                individual[i + index] = move
-            elif pair_map[move] % 4 == 2:
-                individual[i + index] = double_move[move]
-            elif pair_map[move] % 4 == 3:
-                individual[i + index] = inverse_moves[move]
-            elif pair_map[move] % 4 == 0:
-                individual[i + index] = Move.N
-                    
-        rest_of_subsequence = subsequence_length - 2
-        
-        for index in range(rest_of_subsequence):
-            individual[i + 2 + index] = Move.N
-        
-        
-        # Skip over the processed subsequence in the next iteration
-        i += subsequence_length
-                    
-    # reinsert the null moves
-    for i in null_moves:
-        individual.insert(i, Move.N)
-        
-    return individual
-
 
 def generate_individual(SEQUENCE_LENGTH, phase):
     """Generate a random individual solution."""
     if phase == 1:
-        individual = [random.choice(list(Move)) for _ in range(SEQUENCE_LENGTH)]
+        individual = [random.choice(single_move_v2) for _ in range(SEQUENCE_LENGTH)]
     elif phase == 2:
         individual = [random.choice(phase2_move) for _ in range(SEQUENCE_LENGTH)]
     else:
@@ -373,13 +252,9 @@ def mutate(individual, phase, mutation_rate=None):
     if phase == 1:
         # Get the list of allowed moves for the mutation based on the last move group
         allowed_moves = get_allowed_mutations(move_sequence1, move_sequence2)
-        
-    elif phase == 2:
-        # Get the list of allowed moves for the mutation based on the last move group
-        allowed_moves = get_allowed_mutations_phase2(move_sequence1, move_sequence2)
     
     else:
-        raise ValueError("Phase must be 1 or 2")
+        raise ValueError("Phase must be 1")
     
     # Apply a valid mutation from the allowed moves
     new_individual = individual.copy()
@@ -537,12 +412,10 @@ if __name__ == "__main__":
     index = 0
     for i in range(1000):
         individual_1 = [random.choice(list(Move)) for _ in range(20)]
-        simplified = simplify_individual(individual_1)
         
         cube1 = Cube()
         cube1.move_list(individual_1)
         cube2 = Cube()
-        cube2.move_list(simplified)
         
         if cube1.f == cube2.f:
             index += 1

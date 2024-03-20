@@ -29,7 +29,7 @@ def genetic_algorithm_phase2(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SE
         best_individual = [individual for individual, score in scored_population if score == best_fitness][0]
         best_fitnesses.append(best_fitness)
         
-        print(f"Generation {index} completed, Best Fitness: {best_fitness}")
+        # print(f"Generation {index} completed, Best Fitness: {best_fitness}")
         
         if best_fitness == 100:
             solved = True
@@ -94,19 +94,19 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
                 success += 1
                 total_gen += generations
                 total_len += sol_length
-                cube.move_list(best_individual)
+                # cube.move_list(best_individual)
         
-        best_sol = ""
-        for move in best_individual:
-            if move != Move.N:
-                best_sol += move_dict[move] + " "
+        # best_sol = ""
+        # for move in best_individual:
+        #     if move != Move.N:
+        #         best_sol += move_dict[move] + " "
                 
-        print(f"Best Solution: {best_sol}")
-        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Solved: {cube.is_solved()}")
+    #     print(f"Best Solution: {best_sol}")
+        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}")
     
-    print("Success rate: ", success / 100)
-    print("Average generations: ", total_gen / success)
-    print("Average solution length: ", total_len / success)
+    # print("Success rate: ", success / 100)
+    # print("Average generations: ", total_gen / success)
+    # print("Average solution length: ", total_len / success)
 
     # return the success rate
     return success - (total_len / success)
@@ -126,7 +126,7 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
 # Define the BayesianOptimization object
 pbounds = {
     "POPULATION_SIZE": (1000, 5000),
-    "NUM_GENERATIONS": (100, 300),
+    "NUM_GENERATIONS": (100, 200),
     "SEQUENCE_LENGTH": (10, 30),
     "TournamentSize": (2, 8),
     "EliteRate": (0.003, 0.009)

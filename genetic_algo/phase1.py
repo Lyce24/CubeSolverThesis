@@ -40,39 +40,39 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         new_population = []        
         
         # Elitism: carry over top performers unchanged
-        elite_individuals = elitism(scored_population, 0.005)
-                 
+        # elite_individuals = elitism(scored_population, 0.005)
+        # for i in elite_individuals:
+        #     new_population.append(i)        
+        
+        
         # selected_population = kill_by_rank(scored_population, 0.5)
-        # selected_population = tournament_selection(population, scored_population, 3)
+        # selected_population = tournament_selection(population, scored_population, 2)        
         selected_population = boltzmann_selection(population, scored_population, temperature)
-
-        elite_size = len(elite_individuals)
-
-        while len(new_population) < (POPULATION_SIZE - elite_size):
+    
+        while len(new_population) < (POPULATION_SIZE):
             
             """ with prevention algorithm """
-            # child1, child2 = random.sample(selected_population, 2)
-            # # Mutate children and add them to the new population with simplification
-            # new_population.append(simplify_individual(mutate(child1, 1)))
-            # if len(new_population) < len(population):
-            #     new_population.append(simplify_individual(mutate(child2, 1)))
+            child1, child2 = random.sample(selected_population, 2)
+            # Mutate children and add them to the new population with simplification
+            new_population.append(simplify_individual(mutate(child1, 1)))
+            if len(new_population) < len(population):
+                new_population.append(simplify_individual(mutate(child2, 1)))
             
             """ without prevention algorithm """
-            parent1, parent2 = random.sample(selected_population, 2)
-            child1, child2 = crossover(parent1, parent2)
+            # parent1, parent2 = random.sample(selected_population, 2)
+            # child1, child2 = crossover(parent1, parent2)
             
-            # Mutate children and add them to the new population
-            new_population.append(mutate(child1, 1))
-            if len(new_population) < len(population):
-                new_population.append(mutate(child2, 1))
+            # # Mutate children and add them to the new population
+            # new_population.append(mutate(child1, 1))
+            # if len(new_population) < len(population):
+            #     new_population.append(mutate(child2, 1))
         
-        for i in elite_individuals:
-            new_population.append(i)
-        
+
         best_sol = ""
-        for i in best_individual:
-            best_sol += move_dict[i] + " "
-        
+        for i in simplify_individual(best_individual):
+            if i != Move.N:
+                best_sol += move_dict[i] + " "
+            
         
         print(f"Generation {index} completed, Best Fitness: {best_fitness}, Best Solution: {best_sol}")
         
@@ -91,7 +91,7 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING
     for i in range(100):
         print("Iteration: ", i + 1)
         cube = Cube()
-        print(cube.randomize_n(20))
+        print(cube.randomize_n(100))
         test_cube = cube.to_string()
         
         succeed, generations, sol_length, best_individual = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TEMPERATURE, COOLING_RATE)
@@ -128,7 +128,7 @@ def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, 
     cooling_rate = 0.989
 """ 
 
-test(2402, 1000, 25, 10.32, 0.989)
+test(8000, 1000, 25, 89, 0.989)
 
 # # Define the BayesianOptimization object
 # pbounds = {
