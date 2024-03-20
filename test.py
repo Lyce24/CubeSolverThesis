@@ -39,7 +39,7 @@ def load_model():
     return nnet
 
 # Main GA Loop
-def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
+def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate, threshold):
     population = [generate_individual(SEQUENCE_LENGTH, 1) for _ in range(POPULATION_SIZE)]
     
     best_fitnesses = []
@@ -62,7 +62,7 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         
         print(f"Generation {index} completed, Best Fitness: {best_fitness}")
         
-        if best_fitness == 100:
+        if best_fitness > threshold:
             solved = True
             best_individual = (best_individual)
             best_individual = [move for move in best_individual if move != Move.N]
@@ -74,7 +74,7 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
         # Elitism: carry over top performers unchanged
         elite_individuals = elitism(scored_population, EliteRate)
                  
-        # selected_population = kill_by_rank(scored_population, 0.5)
+        # selected_population = kill_by_rank(scored_population, 0.7)
         selected_population = tournament_selection(population, scored_population, TournamentSize)
         # selected_population = boltzmann_selection(population, scored_population, temperature)
 
@@ -94,9 +94,9 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
             child1, child2 = uniform_crossover(parent1, parent2)
             
             # Mutate children and add them to the new population
-            new_population.append((mutate(child1, 1)))
+            new_population.append(mutate(child1, 1))
             if len(new_population) < len(population):
-                new_population.append((mutate(child2, 1)))
+                new_population.append(mutate(child2, 1))
         
         for i in elite_individuals:
             new_population.append(i)
@@ -114,10 +114,10 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
     total_gen = 0
     total_len = 0
     
-    for i in range(100):
+    for i in range(1):
         print("Iteration: ", i + 1)
         cube = Cube()
-        print(cube.randomize_n(100))
+        print(cube.randomize_n(20))
         test_cube = cube.to_string()
         
         succeed, generations, sol_length, best_individual = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate)
@@ -132,6 +132,8 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
             if move != Move.N:
                 best_sol += move_dict[move] + " "
                 
+        
+                
         print(f"Best Solution: {best_sol}")
         print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Solved: {cube.is_solved()}")
     
@@ -140,12 +142,40 @@ def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, Elit
     print("Average solution length: ", total_len / success)
 
     # return the success rate
-    return success - (total_len / success)
+    return success
 
 if __name__ == "__main__":
-    test(8000, 1000, 100, 3, 0.005)
+    cube = Cube()
+    print(cube.randomize_n(100))
 
+    # iteration 1
+    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 4000, 100, 8, 5, 0.004, threshold=-10)
+    if succeed:
+        cube.move_list(best_individual)
+        print("Step 1: ", best_individual)
+    
+    # iteration 2
+    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 6000, 1000, 15, 4, 0.005, threshold=-9)
+    if succeed:
+        cube.move_list(best_individual)
+        print("Step 2: ", best_individual)
+    
+    # iteration 3
+    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 8000, 1000, 20, 4, 0.005, threshold=-7)
+    if succeed:
+        cube.move_list(best_individual)    
+        print("Step 3: ", best_individual)
 
+    # iteration 4
+    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 10000, 1000, 26, 4, 0.005, threshold=99)
+    if succeed:
+        cube.move_list(best_individual)
+        print("Step 4: ", best_individual)
+        
+    print("Check Solved: ", cube.is_solved())
+    
+
+    
 # def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
 #     POPULATION_SIZE = int(POPULATION_SIZE)
 #     NUM_GENERATIONS = int(NUM_GENERATIONS)
