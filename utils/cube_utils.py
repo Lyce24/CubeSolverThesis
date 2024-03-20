@@ -211,3 +211,10 @@ phase2_move = [
     Move.D1, Move.D3, Move.D2,
     Move.R2, Move.L2, Move.F2, Move.B2, Move.N
 ]
+
+# ["U", "D", "L", "R", "B", "F"]
+single_move = [
+    Move.U1, Move.U3, Move.D1, Move.D3, 
+    Move.L1, Move.L3, Move.R1, Move.R3, 
+    Move.B1, Move.B3, Move.F1, Move.F3
+]

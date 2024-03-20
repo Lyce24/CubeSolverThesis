@@ -1,6 +1,8 @@
 import random
 import numpy as np
-from utils.cube_utils import Facelet, Color, Corner, Edge, Move, cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict, phase2_move
+from utils.cube_utils import Facelet, Color, Corner, Edge, Move, \
+    cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict, phase2_move, \
+    single_move
 
 class Cube:
     """Represent a cube on the facelet level with 54 colored facelets."""
@@ -43,6 +45,50 @@ class Cube:
             self.eo = eo[:]
 
         self.is_phase1_solved = False
+        
+        # Define moves
+        ## faces and turns
+        # Define moves
+        ## faces and turns
+        faces = ["U", "D", "L", "R", "B", "F"]
+        ## [90 degrees clockwise, 90 degrees counter-clockwise]
+        degrees = ["", "'"]
+        degrees_inference = degrees[::-1]
+        self.moves = [f"{f}{n}" for f in faces for n in degrees]
+        self.moves_inference = [f"{f}{n}" for f in faces for n in degrees_inference]
+
+        # Opposite faces
+        self.pairing = {
+            "R": "L",
+            "L": "R",
+            "F": "B",
+            "B": "F",
+            "U": "D",
+            "D": "U",
+        }
+        # Prohibit obviously redundant moves.
+        self.moves_available_after = {
+            m: [v for v in self.moves if v[0] != m[0]] + [m] 
+            for m in self.moves
+        } # self-cancelling moves on the same face
+
+        # [OPTIMIZATION] slicing by move string (e.g., R', U, F) => indices (e.g., 2, 6, 1)
+        self.moves_ix = [self.moves.index(m) for m in self.moves]
+        self.moves_ix_available_after = {
+            self.moves.index(m): [self.moves.index(m) for m in available_moves]
+            for m, available_moves in self.moves_available_after.items()
+        }
+        self.moves_ix_inference = [self.moves.index(m) for m in self.moves_inference]
+        self.pairing_ix = {
+            0: 1,
+            1: 0,
+            2: 3,
+            3: 2,
+            4: 5,
+            5: 4,
+        } # Points to the opposite face index
+        
+        self.state = self.convert_res_input()
 
     def __str__(self):
         return self.to_string()
@@ -301,6 +347,58 @@ class Cube:
         """Perform a list of moves on the facelet cube."""
         for move in move_list:
             self.move(move)
+
+                    
+    def reset(self):
+        """Reset the facelet cube to the solved state."""
+        self.f = [
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            2, 2, 2, 2, 2, 2, 2, 2, 2,
+            3, 3, 3, 3, 3, 3, 3, 3, 3,
+            4, 4, 4, 4, 4, 4, 4, 4, 4,
+            5, 5, 5, 5, 5, 5, 5, 5, 5
+        ]
+            
+    def scrambler(self, scramble_length):
+        """
+        Generates a random scramble of given length and returns the cube state and scramble moves as a generator.
+        Please note that index-based implementations (faster) follow commented lexical logics.
+        """
+        while True:
+            # Reset the cube state, scramble, and return cube state and scramble moves
+            self.reset()
+            scramble = []
+
+            for i in range(scramble_length):
+                if i:
+                    last_move = scramble[-1]
+                    if i > 1:   # [3rd~ moves]
+                        while True:
+                            move = random.choice(self.moves_ix_available_after[last_move])
+
+                            if scramble[-2] == last_move == move:
+                                continue
+      
+                            elif (
+                                scramble[-2]//2 == move//2 and scramble[-2]%2 != move%2
+                                and last_move//2 == self.pairing_ix[move//2]
+                            ):
+                                continue
+                            else:
+                                break
+                    else:       # [2nd move]
+                        # move = random.choice(self.moves_available_after[last_move])
+                        move = random.choice(self.moves_ix_available_after[last_move])
+                else:           # [1st move]
+                    # move = random.choice(self.moves)
+                    move = random.choice(self.moves_ix)
+
+                self.move(single_move[move])
+                scramble.append(move)
+
+                yield self.convert_res_input(), move
+
                 
     def randomize_n(self, n):
         """Randomize the facelet cube n times."""
@@ -396,7 +494,8 @@ class Cube:
             for element in self.rotate_90(temp_list[i*9:i*9+9]):
                 ans_list.append(element)
         
-        return np.array(ans_list, dtype=np.uint8)
+        return np.array(ans_list, dtype=np.int64)
+        
         
     def rotate_90(self, vector):
 
@@ -495,13 +594,7 @@ class Cube:
                 return False
             
         return True
-    
- 
+
     
 if __name__ == '__main__':
-    c = Cube()
-    
-    c.move_list([Move.R1])
-        
-    print(c.get_phase1_score())
-        
+    pass
