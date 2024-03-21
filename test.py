@@ -2,7 +2,7 @@ from rubik54 import Cube
 import random
 from bayes_opt import BayesianOptimization
 from utils.cube_utils import Move, move_dict
-from utils.test_utils import boltzmann_selection, mutate, compute_fitness, \
+from utils.search_utils import mutate, \
                             crossover, generate_individual, \
                             elitism, kill_by_rank, \
                             tournament_selection, uniform_crossover, \
@@ -12,6 +12,7 @@ import torch
 from utils.cube_model import ResnetModel
 from collections import OrderedDict
 import re
+import numpy as np
 
 
 # Genetic Algorithm Parameters
@@ -38,6 +39,7 @@ def load_model():
     nnet.eval()
     return nnet
 
+
 # Main GA Loop
 def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate, threshold):
     population = [generate_individual(SEQUENCE_LENGTH, 1) for _ in range(POPULATION_SIZE)]
@@ -53,7 +55,34 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
     
     while index < NUM_GENERATIONS:
         # Score and select population
-        scored_population = [(individual, compute_fitness(scrambled_str, individual, 2, nnet)) for individual in population]
+        batch_states = []
+        batch_info = []  # To keep track of the corresponding cube and moves
+        
+        for individual in population:
+            cube = Cube()
+            cube.from_string(scrambled_str)
+            cube.move_list(individual)
+            if cube.is_solved():
+                solved = True
+                best_individual = individual
+                sol_length = len(best_individual)
+                break
+            
+            batch_states.append(cube.convert_res_input())
+            batch_info.append((cube, individual))
+            
+        states_np = np.array(batch_states)
+        # Convert NumPy array to a PyTorch tensor
+        input_tensor = torch.tensor(states_np, dtype=torch.float32).to(device)
+        # Compute output in a single batch
+        outputs = nnet(input_tensor)
+        fitness_score = outputs.detach().cpu().numpy()
+        
+        scored_population = []
+         # Create Beam_Node instances using the fitness scores
+        for (_, individual), fitness in zip(batch_info, fitness_score):
+            scored_population.append((individual, -fitness))
+            
 
         best_fitness = max(score for _, score in scored_population)
         best_individual = [individual for individual, score in scored_population if score == best_fitness][0]
@@ -109,101 +138,12 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
     return solved, index, sol_length, best_individual
 
 
-def test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
-    success = 0
-    total_gen = 0
-    total_len = 0
-    
-    for i in range(1):
-        print("Iteration: ", i + 1)
-        cube = Cube()
-        print(cube.randomize_n(20))
-        test_cube = cube.to_string()
-        
-        succeed, generations, sol_length, best_individual = genetic_algorithm(test_cube, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate)
-        if succeed:
-                success += 1
-                total_gen += generations
-                total_len += sol_length
-                cube.move_list(best_individual)
-        
-        best_sol = ""
-        for move in best_individual:
-            if move != Move.N:
-                best_sol += move_dict[move] + " "
-                
-        
-                
-        print(f"Best Solution: {best_sol}")
-        print(f"Success: {success}, Generations: {generations}, Solution Length: {sol_length}, Check Solved: {cube.is_solved()}")
-    
-    print("Success rate: ", success / 100)
-    print("Average generations: ", total_gen / success)
-    print("Average solution length: ", total_len / success)
-
-    # return the success rate
-    return success
-
 if __name__ == "__main__":
+    test_str = "U D' F B L' B' R L' D L' L' D F' U' R F L' B' F"
+
     cube = Cube()
-    print(cube.randomize_n(100))
+    cube.move_list(cube.convert_move(test_str))
 
     # iteration 1
-    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 4000, 100, 8, 5, 0.004, threshold=-10)
-    if succeed:
-        cube.move_list(best_individual)
-        print("Step 1: ", best_individual)
+    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 8000, 1000, 26, 5, 0.004, threshold=99)
     
-    # iteration 2
-    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 6000, 1000, 15, 4, 0.005, threshold=-9)
-    if succeed:
-        cube.move_list(best_individual)
-        print("Step 2: ", best_individual)
-    
-    # iteration 3
-    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 8000, 1000, 20, 4, 0.005, threshold=-7)
-    if succeed:
-        cube.move_list(best_individual)    
-        print("Step 3: ", best_individual)
-
-    # iteration 4
-    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 10000, 1000, 26, 4, 0.005, threshold=99)
-    if succeed:
-        cube.move_list(best_individual)
-        print("Step 4: ", best_individual)
-        
-    print("Check Solved: ", cube.is_solved())
-    
-
-    
-# def function_to_be_optimized(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate):
-#     POPULATION_SIZE = int(POPULATION_SIZE)
-#     NUM_GENERATIONS = int(NUM_GENERATIONS)
-#     SEQUENCE_LENGTH = int(SEQUENCE_LENGTH)
-#     TournamentSize = int(TournamentSize)
-#     EliteRate = float(EliteRate)
-    
-#     return test(POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_LENGTH, TournamentSize, EliteRate)
-
-# # Define the BayesianOptimization object
-# pbounds = {
-#     "POPULATION_SIZE": (1000, 5000),
-#     "NUM_GENERATIONS": (100, 300),
-#     "SEQUENCE_LENGTH": (10, 30),
-#     "TournamentSize": (2, 7),
-#     "EliteRate": (0.003, 0.009)
-# }
-
-# optimizer = BayesianOptimization(
-#     f=function_to_be_optimized,
-#     pbounds=pbounds,
-#     verbose=2, # verbose = 1 prints only when a maximum is observed, verbose = 0 is silent
-#     random_state=1,
-# )
-
-# optimizer.maximize(
-#     init_points=65,
-#     n_iter=35,
-# )
-
-# print(optimizer.max)

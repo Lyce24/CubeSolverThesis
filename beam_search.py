@@ -9,7 +9,7 @@ from rubik54 import Cube
 from utils.cube_model import ResnetModel
 from collections import OrderedDict
 import re
-from utils.test_utils import get_allowed_mutations_pre
+from utils.search_utils import get_allowed_moves
 import numpy as np
 
             
@@ -64,24 +64,22 @@ def generate_new_generation(generation: list[Beam_Node], prevention):
     nodes_searched = 0
     batch_states = []
     batch_info = []  # To keep track of the corresponding cube and moves
-
-    for i in generation:
-        if not prevention:
-            allowed_moves = Cube().get_possible_moves()
-        else:
-            allowed_moves = get_allowed_mutations_pre(i.moves)
+    
+    tempcube = Cube()
+    for node in generation:
+        allowed_moves = get_allowed_moves(node.moves) if prevention else Cube().get_possible_moves()
             
         for move in allowed_moves:
-            new_moves = i.moves + [move]
+            new_moves = node.moves + [move]
             tempcube = Cube()
-            tempcube.from_string(i.cube)
+            tempcube.from_string(node.cube)
             tempcube.move(move)
             state = tempcube.convert_res_input()
             
             if tempcube.is_solved():
                 nodes_searched += 1
                 new_generation.append(Beam_Node(tempcube.to_string(), new_moves, 0, True))
-                continue
+                return [Beam_Node(tempcube.to_string(), new_moves, 0, True)], nodes_searched, True
 
             batch_states.append(state)
             batch_info.append((tempcube, new_moves))
@@ -97,8 +95,7 @@ def generate_new_generation(generation: list[Beam_Node], prevention):
 
     # Sort new generation based on fitness
     new_generation.sort(key=lambda x: x.fitness)
-    return new_generation, nodes_searched
-
+    return new_generation, nodes_searched, False
 
 def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100, prevention = True) -> dict:
     
@@ -108,35 +105,40 @@ def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100, preve
     node_searched = 0
     
     for depth in range(max_depth + 1):
-        print(f"Depth: {depth}, len(generation): {len(generation)}")
-        for i in generation:
-            if i.is_solved:
-                return {"success" : True, "solutions": i.moves, "num_nodes": node_searched, "time_taken": time.time() - start_time}
-    
+              
         if depth == max_depth:
             return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+                
+        new_generation, searched_nodes, success = generate_new_generation(generation, prevention)
         
-        new_generation, searched_nodes = generate_new_generation(generation, prevention)
+        if success:
+            return {"success" : True, "solutions": new_generation[0].moves, "num_nodes": node_searched + searched_nodes, "time_taken": time.time() - start_time}
+        
         node_searched += searched_nodes
-        generation = new_generation[:beam_width]
-        print("Best fitness: ", generation[0].fitness)
-        print("Best moves: ", generation[0].moves)
+        generation = new_generation[: int(beam_width * (1 + (2 * depth)/100))]
         
-    return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
-
+        
+    raise Exception("Beam search failed to find a solution")
             
 if __name__ == "__main__":
     test_str = "U D' F B L' B' R L' D L' L' D F' U' R F L' B' F"
+    
+    success = 0
+    total_sol_length = 0
+    total_nodes = 0
+    total_time = 0
 
-    cube = Cube()
-    cube.move_list(cube.convert_move(test_str))
+    for i in range(0, 100):
+        print(f"Test {i + 1}")
+        cube = Cube()
+        cube.randomize_n(100)
+        
+        result = beam_search(cube, 2048, 40, True)
+        if result["success"]:
+            success += 1
+            total_sol_length += len(result["solutions"])
+            total_nodes += result["num_nodes"]
+            total_time += result["time_taken"]
+            print(f"Success: {success}, Sol Length: {len(result['solutions'])}, Num Nodes: {result['num_nodes']}, Time Taken: {result['time_taken']}")
     
-    print(beam_search(cube, 1000, 30, False))
-    # convert list to numpy list
-    
-    # example = [cube.convert_res_input() for _ in range(10000)]
-    # example = np.array(example)
-    
-    # start_time = time.time()
-    # nnet(torch.tensor(example, dtype=torch.float32).to(device))
-    # print(time.time() - start_time)
+    print(f"Success Rate: {success/100}, Avg Sol Length: {total_sol_length/success}, Avg Num Nodes: {total_nodes/success}, Avg Time Taken: {total_time/success}")

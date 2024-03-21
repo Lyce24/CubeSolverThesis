@@ -387,6 +387,7 @@ def mutate(individual, phase, mutation_rate=None):
 
     return new_individual
 
+def compute_fitness_v2(generation):
 
 def compute_fitness(scrambled_str, individual, phase, nnet = None):
     """Compute the fitness of an individual solution based on different phases and neural network."""

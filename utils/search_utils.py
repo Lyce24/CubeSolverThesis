@@ -140,9 +140,27 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
     return allowed_moves
 
 
-def get_allowed_mutations_pre(move_sequence):
+def get_allowed_moves(move_sequence):
     
     allowed_moves = list(single_move)  # Start with all moves allowed
+    
+    if not move_sequence:
+        if Move.N in allowed_moves:
+            allowed_moves.remove(Move.N)
+        return allowed_moves
+    
+    last_move = get_last_move(move_sequence)
+    
+    if last_move == Move.N:
+        allowed_moves.remove(Move.N)  # Exclude the null move
+        return allowed_moves
+    
+    allowed_moves = prevent_moves_pre(move_sequence, last_move, allowed_moves)
+    return allowed_moves
+
+def get_allowed_mutations_pre(move_sequence):
+    
+    allowed_moves = list(single_move_v2)  # Start with all moves allowed
     
     if not move_sequence:
         if Move.N in allowed_moves:
