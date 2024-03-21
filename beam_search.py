@@ -4,68 +4,28 @@ The `beam_search` function in this file is designed for readability and reproduc
 """
 
 import time
-import numpy as np
-from copy import deepcopy
-from contextlib import nullcontext
 import torch
+from rubik54 import Cube
+from utils.cube_model import ResnetModel
+from collections import OrderedDict
+import re
+from utils.test_utils import get_allowed_mutations_pre
+import numpy as np
+
             
-            
-if __name__ == "__main__":
-    
-    # from environments import Cube3
-    
-    # import torch
-    
-    # model = torch.jit.load("models/cube3.pth")
-    
-    # env = Cube3()
-    
-    # scramble = ['B', "U'", 'R', 'U', 'U', 'R', 'U', 'D', 'R', 'F', 'R', 'B', "R'", "F'", "U'", "R'", "F'", "F'", 'U', "R'", "F'", 'D']
+"""
+This module provides a beam search algorithm for finding a solution path in a given environment.
+The `beam_search` function in this file is designed for readability and reproducibility, and it may not be the most speed-optimized implementation.
+"""
 
-    # env.reset()
-    # env.apply_scramble(scramble)
-    
-    # print(beam_search(env, model))
-    
-    from rubik54 import Cube, Move
-    import torch
-    from utils.cube_model import ResnetModel
-    from collections import OrderedDict
-    import re
-    
-    import random
-    import numpy as np
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
- 
-    model = torch.jit.load("saved_models/cube3.pth")
-    
-    
-    model.eval()
-    
-    test_str = "U F U R U F D L U U F B"
-
-    cube = Cube()
-    cube.move_list(cube.convert_move(test_str))
-
-  
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    x = cube.convert_res_input()
-    
-    with torch.no_grad():
-        x = torch.from_numpy(x).to(device)
-        
-        p = model(x)
-        p = torch.nn.functional.softmax(p, dim=-1)
-        p = p.detach().cpu().numpy()
-        print(p)
-    
-    # load model
-    def load_model():
+# load model
+def load_model():
 
         state_dim = 54
         nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
-        model = "saved_models/phase2.pt"
+        model = "saved_models/model_state_dict.pt"
 
         state_dict = torch.load(model, map_location=device)
         # remove module prefix
@@ -81,11 +41,102 @@ if __name__ == "__main__":
         nnet.eval()
         return nnet
     
-    nnet = load_model()
-    
-    input_state = cube.convert_res_input()
-    input_tensor = torch.tensor(input_state, dtype=torch.float32).to(device)
-    output = nnet(input_tensor)
+nnet = load_model()
 
-    print(output.item())
+class Beam_Node:
+    def __init__(self, cube, moves, fitness, is_solved):
+        self.cube = cube
+        self.moves = moves
+        self.fitness = fitness
+        self.is_solved = is_solved
+        
+def compute_fitness(states):
+    # Convert list of states to a NumPy array (if not already an array)
+    states_np = np.array(states)
+    # Convert NumPy array to a PyTorch tensor
+    input_tensor = torch.tensor(states_np, dtype=torch.float32).to(device)
+    # Compute output in a single batch
+    outputs = nnet(input_tensor)
+    return outputs.detach().cpu().numpy()
+
+def generate_new_generation(generation: list[Beam_Node], prevention):
+    new_generation = []
+    nodes_searched = 0
+    batch_states = []
+    batch_info = []  # To keep track of the corresponding cube and moves
+
+    for i in generation:
+        if not prevention:
+            allowed_moves = Cube().get_possible_moves()
+        else:
+            allowed_moves = get_allowed_mutations_pre(i.moves)
+            
+        for move in allowed_moves:
+            new_moves = i.moves + [move]
+            tempcube = Cube()
+            tempcube.from_string(i.cube)
+            tempcube.move(move)
+            state = tempcube.convert_res_input()
+            
+            if tempcube.is_solved():
+                nodes_searched += 1
+                new_generation.append(Beam_Node(tempcube.to_string(), new_moves, 0, True))
+                continue
+
+            batch_states.append(state)
+            batch_info.append((tempcube, new_moves))
+            nodes_searched += 1
+
+    # Convert batch_states to numpy array and compute fitness in one go
+    batch_states_np = np.array(batch_states)
+    fitness_scores = compute_fitness(batch_states_np)
+
+    # Create Beam_Node instances using the fitness scores
+    for (tempcube, new_moves), fitness in zip(batch_info, fitness_scores):
+        new_generation.append(Beam_Node(tempcube.to_string(), new_moves, fitness, False))
+
+    # Sort new generation based on fitness
+    new_generation.sort(key=lambda x: x.fitness)
+    return new_generation, nodes_searched
+
+
+def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100, prevention = True) -> dict:
     
+    root = Beam_Node(scrambled_cube.to_string(), [], compute_fitness(scrambled_cube.convert_res_input()), cube.is_solved())
+    generation = [root]
+    start_time = time.time()
+    node_searched = 0
+    
+    for depth in range(max_depth + 1):
+        print(f"Depth: {depth}, len(generation): {len(generation)}")
+        for i in generation:
+            if i.is_solved:
+                return {"success" : True, "solutions": i.moves, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+    
+        if depth == max_depth:
+            return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+        
+        new_generation, searched_nodes = generate_new_generation(generation, prevention)
+        node_searched += searched_nodes
+        generation = new_generation[:beam_width]
+        print("Best fitness: ", generation[0].fitness)
+        print("Best moves: ", generation[0].moves)
+        
+    return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+
+            
+if __name__ == "__main__":
+    test_str = "U D' F B L' B' R L' D L' L' D F' U' R F L' B' F"
+
+    cube = Cube()
+    cube.move_list(cube.convert_move(test_str))
+    
+    print(beam_search(cube, 1000, 30, False))
+    # convert list to numpy list
+    
+    # example = [cube.convert_res_input() for _ in range(10000)]
+    # example = np.array(example)
+    
+    # start_time = time.time()
+    # nnet(torch.tensor(example, dtype=torch.float32).to(device))
+    # print(time.time() - start_time)

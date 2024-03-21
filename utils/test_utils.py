@@ -107,6 +107,7 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
     temp = [move for move in move_sequence if move != Move.N]
     subsequence = []
     last_group = get_move_group(last_move)
+    
     for move in reversed(temp):
         if get_move_group(move) == last_group:
             subsequence.append(move)
@@ -141,10 +142,11 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
 
 def get_allowed_mutations_pre(move_sequence):
     
-    allowed_moves = list(single_move_v2)  # Start with all moves allowed
+    allowed_moves = list(single_move)  # Start with all moves allowed
     
     if not move_sequence:
-        allowed_moves.remove(Move.N)  # Exclude the null move
+        if Move.N in allowed_moves:
+            allowed_moves.remove(Move.N)
         return allowed_moves
     
     last_move = get_last_move(move_sequence)

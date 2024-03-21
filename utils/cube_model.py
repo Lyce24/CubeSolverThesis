@@ -1,6 +1,7 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
+# 6, 5000, 1000, 4, 1,
 class ResnetModel(nn.Module):
     def __init__(self, state_dim: int = 54, one_hot_depth: int = 6, h1_dim: int = 5000, resnet_dim: int = 1000, num_resnet_blocks: int = 4,
                  out_dim: int = 1, batch_norm: bool = False):

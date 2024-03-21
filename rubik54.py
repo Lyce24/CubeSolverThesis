@@ -89,6 +89,21 @@ class Cube:
         } # Points to the opposite face index
         
         self.state = self.convert_res_input()
+        
+        self.move_dict = {
+            "U": Move.U1,
+            "U'": Move.U3,
+            "R": Move.R1,
+            "R'": Move.R3,
+            "F": Move.F1,
+            "F'": Move.F3,
+            "D": Move.D1,
+            "D'": Move.D3,
+            "L": Move.L1,
+            "L'": Move.L3,
+            "B": Move.B1,
+            "B'": Move.B3         
+        }
 
     def __str__(self):
         return self.to_string()
@@ -465,9 +480,8 @@ class Cube:
     def copy(self):
         return np.array(self.f)
     
-    
     def get_possible_moves(self):
-        return [Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3, Move.U2, Move.R2, Move.F2, Move.D2, Move.L2, Move.B2]
+        return [Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3]
     
     def convert_res_input(self):
         
