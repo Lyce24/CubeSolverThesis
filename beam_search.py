@@ -1,54 +1,23 @@
-"""
-This module provides a beam search algorithm for finding a solution path in a given environment.
-The `beam_search` function in this file is designed for readability and reproducibility, and it may not be the most speed-optimized implementation.
-"""
-
 import time
 import torch
-from rubik54 import Cube
-from utils.cube_model import ResnetModel
-from collections import OrderedDict
-import re
-from utils.search_utils import get_allowed_moves
+from cube import Cube, load_model, get_allowed_moves, device
 import numpy as np
+from queue import PriorityQueue
 
-            
-"""
-This module provides a beam search algorithm for finding a solution path in a given environment.
-The `beam_search` function in this file is designed for readability and reproducibility, and it may not be the most speed-optimized implementation.
-"""
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-# load model
-def load_model():
-
-        state_dim = 54
-        nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
-        model = "saved_models/model_state_dict.pt"
-
-        state_dict = torch.load(model, map_location=device)
-        # remove module prefix
-        new_state_dict = OrderedDict()
-        for k, v in state_dict.items():
-                    k = re.sub('^module\.', '', k)
-                    new_state_dict[k] = v
-
-        # set state dict
-        nnet.load_state_dict(new_state_dict)
-            
-        # load model
-        nnet.eval()
-        return nnet
-    
 nnet = load_model()
 
 class Beam_Node:
-    def __init__(self, cube, moves, fitness, is_solved):
+    def __init__(self, cube : Cube, moves, fitness, is_solved):
         self.cube = cube
         self.moves = moves
         self.fitness = fitness
         self.is_solved = is_solved
+        
+    def __lt__(self, other):
+        return self.fitness < other.fitness
+    
+    def get_possible_moves(self):
+        return get_allowed_moves(self.moves)
         
 def compute_fitness(states):
     # Convert list of states to a NumPy array (if not already an array)
@@ -57,52 +26,51 @@ def compute_fitness(states):
     input_tensor = torch.tensor(states_np, dtype=torch.float32).to(device)
     # Compute output in a single batch
     outputs = nnet(input_tensor)
-    return outputs.detach().cpu().numpy()
+    fitness_scores = outputs.detach().cpu().numpy()
+    torch.cuda.empty_cache()  # Clear CUDA cache here
+    return fitness_scores
 
-def generate_new_generation(generation: list[Beam_Node], prevention):
+def generate_new_generation(generation: list[Beam_Node], seen_state):
     new_generation = []
     nodes_searched = 0
     batch_states = []
     batch_info = []  # To keep track of the corresponding cube and moves
     
-    tempcube = Cube()
     for node in generation:
-        allowed_moves = get_allowed_moves(node.moves) if prevention else Cube().get_possible_moves()
-            
-        for move in allowed_moves:
+        allowed_moves = node.get_possible_moves()
+        
+        for move in allowed_moves:            
             new_moves = node.moves + [move]
-            tempcube = Cube()
-            tempcube.from_string(node.cube)
+            tempcube = node.cube.copy()
             tempcube.move(move)
-            state = tempcube.convert_res_input()
             
+            if tempcube in seen_state:
+                continue
+        
             if tempcube.is_solved():
-                nodes_searched += 1
-                new_generation.append(Beam_Node(tempcube.to_string(), new_moves, 0, True))
-                return [Beam_Node(tempcube.to_string(), new_moves, 0, True)], nodes_searched, True
+                return [Beam_Node(tempcube, new_moves, 0, True)], nodes_searched, True
 
-            batch_states.append(state)
+            batch_states.append(tempcube.state)
             batch_info.append((tempcube, new_moves))
             nodes_searched += 1
 
-    # Convert batch_states to numpy array and compute fitness in one go
-    batch_states_np = np.array(batch_states)
-    fitness_scores = compute_fitness(batch_states_np)
-
-    # Create Beam_Node instances using the fitness scores
+    fitness_scores = compute_fitness(batch_states)
     for (tempcube, new_moves), fitness in zip(batch_info, fitness_scores):
-        new_generation.append(Beam_Node(tempcube.to_string(), new_moves, fitness, False))
+        new_generation.append(Beam_Node(tempcube, new_moves, fitness, False))
 
     # Sort new generation based on fitness
     new_generation.sort(key=lambda x: x.fitness)
     return new_generation, nodes_searched, False
 
 def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100, prevention = True) -> dict:
-    
-    root = Beam_Node(scrambled_cube.to_string(), [], compute_fitness(scrambled_cube.convert_res_input()), cube.is_solved())
+    root_fitness = compute_fitness([scrambled_cube.state])[0]
+    root = Beam_Node(scrambled_cube, [], root_fitness, scrambled_cube.is_solved())
     generation = [root]
     start_time = time.time()
-    node_searched = 0
+    node_searched = 1
+    
+    seen_state = set()
+    seen_state.add(scrambled_cube)
     
     for depth in range(max_depth + 1):
               
@@ -117,28 +85,118 @@ def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100, preve
         node_searched += searched_nodes
         generation = new_generation[: int(beam_width * (1 + (2 * depth)/100))]
         
+        for node in generation:
+            seen_state.add(node.cube)
+
+    raise Exception("Beam search failed to find a solution")
+
+def generate_new_generation_pq(generation: PriorityQueue, seen_state):
+    new_generation = PriorityQueue()
+    nodes_searched = 0
+    
+    batch_states = []
+    batch_info = []
+    
+    while not generation.empty():
+        _, node = generation.get()
+        allowed_moves = node.get_possible_moves()
         
+        for move in allowed_moves:
+            new_moves = node.moves + [move]
+            tempcube = node.cube.copy()
+            tempcube.move(move)
+            
+            if tempcube in seen_state:
+                continue
+        
+            if tempcube.is_solved():
+                ans_queue = PriorityQueue()
+                ans_queue.put((0, Beam_Node(tempcube, new_moves, 0, True)))
+                return ans_queue, nodes_searched, True
+
+            batch_states.append(tempcube.state)
+            batch_info.append((tempcube, new_moves))
+            nodes_searched += 1
+
+    fitness_scores = compute_fitness(batch_states)
+    for (tempcube, new_moves), fitness in zip(batch_info, fitness_scores):
+        new_generation.put((fitness, Beam_Node(tempcube, new_moves, fitness, False)))
+
+    return new_generation, nodes_searched, False
+
+
+def beam_search_pq(scrambled_cube: Cube, beam_width=1024, max_depth=100) -> dict:
+    root_fitness = compute_fitness([scrambled_cube.state])[0]
+    root = Beam_Node(scrambled_cube, [], root_fitness, scrambled_cube.is_solved())
+    generation = PriorityQueue()
+    generation.put((root_fitness, root))
+    start_time = time.time()
+    node_searched = 1
+    
+    seen_state = set()
+    seen_state.add(scrambled_cube)
+
+    for depth in range(max_depth + 1):
+        
+        print(f"Depth: {depth}, min_fitness: {generation.queue[0][0]}, best_moves: {generation.queue[0][1].moves}, num_nodes: {node_searched}")
+        
+        if depth == max_depth:
+            return {"success": False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+        
+        new_generation, searched_nodes, success = generate_new_generation_pq(generation, seen_state)
+        
+        if success:
+            solution_node = new_generation.get()[1]
+            return {"success": True, "solutions": solution_node.moves, "num_nodes": node_searched + searched_nodes, "time_taken": time.time() - start_time}
+        
+        node_searched += searched_nodes
+        generation = PriorityQueue()
+        
+        for _ in range(min(int(beam_width * (1 + (2 * depth)/100)), new_generation.qsize())):
+            if new_generation.empty(): 
+                break
+            
+            fitness, node = new_generation.get()
+            generation.put((fitness, node))
+            seen_state.add(node.cube)
+
     raise Exception("Beam search failed to find a solution")
             
 if __name__ == "__main__":
-    test_str = "U D' F B L' B' R L' D L' L' D F' U' R F L' B' F"
+    from scramble100 import selected_scrambles
     
     success = 0
     total_sol_length = 0
     total_nodes = 0
     total_time = 0
-
-    for i in range(0, 100):
+    
+    # limit = 39000
+    """
+    1024 =>
+    Success Rate: 0.68, Avg Sol Length: 25.235294117647058, Avg Num Nodes: 298359.92647058825, Avg Time Taken: 61.83388700204737
+    
+    1911 =>
+    Success Rate: 0.85, Avg Sol Length: 25.0, Avg Num Nodes: 541414.0352941176, Avg Time Taken: 116.34260092623093
+    
+    2048 =>
+    Success Rate: 0.88, Avg Sol Length: 24.59090909090909, Avg Num Nodes: 566032.8863636364, Avg Time Taken: 110.20973552898927
+    
+    4096 =>
+    Success Rate: 0.98, Avg Sol Length: 24.183673469387756, Avg Num Nodes: 1087275.0204081633, Avg Time Taken: 214.24532394506494    
+    """
+    
+    for i, scramble in enumerate(selected_scrambles):
         print(f"Test {i + 1}")
         cube = Cube()
-        cube.randomize_n(100)
+        cube.move_list(cube.convert_move(scramble))
         
-        result = beam_search(cube, 2048, 40, True)
+        result = beam_search_pq(cube, 1911, 35)
         if result["success"]:
             success += 1
             total_sol_length += len(result["solutions"])
             total_nodes += result["num_nodes"]
             total_time += result["time_taken"]
-            print(f"Success: {success}, Sol Length: {len(result['solutions'])}, Num Nodes: {result['num_nodes']}, Time Taken: {result['time_taken']}")
+            cube.move_list(result["solutions"])
+            print(f"Success: {success}, Sol Length: {len(result['solutions'])}, Num Nodes: {result['num_nodes']}, Time Taken: {result['time_taken']}, Check: {cube.is_solved()}")
     
     print(f"Success Rate: {success/100}, Avg Sol Length: {total_sol_length/success}, Avg Num Nodes: {total_nodes/success}, Avg Time Taken: {total_time/success}")

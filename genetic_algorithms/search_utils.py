@@ -5,7 +5,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rubik54 import Move, phase2_move, Cube
 import random
 import torch
-from utils.cube_model import ResnetModel
+from ga_utils import ResnetModel
 from collections import OrderedDict
 import re
 import numpy as np

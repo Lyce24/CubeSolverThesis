@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from utils.cube_utils import Facelet, Color, Corner, Edge, Move, \
+from cube_utils import Facelet, Color, Corner, Edge, Move, \
     cornerFacelet, edgeFacelet, cornerColor, edgeColor, move_dict, color_dict, phase2_move, \
     single_move
 

@@ -1,8 +1,8 @@
 from rubik54 import Cube
 import random
 from bayes_opt import BayesianOptimization
-from utils.cube_utils import Move, move_dict
-from utils.ga_utils import boltzmann_selection, mutate, compute_fitness, \
+from cube_utils import Move, move_dict
+from ga_utils import boltzmann_selection, mutate, compute_fitness, \
                             crossover, generate_individual, load_model, \
                             simplify_individual, elitism, kill_by_rank, \
                             tournament_selection, uniform_crossover, \

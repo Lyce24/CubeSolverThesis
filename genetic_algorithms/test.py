@@ -1,15 +1,15 @@
 from rubik54 import Cube
 import random
 from bayes_opt import BayesianOptimization
-from utils.cube_utils import Move, move_dict
-from utils.search_utils import mutate, \
+from cube_utils import Move, move_dict
+from search_utils import mutate, \
                             crossover, generate_individual, \
                             elitism, kill_by_rank, \
                             tournament_selection, uniform_crossover, \
                             two_point_crossover
                             
 import torch
-from utils.cube_model import ResnetModel
+from ga_utils import ResnetModel
 from collections import OrderedDict
 import re
 import numpy as np
@@ -139,11 +139,16 @@ def genetic_algorithm(scrambled_str, POPULATION_SIZE, NUM_GENERATIONS, SEQUENCE_
 
 
 if __name__ == "__main__":
-    test_str = "U D' F B L' B' R L' D L' L' D F' U' R F L' B' F"
+    test_str = "B U' R U U R U D R F R B R' F' U' R' F' F' U R' F' D"
 
     cube = Cube()
     cube.move_list(cube.convert_move(test_str))
+    
+    # [<Move.R3: 5>, <Move.F1: 6>, <Move.L3: 14>, <Move.U1: 0>, <Move.R1: 3>, <Move.R1: 3>, <Move.D1: 9>, <Move.F3: 8>, <Move.R3: 5>, <Move.U1: 0>, <Move.F3: 8>, <Move.L3: 14>, <Move.B3: 17>, <Move.D3: 11>, <Move.B3: 17>, <Move.D1: 9>, <Move.R1: 3>, <Move.D3: 11>, <Move.B1: 15>, <Move.D1: 9>, <Move.B1: 15>, <Move.U3: 2>]
+    sol = [Move.R3, Move.F1, Move.L3, Move.U1, Move.R1, Move.R1, Move.D1, Move.F3, Move.R3, Move.U1, Move.F3, Move.L3, Move.B3, Move.D3, Move.B3, Move.D1, Move.R1, Move.D3, Move.B1, Move.D1, Move.B1, Move.U3]
 
-    # iteration 1
-    succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 8000, 1000, 26, 5, 0.004, threshold=99)
+    print(cube.is_solved())
+
+    # # iteration 1
+    # succeed, generations, sol_length, best_individual = genetic_algorithm(cube.to_string(), 8000, 1000, 26, 5, 0.004, threshold=99)
     

@@ -325,7 +325,7 @@ if __name__ == "__main__":
 
     env = Cube3()
 
-    test_move = 9
+    test_move = 1
 
 
     print(env.moves[test_move])

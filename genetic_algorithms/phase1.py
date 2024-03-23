@@ -1,8 +1,8 @@
 from rubik54 import Cube
 import random
-from utils.cube_utils import Move, move_dict
+from cube_utils import Move, move_dict
 # from bayes_opt import BayesianOptimization
-from utils.ga_utils import boltzmann_selection, mutate, compute_fitness,generate_individual, simplify_individual, \
+from ga_utils import boltzmann_selection, mutate, compute_fitness,generate_individual, simplify_individual, \
                             crossover, two_point_crossover, uniform_crossover, tournament_selection, elitism, kill_by_rank
 
 # Main GA Loop
