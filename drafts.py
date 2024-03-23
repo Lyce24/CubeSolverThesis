@@ -1,41 +1,16 @@
 import time
 import torch
-from rubik54 import Cube, Move
-from utils.cube_model import ResnetModel
+from cube import Cube, Move, get_allowed_moves, load_model, device
 from collections import OrderedDict
 import re
-from utils.search_utils import get_allowed_moves
 import numpy as np
 import logging
-from heapq import heappush, heappop
-import hashlib
 from queue import PriorityQueue
 from collections import OrderedDict, namedtuple
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # Setup basic configuration for logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# load model
-def load_model():
-
-        state_dim = 54
-        nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
-        model = "saved_models/model_state_dict.pt"
-
-        state_dict = torch.load(model, map_location=device)
-        # remove module prefix
-        new_state_dict = OrderedDict()
-        for k, v in state_dict.items():
-                    k = re.sub('^module\.', '', k)
-                    new_state_dict[k] = v
-
-        # set state dict
-        nnet.load_state_dict(new_state_dict)
-            
-        # load model
-        nnet.eval()
-        return nnet
     
 nnet = load_model()
 
@@ -300,6 +275,75 @@ def beam_search(scrambled_cube: Cube, beam_width=1024, max_depth=100, prevention
             generation.put(new_generation.get())
             
     raise Exception("Beam search failed to find a solution")
+
+def astar_search(scrambled_cube : Cube, N) -> dict:
+    
+    node_searched = 1
+    start_time = time.time()
+    
+    open_list : list[Astart_Node] = []
+    closed_list : list[Astart_Node] = []
+    
+    initial_h = compute_fitness([scrambled_cube.state])[0]
+    start_node = Astart_Node(scrambled_cube, [])
+    start_node.h = initial_h
+    start_node.update_f()
+    
+    open_list.append(start_node)
+    
+    while open_list:        
+        # Sort open_list by f-value and select the N best nodes
+        best_nodes = sorted(open_list, key=lambda x: x.f)[:N]
+
+        batch_states = []
+        batch_info = []
+
+        for node in best_nodes: 
+            open_list.remove(node)
+            closed_list.append(node)
+            
+            allowed_moves = node.get_possible_moves()
+           
+            for move in allowed_moves:
+                new_moves = node.moves + [move]
+                tempcube = node.cube.copy()
+                tempcube.move(move)
+            
+                if tempcube.is_solved():
+                    return {"success": True, "solutions": new_moves, "length": len(new_moves), "num_nodes": node_searched, "time_taken": time.time() - start_time}
+                
+                batch_states.append(tempcube.state)
+                batch_info.append((tempcube, new_moves, node))
+                        
+        # Convert batch_states to numpy array and compute fitness
+        batch_states_np = np.array(batch_states)
+        fitness_scores = compute_fitness(batch_states_np)
+
+        for (cube, new_moves, parent), fitness in zip(batch_info, fitness_scores):
+            new_node = Astart_Node(cube, new_moves)
+            new_node.g = parent.g + 1
+            new_node.h = fitness
+            new_node.update_f()
+            new_node.parent = parent
+            
+            for open_node in open_list:
+                if open_node.cube == new_node.cube and open_node.f <= new_node.f:
+                    continue
+                
+            for closed_node in closed_list:
+                if closed_node.cube == new_node.cube:
+                    if closed_node.f <= new_node.f:
+                        continue
+                    else:
+                        closed_list.remove(closed_node)
+                
+            open_list.append(new_node)
+            node_searched += 1
+        
+ 
+        
+    return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+
 
 if __name__ == "__main__":
     from scramble100 import scrambles

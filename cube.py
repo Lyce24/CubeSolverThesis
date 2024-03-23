@@ -422,6 +422,22 @@ class Cube:
             scramble_string += move_dict[move] + " "
         return scramble_string
     
+    def from_state(self, state):
+        self.state = state
+    
+    def to_string(self):
+        """Return a string representation of the facelet cube."""
+        state_str = ""
+        # iterate over self.state, add each element to state_str
+        for i in range(54):
+            state_str += str(self.state[i])
+        return state_str
+    
+    def from_string(self, state_str):
+        """Set the facelet cube to the state represented by the string state_str."""
+        for i in range(54):
+            self.state[i] = int(state_str[i])
+    
     def __hash__(self) -> int:
         return hash(tuple(self.state))
     
@@ -429,7 +445,7 @@ class Cube:
         return np.array_equal(self.state, other.state)
     
     def __str__(self):
-        return str(self.state)
+        return self.to_string()
 
     
 if __name__ == '__main__':
@@ -448,3 +464,12 @@ if __name__ == '__main__':
     print(cube == cube.copy())
     
     print(len(test))
+    
+    print(cube.to_string())
+    
+    dict = {}
+    dict[cube.__hash__()] = 1
+    
+    dict[cube.copy().__hash__()] = 2
+    
+    print(dict)
