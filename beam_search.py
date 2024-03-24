@@ -1,8 +1,7 @@
 import time
 import torch
-from cube import Cube, load_model, get_allowed_moves, device
+from cube import Cube, load_model, get_allowed_moves, device, Move
 import numpy as np
-from queue import PriorityQueue
 from collections import namedtuple
 # import tracemalloc
 
@@ -44,11 +43,10 @@ def generate_new_generation(generation: list[Beam_Node], seen_state):
 
             batch_states.append(tempcube.state)
             batch_info.append((tempcube.to_string(), new_moves))
+            nodes_searched += 1
             
             del tempcube
             
-            nodes_searched += 1
-
     fitness_scores = compute_fitness(batch_states)
     for (cube_str, new_moves), fitness in zip(batch_info, fitness_scores):
         new_generation.append(Beam_Node(cube_str, new_moves, fitness, False))
@@ -57,7 +55,7 @@ def generate_new_generation(generation: list[Beam_Node], seen_state):
     new_generation.sort(key=lambda x: x.fitness)
     return new_generation, nodes_searched, False
 
-def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100) -> dict:
+def beam_search(scrambled_cube : Cube, beam_width = 3000, max_depth = 100, adaptive = False) -> dict:
     root_fitness = compute_fitness([scrambled_cube.state])[0]
     root = Beam_Node(scrambled_cube.to_string(), [], root_fitness, scrambled_cube.is_solved())
     
@@ -77,16 +75,22 @@ def beam_search(scrambled_cube : Cube, beam_width = 1024, max_depth = 100) -> di
             return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
                 
         new_generation, searched_nodes, success = generate_new_generation(generation, seen_state)
-        
+                
         if success:
             return {"success" : True, "solutions": new_generation[0].moves, "num_nodes": node_searched + searched_nodes, "time_taken": time.time() - start_time}
         
         node_searched += searched_nodes
-        generation = new_generation[: beam_width]
+        
+        adaptive_beam_width = beam_width    
+        
+        if adaptive:
+            adaptive_beam_width = int(beam_width * (1 + (depth/26)))
+        
+        generation = new_generation[: adaptive_beam_width]
         
         for node in generation:
             seen_state.add(node.cube)
-
+            
     return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
 
 if __name__ == "__main__":
@@ -96,33 +100,14 @@ if __name__ == "__main__":
     total_sol_length = 0
     total_nodes = 0
     total_time = 0
-
-    # limit = 39000
-    """
-    1024 =>
-    Success Rate: 0.68, Avg Sol Length: 25.235294117647058, Avg Num Nodes: 298359.92647058825, Avg Time Taken: 61.83388700204737
-    
-    1911 =>
-    Success Rate: 0.85, Avg Sol Length: 25.0, Avg Num Nodes: 541414.0352941176, Avg Time Taken: 116.34260092623093
-    
-    2048 =>
-    Success Rate: 0.88, Avg Sol Length: 24.59090909090909, Avg Num Nodes: 566032.8863636364, Avg Time Taken: 110.20973552898927
-    
-    4096 =>
-    Success Rate: 0.98, Avg Sol Length: 24.183673469387756, Avg Num Nodes: 1087275.0204081633, Avg Time Taken: 214.24532394506494    
-    
-    Memory Usage:
-    3000 => Peak memory usage: 400 ~ 500MB
-    
-    """
-        
+           
     for i, scramble in enumerate(selected_scrambles):
         print(f"Test {i + 1}")
         cube = Cube()
         cube.move_list(cube.convert_move(scramble))
         
         # tracemalloc.start()
-        result = beam_search(cube, 3000, 100)
+        result = beam_search(cube, 1000, 100, adaptive = False)
         
         # _, max_mem = tracemalloc.get_traced_memory()
         # print(f"Peak memory usage: {max_mem / 10**6}MB")

@@ -14,28 +14,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
     
 nnet = load_model()
 
-class Astart_Node:
-    def __init__(self, cube : str, moves : list[Move]):
-        self.cube = cube
-        self.moves = moves
-        self.g = 0
-        self.h = 0
-        self.f = 0
-        self.parent = None
-        
-    def get_possible_moves(self):
-        return get_allowed_moves(self.moves)
-    
-    def is_solved(self):        
-        cube = Cube()
-        cube.from_string(self.cube)
-        return cube.is_solved()
-    
-    def update_f(self):
-        self.f = 0.6 * self.g + self.h
-        
-    def __eq__(self, other):
-        return self.cube == other.cube
+Astar_Node = namedtuple("Astar_Node", ["cube", "moves", "g", "f"])
     
 def compute_fitness(states):
     # Convert list of states to a NumPy array (if not already an array)
@@ -210,7 +189,7 @@ class Beam_Node:
         return self.fitness < other.fitness
         
         
-def generate_new_generation(generation: PriorityQueue, prevention):
+def generate_new_generation_pq(generation: PriorityQueue, seen_state):
     new_generation = PriorityQueue()
     nodes_searched = 0
     
@@ -219,48 +198,61 @@ def generate_new_generation(generation: PriorityQueue, prevention):
     
     while not generation.empty():
         _, node = generation.get()
-        allowed_moves = get_allowed_moves(node.moves) if prevention else Cube().get_possible_moves()
         
-        for move in allowed_moves:
+        allowed_moves = get_allowed_moves(node.moves)
+        
+        for move in allowed_moves:            
             new_moves = node.moves + [move]
             tempcube = Cube()
             tempcube.from_string(node.cube)
             tempcube.move(move)
-            state = tempcube.convert_res_input()
-
+            
+            if tempcube in seen_state:
+                continue
+        
             if tempcube.is_solved():
-                print("Solution found")
                 ans_queue = PriorityQueue()
-                ans_queue.put((0, Beam_Node(tempcube.to_string(), new_moves, 0, True)))
+                ans_queue.put((0, Beam_Node(tempcube, new_moves, 0, True)))
                 return ans_queue, nodes_searched, True
 
-            batch_states.append(state)
+            batch_states.append(tempcube.state)
             batch_info.append((tempcube.to_string(), new_moves))
+            
+            del tempcube
+            
             nodes_searched += 1
-
+            
     fitness_scores = compute_fitness(batch_states)
-    for (tempcube_str, new_moves), fitness in zip(batch_info, fitness_scores):
-        new_generation.put((fitness, Beam_Node(tempcube_str, new_moves, fitness, False)))
+    for (cube_str, new_moves), fitness in zip(batch_info, fitness_scores):
+        new_generation.put((fitness, Beam_Node(cube_str, new_moves, fitness, False)))
 
     return new_generation, nodes_searched, False
 
 
-def beam_search(scrambled_cube: Cube, beam_width=1024, max_depth=100, prevention=True) -> dict:
-    root_fitness = compute_fitness([scrambled_cube.convert_res_input()])[0]
+def beam_search_pq(scrambled_cube: Cube, beam_width=1024, max_depth=100) -> dict:
+    
+    root_fitness = compute_fitness([scrambled_cube.state])[0]
     root = Beam_Node(scrambled_cube.to_string(), [], root_fitness, scrambled_cube.is_solved())
+    
+    if root.is_solved:
+        return {"success" : True, "solutions": [], "num_nodes": 1, "time_taken": 0}
+    
     generation = PriorityQueue()
     generation.put((root_fitness, root))
     start_time = time.time()
-    node_searched = 0
+    node_searched = 1
+    
+    seen_state = set()
+    seen_state.add(scrambled_cube)
 
     for depth in range(max_depth + 1):
         
-        print(f"Depth: {depth}, min_fitness: {generation.queue[0][0]}, node_searched: {node_searched}")
+        # print(f"Depth: {depth}, min_fitness: {generation.queue[0][0]}, best_moves: {generation.queue[0][1].moves}, num_nodes: {node_searched}")
         
         if depth == max_depth:
             return {"success": False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
         
-        new_generation, searched_nodes, success = generate_new_generation(generation, prevention)
+        new_generation, searched_nodes, success = generate_new_generation_pq(generation, seen_state)
         
         if success:
             solution_node = new_generation.get()[1]
@@ -269,81 +261,118 @@ def beam_search(scrambled_cube: Cube, beam_width=1024, max_depth=100, prevention
         node_searched += searched_nodes
         generation = PriorityQueue()
         
-        for _ in range(min(int(beam_width * (1 + (2 * depth)/100)), new_generation.qsize())):
+        for _ in range(min(beam_width, new_generation.qsize())):
             if new_generation.empty(): 
                 break
-            generation.put(new_generation.get())
             
+            fitness, node = new_generation.get()
+            generation.put((fitness, node))
+            seen_state.add(node.cube)
+
     raise Exception("Beam search failed to find a solution")
 
-def astar_search(scrambled_cube : Cube, N) -> dict:
+    raise Exception("Beam search failed to find a solution")
+
+def astar_search(scrambled_cube : Cube, N, scale_factor) -> dict:
     
-    node_searched = 1
+    node_explored = 1
     start_time = time.time()
     
-    open_list : list[Astart_Node] = []
-    closed_list : list[Astart_Node] = []
+    # a node can be either in the open or closed list, but not both
+    open_list : list[Astar_Node] = []
+    closed_list = set()
+    cube_to_fitness = {}
     
-    initial_h = compute_fitness([scrambled_cube.state])[0]
-    start_node = Astart_Node(scrambled_cube, [])
-    start_node.h = initial_h
-    start_node.update_f()
+    initial_g = 0
+    initial_f = compute_fitness([scrambled_cube.state])[0] + (scale_factor * initial_g)
+    start_node = Astar_Node(scrambled_cube.to_string(), [], initial_g, initial_f)
     
     open_list.append(start_node)
     
+    cube_to_fitness[scrambled_cube.__hash__()] = start_node.f
+    
+    iteration = 1
     while open_list:        
+        if iteration == 1 or iteration % 2 == 0:
+            print(f"Iteration: {iteration}")
+            print(f"Open List Size: {len(open_list)}")
+        
+        initial_time = time.time()
+        
         # Sort open_list by f-value and select the N best nodes
-        best_nodes = sorted(open_list, key=lambda x: x.f)[:N]
-
+        open_list.sort(key=lambda x: x.f)
+        best_nodes = []
+        
+        for _ in range(min(N, len(open_list))):
+            if open_list and open_list[0].cube in closed_list:
+                del open_list[0]
+                continue
+            
+            best_nodes.append(open_list[0])
+            closed_list.add(open_list[0].cube)
+            
+            del open_list[0]
+        
+        batch_time = time.time()
+        
+        if iteration == 1 or iteration % 2 == 0:
+            print(f"Batch Time: {batch_time - initial_time}")
+            
         batch_states = []
         batch_info = []
-
+        
         for node in best_nodes: 
-            open_list.remove(node)
-            closed_list.append(node)
             
-            allowed_moves = node.get_possible_moves()
-           
+            allowed_moves = get_allowed_moves(node.moves)
+            
             for move in allowed_moves:
                 new_moves = node.moves + [move]
-                tempcube = node.cube.copy()
+                tempcube = Cube()
+                tempcube.from_string(node.cube)
                 tempcube.move(move)
             
                 if tempcube.is_solved():
-                    return {"success": True, "solutions": new_moves, "length": len(new_moves), "num_nodes": node_searched, "time_taken": time.time() - start_time}
+                    return {"success": True, "solutions": new_moves, "length": len(new_moves), "num_nodes": node_explored, "time_taken": time.time() - start_time}
                 
                 batch_states.append(tempcube.state)
-                batch_info.append((tempcube, new_moves, node))
-                        
+                batch_info.append((tempcube.to_string(), new_moves, node.g , tempcube.__hash__()))
+                
+                del tempcube
+                
+        prepare_time = time.time()
+        if iteration == 1 or iteration % 2 == 0:
+            print(f"Prepare Time: {prepare_time - batch_time}")
+           
         # Convert batch_states to numpy array and compute fitness
-        batch_states_np = np.array(batch_states)
-        fitness_scores = compute_fitness(batch_states_np)
-
-        for (cube, new_moves, parent), fitness in zip(batch_info, fitness_scores):
-            new_node = Astart_Node(cube, new_moves)
-            new_node.g = parent.g + 1
-            new_node.h = fitness
-            new_node.update_f()
-            new_node.parent = parent
+        fitness_scores = compute_fitness(batch_states)
+        compute_time = time.time()
+        
+        if iteration == 1 or iteration % 2 == 0:
+            print(f"Compute Time: {compute_time - prepare_time}")
             
-            for open_node in open_list:
-                if open_node.cube == new_node.cube and open_node.f <= new_node.f:
-                    continue
-                
-            for closed_node in closed_list:
-                if closed_node.cube == new_node.cube:
-                    if closed_node.f <= new_node.f:
-                        continue
-                    else:
-                        closed_list.remove(closed_node)
-                
+        for ((cube_str, new_moves, g, cube_hash), fitness) in zip(batch_info, fitness_scores):
+            updated_g = g + 1
+            updated_f = (scale_factor * updated_g) + fitness
+            new_node : Astar_Node = Astar_Node(cube_str, new_moves, updated_g, updated_f)
+            
+            score = cube_to_fitness.get(cube_hash)
+            if score and score <= new_node.f:
+                continue
+            
+            cube_to_fitness[cube_hash] = new_node.f
             open_list.append(new_node)
-            node_searched += 1
+            
+            node_explored += 1
+            
+        check_time = time.time()
+        if iteration == 1 or iteration % 2 == 0:
+            print(f"Check Time: {check_time - compute_time}")
+            print(f"total time: {check_time - initial_time}\n")
         
- 
-        
-    return {"success" : False, "solutions": None, "num_nodes": node_searched, "time_taken": time.time() - start_time}
+        iteration += 1
+        # print(f"Nodes Explored: {node_explored}")
 
+    return {"success" : False, "solutions": None, "num_nodes": node_explored, "time_taken": time.time() - start_time}
 
 if __name__ == "__main__":
     from scramble100 import scrambles

@@ -238,6 +238,9 @@ def get_allowed_moves(move_sequence):
         return allowed_moves
     
     last_move = get_last_move(move_sequence)
+    
+    allowed_moves.remove(inverse_moves[last_move])
+    
     allowed_moves = prevent_moves_pre(move_sequence, last_move, allowed_moves)
     return allowed_moves
 
@@ -420,7 +423,7 @@ class Cube:
         scramble_string = ""
         for move in scramble_move:
             scramble_string += move_dict[move] + " "
-        return scramble_string
+        return scramble_string, scramble_move
     
     def from_state(self, state):
         self.state = state

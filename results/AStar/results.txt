@@ -1,0 +1,818 @@
+0.2 3000 (RTX 2060)
+Test 1
+Success: 1, Sol Length: 24, Num Nodes: 595725, Time Taken: 49.210636615753174, Check: True
+Test 2
+Success: 2, Sol Length: 24, Num Nodes: 596107, Time Taken: 47.872358560562134, Check: True
+Test 3
+Success: 3, Sol Length: 24, Num Nodes: 596165, Time Taken: 48.03159165382385, Check: True
+Test 4
+Success: 4, Sol Length: 23, Num Nodes: 564236, Time Taken: 44.56811285018921, Check: True
+Test 5
+Success: 5, Sol Length: 20, Num Nodes: 472846, Time Taken: 38.00411653518677, Check: True
+Test 6
+Success: 6, Sol Length: 23, Num Nodes: 565312, Time Taken: 44.43145155906677, Check: True
+Test 7
+Success: 7, Sol Length: 24, Num Nodes: 596352, Time Taken: 48.04544949531555, Check: True
+Test 8
+Success: 8, Sol Length: 22, Num Nodes: 535305, Time Taken: 42.761945486068726, Check: True
+Test 9
+Success: 9, Sol Length: 23, Num Nodes: 565499, Time Taken: 44.91258788108826, Check: True
+Test 10
+Success: 10, Sol Length: 26, Num Nodes: 658583, Time Taken: 52.6117377281189, Check: True
+Test 11
+Success: 11, Sol Length: 20, Num Nodes: 472201, Time Taken: 37.49414944648743, Check: True
+Test 12
+Success: 12, Sol Length: 26, Num Nodes: 657330, Time Taken: 52.55101490020752, Check: True
+Test 13
+Success: 13, Sol Length: 24, Num Nodes: 595504, Time Taken: 47.27788257598877, Check: True
+Test 14
+Success: 14, Sol Length: 25, Num Nodes: 626951, Time Taken: 50.127707719802856, Check: True
+Test 15
+Success: 15, Sol Length: 22, Num Nodes: 532753, Time Taken: 42.584322929382324, Check: True
+Test 16
+Success: 16, Sol Length: 22, Num Nodes: 533082, Time Taken: 42.28865909576416, Check: True
+Test 17
+Success: 17, Sol Length: 26, Num Nodes: 656868, Time Taken: 52.63308548927307, Check: True
+Test 18
+Success: 18, Sol Length: 23, Num Nodes: 565049, Time Taken: 45.02819633483887, Check: True
+Test 19
+Success: 19, Sol Length: 21, Num Nodes: 503921, Time Taken: 40.359578132629395, Check: True
+Test 20
+Success: 20, Sol Length: 23, Num Nodes: 564995, Time Taken: 45.10300660133362, Check: True
+Test 21
+Success: 21, Sol Length: 23, Num Nodes: 566125, Time Taken: 45.12605023384094, Check: True
+Test 22
+Success: 22, Sol Length: 23, Num Nodes: 565329, Time Taken: 44.99783658981323, Check: True
+Test 23
+Success: 23, Sol Length: 24, Num Nodes: 596165, Time Taken: 47.755757093429565, Check: True
+Test 24
+Success: 24, Sol Length: 25, Num Nodes: 626795, Time Taken: 49.68552780151367, Check: True
+Test 25
+Success: 25, Sol Length: 22, Num Nodes: 534338, Time Taken: 42.42151761054993, Check: True
+Test 26
+Success: 26, Sol Length: 24, Num Nodes: 594946, Time Taken: 47.713812828063965, Check: True
+Test 27
+Success: 27, Sol Length: 24, Num Nodes: 591922, Time Taken: 47.54754710197449, Check: True
+Test 28
+Success: 28, Sol Length: 23, Num Nodes: 565810, Time Taken: 44.84437918663025, Check: True
+Test 29
+Success: 29, Sol Length: 23, Num Nodes: 564599, Time Taken: 45.38255858421326, Check: True
+Test 30
+Success: 30, Sol Length: 24, Num Nodes: 595395, Time Taken: 46.97152233123779, Check: True
+Test 31
+Success: 31, Sol Length: 25, Num Nodes: 627453, Time Taken: 49.77735757827759, Check: True
+Test 32
+Success: 32, Sol Length: 23, Num Nodes: 566157, Time Taken: 45.12846255302429, Check: True
+Test 33
+Success: 33, Sol Length: 23, Num Nodes: 564503, Time Taken: 44.681143045425415, Check: True
+Test 34
+Success: 34, Sol Length: 20, Num Nodes: 473430, Time Taken: 37.592568159103394, Check: True
+Test 35
+Success: 35, Sol Length: 22, Num Nodes: 531686, Time Taken: 42.29419231414795, Check: True
+Test 36
+Success: 36, Sol Length: 25, Num Nodes: 627465, Time Taken: 50.037092208862305, Check: True
+Test 37
+Success: 37, Sol Length: 24, Num Nodes: 596501, Time Taken: 47.07396197319031, Check: True
+Test 38
+Success: 38, Sol Length: 25, Num Nodes: 625810, Time Taken: 49.55501961708069, Check: True
+Test 39
+Success: 39, Sol Length: 24, Num Nodes: 596165, Time Taken: 47.08980965614319, Check: True
+Test 40
+Success: 40, Sol Length: 27, Num Nodes: 687447, Time Taken: 54.99706530570984, Check: True
+Test 41
+Success: 41, Sol Length: 23, Num Nodes: 566006, Time Taken: 44.566197633743286, Check: True
+Test 42
+Success: 42, Sol Length: 22, Num Nodes: 531178, Time Taken: 42.21716046333313, Check: True
+Test 43
+Success: 43, Sol Length: 26, Num Nodes: 659274, Time Taken: 52.28715777397156, Check: True
+Test 44
+Success: 44, Sol Length: 19, Num Nodes: 440398, Time Taken: 35.07123517990112, Check: True
+Test 45
+Success: 45, Sol Length: 22, Num Nodes: 534226, Time Taken: 42.474971294403076, Check: True
+Test 46
+Success: 46, Sol Length: 26, Num Nodes: 659473, Time Taken: 51.82436490058899, Check: True
+Test 47
+Success: 47, Sol Length: 23, Num Nodes: 563075, Time Taken: 44.66767358779907, Check: True
+Test 48
+Success: 48, Sol Length: 21, Num Nodes: 504020, Time Taken: 40.088716983795166, Check: True
+Test 49
+Success: 49, Sol Length: 20, Num Nodes: 472896, Time Taken: 37.91185641288757, Check: True
+Test 50
+Success: 50, Sol Length: 22, Num Nodes: 535101, Time Taken: 42.57687544822693, Check: True
+Test 51
+Success: 51, Sol Length: 23, Num Nodes: 565671, Time Taken: 45.82513666152954, Check: True
+Test 52
+Success: 52, Sol Length: 23, Num Nodes: 565446, Time Taken: 47.23107409477234, Check: True
+Test 53
+Success: 53, Sol Length: 24, Num Nodes: 596396, Time Taken: 48.62981820106506, Check: True
+Test 54
+Success: 54, Sol Length: 24, Num Nodes: 596504, Time Taken: 47.58890748023987, Check: True
+Test 55
+Success: 55, Sol Length: 23, Num Nodes: 566005, Time Taken: 45.76999759674072, Check: True
+Test 56
+Success: 56, Sol Length: 24, Num Nodes: 595496, Time Taken: 49.19694757461548, Check: True
+Test 57
+Success: 57, Sol Length: 25, Num Nodes: 627001, Time Taken: 49.858494997024536, Check: True
+Test 58
+Success: 58, Sol Length: 23, Num Nodes: 565509, Time Taken: 45.1061372756958, Check: True
+Test 59
+Success: 59, Sol Length: 22, Num Nodes: 533123, Time Taken: 42.47499966621399, Check: True
+Test 60
+Success: 60, Sol Length: 25, Num Nodes: 625594, Time Taken: 53.615626096725464, Check: True
+Test 61
+Success: 61, Sol Length: 22, Num Nodes: 533762, Time Taken: 44.02671551704407, Check: True
+Test 62
+Success: 62, Sol Length: 24, Num Nodes: 594782, Time Taken: 49.18489098548889, Check: True
+Test 63
+Success: 63, Sol Length: 19, Num Nodes: 440726, Time Taken: 35.686355113983154, Check: True
+Test 64
+Success: 64, Sol Length: 24, Num Nodes: 595395, Time Taken: 49.03306746482849, Check: True
+Test 65
+Success: 65, Sol Length: 22, Num Nodes: 536005, Time Taken: 42.06157684326172, Check: True
+Test 66
+Success: 66, Sol Length: 24, Num Nodes: 596574, Time Taken: 47.26136112213135, Check: True
+Test 67
+Success: 67, Sol Length: 23, Num Nodes: 565312, Time Taken: 44.65460205078125, Check: True
+Test 68
+Success: 68, Sol Length: 23, Num Nodes: 564627, Time Taken: 45.398155212402344, Check: True
+Test 69
+Success: 69, Sol Length: 23, Num Nodes: 564415, Time Taken: 46.45763301849365, Check: True
+Test 70
+Success: 70, Sol Length: 24, Num Nodes: 595297, Time Taken: 47.98496985435486, Check: True
+Test 71
+Success: 71, Sol Length: 24, Num Nodes: 596135, Time Taken: 47.50831151008606, Check: True
+Test 72
+Success: 72, Sol Length: 23, Num Nodes: 564835, Time Taken: 45.27605152130127, Check: True
+Test 73
+Success: 73, Sol Length: 25, Num Nodes: 628171, Time Taken: 49.7583065032959, Check: True
+Test 74
+Success: 74, Sol Length: 23, Num Nodes: 564121, Time Taken: 45.04454231262207, Check: True
+Test 75
+Success: 75, Sol Length: 20, Num Nodes: 472896, Time Taken: 37.62457776069641, Check: True
+Test 76
+Success: 76, Sol Length: 24, Num Nodes: 595885, Time Taken: 47.70147180557251, Check: True
+Test 77
+Success: 77, Sol Length: 20, Num Nodes: 472486, Time Taken: 37.331421852111816, Check: True
+Test 78
+Success: 78, Sol Length: 22, Num Nodes: 534476, Time Taken: 42.479182720184326, Check: True
+Test 79
+Success: 79, Sol Length: 23, Num Nodes: 565542, Time Taken: 45.14696645736694, Check: True
+Test 80
+Success: 80, Sol Length: 25, Num Nodes: 627148, Time Taken: 49.90518307685852, Check: True
+Test 81
+Success: 81, Sol Length: 24, Num Nodes: 597128, Time Taken: 48.30561661720276, Check: True
+Test 82
+Success: 82, Sol Length: 24, Num Nodes: 594064, Time Taken: 48.426671743392944, Check: True
+Test 83
+Success: 83, Sol Length: 21, Num Nodes: 505147, Time Taken: 40.6256000995636, Check: True
+Test 84
+Success: 84, Sol Length: 24, Num Nodes: 594983, Time Taken: 47.64544939994812, Check: True
+Test 85
+Success: 85, Sol Length: 21, Num Nodes: 502657, Time Taken: 40.1708550453186, Check: True
+Test 86
+Success: 86, Sol Length: 22, Num Nodes: 534434, Time Taken: 42.797064781188965, Check: True
+Test 87
+Success: 87, Sol Length: 23, Num Nodes: 565738, Time Taken: 44.9080593585968, Check: True
+Test 88
+Success: 88, Sol Length: 25, Num Nodes: 626816, Time Taken: 49.49752902984619, Check: True
+Test 89
+Success: 89, Sol Length: 26, Num Nodes: 658560, Time Taken: 52.12889766693115, Check: True
+Test 90
+Success: 90, Sol Length: 25, Num Nodes: 626684, Time Taken: 49.59551405906677, Check: True
+Test 91
+Success: 91, Sol Length: 21, Num Nodes: 503576, Time Taken: 39.80097484588623, Check: True
+Test 92
+Success: 92, Sol Length: 22, Num Nodes: 535405, Time Taken: 44.451600790023804, Check: True
+Test 93
+Success: 93, Sol Length: 23, Num Nodes: 564858, Time Taken: 46.01241135597229, Check: True
+Test 94
+Success: 94, Sol Length: 23, Num Nodes: 565607, Time Taken: 47.038286447525024, Check: True
+Test 95
+Success: 95, Sol Length: 25, Num Nodes: 626913, Time Taken: 50.049341678619385, Check: True
+Test 96
+Success: 96, Sol Length: 21, Num Nodes: 503923, Time Taken: 40.78283953666687, Check: True
+Test 97
+Success: 97, Sol Length: 27, Num Nodes: 687620, Time Taken: 54.20983910560608, Check: True
+Test 98
+Success: 98, Sol Length: 23, Num Nodes: 562497, Time Taken: 45.06799006462097, Check: True
+Test 99
+Success: 99, Sol Length: 24, Num Nodes: 594899, Time Taken: 47.705193281173706, Check: True
+Test 100
+Success: 100, Sol Length: 22, Num Nodes: 534226, Time Taken: 41.7273907661438, Check: True
+Success Rate: 1.0, Avg Sol Length: 23.21, Avg Num Nodes: 571495.42, Avg Time Taken: 45.760265910625456
+
+0.4 3000 (RTX 2060)
+Test 1
+Success: 1, Sol Length: 24, Num Nodes: 660498, Time Taken: 54.12089920043945, Check: True
+Test 2
+Success: 2, Sol Length: 22, Num Nodes: 937702, Time Taken: 73.62849926948547, Check: True
+Test 3
+Success: 3, Sol Length: 24, Num Nodes: 1060969, Time Taken: 83.61738991737366, Check: True
+Test 4
+Success: 4, Sol Length: 23, Num Nodes: 566962, Time Taken: 44.369248151779175, Check: True
+Test 5
+Success: 5, Sol Length: 20, Num Nodes: 474603, Time Taken: 37.08611083030701, Check: True
+Test 6
+Success: 6, Sol Length: 23, Num Nodes: 999178, Time Taken: 79.14424562454224, Check: True
+Test 7
+Success: 7, Sol Length: 24, Num Nodes: 1122649, Time Taken: 89.63903427124023, Check: True
+Test 8
+Success: 8, Sol Length: 22, Num Nodes: 536666, Time Taken: 41.893670320510864, Check: True
+Test 9
+Success: 9, Sol Length: 23, Num Nodes: 567685, Time Taken: 44.48940587043762, Check: True
+Test 10
+Success: 10, Sol Length: 24, Num Nodes: 1031922, Time Taken: 81.5141851902008, Check: True
+Test 11
+Success: 11, Sol Length: 20, Num Nodes: 473936, Time Taken: 37.067662477493286, Check: True
+Test 12
+Success: 12, Sol Length: 22, Num Nodes: 1000090, Time Taken: 79.46892881393433, Check: True
+Test 13
+Success: 13, Sol Length: 24, Num Nodes: 598360, Time Taken: 46.66888380050659, Check: True
+Test 14
+Success: 14, Sol Length: 23, Num Nodes: 1340353, Time Taken: 106.42452025413513, Check: True
+Test 15
+Success: 15, Sol Length: 22, Num Nodes: 534729, Time Taken: 41.687095642089844, Check: True
+Test 16
+Success: 16, Sol Length: 22, Num Nodes: 535702, Time Taken: 42.11336946487427, Check: True
+Test 17
+Success: 17, Sol Length: 24, Num Nodes: 2113431, Time Taken: 169.0809075832367, Check: True
+Test 18
+Success: 18, Sol Length: 25, Num Nodes: 629016, Time Taken: 48.79085946083069, Check: True
+Test 19
+Success: 19, Sol Length: 21, Num Nodes: 505252, Time Taken: 39.656397104263306, Check: True
+Test 20
+Success: 20, Sol Length: 23, Num Nodes: 567385, Time Taken: 44.90597081184387, Check: True
+Test 21
+Success: 21, Sol Length: 23, Num Nodes: 567768, Time Taken: 45.06006836891174, Check: True
+Test 22
+Success: 22, Sol Length: 23, Num Nodes: 628822, Time Taken: 49.60889410972595, Check: True
+Test 23
+Success: 23, Sol Length: 24, Num Nodes: 1060969, Time Taken: 84.58350348472595, Check: True
+Test 24
+Success: 24, Sol Length: 25, Num Nodes: 630269, Time Taken: 49.00762963294983, Check: True
+Test 25
+Success: 25, Sol Length: 22, Num Nodes: 535546, Time Taken: 42.12762928009033, Check: True
+Test 26
+Success: 26, Sol Length: 24, Num Nodes: 813729, Time Taken: 65.05494856834412, Check: True
+Test 27
+Success: 27, Sol Length: 24, Num Nodes: 597562, Time Taken: 47.34687161445618, Check: True
+Test 28
+Success: 28, Sol Length: 23, Num Nodes: 598718, Time Taken: 46.90085530281067, Check: True
+Test 29
+Success: 29, Sol Length: 23, Num Nodes: 567098, Time Taken: 44.670305252075195, Check: True
+Test 30
+Success: 30, Sol Length: 24, Num Nodes: 598281, Time Taken: 46.731491565704346, Check: True
+Test 31
+Success: 31, Sol Length: 23, Num Nodes: 690854, Time Taken: 54.657867670059204, Check: True
+Test 32
+Success: 32, Sol Length: 23, Num Nodes: 1093689, Time Taken: 86.68444037437439, Check: True
+Test 33
+Success: 33, Sol Length: 23, Num Nodes: 689622, Time Taken: 54.20060873031616, Check: True
+Test 34
+Success: 34, Sol Length: 20, Num Nodes: 474243, Time Taken: 36.84357023239136, Check: True
+Test 35
+Success: 35, Sol Length: 22, Num Nodes: 532755, Time Taken: 42.096452474594116, Check: True
+Test 36
+Success: 36, Sol Length: 21, Num Nodes: 690800, Time Taken: 54.54479765892029, Check: True
+Test 37
+Success: 37, Sol Length: 26, Num Nodes: 1278973, Time Taken: 102.33612489700317, Check: True
+Test 38
+Success: 38, Sol Length: 23, Num Nodes: 1771581, Time Taken: 140.1381630897522, Check: True
+Test 39
+Success: 39, Sol Length: 24, Num Nodes: 1060969, Time Taken: 83.85617780685425, Check: True
+Test 40
+Success: 40, Sol Length: 23, Num Nodes: 1338879, Time Taken: 106.28257393836975, Check: True
+Test 41
+Success: 41, Sol Length: 23, Num Nodes: 567236, Time Taken: 43.99735713005066, Check: True
+Test 42
+Success: 42, Sol Length: 22, Num Nodes: 534023, Time Taken: 42.07599663734436, Check: True
+Test 43
+Success: 43, Sol Length: 24, Num Nodes: 1093144, Time Taken: 86.4551408290863, Check: True
+Test 44
+Success: 44, Sol Length: 19, Num Nodes: 441411, Time Taken: 34.571250200271606, Check: True
+Test 45
+Success: 45, Sol Length: 22, Num Nodes: 1860354, Time Taken: 148.50114679336548, Check: True
+Test 46
+Success: 46, Sol Length: 24, Num Nodes: 1340760, Time Taken: 105.56573414802551, Check: True
+Test 47
+Success: 47, Sol Length: 23, Num Nodes: 567232, Time Taken: 44.25568771362305, Check: True
+Test 48
+Success: 48, Sol Length: 21, Num Nodes: 505662, Time Taken: 39.83819317817688, Check: True
+Test 49
+Success: 49, Sol Length: 20, Num Nodes: 474178, Time Taken: 37.11998438835144, Check: True
+Test 50
+Success: 50, Sol Length: 22, Num Nodes: 536685, Time Taken: 41.98147249221802, Check: True
+Test 51
+Success: 51, Sol Length: 25, Num Nodes: 969220, Time Taken: 76.94552826881409, Check: True
+Test 52
+Success: 52, Sol Length: 23, Num Nodes: 598267, Time Taken: 46.78448700904846, Check: True
+Test 53
+Success: 53, Sol Length: 24, Num Nodes: 1000562, Time Taken: 79.1023907661438, Check: True
+Test 54
+Success: 54, Sol Length: 24, Num Nodes: 1402662, Time Taken: 111.3119592666626, Check: True
+Test 55
+Success: 55, Sol Length: 23, Num Nodes: 568098, Time Taken: 44.325891733169556, Check: True
+Test 56
+Success: 56, Sol Length: 22, Num Nodes: 721120, Time Taken: 56.731507778167725, Check: True
+Test 57
+Success: 57, Sol Length: 23, Num Nodes: 1370935, Time Taken: 108.44797468185425, Check: True
+Test 58
+Success: 58, Sol Length: 23, Num Nodes: 567543, Time Taken: 44.167707204818726, Check: True
+Test 59
+Success: 59, Sol Length: 22, Num Nodes: 536085, Time Taken: 42.28696155548096, Check: True
+Test 60
+Success: 60, Sol Length: 25, Num Nodes: 1924105, Time Taken: 153.52097487449646, Check: True
+Test 61
+Success: 61, Sol Length: 22, Num Nodes: 536044, Time Taken: 41.599409103393555, Check: True
+Test 62
+Success: 62, Sol Length: 20, Num Nodes: 811079, Time Taken: 64.23910236358643, Check: True
+Test 63
+Success: 63, Sol Length: 19, Num Nodes: 442452, Time Taken: 34.34903836250305, Check: True
+Test 64
+Success: 64, Sol Length: 24, Num Nodes: 598281, Time Taken: 47.14922571182251, Check: True
+Test 65
+Success: 65, Sol Length: 22, Num Nodes: 537115, Time Taken: 42.1269326210022, Check: True
+Test 66
+Success: 66, Sol Length: 24, Num Nodes: 2111575, Time Taken: 169.11847758293152, Check: True
+Test 67
+Success: 67, Sol Length: 23, Num Nodes: 999178, Time Taken: 78.9625563621521, Check: True
+Test 68
+Success: 68, Sol Length: 23, Num Nodes: 721666, Time Taken: 57.336601972579956, Check: True
+Test 69
+Success: 69, Sol Length: 23, Num Nodes: 597279, Time Taken: 47.015387773513794, Check: True
+Test 70
+Success: 70, Sol Length: 22, Num Nodes: 1153453, Time Taken: 91.31060338020325, Check: True
+Test 71
+Success: 71, Sol Length: 22, Num Nodes: 1555521, Time Taken: 124.09703087806702, Check: True
+Test 72
+Success: 72, Sol Length: 21, Num Nodes: 567140, Time Taken: 44.33828353881836, Check: True
+Test 73
+Success: 73, Sol Length: 25, Num Nodes: 908226, Time Taken: 71.58730244636536, Check: True
+Test 74
+Success: 74, Sol Length: 23, Num Nodes: 690421, Time Taken: 54.50957751274109, Check: True
+Test 75
+Success: 75, Sol Length: 20, Num Nodes: 474178, Time Taken: 37.5956072807312, Check: True
+Test 76
+Success: 76, Sol Length: 20, Num Nodes: 628049, Time Taken: 49.59389328956604, Check: True
+Test 77
+Success: 77, Sol Length: 20, Num Nodes: 474241, Time Taken: 37.38047456741333, Check: True
+Test 78
+Success: 78, Sol Length: 22, Num Nodes: 535771, Time Taken: 42.18041968345642, Check: True
+Test 79
+Success: 79, Sol Length: 23, Num Nodes: 567563, Time Taken: 44.68664813041687, Check: True
+Test 80
+Success: 80, Sol Length: 23, Num Nodes: 783983, Time Taken: 61.90141701698303, Check: True
+Test 81
+Success: 81, Sol Length: 24, Num Nodes: 722365, Time Taken: 56.71852517127991, Check: True
+Test 82
+Success: 82, Sol Length: 24, Num Nodes: 598408, Time Taken: 47.219929933547974, Check: True
+Test 83
+Success: 83, Sol Length: 21, Num Nodes: 506580, Time Taken: 39.7405047416687, Check: True
+Test 84
+Success: 84, Sol Length: 24, Num Nodes: 1491492, Time Taken: 118.75642395019531, Check: True
+Test 85
+Success: 85, Sol Length: 21, Num Nodes: 504648, Time Taken: 39.60441732406616, Check: True
+Test 86
+Success: 86, Sol Length: 22, Num Nodes: 1061232, Time Taken: 83.97428917884827, Check: True
+Test 87
+Success: 87, Sol Length: 23, Num Nodes: 568177, Time Taken: 44.739372968673706, Check: True
+Test 88
+Success: 88, Sol Length: 25, Num Nodes: 2359778, Time Taken: 188.51980638504028, Check: True
+Test 89
+Success: 89, Sol Length: 24, Num Nodes: 876784, Time Taken: 69.71576380729675, Check: True
+Test 90
+Success: 90, Sol Length: 25, Num Nodes: 1000951, Time Taken: 78.63369154930115, Check: True
+Test 91
+Success: 91, Sol Length: 21, Num Nodes: 505360, Time Taken: 39.62428641319275, Check: True
+Test 92
+Success: 92, Sol Length: 22, Num Nodes: 537061, Time Taken: 42.49862790107727, Check: True
+Test 93
+Success: 93, Sol Length: 23, Num Nodes: 567860, Time Taken: 44.65195393562317, Check: True
+Test 94
+Success: 94, Sol Length: 23, Num Nodes: 813310, Time Taken: 64.00000238418579, Check: True
+Test 95
+Success: 95, Sol Length: 25, Num Nodes: 2574233, Time Taken: 206.6214382648468, Check: True
+Test 96
+Success: 96, Sol Length: 21, Num Nodes: 536800, Time Taken: 41.49776911735535, Check: True
+Test 97
+Success: 97, Sol Length: 21, Num Nodes: 997420, Time Taken: 79.0131151676178, Check: True
+Test 98
+Success: 98, Sol Length: 23, Num Nodes: 689690, Time Taken: 54.53061389923096, Check: True
+Test 99
+Success: 99, Sol Length: 22, Num Nodes: 845277, Time Taken: 66.82950854301453, Check: True
+Test 100
+Success: 100, Sol Length: 22, Num Nodes: 1860354, Time Taken: 148.33685898780823, Check: True
+Success Rate: 1.0, Avg Sol Length: 22.69, Avg Num Nodes: 853684.92, Avg Time Taken: 67.52392493963242
+
+0.5 3000 (RTX 2060)
+Test 1
+Success: 1, Sol Length: 22, Num Nodes: 2026038, Time Taken: 164.83457207679749, Check: True
+Test 2
+Success: 2, Sol Length: 22, Num Nodes: 1559134, Time Taken: 124.6903989315033, Check: True
+Test 3
+Success: 3, Sol Length: 20, Num Nodes: 1931741, Time Taken: 156.7997329235077, Check: True
+Test 4
+Success: 4, Sol Length: 23, Num Nodes: 1713197, Time Taken: 139.0677535533905, Check: True
+Test 5
+Success: 5, Sol Length: 20, Num Nodes: 475440, Time Taken: 37.590252161026, Check: True
+Test 6
+Success: 6, Sol Length: 23, Num Nodes: 2177601, Time Taken: 176.36510133743286, Check: True
+Test 7
+Success: 7, Sol Length: 22, Num Nodes: 1897860, Time Taken: 151.65577125549316, Check: True
+Test 8
+Success: 8, Sol Length: 22, Num Nodes: 538020, Time Taken: 43.23785901069641, Check: True
+Test 9
+Success: 9, Sol Length: 23, Num Nodes: 2398120, Time Taken: 195.13632488250732, Check: True
+Test 10
+Success: 10, Sol Length: 22, Num Nodes: 786840, Time Taken: 62.10068702697754, Check: True
+Test 11
+Success: 11, Sol Length: 20, Num Nodes: 474899, Time Taken: 37.80392575263977, Check: True
+Test 12
+Success: 12, Sol Length: 22, Num Nodes: 2924409, Time Taken: 238.1468620300293, Check: True
+Test 13
+Success: 13, Sol Length: 24, Num Nodes: 2335999, Time Taken: 189.10819745063782, Check: True
+Test 14
+Success: 14, Sol Length: 23, Num Nodes: 847898, Time Taken: 66.97019100189209, Check: True
+Test 15
+Success: 15, Sol Length: 22, Num Nodes: 1862186, Time Taken: 150.99890613555908, Check: True
+Test 16
+Success: 16, Sol Length: 22, Num Nodes: 1124692, Time Taken: 89.59213614463806, Check: True
+Test 17
+Success: 17, Sol Length: 24, Num Nodes: 19824913, Time Taken: 1657.6651623249054, Check: True
+Test 18
+Success: 18, Sol Length: 23, Num Nodes: 3017017, Time Taken: 232.5558204650879, Check: True
+Test 19
+Success: 19, Sol Length: 21, Num Nodes: 506105, Time Taken: 40.41170287132263, Check: True
+Test 20
+Success: 20, Sol Length: 23, Num Nodes: 1188591, Time Taken: 95.86321091651917, Check: True
+Test 21
+Success: 21, Sol Length: 23, Num Nodes: 847573, Time Taken: 67.51679921150208, Check: True
+Test 22
+Success: 22, Sol Length: 21, Num Nodes: 1157054, Time Taken: 92.85322213172913, Check: True
+Test 23
+Success: 23, Sol Length: 20, Num Nodes: 1931741, Time Taken: 156.10313963890076, Check: True
+Test 24
+Success: 24, Sol Length: 21, Num Nodes: 1313742, Time Taken: 105.76844120025635, Check: True
+Test 25
+Success: 25, Sol Length: 22, Num Nodes: 1031626, Time Taken: 82.18596649169922, Check: True
+Test 26
+Success: 26, Sol Length: 22, Num Nodes: 1123974, Time Taken: 90.84213089942932, Check: True
+Test 27
+Success: 27, Sol Length: 22, Num Nodes: 3695253, Time Taken: 299.8226475715637, Check: True
+Test 28
+Success: 28, Sol Length: 21, Num Nodes: 724470, Time Taken: 57.07584309577942, Check: True
+Test 29
+Success: 29, Sol Length: 21, Num Nodes: 847304, Time Taken: 67.96141791343689, Check: True
+Test 30
+Success: 30, Sol Length: 24, Num Nodes: 6142564, Time Taken: 501.936861038208, Check: True
+Test 31
+Success: 31, Sol Length: 23, Num Nodes: 1807417, Time Taken: 143.64135336875916, Check: True
+Test 32
+Success: 32, Sol Length: 23, Num Nodes: 3636492, Time Taken: 295.63919377326965, Check: True
+Test 33
+Success: 33, Sol Length: 23, Num Nodes: 938833, Time Taken: 73.76608228683472, Check: True
+Test 34
+Success: 34, Sol Length: 20, Num Nodes: 475230, Time Taken: 37.40741991996765, Check: True
+Test 35
+Success: 35, Sol Length: 20, Num Nodes: 1086315, Time Taken: 87.42650771141052, Check: True
+Test 36
+Success: 36, Sol Length: 21, Num Nodes: 1777445, Time Taken: 143.99440908432007, Check: True
+Test 37
+Success: 37, Sol Length: 24, Num Nodes: 2212462, Time Taken: 178.44242238998413, Check: True
+Test 38
+Success: 38, Sol Length: 23, Num Nodes: 5365754, Time Taken: 436.94662141799927, Check: True
+Test 39
+Success: 39, Sol Length: 20, Num Nodes: 1931741, Time Taken: 155.25556445121765, Check: True
+Test 40
+Success: 40, Sol Length: 21, Num Nodes: 2854982, Time Taken: 231.80247974395752, Check: True
+Test 41
+Success: 41, Sol Length: 23, Num Nodes: 568753, Time Taken: 44.43713903427124, Check: True
+Test 42
+Success: 42, Sol Length: 22, Num Nodes: 536407, Time Taken: 42.776610136032104, Check: True
+Test 43
+Success: 43, Sol Length: 24, Num Nodes: 6024399, Time Taken: 489.6029269695282, Check: True
+Test 44
+Success: 44, Sol Length: 19, Num Nodes: 441882, Time Taken: 34.91771149635315, Check: True
+Test 45
+Success: 45, Sol Length: 22, Num Nodes: 6026344, Time Taken: 491.28927063941956, Check: True
+Test 46
+Success: 46, Sol Length: 20, Num Nodes: 3172925, Time Taken: 257.2876214981079, Check: True
+Test 47
+Success: 47, Sol Length: 23, Num Nodes: 1653202, Time Taken: 132.68025970458984, Check: True
+Test 48
+Success: 48, Sol Length: 21, Num Nodes: 506303, Time Taken: 40.191994190216064, Check: True
+Test 49
+Success: 49, Sol Length: 20, Num Nodes: 475300, Time Taken: 37.62935256958008, Check: True
+Test 50
+Success: 50, Sol Length: 22, Num Nodes: 537634, Time Taken: 42.76522350311279, Check: True
+Test 51
+Success: 51, Sol Length: 21, Num Nodes: 2799992, Time Taken: 225.7732057571411, Check: True
+Test 52
+Success: 52, Sol Length: 23, Num Nodes: 1498085, Time Taken: 121.49756503105164, Check: True
+Test 53
+Success: 53, Sol Length: 24, Num Nodes: 1934403, Time Taken: 155.00706815719604, Check: True
+Test 54
+Success: 54, Sol Length: 22, Num Nodes: 1655950, Time Taken: 132.41284680366516, Check: True
+Test 55
+Success: 55, Sol Length: 23, Num Nodes: 1250912, Time Taken: 100.46362400054932, Check: True
+Test 56
+Success: 56, Sol Length: 22, Num Nodes: 1931175, Time Taken: 155.09077644348145, Check: True
+Test 57
+Success: 57, Sol Length: 23, Num Nodes: 2118650, Time Taken: 170.90714168548584, Check: True
+Test 58
+Success: 58, Sol Length: 23, Num Nodes: 2736532, Time Taken: 220.97872281074524, Check: True
+Test 59
+Success: 59, Sol Length: 22, Num Nodes: 567957, Time Taken: 44.77780723571777, Check: True
+Test 60
+Success: 60, Sol Length: 25, Num Nodes: 3633799, Time Taken: 294.6381981372833, Check: True
+Test 61
+Success: 61, Sol Length: 22, Num Nodes: 1435211, Time Taken: 115.42229270935059, Check: True
+Test 62
+Success: 62, Sol Length: 20, Num Nodes: 1458698, Time Taken: 117.40967416763306, Check: True
+Test 63
+Success: 63, Sol Length: 19, Num Nodes: 443422, Time Taken: 35.12542223930359, Check: True
+Test 64
+Success: 64, Sol Length: 24, Num Nodes: 6142564, Time Taken: 500.94135999679565, Check: True
+Test 65
+Success: 65, Sol Length: 22, Num Nodes: 880177, Time Taken: 66.9182779788971, Check: True
+Test 66
+Success: 66, Sol Length: 22, Num Nodes: 2366302, Time Taken: 191.06677389144897, Check: True
+Test 67
+Success: 67, Sol Length: 23, Num Nodes: 2177601, Time Taken: 176.8616976737976, Check: True
+Test 68
+Success: 68, Sol Length: 21, Num Nodes: 5918340, Time Taken: 481.9614300727844, Check: True
+Test 69
+Success: 69, Sol Length: 23, Num Nodes: 3629231, Time Taken: 295.07087755203247, Check: True
+Test 70
+Success: 70, Sol Length: 22, Num Nodes: 3074005, Time Taken: 249.37196016311646, Check: True
+Test 71
+Success: 71, Sol Length: 22, Num Nodes: 1899444, Time Taken: 151.8556649684906, Check: True
+Test 72
+Success: 72, Sol Length: 21, Num Nodes: 970146, Time Taken: 78.09128642082214, Check: True
+Test 73
+Success: 73, Sol Length: 23, Num Nodes: 5127451, Time Taken: 416.867534160614, Check: True
+Test 74
+Success: 74, Sol Length: 23, Num Nodes: 4406641, Time Taken: 357.3064601421356, Check: True
+Test 75
+Success: 75, Sol Length: 20, Num Nodes: 475300, Time Taken: 37.80016851425171, Check: True
+Test 76
+Success: 76, Sol Length: 20, Num Nodes: 877064, Time Taken: 70.09701943397522, Check: True
+Test 77
+Success: 77, Sol Length: 20, Num Nodes: 475364, Time Taken: 37.49691343307495, Check: True
+Test 78
+Success: 78, Sol Length: 22, Num Nodes: 1372807, Time Taken: 110.37932848930359, Check: True
+Test 79
+Success: 79, Sol Length: 23, Num Nodes: 754739, Time Taken: 60.23416495323181, Check: True
+Test 80
+Success: 80, Sol Length: 23, Num Nodes: 2088669, Time Taken: 168.1954414844513, Check: True
+Test 81
+Success: 81, Sol Length: 22, Num Nodes: 1717402, Time Taken: 138.20886659622192, Check: True
+Test 82
+Success: 82, Sol Length: 24, Num Nodes: 1219171, Time Taken: 98.3371045589447, Check: True
+Test 83
+Success: 83, Sol Length: 21, Num Nodes: 507587, Time Taken: 39.915404319763184, Check: True
+Test 84
+Success: 84, Sol Length: 20, Num Nodes: 5603246, Time Taken: 456.16609239578247, Check: True
+Test 85
+Success: 85, Sol Length: 21, Num Nodes: 505973, Time Taken: 39.91900944709778, Check: True
+Test 86
+Success: 86, Sol Length: 22, Num Nodes: 3163689, Time Taken: 256.7379596233368, Check: True
+Test 87
+Success: 87, Sol Length: 23, Num Nodes: 569448, Time Taken: 44.84742450714111, Check: True
+Test 88
+Success: 88, Sol Length: 23, Num Nodes: 3853584, Time Taken: 314.0444276332855, Check: True
+Test 89
+Success: 89, Sol Length: 22, Num Nodes: 1375687, Time Taken: 109.12601089477539, Check: True
+Test 90
+Success: 90, Sol Length: 23, Num Nodes: 3420964, Time Taken: 282.7411141395569, Check: True
+Test 91
+Success: 91, Sol Length: 21, Num Nodes: 506766, Time Taken: 40.07580304145813, Check: True
+Test 92
+Success: 92, Sol Length: 22, Num Nodes: 538035, Time Taken: 43.76602816581726, Check: True
+Test 93
+Success: 93, Sol Length: 23, Num Nodes: 2614550, Time Taken: 212.38368916511536, Check: True
+Test 94
+Success: 94, Sol Length: 21, Num Nodes: 1248925, Time Taken: 100.87862086296082, Check: True
+Test 95
+Success: 95, Sol Length: 23, Num Nodes: 5678487, Time Taken: 464.90213322639465, Check: True
+Test 96
+Success: 96, Sol Length: 21, Num Nodes: 723971, Time Taken: 56.72710108757019, Check: True
+Test 97
+Success: 97, Sol Length: 21, Num Nodes: 1059865, Time Taken: 84.83587598800659, Check: True
+Test 98
+Success: 98, Sol Length: 21, Num Nodes: 1124115, Time Taken: 90.85376787185669, Check: True
+Test 99
+Success: 99, Sol Length: 22, Num Nodes: 1869585, Time Taken: 151.46839785575867, Check: True
+Test 100
+Success: 100, Sol Length: 22, Num Nodes: 6026344, Time Taken: 503.5064675807953, Check: True
+Success Rate: 1.0, Avg Sol Length: 21.95, Avg Num Nodes: 2198838.46, Avg Time Taken: 178.40023204803467
+
+0.6 3000 (RTX 2060)
+
+
+0.2 10000
+Test 1
+Success: 1, Sol Length: 24, Num Nodes: 1954299, Time Taken: 130.56117701530457, Check: True
+Test 2
+Success: 2, Sol Length: 24, Num Nodes: 1951683, Time Taken: 131.2180690765381, Check: True
+Test 3
+Success: 3, Sol Length: 22, Num Nodes: 1750345, Time Taken: 116.52505135536194, Check: True
+Test 4
+Success: 4, Sol Length: 23, Num Nodes: 1849543, Time Taken: 123.34514212608337, Check: True
+Test 5
+Success: 5, Sol Length: 20, Num Nodes: 1545210, Time Taken: 103.00037980079651, Check: True
+Test 6
+Success: 6, Sol Length: 23, Num Nodes: 1850582, Time Taken: 125.2952139377594, Check: True
+Test 7
+Success: 7, Sol Length: 24, Num Nodes: 1953389, Time Taken: 134.75501203536987, Check: True
+Test 8
+Success: 8, Sol Length: 22, Num Nodes: 1751584, Time Taken: 120.07118535041809, Check: True
+Test 9
+Success: 9, Sol Length: 23, Num Nodes: 1853108, Time Taken: 125.24101305007935, Check: True
+Test 10
+Success: 10, Sol Length: 22, Num Nodes: 1752873, Time Taken: 118.19639563560486, Check: True
+Test 11
+Success: 11, Sol Length: 20, Num Nodes: 1542349, Time Taken: 104.27077746391296, Check: True
+Test 12
+Success: 12, Sol Length: 24, Num Nodes: 1956835, Time Taken: 132.51063466072083, Check: True
+Test 13
+Success: 13, Sol Length: 24, Num Nodes: 1953635, Time Taken: 130.65593123435974, Check: True
+Test 14
+Success: 14, Sol Length: 23, Num Nodes: 1853879, Time Taken: 123.18006753921509, Check: True
+Test 15
+Success: 15, Sol Length: 22, Num Nodes: 1743118, Time Taken: 117.15958595275879, Check: True
+Test 16
+Success: 16, Sol Length: 22, Num Nodes: 1746465, Time Taken: 116.49294590950012, Check: True
+Test 17
+Success: 17, Sol Length: 24, Num Nodes: 1954919, Time Taken: 131.30917882919312, Check: True
+Test 18
+Success: 18, Sol Length: 23, Num Nodes: 1852760, Time Taken: 123.40943956375122, Check: True
+Test 19
+Success: 19, Sol Length: 21, Num Nodes: 1645823, Time Taken: 109.96892547607422, Check: True
+Test 20
+Success: 20, Sol Length: 23, Num Nodes: 1851222, Time Taken: 124.24935626983643, Check: True
+Test 21
+Success: 21, Sol Length: 23, Num Nodes: 1853549, Time Taken: 124.04614853858948, Check: True
+Test 22
+Success: 22, Sol Length: 21, Num Nodes: 1648093, Time Taken: 110.22401165962219, Check: True
+Test 23
+Success: 23, Sol Length: 22, Num Nodes: 1750345, Time Taken: 117.9047303199768, Check: True
+Test 24
+Success: 24, Sol Length: 25, Num Nodes: 2055919, Time Taken: 137.89712715148926, Check: True
+Test 25
+Success: 25, Sol Length: 22, Num Nodes: 1748782, Time Taken: 117.54858684539795, Check: True
+Test 26
+Success: 26, Sol Length: 24, Num Nodes: 1953230, Time Taken: 131.11889052391052, Check: True
+Test 27
+Success: 27, Sol Length: 24, Num Nodes: 1948373, Time Taken: 130.81550765037537, Check: True
+Test 28
+Success: 28, Sol Length: 21, Num Nodes: 1648443, Time Taken: 110.00355052947998, Check: True
+Test 29
+Success: 29, Sol Length: 23, Num Nodes: 1850029, Time Taken: 124.40859651565552, Check: True
+Test 30
+Success: 30, Sol Length: 24, Num Nodes: 1953443, Time Taken: 131.61340069770813, Check: True
+Test 31
+Success: 31, Sol Length: 23, Num Nodes: 1854287, Time Taken: 123.75036406517029, Check: True
+Test 32
+Success: 32, Sol Length: 23, Num Nodes: 1853638, Time Taken: 123.9568600654602, Check: True
+Test 33
+Success: 33, Sol Length: 23, Num Nodes: 1847760, Time Taken: 124.24459838867188, Check: True
+Test 34
+Success: 34, Sol Length: 20, Num Nodes: 1545872, Time Taken: 103.71467757225037, Check: True
+Test 35
+Success: 35, Sol Length: 20, Num Nodes: 1538159, Time Taken: 103.3219838142395, Check: True
+Test 36
+Success: 36, Sol Length: 21, Num Nodes: 1649987, Time Taken: 110.12686657905579, Check: True
+Test 37
+Success: 37, Sol Length: 24, Num Nodes: 1954215, Time Taken: 131.66331601142883, Check: True
+Test 38
+Success: 38, Sol Length: 25, Num Nodes: 2051722, Time Taken: 137.5810387134552, Check: True
+Test 39
+Success: 39, Sol Length: 22, Num Nodes: 1750345, Time Taken: 116.66295313835144, Check: True
+Test 40
+Success: 40, Sol Length: 23, Num Nodes: 1849956, Time Taken: 123.88725781440735, Check: True
+Test 41
+Success: 41, Sol Length: 23, Num Nodes: 1851911, Time Taken: 124.52520442008972, Check: True
+Test 42
+Success: 42, Sol Length: 22, Num Nodes: 1740998, Time Taken: 117.31854033470154, Check: True
+Test 43
+Success: 43, Sol Length: 24, Num Nodes: 1957878, Time Taken: 131.69878554344177, Check: True
+Test 44
+Success: 44, Sol Length: 19, Num Nodes: 1436010, Time Taken: 97.71138548851013, Check: True
+Test 45
+Success: 45, Sol Length: 22, Num Nodes: 1747328, Time Taken: 117.59480547904968, Check: True
+Test 46
+Success: 46, Sol Length: 24, Num Nodes: 1955732, Time Taken: 130.9085693359375, Check: True
+Test 47
+Success: 47, Sol Length: 23, Num Nodes: 1848583, Time Taken: 124.38288736343384, Check: True
+Test 48
+Success: 48, Sol Length: 21, Num Nodes: 1647617, Time Taken: 109.94580864906311, Check: True
+Test 49
+Success: 49, Sol Length: 20, Num Nodes: 1543806, Time Taken: 104.77269220352173, Check: True
+Test 50
+Success: 50, Sol Length: 22, Num Nodes: 1749866, Time Taken: 118.63789176940918, Check: True
+Test 51
+Success: 51, Sol Length: 23, Num Nodes: 1850223, Time Taken: 125.19903755187988, Check: True
+Test 52
+Success: 52, Sol Length: 23, Num Nodes: 1850805, Time Taken: 124.22428917884827, Check: True
+Test 53
+Success: 53, Sol Length: 24, Num Nodes: 1954472, Time Taken: 133.78520321846008, Check: True
+Test 54
+Success: 54, Sol Length: 24, Num Nodes: 1956692, Time Taken: 131.9834225177765, Check: True
+Test 55
+Success: 55, Sol Length: 23, Num Nodes: 1854703, Time Taken: 125.0616705417633, Check: True
+Test 56
+Success: 56, Sol Length: 22, Num Nodes: 1749700, Time Taken: 118.64426970481873, Check: True
+Test 57
+Success: 57, Sol Length: 25, Num Nodes: 2057504, Time Taken: 138.50551342964172, Check: True
+Test 58
+Success: 58, Sol Length: 23, Num Nodes: 1850885, Time Taken: 125.02109122276306, Check: True
+Test 59
+Success: 59, Sol Length: 22, Num Nodes: 1748229, Time Taken: 118.27261590957642, Check: True
+Test 60
+Success: 60, Sol Length: 25, Num Nodes: 2050175, Time Taken: 139.31285786628723, Check: True
+Test 61
+Success: 61, Sol Length: 22, Num Nodes: 1748047, Time Taken: 118.1424491405487, Check: True
+Test 62
+Success: 62, Sol Length: 20, Num Nodes: 1541428, Time Taken: 103.39058542251587, Check: True
+Test 63
+Success: 63, Sol Length: 19, Num Nodes: 1438327, Time Taken: 97.9203770160675, Check: True
+Test 64
+Success: 64, Sol Length: 24, Num Nodes: 1953443, Time Taken: 131.83499789237976, Check: True
+Test 65
+Success: 65, Sol Length: 22, Num Nodes: 1752498, Time Taken: 118.75171637535095, Check: True
+Test 66
+Success: 66, Sol Length: 24, Num Nodes: 1955475, Time Taken: 133.2559518814087, Check: True
+Test 67
+Success: 67, Sol Length: 23, Num Nodes: 1850582, Time Taken: 124.6159462928772, Check: True
+Test 68
+Success: 68, Sol Length: 23, Num Nodes: 1849398, Time Taken: 124.73513102531433, Check: True
+Test 69
+Success: 69, Sol Length: 23, Num Nodes: 1848648, Time Taken: 125.68108463287354, Check: True
+Test 70
+Success: 70, Sol Length: 22, Num Nodes: 1748216, Time Taken: 119.54173278808594, Check: True
+Test 71
+Success: 71, Sol Length: 22, Num Nodes: 1749741, Time Taken: 118.26614165306091, Check: True
+Test 72
+Success: 72, Sol Length: 21, Num Nodes: 1647908, Time Taken: 112.07008266448975, Check: True
+Test 73
+Success: 73, Sol Length: 25, Num Nodes: 2058411, Time Taken: 139.00275325775146, Check: True
+Test 74
+Success: 74, Sol Length: 23, Num Nodes: 1850962, Time Taken: 125.33462715148926, Check: True
+Test 75
+Success: 75, Sol Length: 20, Num Nodes: 1543806, Time Taken: 104.73007559776306, Check: True
+Test 76
+Success: 76, Sol Length: 20, Num Nodes: 1544576, Time Taken: 103.58849787712097, Check: True
+Test 77
+Success: 77, Sol Length: 20, Num Nodes: 1544117, Time Taken: 104.51683354377747, Check: True
+Test 78
+Success: 78, Sol Length: 22, Num Nodes: 1747377, Time Taken: 117.78509712219238, Check: True
+Test 79
+Success: 79, Sol Length: 23, Num Nodes: 1852881, Time Taken: 125.6800594329834, Check: True
+Test 80
+Success: 80, Sol Length: 23, Num Nodes: 1853847, Time Taken: 125.2467429637909, Check: True
+Test 81
+Success: 81, Sol Length: 22, Num Nodes: 1754015, Time Taken: 118.80145764350891, Check: True
+Test 82
+Success: 82, Sol Length: 22, Num Nodes: 1749165, Time Taken: 119.1295554637909, Check: True
+Test 83
+Success: 83, Sol Length: 21, Num Nodes: 1649294, Time Taken: 111.89020299911499, Check: True
+Test 84
+Success: 84, Sol Length: 24, Num Nodes: 1947291, Time Taken: 133.76478099822998, Check: True
+Test 85
+Success: 85, Sol Length: 21, Num Nodes: 1645348, Time Taken: 112.591135263443, Check: True
+Test 86
+Success: 86, Sol Length: 22, Num Nodes: 1747181, Time Taken: 118.6870539188385, Check: True
+Test 87
+Success: 87, Sol Length: 23, Num Nodes: 1853627, Time Taken: 126.40916848182678, Check: True
+Test 88
+Success: 88, Sol Length: 25, Num Nodes: 2054377, Time Taken: 139.4127538204193, Check: True
+Test 89
+Success: 89, Sol Length: 22, Num Nodes: 1751601, Time Taken: 118.81685090065002, Check: True
+Test 90
+Success: 90, Sol Length: 25, Num Nodes: 2055406, Time Taken: 138.41240453720093, Check: True
+Test 91
+Success: 91, Sol Length: 21, Num Nodes: 1646095, Time Taken: 110.7354154586792, Check: True
+Test 92
+Success: 92, Sol Length: 22, Num Nodes: 1751638, Time Taken: 119.56121015548706, Check: True
+Test 93
+Success: 93, Sol Length: 23, Num Nodes: 1851986, Time Taken: 125.90383720397949, Check: True
+Test 94
+Success: 94, Sol Length: 21, Num Nodes: 1647298, Time Taken: 111.71027827262878, Check: True
+Test 95
+Success: 95, Sol Length: 23, Num Nodes: 1851495, Time Taken: 126.403400182724, Check: True
+Test 96
+Success: 96, Sol Length: 21, Num Nodes: 1648461, Time Taken: 111.83898568153381, Check: True
+Test 97
+Success: 97, Sol Length: 23, Num Nodes: 1848613, Time Taken: 124.31250309944153, Check: True
+Test 98
+Success: 98, Sol Length: 21, Num Nodes: 1643762, Time Taken: 113.01273775100708, Check: True
+Test 99
+Success: 99, Sol Length: 24, Num Nodes: 1952742, Time Taken: 136.37947368621826, Check: True
+Test 100
+Success: 100, Sol Length: 22, Num Nodes: 1747328, Time Taken: 124.15013027191162, Check: True
+Success Rate: 1.0, Avg Sol Length: 22.49, Avg Num Nodes: 1798992.96, Avg Time Taken: 121.49426710128785
+
+0.4 10000 (RTX 3090)
+
+0.6 10000 (RTX 3090)

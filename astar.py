@@ -31,7 +31,7 @@ def astar_search_pq(scrambled_cube : Cube, N, scale_factor = 0.6) -> dict:
     
     open_list = PriorityQueue()
     closed_list = set()
-    cube_to_node = {}
+    cube_to_fitness = {}
 
     initial_g = 0
     initial_f = compute_fitness([scrambled_cube.state])[0] + (scale_factor * initial_g)
@@ -39,9 +39,11 @@ def astar_search_pq(scrambled_cube : Cube, N, scale_factor = 0.6) -> dict:
     
     open_list.put((start_node.f, start_node))
     
-    cube_to_node[scrambled_cube.__hash__()] = start_node.f
+    cube_to_fitness[scrambled_cube.__hash__()] = initial_f
 
+    iteration = 0
     while not open_list.empty():
+        
         best_nodes = []
         batch_info = []
         batch_states = []
@@ -55,8 +57,8 @@ def astar_search_pq(scrambled_cube : Cube, N, scale_factor = 0.6) -> dict:
             closed_list.add(current_node.cube)
             best_nodes.append(current_node)
             
-        # print(f"Best Fitness: {best_nodes[0].f}, Best Moves: {best_nodes[0].moves}")
-        
+        # print(f"Iteration: {iteration}, Node Explored: {node_explored}, Best F: {best_nodes[0].f}")
+                
         # Generate new states for the batch
         for node in best_nodes:
             allowed_moves = get_allowed_moves(node.moves)
@@ -74,29 +76,26 @@ def astar_search_pq(scrambled_cube : Cube, N, scale_factor = 0.6) -> dict:
                 batch_info.append((tempcube.to_string(), new_moves, node.g , tempcube.__hash__()))
                 
                 del tempcube
-                        
+
         # Convert batch_states to numpy array and compute fitness
         fitness_scores = compute_fitness(batch_states)
-        
+
         for ((cube_str, new_moves, g, cube_hash), fitness) in zip(batch_info, fitness_scores):
             updated_g = g + 1
             updated_f = (scale_factor * updated_g) + fitness
             new_node : Astar_Node = Astar_Node(cube_str, new_moves, updated_g, updated_f)
             
-            score = cube_to_node.get(cube_hash)
+            score = cube_to_fitness.get(cube_hash)
             if score and score <= new_node.f:
                 continue
             
-            cube_to_node[cube_hash] = new_node.f
+            cube_to_fitness[cube_hash] = new_node.f
             open_list.put((new_node.f, new_node))
             
             node_explored += 1
-            
-        # print(f"Nodes Explored: {node_explored}")
-        
+        iteration += 1
+                  
     return {"success" : False, "solutions": None, "num_nodes": node_explored, "time_taken": time.time() - time_start}
-
-
 
 if __name__ == "__main__":
     from scramble100 import selected_scrambles
