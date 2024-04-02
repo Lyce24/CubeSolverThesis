@@ -450,6 +450,8 @@ class Cube:
     def __str__(self):
         return self.to_string()
 
+    def __lt__(self, other):
+        return self.to_string() < other.to_string()
     
 if __name__ == '__main__':
     from scramble100 import scrambles
