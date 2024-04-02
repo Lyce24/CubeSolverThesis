@@ -7,8 +7,9 @@ from heapq import heappush, heappop
 
 nnet = load_model()
 
-Node = namedtuple("Node", ["cube", "moves", "g", "f", "is_solved"])
+Node = namedtuple("Node", ["cube", "moves", "g", "f", "is_solved", "wf"])
 
+        
 def compute_fitness(states):
     # Convert list of states to a NumPy array (if not already an array)
     states_np = np.array(states)
@@ -21,18 +22,18 @@ def compute_fitness(states):
     return fitness_scores    
         
 class DPS:
-    def __init__(self, start_cube : Cube, w_admissible = 1.5, weighted = 2.0, N = 1, focal = False):
-        self.open = np.array([])
-        self.focal = np.array([])
-        self.visited = set()
+    def __init__(self, start_cube : Cube, w_admissible = 1.5, weighted = 2.0, batch_size = 1, focal = False):
         self.start_cube = start_cube
         self.w_admissible = w_admissible
         self.weighted = weighted
-        self.N = N
+        self.batch_size = batch_size
+        
+    def calculate_potential(self, cube):
+        return compute_fitness([cube.state])[0][0]
     
     def search(self) -> dict:
         
-        print("Starting DPS Search with N = ", self.N)
+        print(f"Starting DPS Search with w_admissible = {self.w_admissible} and weighted = {self.weighted}")
         time_start = time.time()
         node_explored = 1
             
@@ -41,7 +42,7 @@ class DPS:
         
         initial_g = 0
         initial_f = ((compute_fitness([self.start_cube.state])[0][0]) * self.weighted)+ initial_g
-        start_node = Node(self.start_cube, [], initial_g, initial_f, self.start_cube.is_solved())
+        start_node = Node(self.start_cube, [], initial_g, initial_f, self.start_cube.is_solved(), initial_f)
         
         self.open = np.append(self.open, start_node)
         self.focal = np.append(self.focal, start_node)
@@ -117,103 +118,118 @@ class DPS:
         best_node_index = np.argmax(scores)
         
         return best_node_index
-    
-class AWA:
-    def __init__(self, start_cube : Cube, scale_factor = 2.5, batch_size = 1, max_time = 60):
+        
+        
+class RWA:
+    def __init__(self, start_cube : Union[Cube, None], scale_factor = 2.5, batch_size = 1, max_time = 60):
         self.start_cube = start_cube
         self.scale_factor = scale_factor
         self.batch_size = batch_size
         self.max_time = max_time
-        self.time_start = time.time()
         
     def search(self):
         print(f"Starting AWA Search with scale factor = {self.scale_factor} and batch size = {self.batch_size}")
 
-        open_list = []
-        closed_list = {}
+        assert self.start_cube is not None, "Start cube is not set"
+
+        start_time = time.time()
 
         node_explored = 1
+        open_list = []
+        close = set()
+        cube_to_steps = {} # open union close with g value
+        
+        incumbent = None
 
         if self.start_cube.is_solved():
             return {"success": True, "solutions": [], "num_nodes": 1, "time_taken": 0}
 
         initial_g = 0
-        initial_f = (compute_fitness([self.start_cube.state])[0] * self.scale_factor) + initial_g
-        start_node = Node(self.start_cube.to_string(), [], initial_g, initial_f, self.start_cube.is_solved())
+        initial_f = (compute_fitness([self.start_cube.state])[0]) + initial_g
+        weighted_f = initial_f * self.scale_factor + initial_g
+        start_node = Node(self.start_cube.to_string(), [], initial_g, initial_f, self.start_cube.is_solved(), weighted_f)
         
-        heappush(self.open, (start_node.f, start_node))
+        heappush(open_list, (weighted_f, start_node))
+        cube_to_steps[start_node.cube] = initial_g
         
-        # while (len(self.open))
-    
-
-# def idastar_search(scrambled_str: str) -> dict:
-
-#     scrambled_cube = Cube()
-#     scrambled_cube.from_string(scrambled_str)
-#     initial_h = compute_fitness(np.array([scrambled_cube.convert_res_input()]))[0]
-#     start_node = Astart_Node(scrambled_str, [])
-#     start_node.h = initial_h
-#     start_node.update_f()
-    
-#     threshold = start_node.f
-
-#     def search(node : Astart_Node, threshold, depth = 0, max_depth = 40):
-#         logging.debug(f"Depth {depth}: Threshold: {threshold}, Current Node F: {node.f}")
-        
-#         if depth > 16:
-#             logging.info(f"Depth: {depth}, Threshold: {threshold}, Current Node F: {node.f}")
-        
-#         if depth > max_depth:
-#             logging.info(f"Reached maximum depth of {max_depth}.")
-#             return float('inf')  # Indicating that this path didn't lead to a solution within the depth limit.
-#         if node.f > threshold:
-#             logging.debug(f"Depth {depth}: Node f={node.f} exceeds threshold. Returning to previous level.")
-#             return node.f
-#         if node.is_solved():
-#             logging.debug(f"Solution found with {len(node.moves)} moves: {node.moves}")
-#             return node
-#         min_threshold = float('inf')
-        
-#         # Batch preparation for parallel fitness computation
-#         cube_states = []
-#         cube_info = []
-#         for move in node.get_possible_moves():
-#             tempcube = Cube()
-#             tempcube.from_string(node.cube)
-#             tempcube.move(move)
-#             cube_states.append(tempcube.convert_res_input())  # Prepare the cube state for fitness computation
-#             cube_info.append((tempcube.to_string(), node.moves + [move]))
+        while open_list and time.time() - start_time < self.max_time:
             
-#         # Parallel fitness computation for the batch
-#         fitness_scores = compute_fitness(np.array(cube_states))
-        
-#         for (cube_str, moves), fitness in zip(cube_info, fitness_scores):
-#             new_node = Astart_Node(cube_str, moves)
-#             new_node.g = node.g + 1
-#             new_node.h = fitness
-#             new_node.update_f()
+            best_nodes = []
+            batch_info = []
+            batch_states = []
             
-#             logging.debug(f"Depth {depth}: Created new node with f={new_node.f} from moves: {moves}.")
-#             temp = search(new_node, threshold, depth=depth+1, max_depth=max_depth)  # Recursive search call
-            
-#             if isinstance(temp, Astart_Node):  # Solution found
-#                 return temp
-#             if temp < min_threshold:
-#                 min_threshold = temp
+            # Collect batch
+            while open_list and len(best_nodes) < self.batch_size:
+                _, current_node = heappop(open_list)
+                cube_to_steps[current_node.cube.__hash__()] = current_node.g
                 
-#         return min_threshold
+                if incumbent == None or current_node.f < incumbent.f:
+                    best_nodes.append(current_node)
+                    close.add(current_node.cube)
+        
+            for node in best_nodes:
+                for move in get_allowed_moves(node.moves):
+                    new_moves = node.moves + [move]
+                    tempcube = Cube()
+                    tempcube.from_string(node.cube)
+                    tempcube.move(move)
+                    batch_states.append(tempcube.state)
+                    batch_info.append((tempcube.to_string(), new_moves, node.g, tempcube.__hash__(), tempcube.is_solved()))
 
-#     logging.info(f"Starting IDA* search with initial threshold: {threshold}")
-#     while True:
-#             start_time = time.time()
-#             result = search(start_node, threshold)
-#             if isinstance(result, Astart_Node):  # Solution found
-#                 return {"success": True, "solution": result.moves, "num_moves": len(result.moves)}
-#             if result == float('inf'):
-#                 return {"success": False, "solution": None, "num_moves": 0}
-#             logging.info(f"No solution under current threshold {threshold}. Increasing threshold to {result}. Time taken: {time.time() - start_time}")
-#             threshold = result
+                    del tempcube
 
+            # Compute fitness for batch states
+            fitness_scores = compute_fitness(batch_states)
 
+            for ((cube_str, new_moves, g, cube_hash, solved), fitness) in zip(batch_info, fitness_scores):
+                updated_g = g + 1
+                updated_f = updated_g + (fitness[0])
+                new_wf = fitness[0] * self.scale_factor + updated_g
+                
+                if solved:
+                    if incumbent == None or updated_f < incumbent.f:
+                        incumbent = Node(cube_str, new_moves, updated_g, updated_f, True, new_wf)
+                        print(f"Improved incumbent with {len(incumbent.moves)} moves at time {time.time() - start_time}")
+                
+                new_node = Node(cube_str, new_moves, updated_g, updated_f, False, new_wf)
+
+                score = cube_to_steps.get(cube_hash)
+                
+                if not score or score > new_node.g:
+                    if cube_hash in close:
+                        close.remove(cube_hash)
+                    cube_to_steps[cube_hash] = new_node.g
+                    heappush(open_list, (new_wf, new_node))
+                    node_explored += 1
+
+        if open_list:
+            f_min = min(open_list, key = lambda x: x[1].f)
+            f_min = f_min[1].f
+                   
+            if incumbent != None:
+                error = incumbent.f - f_min
+                return {"success": True, "solutions": incumbent.moves, "length": len(incumbent.moves), "num_nodes": node_explored, "time_taken": time.time() - start_time, "error": error}
+            else:
+                return {"success" : False}
+        else:
+            if incumbent != None:
+                return {"success": True, "solutions": incumbent.moves, "length": len(incumbent.moves), "num_nodes": node_explored, "time_taken": time.time() - start_time, "error": 0}
+            else:
+                return {"success" : False}
+            
+    def __str__(self) -> str:
+        return f"AWA(scale_factor={self.scale_factor}, batch_size={self.batch_size}, max_time={self.max_time})"
+
+    
 if __name__ == "__main__":
-    pass
+    from scramble100 import selected_scrambles
+    
+    test_str = selected_scrambles[0]
+    
+    temp = Cube()
+    temp.move_list(temp.convert_move(test_str))
+    
+    awa = AWA(temp, 5, 1)
+    
+    result, error = awa.search()
+    print(result, error)
