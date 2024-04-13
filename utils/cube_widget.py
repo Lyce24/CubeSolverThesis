@@ -1,23 +1,32 @@
-from .settings_dialog import Ui_SettingsDialog
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIntValidator
-import utils.cube_utils as cu
-import utils.widgets_utils as wu
+from utils.validate import validate
 from cube import Cube, Move
+from PyQt5.QtWidgets import QApplication
 
-from beam_search import beam_search
-from astar import astar_search_pq
+from search import MAWAStar, MBS, MWAStar
+
+# write the number in scientific notation => 1000 -> 1.0 x 10^3
+def scientific_notation(num):
+    return "{:.1e}".format(num)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        # Create the main window
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(957, 716)
+        MainWindow.resize(1280, 960)
+        
+        self.actions_delay = 250
+        
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        
+        # Vertical layout for the main window
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
+        
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -39,733 +48,116 @@ class Ui_MainWindow(object):
         self.gridLayout_7.addItem(spacerItem6, 2, 3, 1, 1)
         spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_7.addItem(spacerItem7, 2, 2, 1, 1)
+
+
+        """
+                      |  2  5  8 |
+                      |  1  4  7 |
+                      |  0  3  6 |
+             --------------------------------------------
+             20 23 26 | 47 50 53 | 29 32 35 | 38 41 44
+             19 22 25 | 46 49 52 | 28 31 34 | 37 40 43
+             18 21 24 | 45 48 51 | 27 30 33 | 36 39 42
+             --------------------------------------------           
+                      | 11 14 17 |
+                      | 10 13 16 |
+                      | 9  12 15 |
+        
+        """
+        
+        ### Front Face - Orange
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.cubie_20 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_20.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_20.sizePolicy().hasHeightForWidth())
-        self.cubie_20.setSizePolicy(sizePolicy)
-        self.cubie_20.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_20.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_20.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_20.setObjectName("cubie_20")
-        self.gridLayout_3.addWidget(self.cubie_20, 0, 2, 1, 1)
-        self.cubie_22 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_22.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_22.sizePolicy().hasHeightForWidth())
-        self.cubie_22.setSizePolicy(sizePolicy)
-        self.cubie_22.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_22.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_22.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_22.setObjectName("cubie_22")
-        self.gridLayout_3.addWidget(self.cubie_22, 1, 1, 1, 1)
-        self.cubie_21 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_21.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_21.sizePolicy().hasHeightForWidth())
-        self.cubie_21.setSizePolicy(sizePolicy)
-        self.cubie_21.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_21.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_21.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_21.setObjectName("cubie_21")
-        self.gridLayout_3.addWidget(self.cubie_21, 1, 0, 1, 1)
-        self.cubie_23 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_23.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_23.sizePolicy().hasHeightForWidth())
-        self.cubie_23.setSizePolicy(sizePolicy)
-        self.cubie_23.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_23.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_23.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_23.setObjectName("cubie_23")
-        self.gridLayout_3.addWidget(self.cubie_23, 1, 2, 1, 1)
-        self.cubie_19 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_19.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_19.sizePolicy().hasHeightForWidth())
-        self.cubie_19.setSizePolicy(sizePolicy)
-        self.cubie_19.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_19.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_19.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_19.setObjectName("cubie_19")
-        self.gridLayout_3.addWidget(self.cubie_19, 0, 1, 1, 1)
-        self.cubie_18 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_18.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_18.sizePolicy().hasHeightForWidth())
-        self.cubie_18.setSizePolicy(sizePolicy)
-        self.cubie_18.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_18.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_18.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_18.setObjectName("cubie_18")
-        self.gridLayout_3.addWidget(self.cubie_18, 0, 0, 1, 1)
-        self.cubie_24 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_24.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_24.sizePolicy().hasHeightForWidth())
-        self.cubie_24.setSizePolicy(sizePolicy)
-        self.cubie_24.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_24.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_24.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_24.setObjectName("cubie_24")
-        self.gridLayout_3.addWidget(self.cubie_24, 2, 0, 1, 1)
-        self.cubie_25 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_25.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_25.sizePolicy().hasHeightForWidth())
-        self.cubie_25.setSizePolicy(sizePolicy)
-        self.cubie_25.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_25.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_25.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_25.setObjectName("cubie_25")
-        self.gridLayout_3.addWidget(self.cubie_25, 2, 1, 1, 1)
-        self.cubie_26 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_26.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_26.sizePolicy().hasHeightForWidth())
-        self.cubie_26.setSizePolicy(sizePolicy)
-        self.cubie_26.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_26.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_26.setStyleSheet("background-color:white;\n"
-"")
-        self.cubie_26.setObjectName("cubie_26")
-        self.gridLayout_3.addWidget(self.cubie_26, 2, 2, 1, 1)
+        self.subface_47 = self.setupsubfaces("orange", "cubie_47", self.gridLayout_3, 0, 0)
+        self.subface_46 = self.setupsubfaces("orange", "cubie_46", self.gridLayout_3, 1, 0)
+        self.subface_45 = self.setupsubfaces("orange", "cubie_45", self.gridLayout_3, 2, 0)
+        self.subface_50 = self.setupsubfaces("orange", "cubie_50", self.gridLayout_3, 0, 1)
+        self.subface_49 = self.setupsubfaces("orange", "cubie_49", self.gridLayout_3, 1, 1)
+        self.subface_48 = self.setupsubfaces("orange", "cubie_48", self.gridLayout_3, 2, 1)
+        self.subface_53 = self.setupsubfaces("orange", "cubie_53", self.gridLayout_3, 0, 2)
+        self.subface_52 = self.setupsubfaces("orange", "cubie_52", self.gridLayout_3, 1, 2)
+        self.subface_51 = self.setupsubfaces("orange", "cubie_51", self.gridLayout_3, 2, 2)
         self.gridLayout_7.addLayout(self.gridLayout_3, 1, 1, 1, 1)
+        
+        ### Up Face - White
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
-        self.cubie_8 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_8.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_8.sizePolicy().hasHeightForWidth())
-        self.cubie_8.setSizePolicy(sizePolicy)
-        self.cubie_8.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_8.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_8.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_8.setObjectName("cubie_8")
-        self.gridLayout.addWidget(self.cubie_8, 2, 2, 1, 1)
-        self.cubie_0 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_0.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_0.sizePolicy().hasHeightForWidth())
-        self.cubie_0.setSizePolicy(sizePolicy)
-        self.cubie_0.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_0.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_0.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_0.setObjectName("cubie_0")
-        self.gridLayout.addWidget(self.cubie_0, 0, 0, 1, 1)
-        self.cubie_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_1.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_1.sizePolicy().hasHeightForWidth())
-        self.cubie_1.setSizePolicy(sizePolicy)
-        self.cubie_1.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_1.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_1.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_1.setObjectName("cubie_1")
-        self.gridLayout.addWidget(self.cubie_1, 0, 1, 1, 1)
-        self.cubie_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_2.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_2.sizePolicy().hasHeightForWidth())
-        self.cubie_2.setSizePolicy(sizePolicy)
-        self.cubie_2.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_2.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_2.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_2.setObjectName("cubie_2")
-        self.gridLayout.addWidget(self.cubie_2, 0, 2, 1, 1)
-        self.cubie_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_3.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_3.sizePolicy().hasHeightForWidth())
-        self.cubie_3.setSizePolicy(sizePolicy)
-        self.cubie_3.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_3.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_3.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_3.setObjectName("cubie_3")
-        self.gridLayout.addWidget(self.cubie_3, 1, 0, 1, 1)
-        self.cubie_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_4.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_4.sizePolicy().hasHeightForWidth())
-        self.cubie_4.setSizePolicy(sizePolicy)
-        self.cubie_4.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_4.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_4.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_4.setObjectName("cubie_4")
-        self.gridLayout.addWidget(self.cubie_4, 1, 1, 1, 1)
-        self.cubie_5 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_5.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_5.sizePolicy().hasHeightForWidth())
-        self.cubie_5.setSizePolicy(sizePolicy)
-        self.cubie_5.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_5.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_5.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_5.setObjectName("cubie_5")
-        self.gridLayout.addWidget(self.cubie_5, 1, 2, 1, 1)
-        self.cubie_6 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_6.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_6.sizePolicy().hasHeightForWidth())
-        self.cubie_6.setSizePolicy(sizePolicy)
-        self.cubie_6.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_6.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_6.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_6.setObjectName("cubie_6")
-        self.gridLayout.addWidget(self.cubie_6, 2, 0, 1, 1)
-        self.cubie_7 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_7.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_7.sizePolicy().hasHeightForWidth())
-        self.cubie_7.setSizePolicy(sizePolicy)
-        self.cubie_7.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_7.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_7.setStyleSheet("background-color:blue;\n"
-"")
-        self.cubie_7.setObjectName("cubie_7")
-        self.gridLayout.addWidget(self.cubie_7, 2, 1, 1, 1)
+        self.subface_2 = self.setupsubfaces("white", "cubie_2", self.gridLayout, 0, 0)
+        self.subface_1 = self.setupsubfaces("white", "cubie_1", self.gridLayout, 1, 0)
+        self.subface_0 = self.setupsubfaces("white", "cubie_0", self.gridLayout, 2, 0)
+        self.subface_5 = self.setupsubfaces("white", "cubie_5", self.gridLayout, 0, 1)
+        self.subface_4 = self.setupsubfaces("white", "cubie_4", self.gridLayout, 1, 1)
+        self.subface_3 = self.setupsubfaces("white", "cubie_3", self.gridLayout, 2, 1)
+        self.subface_8 = self.setupsubfaces("white", "cubie_8", self.gridLayout, 0, 2)
+        self.subface_7 = self.setupsubfaces("white", "cubie_7", self.gridLayout, 1, 2)
+        self.subface_6 = self.setupsubfaces("white", "cubie_6", self.gridLayout, 2, 2)
         self.gridLayout_7.addLayout(self.gridLayout, 0, 1, 1, 1)
+        
+        ### Left Face - Blue
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.cubie_9 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_9.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_9.sizePolicy().hasHeightForWidth())
-        self.cubie_9.setSizePolicy(sizePolicy)
-        self.cubie_9.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_9.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_9.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_9.setObjectName("cubie_9")
-        self.gridLayout_2.addWidget(self.cubie_9, 0, 0, 1, 1)
-        self.cubie_11 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_11.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_11.sizePolicy().hasHeightForWidth())
-        self.cubie_11.setSizePolicy(sizePolicy)
-        self.cubie_11.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_11.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_11.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_11.setObjectName("cubie_11")
-        self.gridLayout_2.addWidget(self.cubie_11, 0, 2, 1, 1)
-        self.cubie_12 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_12.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_12.sizePolicy().hasHeightForWidth())
-        self.cubie_12.setSizePolicy(sizePolicy)
-        self.cubie_12.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_12.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_12.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_12.setObjectName("cubie_12")
-        self.gridLayout_2.addWidget(self.cubie_12, 1, 0, 1, 1)
-        self.cubie_10 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_10.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_10.sizePolicy().hasHeightForWidth())
-        self.cubie_10.setSizePolicy(sizePolicy)
-        self.cubie_10.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_10.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_10.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_10.setObjectName("cubie_10")
-        self.gridLayout_2.addWidget(self.cubie_10, 0, 1, 1, 1)
-        self.cubie_14 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_14.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_14.sizePolicy().hasHeightForWidth())
-        self.cubie_14.setSizePolicy(sizePolicy)
-        self.cubie_14.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_14.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_14.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_14.setObjectName("cubie_14")
-        self.gridLayout_2.addWidget(self.cubie_14, 1, 2, 1, 1)
-        self.cubie_13 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_13.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_13.sizePolicy().hasHeightForWidth())
-        self.cubie_13.setSizePolicy(sizePolicy)
-        self.cubie_13.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_13.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_13.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_13.setObjectName("cubie_13")
-        self.gridLayout_2.addWidget(self.cubie_13, 1, 1, 1, 1)
-        self.cubie_15 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_15.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_15.sizePolicy().hasHeightForWidth())
-        self.cubie_15.setSizePolicy(sizePolicy)
-        self.cubie_15.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_15.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_15.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_15.setObjectName("cubie_15")
-        self.gridLayout_2.addWidget(self.cubie_15, 2, 0, 1, 1)
-        self.cubie_16 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_16.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_16.sizePolicy().hasHeightForWidth())
-        self.cubie_16.setSizePolicy(sizePolicy)
-        self.cubie_16.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_16.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_16.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_16.setObjectName("cubie_16")
-        self.gridLayout_2.addWidget(self.cubie_16, 2, 1, 1, 1)
-        self.cubie_17 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_17.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_17.sizePolicy().hasHeightForWidth())
-        self.cubie_17.setSizePolicy(sizePolicy)
-        self.cubie_17.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_17.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_17.setStyleSheet("background-color:orange;\n"
-"")
-        self.cubie_17.setObjectName("cubie_17")
-        self.gridLayout_2.addWidget(self.cubie_17, 2, 2, 1, 1)
+        self.subface_20 = self.setupsubfaces("blue", "cubie_20", self.gridLayout_2, 0, 0)
+        self.subface_19 = self.setupsubfaces("blue", "cubie_19", self.gridLayout_2, 1, 0)
+        self.subface_18 = self.setupsubfaces("blue", "cubie_18", self.gridLayout_2, 2, 0)
+        self.subface_23 = self.setupsubfaces("blue", "cubie_23", self.gridLayout_2, 0, 1)
+        self.subface_22 = self.setupsubfaces("blue", "cubie_22", self.gridLayout_2, 1, 1)
+        self.subface_21 = self.setupsubfaces("blue", "cubie_21", self.gridLayout_2, 2, 1)
+        self.subface_26 = self.setupsubfaces("blue", "cubie_26", self.gridLayout_2, 0, 2)
+        self.subface_25 = self.setupsubfaces("blue", "cubie_25", self.gridLayout_2, 1, 2)
+        self.subface_24 = self.setupsubfaces("blue", "cubie_24", self.gridLayout_2, 2, 2)
         self.gridLayout_7.addLayout(self.gridLayout_2, 1, 0, 1, 1)
+        
+        ### Back Face - Red
         self.gridLayout_5 = QtWidgets.QGridLayout()
         self.gridLayout_5.setSpacing(0)
         self.gridLayout_5.setObjectName("gridLayout_5")
-        self.cubie_37 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_37.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_37.sizePolicy().hasHeightForWidth())
-        self.cubie_37.setSizePolicy(sizePolicy)
-        self.cubie_37.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_37.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_37.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_37.setObjectName("cubie_37")
-        self.gridLayout_5.addWidget(self.cubie_37, 0, 1, 1, 1)
-        self.cubie_38 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_38.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_38.sizePolicy().hasHeightForWidth())
-        self.cubie_38.setSizePolicy(sizePolicy)
-        self.cubie_38.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_38.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_38.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_38.setObjectName("cubie_38")
-        self.gridLayout_5.addWidget(self.cubie_38, 0, 2, 1, 1)
-        self.cubie_40 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_40.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_40.sizePolicy().hasHeightForWidth())
-        self.cubie_40.setSizePolicy(sizePolicy)
-        self.cubie_40.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_40.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_40.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_40.setObjectName("cubie_40")
-        self.gridLayout_5.addWidget(self.cubie_40, 1, 1, 1, 1)
-        self.cubie_39 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_39.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_39.sizePolicy().hasHeightForWidth())
-        self.cubie_39.setSizePolicy(sizePolicy)
-        self.cubie_39.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_39.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_39.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_39.setObjectName("cubie_39")
-        self.gridLayout_5.addWidget(self.cubie_39, 1, 0, 1, 1)
-        self.cubie_41 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_41.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_41.sizePolicy().hasHeightForWidth())
-        self.cubie_41.setSizePolicy(sizePolicy)
-        self.cubie_41.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_41.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_41.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_41.setObjectName("cubie_41")
-        self.gridLayout_5.addWidget(self.cubie_41, 1, 2, 1, 1)
-        self.cubie_36 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_36.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_36.sizePolicy().hasHeightForWidth())
-        self.cubie_36.setSizePolicy(sizePolicy)
-        self.cubie_36.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_36.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_36.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_36.setObjectName("cubie_36")
-        self.gridLayout_5.addWidget(self.cubie_36, 0, 0, 1, 1)
-        self.cubie_42 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_42.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_42.sizePolicy().hasHeightForWidth())
-        self.cubie_42.setSizePolicy(sizePolicy)
-        self.cubie_42.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_42.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_42.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_42.setObjectName("cubie_42")
-        self.gridLayout_5.addWidget(self.cubie_42, 2, 0, 1, 1)
-        self.cubie_43 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_43.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_43.sizePolicy().hasHeightForWidth())
-        self.cubie_43.setSizePolicy(sizePolicy)
-        self.cubie_43.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_43.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_43.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_43.setObjectName("cubie_43")
-        self.gridLayout_5.addWidget(self.cubie_43, 2, 1, 1, 1)
-        self.cubie_44 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_44.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_44.sizePolicy().hasHeightForWidth())
-        self.cubie_44.setSizePolicy(sizePolicy)
-        self.cubie_44.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_44.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_44.setStyleSheet("background-color:yellow;\n"
-"")
-        self.cubie_44.setObjectName("cubie_44")
-        self.gridLayout_5.addWidget(self.cubie_44, 2, 2, 1, 1)
+        
+        self.subface_38 = self.setupsubfaces("red", "cubie_38", self.gridLayout_5, 0, 0)
+        self.subface_37 = self.setupsubfaces("red", "cubie_37", self.gridLayout_5, 1, 0)
+        self.subface_36 = self.setupsubfaces("red", "cubie_36", self.gridLayout_5, 2, 0)
+        self.subface_41 = self.setupsubfaces("red", "cubie_41", self.gridLayout_5, 0, 1)
+        self.subface_40 = self.setupsubfaces("red", "cubie_40", self.gridLayout_5, 1, 1)
+        self.subface_39 = self.setupsubfaces("red", "cubie_39", self.gridLayout_5, 2, 1)
+        self.subface_44 = self.setupsubfaces("red", "cubie_44", self.gridLayout_5, 0, 2)
+        self.subface_43 = self.setupsubfaces("red", "cubie_43", self.gridLayout_5, 1, 2)
+        self.subface_42 = self.setupsubfaces("red", "cubie_42", self.gridLayout_5, 2, 2)
         self.gridLayout_7.addLayout(self.gridLayout_5, 1, 3, 1, 1)
+        
+        ### Right Face - Green
         self.gridLayout_4 = QtWidgets.QGridLayout()
         self.gridLayout_4.setSpacing(0)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        self.cubie_28 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_28.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_28.sizePolicy().hasHeightForWidth())
-        self.cubie_28.setSizePolicy(sizePolicy)
-        self.cubie_28.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_28.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_28.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_28.setObjectName("cubie_28")
-        self.gridLayout_4.addWidget(self.cubie_28, 0, 1, 1, 1)
-        self.cubie_30 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_30.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_30.sizePolicy().hasHeightForWidth())
-        self.cubie_30.setSizePolicy(sizePolicy)
-        self.cubie_30.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_30.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_30.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_30.setObjectName("cubie_30")
-        self.gridLayout_4.addWidget(self.cubie_30, 1, 0, 1, 1)
-        self.cubie_29 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_29.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_29.sizePolicy().hasHeightForWidth())
-        self.cubie_29.setSizePolicy(sizePolicy)
-        self.cubie_29.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_29.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_29.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_29.setObjectName("cubie_29")
-        self.gridLayout_4.addWidget(self.cubie_29, 0, 2, 1, 1)
-        self.cubie_31 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_31.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_31.sizePolicy().hasHeightForWidth())
-        self.cubie_31.setSizePolicy(sizePolicy)
-        self.cubie_31.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_31.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_31.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_31.setObjectName("cubie_31")
-        self.gridLayout_4.addWidget(self.cubie_31, 1, 1, 1, 1)
-        self.cubie_32 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_32.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_32.sizePolicy().hasHeightForWidth())
-        self.cubie_32.setSizePolicy(sizePolicy)
-        self.cubie_32.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_32.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_32.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_32.setObjectName("cubie_32")
-        self.gridLayout_4.addWidget(self.cubie_32, 1, 2, 1, 1)
-        self.cubie_27 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_27.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_27.sizePolicy().hasHeightForWidth())
-        self.cubie_27.setSizePolicy(sizePolicy)
-        self.cubie_27.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_27.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_27.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_27.setObjectName("cubie_27")
-        self.gridLayout_4.addWidget(self.cubie_27, 0, 0, 1, 1)
-        self.cubie_33 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_33.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_33.sizePolicy().hasHeightForWidth())
-        self.cubie_33.setSizePolicy(sizePolicy)
-        self.cubie_33.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_33.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_33.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_33.setObjectName("cubie_33")
-        self.gridLayout_4.addWidget(self.cubie_33, 2, 0, 1, 1)
-        self.cubie_34 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_34.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_34.sizePolicy().hasHeightForWidth())
-        self.cubie_34.setSizePolicy(sizePolicy)
-        self.cubie_34.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_34.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_34.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_34.setObjectName("cubie_34")
-        self.gridLayout_4.addWidget(self.cubie_34, 2, 1, 1, 1)
-        self.cubie_35 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_35.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_35.sizePolicy().hasHeightForWidth())
-        self.cubie_35.setSizePolicy(sizePolicy)
-        self.cubie_35.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_35.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_35.setStyleSheet("background-color:red;\n"
-"")
-        self.cubie_35.setObjectName("cubie_35")
-        self.gridLayout_4.addWidget(self.cubie_35, 2, 2, 1, 1)
+        self.subface_29 = self.setupsubfaces("green", "cubie_29", self.gridLayout_4, 0, 0)
+        self.subface_28 = self.setupsubfaces("green", "cubie_28", self.gridLayout_4, 1, 0)
+        self.subface_27 = self.setupsubfaces("green", "cubie_27", self.gridLayout_4, 2, 0)
+        self.subface_32 = self.setupsubfaces("green", "cubie_32", self.gridLayout_4, 0, 1)
+        self.subface_31 = self.setupsubfaces("green", "cubie_31", self.gridLayout_4, 1, 1)
+        self.subface_30 = self.setupsubfaces("green", "cubie_30", self.gridLayout_4, 2, 1)
+        self.subface_35 = self.setupsubfaces("green", "cubie_35", self.gridLayout_4, 0, 2)
+        self.subface_34 = self.setupsubfaces("green", "cubie_34", self.gridLayout_4, 1, 2)
+        self.subface_33 = self.setupsubfaces("green", "cubie_33", self.gridLayout_4, 2, 2)
         self.gridLayout_7.addLayout(self.gridLayout_4, 1, 2, 1, 1)
+        
+        ### Down Face - Yellow
         self.gridLayout_6 = QtWidgets.QGridLayout()
         self.gridLayout_6.setSpacing(0)
         self.gridLayout_6.setObjectName("gridLayout_6")
-        self.cubie_47 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_47.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_47.sizePolicy().hasHeightForWidth())
-        self.cubie_47.setSizePolicy(sizePolicy)
-        self.cubie_47.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_47.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_47.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_47.setObjectName("cubie_47")
-        self.gridLayout_6.addWidget(self.cubie_47, 0, 2, 1, 1)
-        self.cubie_45 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_45.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_45.sizePolicy().hasHeightForWidth())
-        self.cubie_45.setSizePolicy(sizePolicy)
-        self.cubie_45.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_45.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_45.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_45.setObjectName("cubie_45")
-        self.gridLayout_6.addWidget(self.cubie_45, 0, 0, 1, 1)
-        self.cubie_46 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_46.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_46.sizePolicy().hasHeightForWidth())
-        self.cubie_46.setSizePolicy(sizePolicy)
-        self.cubie_46.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_46.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_46.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_46.setObjectName("cubie_46")
-        self.gridLayout_6.addWidget(self.cubie_46, 0, 1, 1, 1)
-        self.cubie_48 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_48.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_48.sizePolicy().hasHeightForWidth())
-        self.cubie_48.setSizePolicy(sizePolicy)
-        self.cubie_48.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_48.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_48.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_48.setObjectName("cubie_48")
-        self.gridLayout_6.addWidget(self.cubie_48, 1, 0, 1, 1)
-        self.cubie_50 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_50.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_50.sizePolicy().hasHeightForWidth())
-        self.cubie_50.setSizePolicy(sizePolicy)
-        self.cubie_50.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_50.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_50.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_50.setObjectName("cubie_50")
-        self.gridLayout_6.addWidget(self.cubie_50, 1, 2, 1, 1)
-        self.cubie_49 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_49.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_49.sizePolicy().hasHeightForWidth())
-        self.cubie_49.setSizePolicy(sizePolicy)
-        self.cubie_49.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_49.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_49.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_49.setObjectName("cubie_49")
-        self.gridLayout_6.addWidget(self.cubie_49, 1, 1, 1, 1)
-        self.cubie_51 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_51.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_51.sizePolicy().hasHeightForWidth())
-        self.cubie_51.setSizePolicy(sizePolicy)
-        self.cubie_51.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_51.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_51.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_51.setObjectName("cubie_51")
-        self.gridLayout_6.addWidget(self.cubie_51, 2, 0, 1, 1)
-        self.cubie_52 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_52.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_52.sizePolicy().hasHeightForWidth())
-        self.cubie_52.setSizePolicy(sizePolicy)
-        self.cubie_52.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_52.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_52.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_52.setObjectName("cubie_52")
-        self.gridLayout_6.addWidget(self.cubie_52, 2, 1, 1, 1)
-        self.cubie_53 = QtWidgets.QLineEdit(self.centralwidget)
-        self.cubie_53.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.cubie_53.sizePolicy().hasHeightForWidth())
-        self.cubie_53.setSizePolicy(sizePolicy)
-        self.cubie_53.setMinimumSize(QtCore.QSize(50, 50))
-        self.cubie_53.setMaximumSize(QtCore.QSize(50, 50))
-        self.cubie_53.setStyleSheet("background-color:green;\n"
-"")
-        self.cubie_53.setObjectName("cubie_53")
-        self.gridLayout_6.addWidget(self.cubie_53, 2, 2, 1, 1)
+        self.subface_11 = self.setupsubfaces("yellow", "cubie_11", self.gridLayout_6, 0, 0)
+        self.subface_10 = self.setupsubfaces("yellow", "cubie_10", self.gridLayout_6, 1, 0)
+        self.subface_9 = self.setupsubfaces("yellow", "cubie_9", self.gridLayout_6, 2, 0)
+        self.subface_14 = self.setupsubfaces("yellow", "cubie_14", self.gridLayout_6, 0, 1)
+        self.subface_13 = self.setupsubfaces("yellow", "cubie_13", self.gridLayout_6, 1, 1)
+        self.subface_12 = self.setupsubfaces("yellow", "cubie_12", self.gridLayout_6, 2, 1)
+        self.subface_17 = self.setupsubfaces("yellow", "cubie_17", self.gridLayout_6, 0, 2)
+        self.subface_16 = self.setupsubfaces("yellow", "cubie_16", self.gridLayout_6, 1, 2)
+        self.subface_15 = self.setupsubfaces("yellow", "cubie_15", self.gridLayout_6, 2, 2)
         self.gridLayout_7.addLayout(self.gridLayout_6, 2, 1, 1, 1)
+        
+        
         self.horizontalLayout.addLayout(self.gridLayout_7)
         spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem8)
@@ -775,6 +167,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.addItem(spacerItem9)
         self.formLayout = QtWidgets.QFormLayout()
         self.formLayout.setObjectName("formLayout")
+        
+        
         self.btn_up = QtWidgets.QPushButton(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -784,7 +178,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_up.setFont(font)
-        self.btn_up.setStyleSheet("background-color:blue;\n"
+        self.btn_up.setStyleSheet("background-color:white;\n"
 "")
         self.btn_up.setObjectName("btn_up")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.btn_up)
@@ -797,7 +191,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_up_reverse.setFont(font)
-        self.btn_up_reverse.setStyleSheet("background-color:blue;\n"
+        self.btn_up_reverse.setStyleSheet("background-color:white;\n"
 "")
         self.btn_up_reverse.setObjectName("btn_up_reverse")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.btn_up_reverse)
@@ -805,7 +199,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_left.setFont(font)
-        self.btn_left.setStyleSheet("background-color:orange;\n"
+        self.btn_left.setStyleSheet("background-color:blue;\n"
 "")
         self.btn_left.setObjectName("btn_left")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.btn_left)
@@ -818,7 +212,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_left_reverse.setFont(font)
-        self.btn_left_reverse.setStyleSheet("background-color:orange;\n"
+        self.btn_left_reverse.setStyleSheet("background-color:blue;\n"
 "")
         self.btn_left_reverse.setObjectName("btn_left_reverse")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.btn_left_reverse)
@@ -826,7 +220,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_front.setFont(font)
-        self.btn_front.setStyleSheet("background-color:white;\n"
+        self.btn_front.setStyleSheet("background-color:orange;\n"
 "")
         self.btn_front.setObjectName("btn_front")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.btn_front)
@@ -839,7 +233,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_front_reverse.setFont(font)
-        self.btn_front_reverse.setStyleSheet("background-color:white;\n"
+        self.btn_front_reverse.setStyleSheet("background-color:orange;\n"
 "")
         self.btn_front_reverse.setObjectName("btn_front_reverse")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.btn_front_reverse)
@@ -847,7 +241,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_right.setFont(font)
-        self.btn_right.setStyleSheet("background-color:red;\n"
+        self.btn_right.setStyleSheet("background-color:green;\n"
 "")
         self.btn_right.setObjectName("btn_right")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.btn_right)
@@ -860,7 +254,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_right_reverse.setFont(font)
-        self.btn_right_reverse.setStyleSheet("background-color:red;\n"
+        self.btn_right_reverse.setStyleSheet("background-color:green;\n"
 "")
         self.btn_right_reverse.setObjectName("btn_right_reverse")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.btn_right_reverse)
@@ -868,7 +262,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_back.setFont(font)
-        self.btn_back.setStyleSheet("background-color:yellow;\n"
+        self.btn_back.setStyleSheet("background-color:red;\n"
 "")
         self.btn_back.setObjectName("btn_back")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.btn_back)
@@ -881,7 +275,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_back_reverse.setFont(font)
-        self.btn_back_reverse.setStyleSheet("background-color:yellow;\n"
+        self.btn_back_reverse.setStyleSheet("background-color:red;\n"
 "")
         self.btn_back_reverse.setObjectName("btn_back_reverse")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.btn_back_reverse)
@@ -889,7 +283,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_down.setFont(font)
-        self.btn_down.setStyleSheet("background-color:green;\n"
+        self.btn_down.setStyleSheet("background-color:yellow;\n"
 "")
         self.btn_down.setObjectName("btn_down")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.btn_down)
@@ -902,10 +296,12 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_down_reverse.setFont(font)
-        self.btn_down_reverse.setStyleSheet("background-color:green;\n"
+        self.btn_down_reverse.setStyleSheet("background-color:yellow;\n"
 "")
         self.btn_down_reverse.setObjectName("btn_down_reverse")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.btn_down_reverse)
+        
+        ### Ret
         self.verticalLayout_11.addLayout(self.formLayout)
         self.horizontalLayout_26 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
@@ -959,16 +355,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         spacerItem30 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem30)
-        self.sol_stats = QtWidgets.QLineEdit(self.centralwidget)
-        self.sol_stats.setEnabled(False)
+        self.sol = QtWidgets.QLineEdit(self.centralwidget)
+        self.sol.setEnabled(False)
         font = QtGui.QFont()
         font.setPointSize(14)
+        
         # set color of the font to be black
-        self.sol_stats.setStyleSheet("color:black;")
-        self.sol_stats.setFont(font)
-        self.sol_stats.setAlignment(QtCore.Qt.AlignCenter)
-        self.sol_stats.setObjectName("sol_stats")
-        self.horizontalLayout_3.addWidget(self.sol_stats)
+        self.sol.setStyleSheet("color:black;")
+        self.sol.setFont(font)
+        self.sol.setAlignment(QtCore.Qt.AlignCenter)
+        self.sol.setObjectName("sol")
+        self.horizontalLayout_3.addWidget(self.sol)
         
         spacerItem31 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem31)
@@ -977,183 +374,326 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setStretch(2, 1)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
         
-    
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        spacerItem32 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem32)
+        self.sol_status = QtWidgets.QLineEdit(self.centralwidget)
+        self.sol_status.setEnabled(False)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        
+        # set color of the font to be black
+        self.sol_status.setStyleSheet("color:black;")
+        self.sol_status.setFont(font)
+        self.sol_status.setAlignment(QtCore.Qt.AlignCenter)
+        self.sol_status.setObjectName("sol_status")
+        self.horizontalLayout_4.addWidget(self.sol_status)
+
+        spacerItem33 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem33)
+        self.horizontalLayout_4.setStretch(0, 1)
+        self.horizontalLayout_4.setStretch(1, 18)
+        self.horizontalLayout_4.setStretch(2, 1)
+        self.verticalLayout.addLayout(self.horizontalLayout_4)
+                
         spacerItem16 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem16)
-        self.horizontalLayout_30 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_30.setObjectName("horizontalLayout_30")
-        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_30.addItem(spacerItem17)
-        self.verticalLayout_8 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_8.setObjectName("verticalLayout_8")
-        self.btn_solve = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_solve.setMinimumSize(QtCore.QSize(150, 0))
+
+        spacerItem28 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem28)
+        
+        """
+        start here
+        """
+        
+        # Create the main horizontal layout for the lower half
+        self.lowerHorizontalLayout = QtWidgets.QHBoxLayout()
+
+        # Left vertical layout which will take up 3/5 of the space
+        self.scramble_section = QtWidgets.QVBoxLayout()
+        self.scramble_buttons = QtWidgets.QVBoxLayout()
+   
+        self.randomize_option = QtWidgets.QHBoxLayout()        
+        self.line_scramble_depth = QtWidgets.QLineEdit(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.btn_solve.setFont(font)
-        self.btn_solve.setObjectName("btn_solve")
-        self.verticalLayout_8.addWidget(self.btn_solve)
-        spacerItem18 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_8.addItem(spacerItem18)
-        self.verticalLayout_8.setStretch(0, 1)
-        self.verticalLayout_8.setStretch(1, 1)
-        self.horizontalLayout_30.addLayout(self.verticalLayout_8)
-        self.verticalLayout_9 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_9.setObjectName("verticalLayout_9")
-        spacerItem19 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_9.addItem(spacerItem19)
-        self.verticalLayout_9.setStretch(0, 1)
-        self.verticalLayout_9.setStretch(1, 1)
-        self.horizontalLayout_30.addLayout(self.verticalLayout_9)
-        self.verticalLayout_10 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_10.setObjectName("verticalLayout_10")
-        self.astar_option = QtWidgets.QRadioButton(self.centralwidget)
+        self.line_scramble_depth.setFont(font)
+        self.line_scramble_depth.setMaxLength(3)
+        self.line_scramble_depth.setValidator(QIntValidator())
+        self.line_scramble_depth.setMaximumWidth(150)
+        self.line_scramble_depth.setObjectName("line_scramble_depth")
+        self.randomize_option.addWidget(self.line_scramble_depth)    
+        
+        self.config_options = QtWidgets.QVBoxLayout()
+        self.max_scramble_string = 150
+        self.line_scramble_string_U = QtWidgets.QLineEdit(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.astar_option.setFont(font)
-        self.astar_option.setChecked(True)
-        self.astar_option.setObjectName("astar_option")
-        self.verticalLayout_10.addWidget(self.astar_option)
-        self.beam_search_option = QtWidgets.QRadioButton(self.centralwidget)
+        self.line_scramble_string_U.setFont(font)
+        self.line_scramble_string_U.setMaxLength(9)
+        self.line_scramble_string_U.setMaximumWidth(self.max_scramble_string)
+        self.line_scramble_string_U.setObjectName("line_scramble_string_U")
+        self.config_options.addWidget(self.line_scramble_string_U)
+        
+        # repeat for D, L, R, B, F
+        self.line_scramble_string_D = QtWidgets.QLineEdit(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.beam_search_option.setFont(font)
-        self.beam_search_option.setObjectName("beam_search_option")
-        self.verticalLayout_10.addWidget(self.beam_search_option)
-        self.verticalLayout_10.setStretch(0, 1)
-        self.verticalLayout_10.setStretch(1, 1)
-        self.horizontalLayout_30.addLayout(self.verticalLayout_10)
-        spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_30.addItem(spacerItem20)
-        self.verticalLayout_13 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_13.setObjectName("verticalLayout_13")
-        self.horizontalLayout_25 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_25.setObjectName("horizontalLayout_25")
-        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_25.addItem(spacerItem21)
+        self.line_scramble_string_D.setFont(font)
+        self.line_scramble_string_D.setMaxLength(9)
+        self.line_scramble_string_D.setMaximumWidth(self.max_scramble_string)
+        self.line_scramble_string_D.setObjectName("line_scramble_string_D")
+        self.config_options.addWidget(self.line_scramble_string_D)
+        
+        self.line_scramble_string_L = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.line_scramble_string_L.setFont(font)
+        self.line_scramble_string_L.setMaxLength(9)
+        self.line_scramble_string_L.setMaximumWidth(self.max_scramble_string)
+        self.line_scramble_string_L.setObjectName("line_scramble_string_L")
+        self.config_options.addWidget(self.line_scramble_string_L)
+
+        self.line_scramble_string_R = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.line_scramble_string_R.setFont(font)
+        self.line_scramble_string_R.setMaxLength(9)
+        self.line_scramble_string_R.setMaximumWidth(self.max_scramble_string)
+        self.line_scramble_string_R.setObjectName("line_scramble_string_R")
+        self.config_options.addWidget(self.line_scramble_string_R)
+        
+        self.line_scramble_string_B = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.line_scramble_string_B.setFont(font)
+        self.line_scramble_string_B.setMaxLength(9)
+        self.line_scramble_string_B.setMaximumWidth(self.max_scramble_string)
+        self.line_scramble_string_B.setObjectName("line_scramble_string_B")
+        self.config_options.addWidget(self.line_scramble_string_B)
+        
+        self.line_scramble_string_F = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.line_scramble_string_F.setFont(font)
+        self.line_scramble_string_F.setMaxLength(9)
+        self.line_scramble_string_F.setMaximumWidth(self.max_scramble_string)
+        self.line_scramble_string_F.setObjectName("line_scramble_string_F")
+        self.config_options.addWidget(self.line_scramble_string_F)
+    
+         
         self.btn_scramble = QtWidgets.QPushButton(self.centralwidget)
         self.btn_scramble.setMinimumSize(QtCore.QSize(100, 0))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.btn_scramble.setFont(font)
         self.btn_scramble.setObjectName("btn_scramble")
-        self.horizontalLayout_25.addWidget(self.btn_scramble)
-        self.line_scramble_depth = QtWidgets.QLineEdit(self.centralwidget)
+        
+        self.btn_config = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_config.setMinimumSize(QtCore.QSize(100, 0))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.line_scramble_depth.setFont(font)
-        self.line_scramble_depth.setMaxLength(3)
-        self.line_scramble_depth.setObjectName("line_scramble_depth")
-        self.horizontalLayout_25.addWidget(self.line_scramble_depth)
-        spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_25.addItem(spacerItem22)
-        self.verticalLayout_13.addLayout(self.horizontalLayout_25)
-        spacerItem23 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_13.addItem(spacerItem23)
-        self.verticalLayout_13.setStretch(0, 1)
-        self.verticalLayout_13.setStretch(1, 1)
-        self.horizontalLayout_30.addLayout(self.verticalLayout_13)
-        spacerItem24 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_30.addItem(spacerItem24)
-        self.verticalLayout.addLayout(self.horizontalLayout_30)
-        self.horizontalLayout_22 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_22.setObjectName("horizontalLayout_22")
-        spacerItem25 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_22.addItem(spacerItem25)
-        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_22.addItem(spacerItem26)
-        self.btn_settings = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_settings.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.btn_config.setFont(font)
+        self.btn_config.setObjectName("btn_config")
+        
+        
+        self.spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+
+        self.scramble_section.addLayout(self.randomize_option, 1)       
+        self.scramble_section.addItem(self.spacerItem)
+        self.scramble_section.addLayout(self.config_options, 1)
+        
+        self.scramble_section.setStretch(1, 1)
+        self.scramble_section.setStretch(2, 20)
+        self.scramble_section.setStretch(3, 1)
+        
+        self.scramble_buttons.addWidget(self.btn_scramble)
+        self.scramble_buttons.addItem(self.spacerItem)
+        self.scramble_buttons.addWidget(self.btn_config)
+        
+        self.scramble_buttons.setStretch(0, 1)
+        self.scramble_buttons.setStretch(1, 20)
+        self.scramble_buttons.setStretch(2, 1)
+        
+    
+        self.lowerHorizontalLayout.addItem(self.spacerItem)
+        # Add left layout with stretch factor 3
+        self.lowerHorizontalLayout.addLayout(self.scramble_section)
+        self.lowerHorizontalLayout.addLayout(self.scramble_buttons)
+
+        self.lowerHorizontalLayout.addItem(self.spacerItem)
+        
+        self.rightVerticalLayout = QtWidgets.QVBoxLayout()        
+
+        ## EBWA* options
+        self.astarLayout = QtWidgets.QHBoxLayout()
+        self.astar_option = QtWidgets.QRadioButton(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.btn_settings.setFont(font)
-        self.btn_settings.setObjectName("btn_settings")
-        self.horizontalLayout_22.addWidget(self.btn_settings)
-        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_22.addItem(spacerItem27)
-        self.horizontalLayout_22.setStretch(0, 4)
-        self.horizontalLayout_22.setStretch(1, 4)
-        self.horizontalLayout_22.setStretch(2, 2)
-        self.verticalLayout.addLayout(self.horizontalLayout_22)
-        spacerItem28 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem28)
+        self.astar_option.setFont(font)
+        self.astar_option.setChecked(True)
+        self.astar_option.setObjectName("astar_option")
+        self.astarLayout.addWidget(self.astar_option)
+        
+        # Scalar factor for A* algorithm
+        self.astar_scalar_factor = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        
+        self.astar_scalar_factor.setFont(font)
+        self.astar_scalar_factor.setMaxLength(5)
+        self.astar_scalar_factor.setObjectName("astar_scalar_factor")
+        self.astarLayout.addWidget(self.astar_scalar_factor)
+        
+        # Batch size for A* algorithm
+        self.astar_batch_size = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.astar_batch_size.setFont(font)
+        self.astar_batch_size.setMaxLength(5)
+        self.astar_batch_size.setObjectName("astar_batch_size")
+        self.astarLayout.addWidget(self.astar_batch_size)
+        self.rightVerticalLayout.addLayout(self.astarLayout)
+        
+        ### EAWA* options
+        self.eawastarLayout = QtWidgets.QHBoxLayout()
+        self.eawastar_option = QtWidgets.QRadioButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.eawastar_option.setFont(font)
+        self.eawastar_option.setObjectName("eawastar_option")
+        self.eawastarLayout.addWidget(self.eawastar_option)
+        
+        # Scalar factor for EAWA* algorithm
+        self.eawastar_scalar_factor = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.eawastar_scalar_factor.setFont(font)
+        self.eawastar_scalar_factor.setMaxLength(5)
+        self.eawastar_scalar_factor.setObjectName("eawastar_scalar_factor")
+        self.eawastarLayout.addWidget(self.eawastar_scalar_factor)
+        
+        # Batch size for EAW A* algorithm
+        self.eawastar_batch_size = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.eawastar_batch_size.setFont(font)
+        self.eawastar_batch_size.setMaxLength(5)
+        self.eawastar_batch_size.setObjectName("eawastar_batch_size")
+        self.eawastarLayout.addWidget(self.eawastar_batch_size)
+        
+        self.eawastar_time_limit = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.eawastar_time_limit.setFont(font)
+        self.eawastar_time_limit.setMaxLength(5)
+        self.eawastar_time_limit.setObjectName("eawastar_time_limit")
+        self.eawastarLayout.addWidget(self.eawastar_time_limit)
+        self.rightVerticalLayout.addLayout(self.eawastarLayout)
+
+        ### EBS options
+        self.beam_searchLayout = QtWidgets.QHBoxLayout()
+        self.beam_search_option = QtWidgets.QRadioButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.beam_search_option.setFont(font)
+        self.beam_search_option.setObjectName("beam_search_option")
+        self.beam_searchLayout.addWidget(self.beam_search_option)
+                
+        # Beam width for Beam Search algorithm
+        self.beam_width_options = QtWidgets.QLineEdit(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.beam_width_options.setFont(font)
+        self.beam_width_options.setMaxLength(5)
+        self.beam_width_options.setObjectName("beam_width_options")
+        self.beam_searchLayout.addWidget(self.beam_width_options)
+        self.rightVerticalLayout.addLayout(self.beam_searchLayout)
+        
+        # make btn_solve LEFT ALIGNED
+        self.btn_solve = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_solve.setMinimumSize(QtCore.QSize(150, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.btn_solve.setFont(font)
+        self.btn_solve.setObjectName("btn_solve")
+        self.rightVerticalLayout.addWidget(self.btn_solve)
+        
+ 
+        self.lowerHorizontalLayout.addLayout(self.rightVerticalLayout)
+        self.lowerHorizontalLayout.addItem(self.spacerItem)
+        
+        """
+        
+        [ ] [Scramble Section] [Scramble Button] [ ] [Algorithms] [ ]
+        
+        """
+        self.lowerHorizontalLayout.setStretch(0, 1)
+        self.lowerHorizontalLayout.setStretch(1, 6.5)
+        self.lowerHorizontalLayout.setStretch(2, 4)
+        self.lowerHorizontalLayout.setStretch(3, 0.5)
+        self.lowerHorizontalLayout.setStretch(4, 8)
+        self.lowerHorizontalLayout.setStretch(5, 1)
+        
+
+        # Add the lower horizontal layout to the main vertical layout
+        self.verticalLayout.addLayout(self.lowerHorizontalLayout)
+                
         self.verticalLayout_2.addLayout(self.verticalLayout)
+        
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.settings = wu.Settings()
 
-        self.COLOR_VALUE = {"blue": 0, "orange": 1, "white": 2, "red": 3, "yellow": 4, "green": 5}
-        self.VALUE_COLOR = ["blue", "orange", "white", "red", "yellow", "green"]
 
-        # ACTIONS = ["U", "L", "F", "R", "B", "D", "U'", "L'", "F'", "R'", "B'", "D'"]
-        self.move_dict = {
-            Move.U1 : 0,
-            Move.L1 : 1,
-            Move.F1 : 2,
-            Move.R1 : 3,
-            Move.B1 : 4,
-            Move.D1 : 5,
-            Move.U3 : 6,
-            Move.L3 : 7,
-            Move.F3 : 8,
-            Move.R3 : 9,
-            Move.B3 : 10,
-            Move.D3 : 11
-        }
+        self.VALUE_COLOR = ["white", "yellow", "blue", "green", "red", "orange"]
+        
+        self.color_to_face = {"W": "U", "Y": "D", "B": "L", "G": "R", "R": "B", "O": "F"}
 
-        self.cubies = []
-        for i in range(3):
-                for j in range(3):
-                        temp = self.gridLayout_7.itemAtPosition(0, 1).itemAtPosition(i, j).widget()
-                        self.cubies.append([temp, temp.styleSheet().split(":")[1][:-2]])
-
-        for i in range(4):
-                for j in range(3):
-                        for k in range(3):
-                                temp = self.gridLayout_7.itemAtPosition(1, i).itemAtPosition(j, k).widget()
-                                self.cubies.append([temp, temp.styleSheet().split(":")[1][:-2]])
-
-        for i in range(3):
-                for j in range(3):
-                        temp = self.gridLayout_7.itemAtPosition(2, 1).itemAtPosition(i, j).widget()
-                        self.cubies.append([temp, temp.styleSheet().split(":")[1][:-2]])
-
+        self.cubies = [ self.subface_0, self.subface_1, self.subface_2, self.subface_3, self.subface_4, self.subface_5, self.subface_6, self.subface_7, self.subface_8,
+                        self.subface_9, self.subface_10, self.subface_11, self.subface_12, self.subface_13, self.subface_14, self.subface_15, self.subface_16, self.subface_17,
+                        self.subface_18, self.subface_19, self.subface_20, self.subface_21, self.subface_22, self.subface_23, self.subface_24, self.subface_25, self.subface_26,
+                        self.subface_27, self.subface_28, self.subface_29, self.subface_30, self.subface_31, self.subface_32, self.subface_33, self.subface_34, self.subface_35,
+                        self.subface_36, self.subface_37, self.subface_38, self.subface_39, self.subface_40, self.subface_41, self.subface_42, self.subface_43, self.subface_44,
+                        self.subface_45, self.subface_46, self.subface_47, self.subface_48, self.subface_49, self.subface_50, self.subface_51, self.subface_52, self.subface_53]
+                
+        self.cube = Cube()
 
         self.line_scramble_depth.setValidator(QIntValidator())
-        self.btn_scramble.clicked.connect(self.scramble)
+        self.btn_scramble.clicked.connect(self.randomize)
         self.btn_reset.clicked.connect(self.reset)
         self.btn_solve.clicked.connect(self.solve)
+        self.btn_config.clicked.connect(self.from_color)
 
         self.manual_buttons = []
-        self.btn_up.clicked.connect(lambda: self.scramble(seq=[0]))
+        self.btn_up.clicked.connect(lambda: self.move_list([Move.U1]))
         self.manual_buttons.append(self.btn_up)
-        self.btn_up_reverse.clicked.connect(lambda: self.scramble(seq=[6]))
+        self.btn_up_reverse.clicked.connect(lambda: self.move_list([Move.U3]))
         self.manual_buttons.append(self.btn_up_reverse)
-        self.btn_left.clicked.connect(lambda: self.scramble(seq=[1]))
+        self.btn_left.clicked.connect(lambda: self.move_list([Move.L1]))
         self.manual_buttons.append(self.btn_left)
-        self.btn_left_reverse.clicked.connect(lambda: self.scramble(seq=[7]))
+        self.btn_left_reverse.clicked.connect(lambda: self.move_list([Move.L3]))
         self.manual_buttons.append(self.btn_left_reverse)
-        self.btn_front.clicked.connect(lambda: self.scramble(seq=[2]))
+        self.btn_front.clicked.connect(lambda: self.move_list([Move.F1]))
         self.manual_buttons.append(self.btn_front)
-        self.btn_front_reverse.clicked.connect(lambda: self.scramble(seq=[8]))
+        self.btn_front_reverse.clicked.connect(lambda: self.move_list([Move.F3]))
         self.manual_buttons.append(self.btn_front_reverse)
-        self.btn_right.clicked.connect(lambda: self.scramble(seq=[3]))
+        self.btn_right.clicked.connect(lambda: self.move_list([Move.R1]))
         self.manual_buttons.append(self.btn_right)
-        self.btn_right_reverse.clicked.connect(lambda: self.scramble(seq=[9]))
+        self.btn_right_reverse.clicked.connect(lambda: self.move_list([Move.R3]))
         self.manual_buttons.append(self.btn_right_reverse)
-        self.btn_back.clicked.connect(lambda: self.scramble(seq=[4]))
+        self.btn_back.clicked.connect(lambda: self.move_list([Move.B1]))
         self.manual_buttons.append(self.btn_back)
-        self.btn_back_reverse.clicked.connect(lambda: self.scramble(seq=[10]))
+        self.btn_back_reverse.clicked.connect(lambda: self.move_list([Move.B3]))
         self.manual_buttons.append(self.btn_back_reverse)
-        self.btn_down.clicked.connect(lambda: self.scramble(seq=[5]))
+        self.btn_down.clicked.connect(lambda: self.move_list([Move.D1]))
         self.manual_buttons.append(self.btn_down)
-        self.btn_down_reverse.clicked.connect(lambda: self.scramble(seq=[11]))
+        self.btn_down_reverse.clicked.connect(lambda: self.move_list([Move.D3]))
         self.manual_buttons.append(self.btn_down_reverse)
-        self.btn_settings.clicked.connect(self.open_settings)
-        self.settings_dialog = Ui_SettingsDialog(self.settings)
+        # self.btn_settings.clicked.connect(self.open_settings)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -1161,127 +701,25 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-    def open_settings(self):
-        self.settings_dialog.exec_()
-        self.settings_dialog = Ui_SettingsDialog(self.settings)
-
-    def solve(self):
-        self.btn_reset.setEnabled(False)
-        self.btn_scramble.setEnabled(False)
-        self.btn_solve.setEnabled(False)
-
-        astar_option = self.astar_option.isChecked()
-        beam_search_option = self.beam_search_option.isChecked()
         
-        if not astar_option and not beam_search_option:
-            raise Exception("No search algorithm selected.")
+    def setupsubfaces(self, color, subface_name, face, row, col):
+        self.subface_name = QtWidgets.QLineEdit(self.centralwidget)
+        self.subface_name.setEnabled(False)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.subface_name.sizePolicy().hasHeightForWidth())
         
-        if astar_option and beam_search_option:
-            raise Exception("Both search algorithms selected.")
-                
-        # else:
-        #     threshold = self.line_solve_threshold.text() or self.settings.def_iter
-        #     threshold = int(threshold)
-        #     self.astar.set_max_iter(threshold)
-        
-        state = wu.convert_to_res_state(self.cubies)
-        cube = Cube()
-        cube.from_state(state)
-        
-        if cube.is_solved():
-            self.line_actions.setText("The cube is already solved.")
-            self.sol_stats.clear()
-            self.btn_reset.setEnabled(True)
-            self.btn_scramble.setEnabled(True)
-            self.btn_solve.setEnabled(True)
-            [button.setEnabled(True) for button in self.manual_buttons]
-            return        
-        
-        result = None
-        if astar_option:
-            print("Start solving...")
-            print(f"A* Search with Parameters: Batch Size: {self.settings.search_batch_size}, Weight: {self.settings.search_weight}")
-            result = astar_search_pq(cube, self.settings.search_batch_size, self.settings.search_weight)
+        self.subface_name.setSizePolicy(sizePolicy)
+        self.subface_name.setMinimumSize(QtCore.QSize(50, 50))
+        self.subface_name.setMaximumSize(QtCore.QSize(50, 50))
+        self.subface_name.setStyleSheet(f"background-color:{color};\n"
+"")
+        self.subface_name.setObjectName(f"{subface_name}")
+        face.addWidget(self.subface_name, row, col, 1, 1)
+        return self.subface_name
             
-        elif beam_search_option:
-            print("Start solving...")
-            print(f"Beam Search with Parameters: Beam Width: {self.settings.search_beam_width}, Max Depth: {self.settings.beam_search_max_depth}, Adaptive: {self.settings.adaptive_beam_search}")
-            result = beam_search(cube, self.settings.search_beam_width, self.settings.beam_search_max_depth, self.settings.adaptive_beam_search)
-            
-        if result["success"]:
-            sol = []
-            for i in result["solutions"]:
-                sol.append(self.move_dict[i])
-            
-            cube.move_list(result["solutions"])
-            del cube
-            self.move_list(sol, result['num_nodes'], result['time_taken'])
-        else:
-            self.line_actions.setText("The cube couldn't be solved. You can increase the time or iteration limit.")
-        self.btn_reset.setEnabled(True)
-        self.btn_scramble.setEnabled(True)
-        self.btn_solve.setEnabled(True)
-        [button.setEnabled(True) for button in self.manual_buttons]
-        
-    def reset(self):
-        self.line_actions.clear()
-        self.sol_stats.clear()
-        self.line_scramble_depth.clear()
-        self.btn_solve.setEnabled(True)
-        solved = cu.get_solved()
-        for idx, value in enumerate(solved):
-            self.cubies[idx][0].setStyleSheet(f"""background-color:{self.VALUE_COLOR[value]};\n""")
-            self.cubies[idx][1] = self.VALUE_COLOR[value]
-        
-    def move_list(self, seq=None, num_nodes=None, time_taken=None):
-        self.states, self.seq = wu.scramble(self.cubies, seq=seq)
-        self.btn_reset.setEnabled(False)
-        self.btn_scramble.setEnabled(False)
-        self.btn_solve.setEnabled(False)
-        [button.setEnabled(False) for button in self.manual_buttons]
-        string_seq = wu.seq_to_string(self.seq)
-        self.line_actions.setVisible(True)
-        self.line_actions.setText("Solution:" + string_seq)
-        self.sol_stats.setVisible(True)
-        self.sol_stats.setText(f"Solution Length: {len(seq)}, Number of States Explored: {num_nodes}, Time Taken: {round(time_taken, 2)}")
-        self.i = 0
-        self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.act)
-        self.timer.start(self.settings.actions_delay)
-        
-    def scramble(self, seq=None):
-                
-        if not seq:
-            depth = self.line_scramble_depth.text() or self.settings.def_scramble_depth
-            self.line_scramble_depth.clear()
-            
-            if depth == "":
-                depth = 20
-            
-            depth = int(depth)
-            _, scramble_move = Cube().randomize_n(depth)
-            
-            scramble_list = []
-            for i in scramble_move:
-                scramble_list.append(self.move_dict[i])
-            
-            self.states, self.seq = wu.scramble(self.cubies, seq=scramble_list)
-            
-        self.btn_reset.setEnabled(False)
-        self.btn_scramble.setEnabled(False)
-        self.btn_solve.setEnabled(False)
-        [button.setEnabled(False) for button in self.manual_buttons]
-        string_seq = wu.seq_to_string(self.seq)
-        self.line_actions.setVisible(True)
-        self.line_actions.setText("Scramble:" + string_seq)
-        self.sol_stats.clear()
-        self.i = 0
-        self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.act)
-        self.timer.start(self.settings.actions_delay)
-
-    def act(self):
+    def render(self):
         if self.i == len(self.states):
             self.timer.stop()
             self.btn_reset.setEnabled(True)
@@ -1290,10 +728,208 @@ class Ui_MainWindow(object):
             [button.setEnabled(True) for button in self.manual_buttons]
         else:
             for idx, value in enumerate(self.states[self.i]):
-                self.cubies[idx][0].setStyleSheet(f"""background-color:{self.VALUE_COLOR[value]};\n""")
-                self.cubies[idx][1]=self.VALUE_COLOR[value]
+                self.cubies[idx].setStyleSheet(f"""background-color:{self.VALUE_COLOR[value]};\n""")
             self.i+=1
 
+    def solve(self):
+         # Update the action line to inform the user that solving has started
+        self.sol.setText("Start solving...")
+        QApplication.processEvents()  # Ensure the GUI updates to show the message
+        
+        self.btn_reset.setEnabled(False)
+        self.btn_scramble.setEnabled(False)
+        self.btn_solve.setEnabled(False)
+        [button.setEnabled(False) for button in self.manual_buttons]
+        
+        astar_option = self.astar_option.isChecked()
+        beam_search_option = self.beam_search_option.isChecked()
+        eawastar_option = self.eawastar_option.isChecked()
+        
+        if not astar_option and not beam_search_option and not eawastar_option:
+            raise Exception("No search algorithm selected.")
+        
+        if (astar_option and beam_search_option) or (astar_option and eawastar_option) or (beam_search_option and eawastar_option):
+            raise Exception("More than one search algorithm selected.")
+        
+        if self.cube.is_solved():
+            self.line_actions.clear()
+            self.line_actions.setVisible(True)
+            self.line_actions.setText("The cube is already solved.")
+            self.sol.clear()
+            self.sol_status.clear()
+            self.btn_reset.setEnabled(True)
+            self.btn_scramble.setEnabled(True)
+            self.btn_solve.setEnabled(True)
+            [button.setEnabled(True) for button in self.manual_buttons]
+            return
+        
+        result = None   
+        if astar_option:
+            scalar_factor = self.astar_scalar_factor.text()
+            batch_size = self.astar_batch_size.text()
+            if scalar_factor == "":
+                scalar_factor = 3.5
+            else:
+                scalar_factor = float(scalar_factor)
+            
+            if batch_size == "":
+                batch_size = 1500
+            else:
+                batch_size = int(batch_size)
+                
+            self.astar_batch_size.clear()
+            self.astar_scalar_factor.clear()
+            mwas = MWAStar(self.cube, scalar_factor, batch_size)
+            result = mwas.search()
+            
+        elif beam_search_option:
+            beam_width = self.beam_width_options.text()
+            if beam_width == "":
+                beam_width = 2300
+            else:
+                beam_width = int(beam_width)
+                
+            self.beam_width_options.clear()
+            
+            mbs = MBS(self.cube, beam_width)
+            result = mbs.search()
+            
+        elif eawastar_option:
+            scalar_factor = self.eawastar_scalar_factor.text()
+            batch_size = self.eawastar_batch_size.text()
+            time_limit = self.eawastar_time_limit.text()
+            
+            if scalar_factor == "":
+                scalar_factor = 3.0
+            else:
+                scalar_factor = float(scalar_factor)
+            
+            if batch_size == "":
+                batch_size = 2000
+            else:
+                batch_size = int(batch_size)
+                
+            if time_limit == "":
+                time_limit = 60
+            else:
+                time_limit = int(time_limit)
+                
+            self.eawastar_batch_size.clear()
+            self.eawastar_scalar_factor.clear()
+            self.eawastar_time_limit.clear()
+            
+            mwas = MAWAStar(self.cube, scalar_factor, batch_size, time_limit)
+            result = mwas.search()
+    
+        if result["success"] and "error" in result:
+            self.move_list(result["solutions"])
+            self.sol.setText(f"Solution: {self.cube.move_to_string(result['solutions'])}")
+            self.sol_status.setText(f"Solved in {result['length']} steps, {result['time_taken']:.2f}s, {scientific_notation(result['num_nodes'])} states explored, {result['num_nodes'] / result['time_taken']:.2f} states/s, error: {result['error']:.2f}.")
+        
+        elif result["success"] and "error" not in result:
+            self.move_list(result["solutions"])
+            self.sol.setText(f"Solution: {self.cube.move_to_string(result['solutions'])}")
+            self.sol_status.setText(f"Solved in {result['length']} steps, {result['time_taken']:.2f}s, {scientific_notation(result['num_nodes'])} states explored, {result['num_nodes'] / result['time_taken']:.2f} states/s.")
+        else:
+            self.sol.setText("The cube couldn't be solved. You can increase the time, batch size, or scalar factor.")
+        self.btn_reset.setEnabled(True)
+        self.btn_scramble.setEnabled(True)
+        self.btn_solve.setEnabled(True)
+        [button.setEnabled(True) for button in self.manual_buttons]
+
+    def reset(self):
+        self.line_actions.clear()
+        self.sol.clear()
+        self.sol_status.clear()
+        self.line_scramble_depth.clear()
+        self.line_scramble_string_U.clear()
+        self.line_scramble_string_D.clear()
+        self.line_scramble_string_L.clear()
+        self.line_scramble_string_R.clear()
+        self.line_scramble_string_B.clear()
+        self.line_scramble_string_F.clear()
+        self.astar_batch_size.clear()
+        self.astar_scalar_factor.clear()
+        self.eawastar_batch_size.clear()
+        self.eawastar_scalar_factor.clear()
+        self.eawastar_time_limit.clear()
+        self.beam_width_options.clear()
+        
+        self.btn_solve.setEnabled(True)
+        self.cube.reset()
+                
+        for idx, value in enumerate(self.cube.state):
+            self.cubies[idx].setStyleSheet(f"""background-color:{self.VALUE_COLOR[value]};\n""")
+
+        self.line_actions.setVisible(True)
+        self.line_actions.setText("Reset.")
+        
+    def move_list(self, move_list):
+        # render steps by steps
+        self.states = []
+        for move in move_list:
+            self.cube.move(move)
+            self.states.append(self.cube.state.copy())
+            
+        self.i = 0
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.render)
+        self.timer.start(self.actions_delay)
+        
+    def from_color(self):
+        # clear the actions line and depth line sol sol_status
+        self.line_actions.clear()
+        self.sol.clear()
+        self.sol_status.clear()
+        self.line_scramble_depth.clear()
+        
+        U_face = self.line_scramble_string_U.text()
+        D_face = self.line_scramble_string_D.text()
+        L_face = self.line_scramble_string_L.text()
+        R_face = self.line_scramble_string_R.text()
+        B_face = self.line_scramble_string_B.text()
+        F_face = self.line_scramble_string_F.text()
+            
+        scramble_string = U_face + D_face + L_face + R_face + B_face + F_face
+        scramble_string = "".join([self.color_to_face[color] for color in scramble_string])
+
+        if len(scramble_string) != 54:
+            self.line_actions.setVisible(True)
+            self.line_actions.setText("Please enter 9 colors for each face.")
+            return
+        
+        validation_result = validate(scramble_string)
+        if validation_result["success"] == False:
+            self.line_actions.setVisible(True)
+            self.line_actions.setText(validation_result["error"])
+            return
+                
+        self.cube.from_string(scramble_string)
+        for idx, value in enumerate(self.cube.state):
+            self.cubies[idx].setStyleSheet(f"""background-color:{self.VALUE_COLOR[value]};\n""")
+        self.line_actions.setVisible(True)
+        self.line_actions.setText("Finished constructing cube from colors")
+        
+    def randomize(self):
+        depth = self.line_scramble_depth.text()
+        self.line_scramble_depth.clear()
+            
+        if depth == "":
+            depth = 15
+        else:
+            depth = int(depth)
+            
+        move_str, move_list = self.cube.random_moves(depth)
+        self.move_list(move_list)
+                
+        self.btn_reset.setEnabled(False)
+        self.btn_scramble.setEnabled(False)
+        self.btn_solve.setEnabled(False)
+        [button.setEnabled(False) for button in self.manual_buttons]
+        self.line_actions.setVisible(True)
+        self.line_actions.setText("Scramble: " + move_str)
+        self.sol.clear()
+        self.sol_status.clear()
             
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -1311,12 +947,28 @@ class Ui_MainWindow(object):
         self.btn_down.setText(_translate("MainWindow", "D"))
         self.btn_down_reverse.setText(_translate("MainWindow", "D\'"))
         self.btn_reset.setText(_translate("MainWindow", "RESET"))
-        self.btn_solve.setText(_translate("MainWindow", "Solve with:"))
-        self.astar_option.setText(_translate("MainWindow", "A* Search"))
-        self.beam_search_option.setText(_translate("MainWindow", "Beam Search"))
-        self.btn_scramble.setText(_translate("MainWindow", "Scramble"))
-        self.line_scramble_depth.setPlaceholderText(_translate("MainWindow", "Depth"))
-        self.btn_settings.setText(_translate("MainWindow", "Settings"))
+        self.btn_solve.setText(_translate("MainWindow", "Solve with Selected Algorithm"))
+        self.astar_option.setText(_translate("MainWindow", "EBWA* Search"))
+        self.beam_search_option.setText(_translate("MainWindow", "EBS"))
+        self.eawastar_option.setText(_translate("MainWindow", "EAWA* Search"))
+        
+        self.astar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.5"))
+        self.astar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 1500"))
+        self.eawastar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.0"))
+        self.eawastar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 2000"))
+        self.eawastar_time_limit.setPlaceholderText(_translate("MainWindow", "Time limit : 60s"))
+        self.beam_width_options.setPlaceholderText(_translate("MainWindow", "Beam width : 2300"))
+        
+        
+        self.btn_scramble.setText(_translate("MainWindow", "Randomly Scramble with Depth"))
+        self.line_scramble_depth.setPlaceholderText(_translate("MainWindow", "Depth : 15"))
+        self.line_scramble_string_U.setPlaceholderText(_translate("MainWindow", "Colors on U Face"))
+        self.line_scramble_string_D.setPlaceholderText(_translate("MainWindow", "Colors on D Face"))
+        self.line_scramble_string_L.setPlaceholderText(_translate("MainWindow", "Colors on L Face"))
+        self.line_scramble_string_R.setPlaceholderText(_translate("MainWindow", "Colors on R Face"))
+        self.line_scramble_string_B.setPlaceholderText(_translate("MainWindow", "Colors on B Face"))
+        self.line_scramble_string_F.setPlaceholderText(_translate("MainWindow", "Colors on F Face"))
+        self.btn_config.setText(_translate("MainWindow", "Construct Cube from Colors"))
 
 
 if __name__ == "__main__":

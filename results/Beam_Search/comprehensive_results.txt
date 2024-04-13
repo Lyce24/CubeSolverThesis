@@ -1,0 +1,2613 @@
+Test 1
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+1       True    24      103394  6.16499662399292        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+1       True    24      87513   5.079201698303223       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+1       True    24      205281  12.080207586288452      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+1       True    24      173489  10.126269102096558      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+1       True    24      303283  17.78913116455078       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+1       True    24      255682  14.976598262786865      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+1       True    24      400860  23.58184790611267       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+1       True    24      337419  19.80720567703247       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+1       True    24      498262  29.476365566253662      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+1       True    24      419116  24.715944051742554      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+1       True    24      595799  35.37623620033264       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+1       True    24      500635  29.652188777923584      True
+
+Test 2
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+1       False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+1       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+1       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+1       False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+2       True    26      334451  19.63170886039734       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+2       True    26      278047  16.253443479537964      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+2       True    26      442092  26.085285663604736      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+2       True    26      366882  21.53121590614319       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+2       True    24      498791  29.447126388549805      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+2       True    24      419589  24.68939471244812       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+2       True    24      596174  35.341245889663696      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+2       True    24      500919  29.630306482315063      True
+
+Test 3
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+2       True    26      113550  6.591307878494263       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+2       True    26      94724   5.470553874969482       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+2       True    24      205804  12.00689435005188       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+2       True    24      173697  10.132402896881104      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+3       True    24      304044  17.839300632476807      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+3       True    24      256399  15.004847288131714      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+3       True    24      401706  23.61626362800598       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+3       True    24      338077  19.804307222366333      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+3       True    24      499270  29.483426094055176      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+3       True    24      419868  24.678582906723022      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+3       True    24      596207  35.439565658569336      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+3       True    24      500906  29.562415838241577      True
+
+Test 4
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+2       False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+2       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+3       True    23      195214  11.42300796508789       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+3       True    23      166053  9.70660138130188        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+4       True    23      287772  16.865848302841187      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+4       True    23      244571  14.369970083236694      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+4       True    23      380078  22.459148168563843      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+4       True    23      322498  18.95995044708252       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+4       True    23      472086  27.92488408088684       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+4       True    23      400037  23.64563822746277       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+4       True    23      564338  33.51461219787598       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+4       True    23      477612  28.2676682472229        True
+
+Test 5
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+3       True    26      113743  6.598651647567749       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+2       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+4       True    20      164488  9.615988731384277       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+4       True    20      142982  8.357422351837158       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+5       True    20      242174  14.187241077423096      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+5       True    20      210281  12.351353406906128      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+5       True    20      319072  18.831773281097412      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+5       True    20      276496  16.242862939834595      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+5       True    20      396061  23.40599250793457       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+5       True    20      342774  20.199549198150635      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+5       True    20      473052  28.068851470947266      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+5       True    20      409136  24.316561460494995      True
+
+Test 6
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+3       False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+2       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+5       True    23      195387  11.453507661819458      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+5       True    23      166153  9.737171173095703       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+6       True    23      288238  16.933128356933594      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+6       True    23      244762  14.350379467010498      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+6       True    23      380490  22.467764139175415      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+6       True    23      322712  19.150995016098022      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+6       True    23      472850  28.591464519500732      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+6       True    23      400508  24.254281282424927      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+6       True    23      565128  33.50636124610901       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+6       True    23      478213  28.60530996322632       True
+
+Test 7
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+4       True    26      113707  6.699259519577026       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+2       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+6       True    26      225614  13.383963108062744      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+6       True    26      187979  11.016294479370117      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+7       True    26      333188  19.69944405555725       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+7       True    26      276997  16.546318292617798      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+7       True    26      441053  26.50588083267212       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+7       True    26      365886  21.830689191818237      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+7       True    24      498716  29.822620153427124      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+7       True    26      454504  27.192094802856445      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+7       True    24      596098  35.65309691429138       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+7       True    24      500824  29.81301498413086       True
+
+Test 8
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+5       True    24      103822  6.073133945465088       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+3       True    24      87757   5.152376890182495       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+7       True    22      185641  11.096955060958862      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+7       True    24      173784  10.256410121917725      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+8       True    22      273643  16.1215717792511        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+8       True    22      234211  13.780086278915405      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+8       True    22      360999  21.399925231933594      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+8       True    22      308361  18.25273299217224       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+8       True    22      448262  26.680984020233154      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+8       True    22      382655  22.99821448326111       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+8       True    22      535432  32.48791575431824       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+8       True    22      456567  27.486021518707275      True
+
+Test 9
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+6       True    25      108739  6.374780178070068       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+4       True    25      90910   5.406728982925415       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+8       True    25      215595  12.793298721313477      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+8       True    25      181000  10.626864671707153      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+9       True    23      288555  17.052369356155396      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+9       True    25      266908  15.783396244049072      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+9       True    23      380904  22.629717350006104      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+9       True    23      322987  19.1233549118042        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+9       True    23      473325  28.11355686187744       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+9       True    23      400940  23.96759271621704       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+9       True    23      565624  34.06146049499512       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+9       True    23      478794  28.529755115509033      True
+
+Test 10
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+6       False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+4       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+8       False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+8       False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+10      True    26      334829  19.77045464515686       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+10      True    26      278337  16.784151077270508      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+10      True    26      442608  26.533066749572754      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+10      True    26      367362  21.905708074569702      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+10      True    26      550091  32.92734360694885       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+10      True    26      456587  27.374548196792603      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+10      True    26      657900  39.39355778694153       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+10      True    26      545015  32.43091821670532       True
+
+Test 11
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+7       True    22      93177   5.564882278442383       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+5       True    22      79806   4.6706788539886475      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+9       True    20      164134  9.922905921936035       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+9       True    20      142649  8.49250602722168        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+11      True    20      241616  14.425888061523438      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+11      True    20      209734  12.384201765060425      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+11      True    20      318546  19.27479124069214       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+11      True    20      276035  16.520451545715332      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+11      True    20      395381  23.812772035598755      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+11      True    20      342237  20.586876392364502      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+11      True    20      472431  28.42064070701599       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+11      True    20      408482  24.307437658309937      True
+
+Test 12
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+8       True    26      113470  6.653483152389526       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+6       True    26      94496   5.51715874671936        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+10      True    26      225445  13.333678960800171      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+10      True    26      187750  11.150596618652344      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+12      True    26      333808  19.901485681533813      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+12      True    26      277347  16.482055187225342      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+12      True    26      441772  26.3968288898468        True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+12      True    26      366428  21.916667938232422      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+12      True    26      549426  33.01998949050903       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+12      True    26      455481  27.420013189315796      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+12      True    26      656946  39.5550901889801        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+12      True    26      544245  32.50106978416443       True
+
+Test 13
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+9       True    24      104025  6.15129828453064        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+7       True    26      95026   5.5859668254852295      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+11      True    24      205538  12.143599033355713      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+11      True    24      173495  10.21390414237976       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+13      True    24      303620  18.065441370010376      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+13      True    24      255994  15.119231700897217      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+13      True    24      401026  23.861173629760742      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+13      True    24      337479  19.963918447494507      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+13      True    24      498427  29.710936546325684      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+13      True    24      419045  25.006383657455444      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+13      True    24      595732  35.70140981674194       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+13      True    24      500657  29.850062131881714      True
+
+Test 14
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+10      True    25      108686  6.403194427490234       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+8       True    25      91166   5.349006175994873       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+12      True    25      216144  12.809077978134155      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+12      True    25      181074  10.935289144515991      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+14      True    25      319311  19.213363647460938      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+14      True    25      267265  15.904525518417358      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+14      True    25      421896  25.09248161315918       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+14      True    25      352718  20.871840953826904      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+14      True    25      524724  31.363507986068726      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+14      True    25      438086  26.06696653366089       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+14      True    25      626210  37.42843723297119       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+14      True    25      522653  31.51814889907837       True
+
+Test 15
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+11      True    24      103200  6.131316661834717       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+9       True    24      87342   5.276170492172241       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+13      True    22      184509  11.12185549736023       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+13      True    22      157890  9.4225435256958 True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+15      True    22      272005  16.114341497421265      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+15      True    22      232707  13.69631290435791       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+15      True    22      358772  21.326833724975586      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+15      True    22      306369  18.185433626174927      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+15      True    22      445671  26.64957594871521       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+15      True    22      380172  22.739242792129517      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+15      True    22      532461  31.864872932434082      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+15      True    22      453958  27.11323380470276       True
+
+Test 16
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+12      True    26      113429  6.703212022781372       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+10      True    26      94517   5.516116142272949       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+14      True    22      184482  10.876124620437622      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+14      True    22      157956  9.32895302772522        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+16      True    22      272340  16.388295650482178      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+16      True    22      232892  13.784447193145752      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+16      True    22      359505  21.395543813705444      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+16      True    22      306854  18.192532300949097      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+16      True    22      446384  26.949294567108154      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+16      True    22      380918  22.731753826141357      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+16      True    22      533372  32.30309176445007       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+16      True    22      454820  27.366705179214478      True
+
+Test 17
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+13      True    26      113524  6.659520864486694       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+11      True    26      94635   5.514213562011719       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+15      True    26      225553  13.299559593200684      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+15      True    26      187793  11.041205167770386      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+17      True    26      333247  19.752973318099976      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+17      True    26      276965  16.41253972053528       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+17      True    26      441037  26.28349280357361       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+17      True    26      365737  21.712581634521484      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+17      True    26      548970  33.236202001571655      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+17      True    26      454799  27.104946613311768      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+17      True    26      656365  39.48826742172241       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+17      True    26      543602  32.90524101257324       True
+
+Test 18
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+14      True    25      108373  6.321009159088135       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+11      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+16      True    25      215127  12.887264251708984      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+16      True    25      180487  10.667752265930176      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+18      True    25      317925  18.826374530792236      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+18      True    25      266143  15.737709283828735      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+18      True    25      420128  25.043307542800903      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+18      True    25      351369  20.920368432998657      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+18      True    23      472616  28.244790077209473      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+18      True    23      400389  23.72865319252014       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+18      True    23      565038  33.766321659088135      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+18      True    23      478202  28.54742121696472       True
+
+Test 19
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+15      True    21      88189   5.152439117431641       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+12      True    21      76089   4.445875883102417       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+17      True    21      174882  10.385613918304443      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+17      True    21      150897  8.90646505355835        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+19      True    21      257652  15.279566526412964      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+19      True    21      221989  13.19942569732666       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+19      True    21      339872  20.28756022453308       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+19      True    21      292323  17.45852565765381       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+19      True    21      421965  25.21680188179016       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+19      True    21      362565  21.76921582221985       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+19      True    21      504086  30.174164533615112      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+19      True    21      432736  25.989301204681396      True
+
+Test 20
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+16      True    25      108407  6.376625061035156       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+13      True    25      90965   5.438288450241089       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+18      True    25      215208  12.771310806274414      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+18      True    25      180604  10.68028473854065       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+20      True    25      317551  18.920153856277466      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+20      True    25      266420  15.781737804412842      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+20      True    23      380768  22.8718740940094        True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+20      True    23      322973  19.290003538131714      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+20      True    23      472965  28.166085481643677      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+20      True    23      400768  23.809465408325195      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+20      True    23      565190  33.666850328445435      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+20      True    23      478444  28.43117070198059       True
+
+Test 21
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+17      True    25      108679  6.342384338378906       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+14      True    25      91140   5.325698614120483       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+19      True    25      215738  12.682830095291138      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+19      True    25      181007  10.694341659545898      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+21      True    23      288856  17.11319136619568       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+21      True    23      245329  14.459182500839233      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+21      True    23      381113  22.556873321533203      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+21      True    23      323193  19.094289541244507      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+21      True    23      473701  28.4086492061615        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+21      True    23      401164  23.7587251663208        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+21      True    23      566082  33.97215819358826       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+21      True    23      479163  28.742233514785767      True
+
+Test 22
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+17      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+14      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+20      True    23      195573  11.603888273239136      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+20      True    23      166190  9.806246995925903       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+22      True    23      288574  17.15300488471985       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+22      True    23      244976  14.472406148910522      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+22      True    23      381055  22.689021348953247      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+22      True    23      323048  19.148347854614258      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+22      True    23      472886  28.190287590026855      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+22      True    23      400651  23.882805585861206      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+22      True    23      565159  33.98637270927429       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+22      True    23      478408  28.518139839172363      True
+
+Test 23
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+18      True    26      113550  6.694899797439575       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+15      True    26      94724   5.5371973514556885      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+21      True    24      205804  12.119175434112549      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+21      True    24      173697  10.222657203674316      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+23      True    24      304044  17.947429180145264      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+23      True    24      256399  15.131189823150635      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+23      True    24      401706  23.87935161590576       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+23      True    24      338077  20.030232906341553      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+23      True    24      499270  29.776087760925293      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+23      True    24      419868  24.9312264919281        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+23      True    24      596207  35.97441387176514       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+23      True    24      500906  29.965455293655396      True
+
+Test 24
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+19      True    25      109037  6.416107892990112       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+16      True    25      91557   5.35201621055603        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+22      True    25      216206  12.795827150344849      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+22      True    25      181133  10.66322636604309       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+24      True    25      319102  18.903090000152588      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+24      True    25      267085  15.859029293060303      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+24      True    25      421581  25.08186435699463       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+24      True    25      352512  20.85355520248413       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+24      True    25      524172  31.40639328956604       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+24      True    25      437983  26.04059910774231       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+24      True    25      626429  37.50747275352478       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+24      True    25      523236  31.21730065345764       True
+
+Test 25
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+20      True    24      103759  6.074065446853638       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+17      True    24      87664   5.100877523422241       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+23      True    24      205642  12.177944421768188      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+23      True    24      173979  10.308722496032715      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+25      True    24      303727  18.09392285346985       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+25      True    24      256080  15.10549521446228       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+25      True    22      359860  21.370490550994873      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+25      True    22      307325  18.264914751052856      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+25      True    22      447123  26.76233148574829       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+25      True    22      381476  22.74560260772705       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+25      True    22      534216  32.0143301486969        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+25      True    22      455411  27.178838968276978      True
+
+Test 26
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+21      True    24      103387  6.056296110153198       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+18      True    24      87401   5.1398913860321045      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+24      True    24      205320  12.11566424369812       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+24      True    24      173229  10.27452826499939       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+26      True    24      302929  17.965209245681763      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+26      True    24      255395  15.121374607086182      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+26      True    24      400037  23.864776134490967      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+26      True    24      336778  19.981762647628784      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+26      True    24      497324  29.77082133293152       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+26      True    24      418090  24.917773008346558      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+26      True    24      594574  35.83841013908386       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+26      True    24      499284  30.07182550430298       True
+
+Test 27
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+22      True    24      102805  6.120509624481201       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+19      True    24      86836   5.066152334213257       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+25      True    24      204210  12.080814838409424      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+25      True    24      172598  10.535791397094727      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+27      True    24      301328  18.070064783096313      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+27      True    24      254482  15.136759996414185      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+27      True    24      398145  23.848020792007446      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+27      True    24      335369  19.96039080619812       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+27      True    24      494995  29.80201268196106       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+27      True    24      416455  24.86106014251709       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+27      True    24      592083  35.569682598114014      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+27      True    24      497427  29.791553020477295      True
+
+Test 28
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+22      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+19      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+25      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+25      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+27      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+27      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+28      True    23      381061  22.595966815948486      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+28      True    23      323038  19.104043006896973      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+28      True    23      473466  28.233736276626587      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+28      True    23      400996  23.87805986404419       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+28      True    23      565772  34.01051735877991       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+28      True    23      478919  28.56080937385559       True
+
+Test 29
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+23      True    25      108483  6.358122110366821       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+20      True    25      91038   5.318159818649292       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+26      True    25      215587  12.72470736503601       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+26      True    25      180582  10.749818801879883      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+28      True    23      288182  17.179675102233887      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+28      True    25      266387  15.844638347625732      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+29      True    23      380279  22.520814657211304      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+29      True    23      322448  19.05101990699768       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+29      True    23      472684  28.341228246688843      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+29      True    23      400318  23.835577487945557      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+29      True    23      564871  34.39891028404236       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+29      True    23      478113  28.777545928955078      True
+
+Test 30
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+23      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+20      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+26      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+26      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+29      True    24      303319  18.01835012435913       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+29      True    24      255596  15.362305641174316      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+30      True    24      400843  23.885629892349243      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+30      True    24      337287  20.33005428314209       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+30      True    24      498332  29.74432682991028       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+30      True    24      418975  24.935725450515747      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+30      True    24      595393  35.65707516670227       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+30      True    24      500180  29.826303243637085      True
+
+Test 31
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+23      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+20      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+27      True    25      215958  12.696653842926025      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+27      True    25      181028  10.738218069076538      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+30      True    25      319250  19.00313901901245       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+30      True    25      267210  15.813748836517334      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+31      True    25      422019  25.09486985206604       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+31      True    25      352629  20.886605739593506      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+31      True    25      524741  31.278390169143677      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+31      True    25      438062  26.063594341278076      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+31      True    25      626974  37.44984412193298       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+31      True    25      523232  31.12003445625305       True
+
+Test 32
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+24      True    25      108515  6.32560920715332        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+21      True    25      91205   5.34231972694397        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+28      True    25      215658  12.69451093673706       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+28      True    25      180539  10.701398849487305      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+31      True    25      318665  18.939599990844727      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+31      True    25      266952  15.954204320907593      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+32      True    23      381634  22.80953574180603       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+32      True    25      352106  21.02765440940857       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+32      True    23      473887  28.30679488182068       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+32      True    23      401466  23.795087814331055      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+32      True    23      566136  33.80487418174744       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+32      True    23      479329  28.579134464263916      True
+
+Test 33
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+24      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+21      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+28      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+28      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+32      True    23      287931  17.03621196746826       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+31      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+33      True    23      380044  22.623070240020752      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+33      True    23      322338  19.45299458503723       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+33      True    23      472187  28.651898622512817      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+33      True    23      399938  23.88339400291443       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+33      True    23      564366  33.78969669342041       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+33      True    23      477612  28.459988355636597      True
+
+Test 34
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+24      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+21      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+29      True    26      225303  13.488124370574951      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+29      True    26      187721  11.055177211761475      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+33      True    24      303242  17.956457138061523      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+32      True    24      256059  15.134207487106323      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+34      True    20      319439  18.97963857650757       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+34      True    20      276785  16.381458282470703      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+34      True    20      396501  23.5999755859375        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+34      True    20      343175  20.457038402557373      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+34      True    20      473479  28.36799716949463       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+34      True    20      409506  24.336905241012573      True
+
+Test 35
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+25      True    22      92473   5.456984519958496       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+22      True    22      79305   4.698099374771118       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+30      True    22      183673  10.867684125900269      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+30      True    22      157174  9.31335711479187        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+34      True    22      271179  16.100992441177368      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+33      True    22      231804  13.81833267211914       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+35      True    22      357953  21.391892433166504      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+35      True    22      305511  18.331347942352295      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+35      True    22      444929  26.845985174179077      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+35      True    22      379340  22.912856817245483      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+35      True    22      531522  31.965807914733887      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+35      True    22      453046  27.10074019432068       True
+
+Test 36
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+26      True    25      109019  6.443601131439209       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+22      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+31      True    25      216121  12.73473072052002       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+31      True    25      181283  10.74250841140747       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+35      True    25      319416  19.059664487838745      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+34      True    25      267406  15.805921077728271      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+36      True    25      422256  25.076675176620483      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+36      True    25      352871  20.928131580352783      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+36      True    25      524795  31.51283574104309       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+36      True    25      438218  26.06755518913269       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+36      True    25      627416  37.72817587852478       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+36      True    25      523513  31.403911113739014      True
+
+Test 37
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+27      True    26      114271  6.67588472366333        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+22      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+32      True    24      206204  12.139795303344727      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+32      True    24      174304  10.237200736999512      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+36      True    24      304148  18.218743801116943      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+35      True    24      256714  15.487035751342773      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+37      True    24      401663  24.088219165802002      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+37      True    24      338141  20.17331051826477       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+37      True    24      499173  29.903558015823364      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+37      True    24      419792  25.060595512390137      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+37      True    24      596156  35.9559063911438        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+37      True    24      501381  30.079593420028687      True
+
+Test 38
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+28      True    25      108345  6.382179260253906       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+23      True    25      90978   5.4415154457092285      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+33      True    25      215535  13.092548847198486      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+33      True    25      180704  10.763962984085083      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+37      True    25      318525  18.956745386123657      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+36      True    25      266648  15.735970497131348      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+38      True    25      420385  25.107419967651367      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+38      True    25      351806  21.072246313095093      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+38      True    25      522690  31.413658142089844      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+38      True    25      436376  25.973381757736206      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+38      True    25      624591  37.53178000450134       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+38      True    25      521057  31.46594524383545       True
+
+Test 39
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+29      True    26      113550  6.6838219165802 True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+24      True    26      94724   5.575272798538208       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+34      True    24      205804  12.129291772842407      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+34      True    24      173697  10.236023902893066      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+38      True    24      304044  18.189496278762817      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+37      True    24      256399  15.184941053390503      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+39      True    24      401706  23.751515865325928      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+39      True    24      338077  20.235446214675903      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+39      True    24      499270  29.866368532180786      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+39      True    24      419868  25.065688848495483      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+39      True    24      596207  35.90909504890442       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+39      True    24      500906  30.07190704345703       True
+
+Test 40
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+29      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+24      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+34      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+34      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+38      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+37      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+39      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+39      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+40      True    25      523444  31.557584285736084      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+40      True    25      437118  26.103793621063232      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+40      True    25      625830  37.91956853866577       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+40      True    25      522176  31.315264463424683      True
+
+Test 41
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+30      True    25      109010  6.362781047821045       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+25      True    25      91444   5.361867904663086       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+35      True    25      216407  12.731354475021362      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+35      True    25      181482  10.805749654769897      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+39      True    25      319234  19.248812913894653      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+38      True    25      267630  15.816400527954102      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+40      True    25      421439  25.036495447158813      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+40      True    25      352189  20.871848344802856      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+41      True    23      473376  28.138089418411255      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+41      True    25      437456  26.080322265625 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+41      True    23      565688  33.86969566345215       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+41      True    23      478852  28.515140533447266      True
+
+Test 42
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+31      True    22      92855   5.483800411224365       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+26      True    22      79730   4.71567440032959        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+36      True    22      183884  10.92128610610962       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+36      True    22      157646  9.540977954864502       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+40      True    22      271387  16.41193175315857       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+39      True    22      232153  13.869863510131836      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+41      True    22      358111  21.450376510620117      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+41      True    22      305936  18.23135280609131       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+42      True    22      444979  26.680145502090454      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+42      True    22      379514  22.638981103897095      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+42      True    22      531692  32.30808925628662       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+42      True    22      453331  27.100348234176636      True
+
+Test 43
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+31      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+26      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+37      True    26      227134  13.425634622573853      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+37      True    26      189071  11.146892786026001      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+41      True    26      335677  19.850668907165527      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+40      True    26      279076  16.42991852760315       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+42      True    26      443183  26.363197565078735      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+42      True    26      367887  22.016846656799316      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+43      True    26      550754  32.78221583366394       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+43      True    26      456750  27.073992252349854      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+43      True    26      658483  39.481815338134766      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+43      True    26      545674  32.51286506652832       True
+
+Test 44
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+32      True    23      97840   5.7804296016693115      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+27      True    23      83378   4.880056142807007       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+38      True    21      174290  10.292863368988037      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+38      True    21      150393  8.948837518692017       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+42      True    19      225980  13.728186130523682      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+41      True    21      221194  13.547169208526611      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+43      True    19      297487  17.95922327041626       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+43      True    19      259751  15.522202730178833      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+44      True    19      369062  22.095066785812378      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+44      True    19      321819  19.45290780067444       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+44      True    19      440507  26.715168476104736      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+44      True    19      383826  22.978769540786743      True
+
+Test 45
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+33      True    24      103303  6.047097206115723       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+28      True    24      87394   5.148768663406372       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+39      True    24      205025  12.15520429611206       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+39      True    24      172995  10.379934549331665      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+43      True    24      302726  18.240466356277466      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+42      True    24      255243  15.178330659866333      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+44      True    22      359570  21.480079174041748      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+44      True    22      307111  18.19424033164978       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+45      True    22      446735  26.64089035987854       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+45      True    22      381018  22.644349336624146      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+45      True    22      533719  31.98072385787964       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+45      True    22      454967  27.262831449508667      True
+
+Test 46
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+33      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+28      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+39      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+39      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+43      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+42      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+44      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+44      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+46      True    26      551051  32.82208299636841       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+45      False
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+46      True    26      658802  39.48171281814575       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+46      True    26      545936  32.59915900230408       True
+
+Test 47
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+33      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+28      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+40      True    23      194706  11.427462100982666      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+40      True    23      165492  9.759422063827515       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+44      True    23      287593  17.027607202529907      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+43      True    23      244281  14.425101041793823      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+45      True    23      378601  22.52167272567749       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+45      True    23      320924  19.074131965637207      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+47      True    23      470627  28.27746844291687       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+46      True    23      398629  23.833212852478027      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+47      True    23      562808  34.06158375740051       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+47      True    23      476167  28.44900870323181       True
+
+Test 48
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+34      True    21      88109   5.223653316497803       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+29      True    21      76009   4.450425863265991       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+41      True    21      174934  10.34924578666687       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+41      True    21      150865  8.90654993057251        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+45      True    21      257761  15.28840684890747       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+44      True    21      222088  13.213370561599731      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+46      True    21      339919  20.411331176757812      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+46      True    21      292398  17.421409130096436      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+48      True    21      421909  25.21093440055847       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+47      True    21      362695  21.67267346382141       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+48      True    21      504006  30.107396602630615      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+48      True    21      432772  25.74937343597412       True
+
+Test 49
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+35      True    26      113521  6.641740560531616       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+30      True    26      94644   5.539722204208374       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+42      True    22      185269  10.892698526382446      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+42      True    22      158656  9.342023611068726       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+46      True    20      242215  14.355592250823975      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+45      True    20      210388  12.49117660522461       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+47      True    20      319192  19.02625870704651       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+47      True    20      276661  16.406688690185547      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+49      True    20      396169  23.580183267593384      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+48      True    20      343012  20.38489079475403       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+49      True    20      472886  28.35130476951599       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+49      True    20      409146  24.390095472335815      True
+
+Test 50
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+36      True    26      113902  6.649982213973999       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+30      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+43      True    24      205623  12.147488594055176      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+43      True    26      187887  11.163921117782593      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+47      True    24      303548  17.972809314727783      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+46      True    24      256129  15.164645433425903      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+48      True    24      400888  24.35912251472473       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+48      True    24      337511  20.48972773551941       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+50      True    24      498500  29.757319927215576      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+49      True    24      419157  24.91523838043213       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+50      True    22      535000  31.95469069480896       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+50      True    22      456164  27.163771390914917      True
+
+Test 51
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+37      True    25      108796  6.353922605514526       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+31      True    25      91316   5.355967998504639       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+44      True    25      215972  12.712238550186157      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+44      True    25      180984  10.643898487091064      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+48      True    25      319400  18.917744636535645      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+47      True    25      267470  16.15259575843811       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+49      True    25      421840  25.33873701095581       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+49      True    25      352795  20.869773149490356      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+51      True    25      523842  31.38125467300415       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+50      True    25      437525  26.02638030052185       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+51      True    23      565600  33.81027364730835       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+51      True    25      522563  31.138668298721313      True
+
+Test 52
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+37      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+31      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+44      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+44      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+48      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+47      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+49      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+49      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+52      True    23      472916  28.193214416503906      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+50      False
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+52      True    23      565084  33.90102410316467       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+52      True    23      478359  28.49765968322754       True
+
+Test 53
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+38      True    26      113612  6.667494773864746       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+32      True    26      94747   5.571626424789429       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+45      True    24      206110  12.128355503082275      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+45      True    26      188069  11.066182374954224      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+49      True    24      304035  17.99191951751709       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+48      True    24      256616  15.096422672271729      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+50      True    24      401805  23.818341970443726      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+50      True    24      338192  19.96674346923828       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+53      True    24      499213  30.13586664199829       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+51      True    24      420089  25.18511724472046       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+53      True    24      596511  35.95275139808655       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+53      True    24      501402  30.189252614974976      True
+
+Test 54
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+39      True    26      113940  6.659935712814331       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+33      True    26      94934   5.5626540184021 True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+46      True    26      225562  13.309798240661621      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+46      True    26      187978  11.167027473449707      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+50      True    24      304397  18.250206232070923      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+49      True    26      277385  16.477824687957764      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+51      True    24      402119  23.880778551101685      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+51      True    24      338444  20.154963970184326      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+54      True    24      499635  29.939302682876587      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+52      True    24      420311  24.895658016204834      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+54      True    24      596500  35.74423027038574       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+54      True    24      501787  29.932244300842285      True
+
+Test 55
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+39      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+33      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+46      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+46      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+51      True    23      288775  17.090192317962646      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+50      True    23      245138  14.425025701522827      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+52      True    23      381477  23.16545605659485       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+52      True    23      323441  19.49747920036316       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+55      True    23      473637  28.615553855895996      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+53      True    23      401401  24.049088716506958      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+55      True    23      565836  34.3292453289032        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+55      True    23      479034  28.6106116771698        True
+
+Test 56
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+40      True    26      113696  6.6484198570251465      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+34      True    26      94819   5.58173942565918        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+47      True    24      205572  12.122377157211304      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+47      True    24      173644  10.209393978118896      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+52      True    24      303702  17.99869465827942       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+51      True    24      256074  15.133073329925537      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+53      True    24      400673  23.847029209136963      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+53      True    24      337246  20.045209646224976      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+56      True    24      498194  29.756427764892578      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+54      True    24      418935  25.114198446273804      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+56      True    24      595675  35.728368043899536      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+56      True    24      500433  29.84289312362671       True
+
+Test 57
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+40      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+34      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+48      True    25      216288  12.732123136520386      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+47      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+53      True    25      319555  18.887202501296997      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+52      True    25      267654  15.792810678482056      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+54      True    25      422169  25.122187852859497      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+54      True    25      352875  21.204286336898804      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+57      True    25      524785  31.4492506980896        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+55      True    25      438348  26.178140878677368      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+57      True    25      626663  37.68054437637329       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+57      True    25      523487  31.27751851081848       True
+
+Test 58
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+40      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+34      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+49      True    23      195652  11.49814224243164       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+48      True    23      166392  9.820313215255737       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+54      True    23      288724  17.184134006500244      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+53      True    23      245211  14.608839988708496      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+55      True    23      381132  22.717241525650024      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+55      True    23      323181  19.618704795837402      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+58      True    23      473631  28.64601492881775       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+56      True    23      401122  23.82601046562195       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+58      True    23      565285  34.19420385360718       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+58      True    23      478306  29.160512685775757      True
+
+Test 59
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+41      True    26      113634  6.6564977169036865      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+35      True    26      94627   5.558365345001221       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+50      True    26      225806  13.284729480743408      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+49      True    26      188078  11.066187143325806      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+55      True    26      334101  19.76988649368286       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+54      True    26      277852  16.469404458999634      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+56      True    26      441690  26.406283378601074      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+56      True    26      366546  21.851772785186768      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+59      True    22      446790  26.841241359710693      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+57      True    22      381164  22.649625301361084      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+59      True    22      533801  31.958961248397827      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+59      True    22      455057  27.195651292800903      True
+
+Test 60
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+42      True    25      108537  6.341122388839722       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+36      True    25      91043   5.31139874458313        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+51      True    25      215555  12.715246200561523      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+50      True    25      180612  10.669171810150146      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+56      True    25      318781  19.10041308403015       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+55      True    25      266839  15.971274375915527      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+57      True    25      420681  25.37235927581787       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+57      True    25      351864  21.006889820098877      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+60      True    25      523149  31.31290078163147       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+58      True    25      436749  26.01484203338623       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+60      True    25      625412  37.86483311653137       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+60      True    25      522045  31.15982723236084       True
+
+Test 61
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+43      True    22      93295   5.473476886749268       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+37      True    22      79954   4.668511629104614       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+52      True    22      185004  10.93568754196167       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+51      True    22      158447  9.323000192642212       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+57      True    22      272682  16.146873950958252      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+56      True    22      233316  13.793933153152466      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+58      True    22      359733  21.35740303993225       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+58      True    22      307234  18.177778244018555      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+61      True    22      446872  26.63843274116516       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+59      True    22      381295  22.685380697250366      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+61      True    22      533779  32.26668620109558       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+61      True    22      455167  27.258387088775635      True
+
+Test 62
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+44      True    24      103547  6.121229648590088       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+38      True    24      87431   5.183118581771851       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+53      True    24      205335  12.176448106765747      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+52      True    24      173374  10.325437307357788      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+58      True    24      303262  18.052778720855713      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+57      True    24      255675  15.151631832122803      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+59      True    24      400547  23.903733491897583      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+59      True    24      337168  19.99917221069336       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+62      True    24      497566  29.797526359558105      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+60      True    24      418470  25.0460524559021        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+62      True    24      594794  35.64536952972412       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+62      True    24      499805  29.883450031280518      True
+
+Test 63
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+45      True    19      77639   4.5392091274261475      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+39      True    19      67933   4.002283811569214       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+54      True    19      153669  9.031158208847046       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+53      True    19      134531  7.9544055461883545      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+59      True    19      226044  13.358301639556885      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+58      True    19      197643  11.663959741592407      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+60      True    19      297637  17.61868667602539       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+60      True    19      259920  15.454614162445068      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+63      True    19      369221  22.104069232940674      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+61      True    19      322060  19.37193012237549       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+63      True    19      440645  27.00996422767639       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+63      True    19      384206  22.93403434753418       True
+
+Test 64
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+45      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+39      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+54      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+53      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+60      True    24      303319  17.940045595169067      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+59      True    24      255596  15.197793960571289      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+61      True    24      400843  23.947415351867676      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+61      True    24      337287  20.45985722541809       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+64      True    24      498332  29.928061962127686      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+62      True    24      418975  25.31795072555542       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+64      True    24      595393  36.039307832717896      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+64      True    24      500180  30.11319398880005       True
+
+Test 65
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+46      True    26      114020  6.762632608413696       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+39      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+55      True    26      226306  13.344836950302124      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+54      True    26      188383  11.20722770690918       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+61      True    26      334840  19.87750482559204       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+60      True    26      278268  16.775663137435913      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+62      True    22      361024  21.46319556236267       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+62      True    22      308352  18.206170082092285      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+65      True    22      448531  26.619627475738525      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+63      True    22      382662  22.835973739624023      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+65      True    22      535949  32.16851353645325       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+65      True    22      456840  27.298304557800293      True
+
+Test 66
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+46      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+39      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+55      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+54      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+61      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+60      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+62      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+62      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+66      True    26      550126  33.18347764015198       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+63      False
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+66      True    24      596260  35.75925588607788       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+66      True    26      544825  32.61612796783447       True
+
+Test 67
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+46      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+39      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+56      True    23      195387  11.551470756530762      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+55      True    23      166153  9.778526067733765       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+62      True    23      288238  17.11373257637024       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+61      True    23      244762  14.476993560791016      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+63      True    23      380490  22.718801498413086      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+63      True    23      322712  19.191420793533325      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+67      True    23      472850  28.533327341079712      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+64      True    23      400508  24.08332395553589       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+67      True    23      565128  33.8412880897522        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+67      True    23      478213  28.459469318389893      True
+
+Test 68
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+47      True    23      98316   5.816778182983398       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+40      True    23      83629   5.005776405334473       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+57      True    23      194841  11.52321457862854       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+56      True    23      165691  9.772072792053223       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+63      True    23      287703  17.034069299697876      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+62      True    23      244315  14.451591491699219      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+64      True    23      379959  22.63908886909485       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+64      True    23      322085  19.130439519882202      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+68      True    23      472384  28.273097038269043      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+65      True    23      399974  23.918756008148193      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+68      True    23      564500  33.87174963951111       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+68      True    23      477705  28.5555636882782        True
+
+Test 69
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+48      True    23      98284   5.7296881675720215      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+41      True    23      83586   4.9530816078186035      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+58      True    23      194933  11.627789497375488      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+57      True    23      165763  9.871459484100342       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+64      True    23      287735  17.009701251983643      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+63      True    23      244286  14.490897178649902      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+65      True    23      379992  22.617761611938477      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+65      True    23      322119  19.120343923568726      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+69      True    23      472234  28.38878607749939       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+66      True    23      399859  23.873571634292603      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+69      True    23      564181  33.78259587287903       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+69      True    23      477611  28.49846911430359       True
+
+Test 70
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+48      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+41      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+59      True    24      205455  12.121427536010742      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+58      True    24      173441  10.226246118545532      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+65      True    24      303206  17.94728708267212       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+64      True    24      255749  15.16034197807312       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+66      True    24      400440  23.77130675315857       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+66      True    24      337148  20.00039005279541       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+70      True    24      497726  29.91528868675232       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+67      True    24      418503  24.98385763168335       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+70      True    24      594917  35.595309019088745      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+70      True    24      499925  30.033902168273926      True
+
+Test 71
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+49      True    24      103697  6.037986516952515       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+42      True    24      87594   5.131429672241211       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+60      True    24      206019  12.101075172424316      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+59      True    26      188173  11.098172426223755      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+66      True    24      304247  18.017155408859253      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+65      True    24      256504  15.194227933883667      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+67      True    24      401706  24.02863359451294       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+67      True    24      338296  20.234416723251343      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+71      True    24      498943  29.939669847488403      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+68      True    24      419844  25.045526266098022      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+71      True    24      596022  35.64883995056152       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+71      True    24      501196  30.0165593624115        True
+
+Test 72
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+50      True    23      98793   5.77349328994751        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+43      True    23      84081   4.9082629680633545      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+61      True    23      195849  11.522985935211182      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+60      True    25      181168  10.659227132797241      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+67      True    23      288938  17.0735285282135        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+66      True    23      245426  14.45023250579834       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+68      True    23      381415  22.628514766693115      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+68      True    23      323492  19.22512912750244       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+72      True    23      472502  28.151646852493286      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+69      True    23      400892  23.79944133758545       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+72      True    23      564701  33.9023380279541        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+72      True    23      477930  28.53871512413025       True
+
+Test 73
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+50      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+43      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+61      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+60      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+68      True    25      319979  18.93160057067871       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+66      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+69      True    25      422725  25.208008527755737      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+68      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+73      True    25      525283  31.26314616203308       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+70      True    25      438794  26.083807945251465      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+73      True    25      627887  37.63543343544006       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+73      True    25      523979  31.264061212539673      True
+
+Test 74
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+51      True    25      108252  6.364043474197388       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+44      True    25      90848   5.322113037109375       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+62      True    25      214677  12.69272780418396       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+61      True    25      180357  10.696022748947144      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+69      True    25      317359  18.831650257110596      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+67      True    25      265696  15.812349557876587      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+70      True    23      380409  22.574103593826294      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+69      True    23      322513  19.090177059173584      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+74      True    23      472768  28.201306343078613      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+71      True    23      400308  23.91537618637085       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+74      True    23      564520  33.8675057888031        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+74      True    23      478187  28.53560447692871       True
+
+Test 75
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+52      True    26      113521  6.656592607498169       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+45      True    26      94644   5.5774760246276855      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+63      True    22      185269  10.916197061538696      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+62      True    22      158656  9.456189393997192       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+70      True    20      242215  14.382100820541382      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+68      True    20      210388  12.41538143157959       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+71      True    20      319192  18.93169379234314       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+70      True    20      276661  16.392236948013306      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+75      True    20      396169  23.596793174743652      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+72      True    20      343012  20.402127027511597      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+75      True    20      472886  28.315444707870483      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+75      True    20      409146  24.356284141540527      True
+
+Test 76
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+53      True    26      113441  6.6964781284332275      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+46      True    26      94545   5.56053352355957        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+64      True    24      205567  12.408555507659912      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+63      True    26      188266  11.118252277374268      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+71      True    24      303404  17.97416400909424       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+69      True    24      255846  15.133097171783447      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+72      True    24      400668  23.777334690093994      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+71      True    24      337556  19.96046757698059       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+76      True    24      498004  29.888631105422974      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+73      True    24      418696  24.900357246398926      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+76      True    24      595015  35.72118139266968       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+76      True    24      500265  29.836100816726685      True
+
+Test 77
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+54      True    20      82847   4.83560848236084        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+47      True    20      72030   4.220532417297363       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+65      True    20      164485  9.699660539627075       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+64      True    20      142891  8.405168533325195       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+72      True    20      242028  14.327505826950073      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+70      True    20      210136  12.400447130203247      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+73      True    20      318757  18.909046173095703      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+72      True    20      276197  16.3340003490448        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+77      True    20      395604  23.602622985839844      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+74      True    20      342432  20.459041595458984      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+77      True    20      472460  28.395782470703125      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+77      True    20      408695  24.32563090324402       True
+
+Test 78
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+55      True    24      103492  6.041151762008667       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+48      True    24      87380   5.129412651062012       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+66      True    24      204967  12.112732648849487      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+65      True    24      173375  10.22619366645813       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+73      True    22      272856  16.288628816604614      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+71      True    22      233413  13.906835317611694      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+74      True    22      360165  21.53591799736023       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+73      True    22      307566  18.358827352523804      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+78      True    22      447282  26.733696460723877      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+75      True    22      381681  22.77763605117798       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+78      True    22      534415  32.01523733139038       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+78      True    22      455595  27.143105268478394      True
+
+Test 79
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+56      True    25      108515  6.356999158859253       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+49      True    25      91201   5.343547105789185       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+67      True    23      195761  11.755417823791504      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+66      True    23      166446  9.857218980789185       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+74      True    23      288816  17.439879655838013      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+72      True    23      245266  14.570981979370117      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+75      True    23      380446  22.728936910629272      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+74      True    23      322704  19.1799259185791        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+79      True    23      472924  28.66188335418701       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+76      True    23      400561  23.724769353866577      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+79      True    23      565444  33.70047879219055       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+79      True    23      478335  28.64059066772461       True
+
+Test 80
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+57      True    25      108718  6.418669700622559       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+50      True    25      91316   5.34142279624939        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+68      True    25      215426  12.742847919464111      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+67      True    25      180553  10.665001153945923      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+75      True    25      318897  18.988795518875122      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+73      True    25      266854  15.77237844467163       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+76      True    25      421428  25.221810579299927      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+75      True    25      352141  20.96418261528015       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+80      True    25      524141  31.34621524810791       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+77      True    25      437518  26.069014310836792      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+80      True    25      626507  37.6479868888855        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+80      True    25      522950  31.150794506072998      True
+
+Test 81
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+57      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+50      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+69      True    26      226167  13.363243579864502      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+68      True    26      188217  11.214250564575195      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+76      True    26      334406  19.99553680419922       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+74      True    26      278176  16.403175354003906      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+77      True    24      402090  23.928672075271606      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+76      True    26      367076  21.782824754714966      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+81      True    24      499926  29.76888632774353       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+78      True    24      420299  24.890586853027344      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+81      True    24      597114  35.72344970703125       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+81      True    24      502140  29.934033393859863      True
+
+Test 82
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+58      True    24      103176  6.074519395828247       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+51      True    24      87231   5.108263254165649       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+70      True    24      204593  12.302685499191284      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+69      True    24      172855  10.283535242080688      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+77      True    24      302222  17.853983879089355      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+75      True    24      254894  15.006502151489258      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+78      True    24      399339  23.658140420913696      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+77      True    24      336346  19.880597352981567      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+82      True    24      496531  29.456414222717285      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+79      True    24      417516  24.69693899154663       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+82      True    24      593775  35.47738170623779       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+82      True    24      498855  29.68049716949463       True
+
+Test 83
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+59      True    25      108951  6.322892189025879       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+52      True    25      91338   5.328451156616211       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+71      True    21      175435  10.233803272247314      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+70      True    21      151370  8.82000470161438        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+78      True    21      258340  15.147413969039917      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+76      True    21      222734  13.059165239334106      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+79      True    21      340623  20.024721384048462      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+78      True    21      293053  17.194944620132446      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+83      True    21      422988  25.02050018310547       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+80      True    21      363490  21.398609399795532      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+83      True    21      505343  29.961907148361206      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+83      True    21      433930  25.650074005126953      True
+
+Test 84
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+60      True    24      103370  6.0221099853515625      True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+53      True    24      87284   5.073296308517456       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+72      True    24      204875  12.01468563079834       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+71      True    24      173174  10.168235301971436      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+79      True    24      302931  17.862046480178833      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+77      True    24      255300  15.02714729309082       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+80      True    24      400001  23.688183307647705      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+79      True    24      336744  19.852738857269287      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+84      True    24      497050  29.580944061279297      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+81      True    24      418114  24.782773733139038      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+84      True    24      594263  35.40979838371277       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+84      True    24      499208  29.669686317443848      True
+
+Test 85
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+61      True    21      87882   5.094029664993286       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+54      True    21      75763   4.4060585498809814      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+73      True    21      174483  10.208114624023438      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+72      True    21      150529  8.829285621643066       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+80      True    21      257252  15.17374849319458       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+78      True    21      221586  12.996524333953857      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+81      True    21      339250  20.08548665046692       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+80      True    21      291824  17.217142581939697      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+85      True    21      421355  24.938321352005005      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+82      True    21      362004  21.350558519363403      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+85      True    21      502815  29.812793970108032      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+85      True    21      432031  25.609215259552002      True
+
+Test 86
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+62      True    24      103177  5.980417966842651       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+55      True    24      87125   5.093859434127808       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+74      True    24      205277  12.019539833068848      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+73      True    24      173204  10.14557147026062       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+81      True    24      303255  17.81912612915039       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+79      True    24      255431  14.981723070144653      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+82      True    24      400414  23.64488434791565       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+81      True    24      337063  19.88748550415039       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+86      True    22      447183  26.378341913223267      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+83      True    24      418444  24.652026176452637      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+86      True    22      534367  31.61450433731079       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+86      True    22      455460  26.91623282432556       True
+
+Test 87
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+63      True    25      108646  6.302662134170532       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+56      True    25      91100   5.313800096511841       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+75      True    23      195835  11.417857885360718      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+74      True    23      166432  9.672428369522095       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+82      True    23      288463  16.909823417663574      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+80      True    23      244969  14.371466398239136      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+83      True    23      380865  22.38613510131836       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+82      True    23      322918  18.923079013824463      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+87      True    23      473290  27.958298921585083      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+84      True    23      400851  23.63847827911377       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+87      True    23      565729  33.523744344711304      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+87      True    23      478765  28.295953273773193      True
+
+Test 88
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+64      True    25      108484  6.319401741027832       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+57      True    25      90967   5.3080995082855225      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+76      True    25      215482  12.645202398300171      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+75      True    25      180786  10.577187061309814      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+83      True    25      318739  18.74664807319641       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+81      True    25      266809  15.68135118484497       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+84      True    25      421387  24.915695905685425      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+83      True    25      352208  20.76739001274109       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+88      True    25      523981  31.108952283859253      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+85      True    25      437554  25.88802456855774       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+88      True    25      626617  37.1824095249176        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+88      True    25      522748  30.915290117263794      True
+
+Test 89
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+64      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+57      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+76      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+75      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+83      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+81      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+85      True    26      442938  26.23482084274292       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+84      True    26      367462  21.64649248123169       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+89      True    26      550643  32.634801387786865      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+86      True    26      456496  26.937313318252563      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+89      True    26      658278  39.13913178443909       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+89      True    26      545355  32.350472927093506      True
+
+Test 90
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+65      True    25      108621  6.320797681808472       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+57      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+77      True    25      216028  12.67599630355835       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+76      True    25      181112  10.591230869293213      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+84      True    25      319413  18.78101682662964       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+82      True    25      267352  15.708322048187256      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+86      True    25      421621  24.916616439819336      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+85      True    25      352655  20.814311265945435      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+90      True    25      523863  31.117888927459717      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+87      True    25      437862  25.933021545410156      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+90      True    25      625743  37.34089207649231       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+90      True    25      522090  30.97130036354065       True
+
+Test 91
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+66      True    21      88148   5.11137580871582        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+58      True    21      76043   4.412635803222656       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+78      True    21      174935  10.229751586914062      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+77      True    21      150946  8.83573293685913        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+85      True    21      257723  15.138926982879639      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+83      True    21      222106  13.021678447723389      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+87      True    21      339794  20.107840299606323      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+86      True    21      292358  17.228307247161865      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+91      True    21      421873  25.00974440574646       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+88      True    21      362554  21.42478656768799       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+91      True    21      503724  29.914896965026855      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+91      True    21      432469  25.65304923057556       True
+
+Test 92
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+67      True    24      103814  5.990371465682983       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+59      True    24      87633   5.117189168930054       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+79      True    24      205897  12.073403596878052      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+78      True    24      173880  10.1821608543396        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+86      True    22      273417  16.05921173095703       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+84      True    22      234064  13.739728450775146      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+88      True    22      360827  21.383196115493774      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+87      True    22      308138  18.178915977478027      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+92      True    22      448218  26.5244243144989        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+89      True    22      382356  22.575955152511597      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+92      True    22      535348  31.85025191307068       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+92      True    22      456478  26.991172075271606      True
+
+Test 93
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+68      True    23      98544   5.725443601608276       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+60      True    23      83856   4.858624219894409       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+80      True    23      195285  11.44093918800354       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+79      True    23      166289  9.711273431777954       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+87      True    23      287907  16.9633047580719        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+85      True    23      244714  14.406493902206421      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+89      True    23      380200  22.45717453956604       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+88      True    23      322404  18.99893021583557       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+93      True    23      472625  28.00801706314087       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+90      True    23      400211  23.588066816329956      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+93      True    23      564887  33.583009481430054      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+93      True    23      478169  28.278778553009033      True
+
+Test 94
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+69      True    23      98497   5.714653015136719       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+61      True    23      83709   4.8419413566589355      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+81      True    23      195075  11.418339729309082      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+80      True    23      166138  9.739066362380981       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+88      True    23      288278  16.945979595184326      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+86      True    23      244715  14.404846429824829      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+90      True    23      380827  22.540029048919678      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+89      True    23      322712  19.06158709526062       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+94      True    23      473221  28.0388400554657        True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+91      True    23      400734  23.706637859344482      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+94      True    23      565523  33.626381397247314      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+94      True    23      478667  28.261326789855957      True
+
+Test 95
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+69      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+61      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+81      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+80      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+89      True    25      318835  18.83539128303528       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+86      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+91      True    25      421595  24.754960298538208      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+90      True    25      352247  20.65553116798401       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+95      True    25      523731  31.019184350967407      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+92      True    25      437621  25.6974995136261        True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+95      True    25      626083  37.18726563453674       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+95      True    25      522615  30.94418692588806       True
+
+Test 96
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+70      True    23      98088   5.71786642074585        True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+62      True    23      83383   4.85975193977356        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+82      True    21      174738  10.222503423690796      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+81      True    21      150721  8.839874267578125       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+90      True    21      257498  15.125170230865479      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+87      True    21      221918  13.071411848068237      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+92      True    21      339656  20.050285816192627      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+91      True    21      292208  17.197290420532227      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+96      True    21      421752  24.978935480117798      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+93      True    21      362468  21.42175269126892       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+96      True    21      503961  29.908653259277344      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+96      True    21      432660  25.606741189956665      True
+
+Test 97
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+70      False
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+62      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+82      False
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+81      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+90      False
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+87      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+92      False
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+91      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+96      False
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+93      False
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+96      False
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+96      False
+
+Test 98
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+71      True    23      98499   5.729222774505615       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+63      True    23      83888   4.868768692016602       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+83      True    23      195040  11.456106662750244      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+82      True    23      165931  9.698398351669312       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+91      True    23      287818  16.92549729347229       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+88      True    23      244428  14.390292167663574      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+93      True    23      380213  22.430745601654053      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+92      True    23      322306  18.994284868240356      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+97      True    23      471437  27.971196174621582      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+94      True    23      399327  23.61777091026306       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+97      True    23      562305  33.54891324043274       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+97      True    23      475876  28.363020658493042      True
+
+Test 99
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+72      True    26      113944  6.627837657928467       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+64      True    26      94851   5.49623966217041        True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+84      True    24      205443  12.037341833114624      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+83      True    24      173644  10.2018883228302        True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+92      True    24      303416  17.865172863006592      True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+89      True    24      255861  15.070507764816284      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+94      True    24      401058  23.67871332168579       True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+93      True    24      337561  19.89388346672058       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+98      True    24      497682  29.591354370117188      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+95      True    24      419244  24.757572650909424      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+98      True    24      594732  35.31453824043274       True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+98      True    24      499658  29.577159881591797      True
+
+Test 100
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = False
+73      True    24      103303  6.032806873321533       True
+Starting Beam Search with beam width = 500, max depth = 26 and adaptive = True
+65      True    24      87394   5.081247568130493       True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+85      True    24      205025  12.029384851455688      True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = True
+84      True    24      172995  10.15377140045166       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+93      True    24      302726  17.90497636795044       True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = True
+90      True    24      255243  15.023747682571411      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+95      True    22      359570  21.242647171020508      True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = True
+94      True    22      307111  18.08214259147644       True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+99      True    22      446735  26.402546405792236      True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = True
+96      True    22      381018  22.568304777145386      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+99      True    22      533719  31.763535976409912      True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = True
+99      True    22      454967  27.005250692367554      True
+
+Results:
+BeamSearch(beam_width=500, max_depth=26, adaptive=False)        0.73    24.28767123287671       104925.80821917808      6.148998636088959
+BeamSearch(beam_width=500, max_depth=26, adaptive=True) 0.65    24.153846153846153      87897.53846153847       5.15190051152156
+BeamSearch(beam_width=1000, max_depth=26, adaptive=False)       0.85    23.63529411764706       201702.75294117647      11.911157498640172
+BeamSearch(beam_width=1000, max_depth=26, adaptive=True)        0.84    23.761904761904763      171532.52380952382      10.128360912913369
+BeamSearch(beam_width=1500, max_depth=26, adaptive=False)       0.93    23.49462365591398       295717.32258064515      17.535335753553657
+BeamSearch(beam_width=1500, max_depth=26, adaptive=True)        0.9     23.555555555555557      250693.6888888889       14.839728254742093
+BeamSearch(beam_width=2000, max_depth=26, adaptive=False)       0.95    23.28421052631579       386292.45263157896      22.980491801312095
+BeamSearch(beam_width=2000, max_depth=26, adaptive=True)        0.94    23.30851063829787       326880.8617021277       19.405647381823112
+BeamSearch(beam_width=2500, max_depth=26, adaptive=False)       0.99    23.21212121212121       478205.1818181818       28.567141077735208
+BeamSearch(beam_width=2500, max_depth=26, adaptive=True)        0.96    23.21875        404169.4583333333       24.055267723898094
+BeamSearch(beam_width=3000, max_depth=26, adaptive=False)       0.99    23.151515151515152      569562.9595959596       34.128833168684835
+BeamSearch(beam_width=3000, max_depth=26, adaptive=True)        0.99    23.19191919191919       482034.63636363635      28.760256304885402

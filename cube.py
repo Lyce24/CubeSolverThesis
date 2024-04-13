@@ -6,6 +6,7 @@ import re
 from enum import IntEnum
 import torch.nn as nn
 import torch.nn.functional as F
+from utils.validate import validate
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
@@ -92,42 +93,115 @@ class ResnetModel(nn.Module):
         # output
         x = self.fc_out(x)
         return x
+    
+
+class LinearBlock(nn.Module):
+    """
+    Linear layer with ReLU and BatchNorm
+    """
+    def __init__(self, input_prev, embed_dim):
+        super(LinearBlock, self).__init__()
+        self.fc = nn.Linear(input_prev, embed_dim)
+        self.relu = nn.ReLU()
+        self.bn = nn.BatchNorm1d(embed_dim)
+
+    def forward(self, inputs):
+        x = inputs
+        x = self.fc(x)
+        x = self.relu(x)
+        x = self.bn(x)
+        return x
+
+class ResidualBlock(nn.Module):
+    """
+    Residual block with two linear layers
+    """
+    def __init__(self, embed_dim):
+        super(ResidualBlock, self).__init__()
+        self.layers = nn.ModuleList([
+            LinearBlock(embed_dim, embed_dim),
+            LinearBlock(embed_dim, embed_dim)
+        ])
+
+    def forward(self, inputs):
+        x = inputs
+        for layer in self.layers:
+            x = layer(x)
+        x += inputs # skip-connection
+        return x
+
+class Model(nn.Module):
+    """
+    Fixed architecture following DeepCubeA.
+    """
+    def __init__(self, input_dim=324, output_dim=12):
+        super(Model, self).__init__()
+        self.input_dim = input_dim
+        self.embedding = LinearBlock(input_dim, 5000)
+        self.layers = nn.ModuleList([
+            LinearBlock(5000,1000),
+            ResidualBlock(1000),
+            ResidualBlock(1000),
+            ResidualBlock(1000),
+            ResidualBlock(1000)
+        ])
+        self.output = nn.Linear(1000, output_dim)
+
+    def forward(self, inputs):
+        # int indices => float one-hot vectors
+        x = nn.functional.one_hot(inputs, num_classes=6).to(torch.float)
+        x = x.reshape(-1, self.input_dim)
+        x = self.embedding(x)
+        for layer in self.layers:
+            x = layer(x)
+        logits = self.output(x)
+        return logits    
+
 
 # load model
-def load_model():
+def load_model(type: str = "state_dict"):
 
-    state_dim = 54
-    nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
-    model = "saved_models/model_state_dict.pt"
+    if type == "state_dict":
 
-    state_dict = torch.load(model, map_location=device)
-    # remove module prefix
-    new_state_dict = OrderedDict()
-    for k, v in state_dict.items():
-                k = re.sub('^module\.', '', k)
-                new_state_dict[k] = v
+        state_dim = 54
+        nnet = ResnetModel(state_dim, 6, 5000, 1000, 4, 1, True).to(device)
+        model = "saved_models/model_state_dict.pt"
 
-    # set state dict
-    nnet.load_state_dict(new_state_dict)
-        
-    # load model
-    nnet.eval()
-    return nnet
+        state_dict = torch.load(model, map_location=device)
+        # remove module prefix
+        new_state_dict = OrderedDict()
+        for k, v in state_dict.items():
+                    k = re.sub('^module\.', '', k)
+                    new_state_dict[k] = v
 
+        # set state dict
+        nnet.load_state_dict(new_state_dict)
+            
+        # load model
+        nnet.eval()
+        return nnet
+    
+    elif type == "reversed":
+        model = Model().to(device)
+        model.load_state_dict(torch.load("saved_models/reversed_15.pth", map_location=device))
+        model.eval()
+        return model
+
+# U, D, L, R, B, F
 class Move(IntEnum):
     """The moves in the faceturn metric. Not to be confused with the names of the facelet positions in class Facelet."""
     U1 = 0 # U(p) face clockwise
     U3 = 1 # U(p) face counter-clockwise
-    R1 = 2 # R(ight) face clockwise
-    R3 = 3 # R(ight) face counter-clockwise
-    F1 = 4 # F(ront) face clockwise
-    F3 = 5 # F(ront) face counter-clockwise
-    D1 = 6 # D(own) face clockwise
-    D3 = 7 # D(own) face counter-clockwise
-    L1 = 8 # L(eft) face clockwise
-    L3 = 9 # L(eft) face counter-clockwise
-    B1 = 10 # B(ack) face clockwise
-    B3 = 11 # B(ack) face counter-clockwise
+    D1 = 2 # D(p) face clockwise
+    D3 = 3 # D(p) face counter-clockwise
+    L1 = 4 # L(p) face clockwise
+    L3 = 5 # L(p) face counter-clockwise
+    R1 = 6 # R(p) face clockwise
+    R3 = 7 # R(p) face counter-clockwise
+    B1 = 8 # B(p) face clockwise
+    B3 = 9 # B(p) face counter-clockwise
+    F1 = 10 # F(p) face clockwise
+    F3 = 11 # F(p) face counter-clockwise
 
 move_dict = {
     Move.U1: "U",
@@ -143,10 +217,6 @@ move_dict = {
     Move.B1: "B",
     Move.B3: "B'",
 }
-
-single_move = [
-    Move.U1, Move.U3, Move.R1, Move.R3, Move.F1, Move.F3, Move.D1, Move.D3, Move.L1, Move.L3, Move.B1, Move.B3
-]
 
 inverse_moves = {
     Move.U1 : Move.U3,
@@ -178,26 +248,42 @@ groups = {
     Move.B3 : "FB",
 }
 
-def get_last_move(move_sequence):
-    # select the last move in the sequence other than the null move. Return both the last move and the index to it
-    # Otherwise, return the null move
-    if len(move_sequence) == 0:
-        raise ValueError("Empty move sequence")
-    
-    for move in (reversed(move_sequence)):
-            return move
+index_to_face = {
+    0: "U",
+    1: "D",
+    2: "L",
+    3: "R",
+    4: "B",
+    5: "F"
+}
 
-# Helper functions not provided:
+face_to_index = {
+    "U": 0,
+    "D": 1,
+    "L": 2,
+    "R": 3,
+    "B": 4,
+    "F": 5
+}
+
 def get_move_group(move):
     # Return the group number for the given move
     return groups[move]
 
-
-def prevent_moves_pre(move_sequence, last_move, allowed_moves):
-    temp = [move for move in move_sequence]
-    subsequence = []
-    last_group = get_move_group(last_move)
+def get_allowed_moves(move_sequence):
     
+    allowed_moves = list(Move)  # Start with all moves allowed
+    
+    if not move_sequence:
+        return allowed_moves
+    
+    last_group = get_move_group(move_sequence[-1])
+    
+    allowed_moves.remove(inverse_moves[move_sequence[-1]])
+    
+    subsequence = []
+    
+    temp = move_sequence.copy()
     for move in reversed(temp):
         if get_move_group(move) == last_group:
             subsequence.append(move)
@@ -207,43 +293,29 @@ def prevent_moves_pre(move_sequence, last_move, allowed_moves):
     pair_map = {}
     
     if last_group == "UD":
-        pair_map = {Move.U1 : 0, Move.D1 : 0}
+        pair_map = {Move.U1 : 0, Move.D1 : 0, Move.U3 : 0, Move.D3 : 0}
     elif last_group == "LR":
-        pair_map = {Move.L1 : 0, Move.R1 : 0}
+        pair_map = {Move.L1 : 0, Move.R1 : 0, Move.L3 : 0, Move.R3 : 0}
     else:
-        pair_map = {Move.F1 : 0, Move.B1 : 0}
+        pair_map = {Move.F1 : 0, Move.B1 : 0, Move.F3 : 0, Move.B3 : 0}
         
     for move in subsequence:
         if move in pair_map:
             pair_map[move] += 1
-        if inverse_moves[move] in pair_map:
-            pair_map[inverse_moves[move]] -= 1
             
+    # can only have three situation for each group
     for i in pair_map:
-        if pair_map[i] % 4 == 3:
+        # xx => not allowed: x and x'
+        if pair_map[i] == 2:
             if i in allowed_moves:
                 allowed_moves.remove(i)
-        elif pair_map[i] % 4 == 1:
             if inverse_moves[i] in allowed_moves:
                 allowed_moves.remove(inverse_moves[i])
-
+        # x => not allowed: x, allowed: x
+        elif pair_map[i] == 1:
+            if inverse_moves[i] in allowed_moves:
+                allowed_moves.remove(inverse_moves[i])
     return allowed_moves
-
-
-def get_allowed_moves(move_sequence):
-    
-    allowed_moves = list(Move)  # Start with all moves allowed
-    
-    if not move_sequence:
-        return allowed_moves
-    
-    last_move = get_last_move(move_sequence)
-    
-    allowed_moves.remove(inverse_moves[last_move])
-    
-    allowed_moves = prevent_moves_pre(move_sequence, last_move, allowed_moves)
-    return allowed_moves
-
 
 class Cube:
     """Represent a cube on the facelet level with 54 colored facelets.
@@ -423,23 +495,66 @@ class Cube:
         scramble_string = ""
         for move in scramble_move:
             scramble_string += move_dict[move] + " "
-        return scramble_string, scramble_move
+        return scramble_string[:-1], scramble_move
     
+    # deep copy of the state
     def from_state(self, state):
-        self.state = state
+        self.state = np.copy(state)
     
     def to_string(self):
         """Return a string representation of the facelet cube."""
         state_str = ""
         # iterate over self.state, add each element to state_str
         for i in range(54):
-            state_str += str(self.state[i])
+            state_str += index_to_face[self.state[i]]
         return state_str
     
     def from_string(self, state_str):
         """Set the facelet cube to the state represented by the string state_str."""
+        assert len(state_str) == 54; "Invalid state string"
+        
         for i in range(54):
-            self.state[i] = int(state_str[i])
+            self.state[i] = face_to_index[state_str[i]]
+            
+    def random_moves(self, n):
+        """Generate n random moves."""
+        scramble_move = []
+        
+        while len(scramble_move) < n:
+            allowed_moves = get_allowed_moves(scramble_move)
+            scramble_move.append(random.choice(allowed_moves))
+            
+        scramble_string = ""
+        for move in scramble_move:
+            scramble_string += move_dict[move] + " "
+        return scramble_string[:-1], scramble_move
+            
+    def scrambler(self, scramble_length):
+        """
+        Generates a random scramble of given length and returns the cube state and scramble moves as a generator.
+        Please note that index-based implementations (faster) follow commented lexical logics.
+        """
+        while True:
+            # Reset the cube state, scramble, and return cube state and scramble moves
+            self.reset()
+            scramble = []
+
+            for i in range(scramble_length):
+                if i:
+                    move = random.choice(get_allowed_moves(scramble))
+                else: 
+                    move = random.choice(list(Move))
+
+                self.move(move)
+                scramble.append(move)
+
+                yield self.state, inverse_moves[move]        
+    
+    def move_to_string(self, moves):
+        return_str = ""
+        for move in moves:
+            return_str += move_dict[move] + " "
+        return return_str[:-1]
     
     def __hash__(self) -> int:
         return hash(tuple(self.state))
@@ -449,32 +564,12 @@ class Cube:
     
     def __str__(self):
         return self.to_string()
-
-    def __lt__(self, other):
-        return self.to_string() < other.to_string()
     
 if __name__ == '__main__':
     from scramble100 import scrambles
     
-    test_str = scrambles[0]
-    
-    cube = Cube()
-    cube.move_list(cube.convert_move(test_str))
-    
-    test = set()
-    test.add(cube)
-    
-    test.add(cube.copy())
-    
-    print(cube == cube.copy())
-    
-    print(len(test))
-    
-    print(cube.to_string())
-    
-    dict = {}
-    dict[cube.__hash__()] = 1
-    
-    dict[cube.copy().__hash__()] = 2
-    
-    print(dict)
+    for i in range(100000):
+        temp = Cube()
+        (temp.randomize_n(20))
+        print(validate(temp.to_string()))
+        

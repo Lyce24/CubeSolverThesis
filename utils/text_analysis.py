@@ -424,5 +424,3 @@ with open(file, "r") as f1:
             sol_moves += int(move_count)
             
 print(total_nodes/len(randomly_selected_indexes), sol_moves/len(randomly_selected_indexes))
-    
-    

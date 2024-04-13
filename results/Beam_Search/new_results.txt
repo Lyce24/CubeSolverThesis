@@ -1,0 +1,1038 @@
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 29, Nodes: 527380, Time: 31.753800868988037, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 656165, Time: 39.730828285217285, Sanity Check: True
+
+Test 42
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 92855, Time: 6.657070875167847, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 183884, Time: 12.624915838241577, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 358111, Time: 25.186614990234375, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 531692, Time: 38.29812979698181, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 22, Nodes: 96799, Time: 5.663860321044922, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 22, Nodes: 192531, Time: 11.130464792251587, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 22, Nodes: 377937, Time: 22.452938079833984, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 22, Nodes: 558721, Time: 33.32984805107117, Sanity Check: True
+
+Test 43
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 30, Nodes: 134567, Time: 9.522711753845215, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 227134, Time: 15.60838770866394, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 443183, Time: 30.981448650360107, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 658483, Time: 47.12182688713074, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 36, Nodes: 353129, Time: 20.890345811843872, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 30, Nodes: 550765, Time: 32.799789905548096, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 30, Nodes: 817511, Time: 48.6413950920105, Sanity Check: True
+
+Test 44
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 97840, Time: 6.995611190795898, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 174290, Time: 12.105465173721313, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 19, Nodes: 297487, Time: 20.970888137817383, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 19, Nodes: 440507, Time: 31.47821855545044, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 23, Nodes: 102491, Time: 5.828637361526489, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 23, Nodes: 203624, Time: 11.959625482559204, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 21, Nodes: 357555, Time: 21.308088302612305, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 21, Nodes: 528325, Time: 31.25421667098999, Sanity Check: True
+
+Test 45
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103303, Time: 7.415607452392578, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205025, Time: 14.355383157730103, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 359570, Time: 25.204232692718506, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 533719, Time: 38.11396646499634, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 213641, Time: 12.067259550094604, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 420682, Time: 24.944881677627563, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 623709, Time: 37.169936418533325, Sanity Check: True
+
+Test 46
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 30, Nodes: 134445, Time: 9.436847448348999, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 30, Nodes: 267066, Time: 18.527465343475342, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 28, Nodes: 483438, Time: 33.78171944618225, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 658803, Time: 46.937255859375, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 36, Nodes: 192362, Time: 11.041784286499023, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 32, Nodes: 299784, Time: 17.232887029647827, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 32, Nodes: 593685, Time: 34.60458207130432, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 30, Nodes: 818509, Time: 50.07273888587952, Sanity Check: True
+
+Test 47
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 118669, Time: 8.521198749542236, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 194706, Time: 13.334692478179932, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 378601, Time: 26.303431749343872, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 562808, Time: 40.19091272354126, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 31, Nodes: 288089, Time: 17.045546054840088, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 486225, Time: 28.949694395065308, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 591409, Time: 34.86366629600525, Sanity Check: True
+
+Test 48
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 88109, Time: 6.287358283996582, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 174934, Time: 12.346967458724976, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 339919, Time: 23.633298873901367, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 504006, Time: 35.89388847351074, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 21, Nodes: 91897, Time: 5.228301048278809, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 21, Nodes: 182330, Time: 10.532520771026611, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 21, Nodes: 358126, Time: 20.996344327926636, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 21, Nodes: 527836, Time: 31.48794412612915, Sanity Check: True
+
+Test 49
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113521, Time: 7.905334234237671, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 185269, Time: 12.93249797821045, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 319192, Time: 22.13905954360962, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 472886, Time: 33.77302527427673, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 26, Nodes: 118793, Time: 6.8520731925964355, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 28, Nodes: 257975, Time: 14.62932300567627, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 28, Nodes: 507801, Time: 30.14363193511963, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 20, Nodes: 496360, Time: 29.2242648601532, Sanity Check: True
+
+Test 50
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113902, Time: 8.09520173072815, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205623, Time: 14.127568006515503, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400888, Time: 28.049877643585205, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 535000, Time: 38.01082682609558, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 34, Nodes: 175720, Time: 10.354684114456177, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 26, Nodes: 236564, Time: 13.464584350585938, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 464732, Time: 27.196932792663574, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 689684, Time: 41.12921714782715, Sanity Check: True
+
+Test 51
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108796, Time: 7.58049464225769, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 215972, Time: 14.863227128982544, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 421840, Time: 29.488821268081665, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565600, Time: 40.401636600494385, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 29, Nodes: 784628, Time: 46.49825048446655, Sanity Check: True
+
+Test 52
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 29, Nodes: 129023, Time: 9.263787508010864, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 236319, Time: 16.307811737060547, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 461745, Time: 32.36307644844055, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565084, Time: 40.13268208503723, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 29, Nodes: 139935, Time: 8.028059482574463, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 29, Nodes: 267306, Time: 15.49339246749878, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 485115, Time: 28.0597927570343, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 27, Nodes: 719616, Time: 44.48358201980591, Sanity Check: True
+
+Test 53
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113612, Time: 7.94279932975769, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 206110, Time: 13.930814027786255, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 401805, Time: 27.942946910858154, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 596511, Time: 42.38276267051697, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 26, Nodes: 236345, Time: 13.853962898254395, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 465507, Time: 27.669806241989136, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 689273, Time: 41.58657240867615, Sanity Check: True
+
+Test 54
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113940, Time: 7.913820266723633, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 225562, Time: 15.439618587493896, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 402119, Time: 27.98304581642151, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 596500, Time: 42.42011642456055, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 26, Nodes: 118573, Time: 6.764641761779785, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 26, Nodes: 236257, Time: 13.527733564376831, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 465131, Time: 27.1035053730011, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 686737, Time: 41.32376575469971, Sanity Check: True
+
+Test 55
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 119379, Time: 8.2284517288208, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 236836, Time: 16.272074222564697, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 381477, Time: 26.58414912223816, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565838, Time: 40.503044843673706, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 27, Nodes: 246756, Time: 14.055124044418335, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 486027, Time: 29.321943283081055, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 591486, Time: 35.72118067741394, Sanity Check: True
+
+Test 56
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113696, Time: 7.9018378257751465, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205572, Time: 14.056205987930298, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400673, Time: 27.792352437973022, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 595675, Time: 42.693111181259155, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 28, Nodes: 129419, Time: 7.415175199508667, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 28, Nodes: 257652, Time: 15.035593271255493, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 420163, Time: 24.94731116294861, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 623088, Time: 37.514044761657715, Sanity Check: True
+
+Test 57
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 119156, Time: 8.276473999023438, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 216288, Time: 14.854155540466309, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 422169, Time: 29.466763734817505, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 626663, Time: 44.88953971862793, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 27, Nodes: 124040, Time: 6.9548022747039795, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 27, Nodes: 246646, Time: 14.0104501247406, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 486049, Time: 29.151122093200684, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 27, Nodes: 721087, Time: 43.551719188690186, Sanity Check: True
+
+Test 58
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 119066, Time: 8.408514022827148, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195652, Time: 13.34479308128357, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 381132, Time: 26.42611265182495, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565285, Time: 40.51976537704468, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 27, Nodes: 124077, Time: 6.973072052001953, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 27, Nodes: 247168, Time: 14.429529428482056, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 29, Nodes: 529777, Time: 31.1876118183136, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 690336, Time: 40.85170888900757, Sanity Check: True
+
+Test 59
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113634, Time: 8.394421577453613, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 225806, Time: 15.980109214782715, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 441690, Time: 30.716654777526855, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 533801, Time: 38.15138006210327, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 26, Nodes: 118072, Time: 6.730732440948486, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 26, Nodes: 235384, Time: 13.612505912780762, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 464114, Time: 27.596539735794067, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 687981, Time: 40.5296573638916, Sanity Check: True
+
+Test 60
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108537, Time: 7.650776624679565, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 215555, Time: 14.916820764541626, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 420681, Time: 29.34795069694519, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 625412, Time: 44.93872570991516, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 25, Nodes: 112980, Time: 6.670306444168091, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 25, Nodes: 225770, Time: 12.8725266456604, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 25, Nodes: 443163, Time: 26.451844453811646, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 655923, Time: 38.36436414718628, Sanity Check: True
+
+Test 61
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 93295, Time: 6.698239088058472, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 185004, Time: 12.677124738693237, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 359733, Time: 25.099400281906128, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 533779, Time: 38.10925889015198, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 24, Nodes: 108112, Time: 6.057887315750122, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 214123, Time: 12.475547552108765, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 22, Nodes: 377379, Time: 22.2549946308136, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 22, Nodes: 558107, Time: 32.57491993904114, Sanity Check: True
+
+Test 62
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103547, Time: 7.41358494758606, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205335, Time: 14.153184413909912, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400547, Time: 28.12403655052185, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 594794, Time: 42.31518483161926, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 214790, Time: 12.338411331176758, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 422252, Time: 25.32087230682373, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 625068, Time: 36.10991907119751, Sanity Check: True
+
+Test 63
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 19, Nodes: 77639, Time: 5.522741079330444, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 19, Nodes: 153669, Time: 10.663710594177246, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 19, Nodes: 297637, Time: 20.682718992233276, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 19, Nodes: 440645, Time: 31.553295373916626, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 19, Nodes: 81348, Time: 4.582464218139648, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 19, Nodes: 161235, Time: 9.02212142944336, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 19, Nodes: 314520, Time: 17.85307812690735, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 19, Nodes: 463461, Time: 27.4643337726593, Sanity Check: True
+
+Test 64
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 30, Nodes: 134386, Time: 9.722520589828491, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 30, Nodes: 266825, Time: 18.501429080963135, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400843, Time: 27.729818105697632, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 595393, Time: 42.7146372795105, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 30, Nodes: 278325, Time: 15.952661991119385, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 421412, Time: 24.83288884162903, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 623744, Time: 37.50383639335632, Sanity Check: True
+
+Test 65
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 114020, Time: 7.919519424438477, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 226306, Time: 15.509201288223267, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 361025, Time: 25.07970094680786, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 535949, Time: 38.339935064315796, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 32, Nodes: 338732, Time: 19.87887740135193, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 30, Nodes: 549543, Time: 31.956161499023438, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 30, Nodes: 812346, Time: 49.135239601135254, Sanity Check: True
+
+Test 66
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 38, Nodes: 175604, Time: 12.268440246582031, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 28, Nodes: 246847, Time: 17.100494861602783, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 28, Nodes: 482211, Time: 33.68403363227844, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 596260, Time: 42.545743465423584, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+Starting GBFS Search with N = 3000 and max depth = 40
+
+Test 67
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195387, Time: 13.788818597793579, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380490, Time: 26.570074319839478, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565128, Time: 40.295244216918945, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 29, Nodes: 133478, Time: 7.7302751541137695, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+Starting GBFS Search with N = 3000 and max depth = 40
+
+Test 68
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98316, Time: 7.193092107772827, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 194839, Time: 13.350905179977417, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 379959, Time: 26.333337783813477, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 564500, Time: 40.378204345703125, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 27, Nodes: 123684, Time: 7.1322410106658936, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 23, Nodes: 203731, Time: 11.541933059692383, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 23, Nodes: 399899, Time: 23.26640558242798, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 591910, Time: 35.740413427352905, Sanity Check: True
+
+Test 69
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98284, Time: 7.02643609046936, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 194933, Time: 13.440507411956787, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 379992, Time: 26.406875133514404, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 564181, Time: 39.910043478012085, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 23, Nodes: 102266, Time: 5.8523030281066895, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 23, Nodes: 203524, Time: 11.603403568267822, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 23, Nodes: 399975, Time: 23.32034158706665, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 592186, Time: 36.10093927383423, Sanity Check: True
+
+Test 70
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 28, Nodes: 123650, Time: 8.879230499267578, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205455, Time: 14.101991653442383, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400440, Time: 27.92501401901245, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 594917, Time: 42.51160144805908, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 215207, Time: 12.155061483383179, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 422059, Time: 24.751275777816772, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 625223, Time: 37.54357981681824, Sanity Check: True
+
+Test 71
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103697, Time: 7.474388122558594, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 206019, Time: 14.2349693775177, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 401706, Time: 28.071231365203857, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 596022, Time: 42.51609134674072, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 26, Nodes: 236767, Time: 13.567730188369751, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 465785, Time: 27.06404709815979, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 689696, Time: 41.86588382720947, Sanity Check: True
+
+Test 72
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98793, Time: 6.994365453720093, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195849, Time: 13.43993616104126, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 381415, Time: 26.450138092041016, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 564701, Time: 40.3638699054718, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 27, Nodes: 124001, Time: 7.086711406707764, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 29, Nodes: 268443, Time: 15.513163566589355, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 487225, Time: 28.52354073524475, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 658028, Time: 39.73155999183655, Sanity Check: True
+
+Test 73
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 31, Nodes: 139656, Time: 9.690240383148193, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 236902, Time: 16.240723609924316, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 422717, Time: 29.340120792388916, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 627887, Time: 44.79828095436096, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 29, Nodes: 134126, Time: 7.766423225402832, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 31, Nodes: 288358, Time: 16.444502353668213, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 29, Nodes: 528857, Time: 31.685539960861206, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 27, Nodes: 721473, Time: 42.05113911628723, Sanity Check: True
+
+Test 74
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108252, Time: 7.562793016433716, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 214677, Time: 14.837618589401245, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380409, Time: 26.464873790740967, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 564520, Time: 40.419978618621826, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 25, Nodes: 112375, Time: 6.546837329864502, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 25, Nodes: 224194, Time: 12.918353080749512, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 25, Nodes: 439670, Time: 26.010692596435547, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 589599, Time: 34.34671211242676, Sanity Check: True
+
+Test 75
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113521, Time: 8.076241254806519, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 185269, Time: 12.848119020462036, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 319192, Time: 22.22073984146118, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 472886, Time: 33.74163103103638, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 26, Nodes: 118793, Time: 6.699365854263306, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 28, Nodes: 257975, Time: 15.218314170837402, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 28, Nodes: 507801, Time: 29.603312492370605, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 20, Nodes: 496360, Time: 29.590211391448975, Sanity Check: True
+
+Test 76
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113441, Time: 8.11302900314331, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205567, Time: 14.264501094818115, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400668, Time: 28.314595222473145, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 595015, Time: 42.6917245388031, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 464974, Time: 27.845876455307007, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 689770, Time: 40.608165979385376, Sanity Check: True
+
+Test 77
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 82847, Time: 5.854421377182007, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 164485, Time: 11.424590110778809, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 318757, Time: 22.271360158920288, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 20, Nodes: 472460, Time: 33.84565806388855, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 20, Nodes: 86500, Time: 4.770495176315308, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 20, Nodes: 171801, Time: 10.153915405273438, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 20, Nodes: 336057, Time: 19.840335369110107, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 20, Nodes: 495716, Time: 28.87264060974121, Sanity Check: True
+
+Test 78
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103492, Time: 7.38732647895813, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 204967, Time: 14.30315637588501, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 360165, Time: 24.99895143508911, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 534415, Time: 38.16139817237854, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 24, Nodes: 108272, Time: 6.245831489562988, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 215867, Time: 12.223842859268188, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 423373, Time: 25.180457830429077, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 22, Nodes: 561706, Time: 32.69276022911072, Sanity Check: True
+
+Test 79
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108515, Time: 7.706015110015869, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195761, Time: 13.422884702682495, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380446, Time: 26.485633611679077, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565444, Time: 40.23862051963806, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 25, Nodes: 113499, Time: 6.30605673789978, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 25, Nodes: 225555, Time: 13.065505981445312, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 25, Nodes: 444020, Time: 26.016716957092285, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 656300, Time: 39.477237701416016, Sanity Check: True
+
+Test 80
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108718, Time: 7.563547611236572, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 215426, Time: 14.725499153137207, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 421428, Time: 29.366492986679077, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 626507, Time: 44.64764714241028, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 27, Nodes: 133627, Time: 7.894330263137817, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 31, Nodes: 289652, Time: 16.54444932937622, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 483570, Time: 28.297768115997314, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 656618, Time: 38.96600317955017, Sanity Check: True
+
+Test 81
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 28, Nodes: 124547, Time: 8.68643856048584, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 226167, Time: 15.591777086257935, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 402090, Time: 28.02950429916382, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 597114, Time: 42.81068778038025, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 28, Nodes: 129808, Time: 7.310237884521484, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 26, Nodes: 236247, Time: 13.700008869171143, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 465046, Time: 27.353490591049194, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 26, Nodes: 689609, Time: 41.05757665634155, Sanity Check: True
+
+Test 82
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103176, Time: 7.345580339431763, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 204593, Time: 14.020137310028076, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 399339, Time: 28.075275897979736, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 593775, Time: 42.51269245147705, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 24, Nodes: 107999, Time: 6.075690507888794, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 214695, Time: 12.497487545013428, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 421597, Time: 25.273149728775024, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 623964, Time: 36.632972955703735, Sanity Check: True
+
+Test 83
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108951, Time: 7.7160937786102295, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 175435, Time: 12.046896696090698, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 340623, Time: 23.700095176696777, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 505343, Time: 36.02613878250122, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 33, Nodes: 161124, Time: 9.238741397857666, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 33, Nodes: 310663, Time: 18.414319276809692, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 25, Nodes: 443181, Time: 25.399247884750366, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 21, Nodes: 528453, Time: 30.930233478546143, Sanity Check: True
+
+Test 84
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103370, Time: 7.393518686294556, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 204875, Time: 14.186448097229004, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400006, Time: 28.087544679641724, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 594263, Time: 42.46841216087341, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 30, Nodes: 144875, Time: 8.377769231796265, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 214075, Time: 12.382999181747437, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 420802, Time: 25.455374717712402, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 623550, Time: 36.30819773674011, Sanity Check: True
+
+Test 85
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 87882, Time: 6.336692571640015, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 174483, Time: 12.037465810775757, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 339250, Time: 24.032763957977295, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 502815, Time: 36.179157972335815, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 21, Nodes: 91548, Time: 5.129214525222778, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 21, Nodes: 182292, Time: 10.571602821350098, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 21, Nodes: 357720, Time: 21.27485942840576, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 21, Nodes: 527968, Time: 31.48452353477478, Sanity Check: True
+
+Test 86
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103177, Time: 7.333796739578247, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205277, Time: 14.197065591812134, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 400414, Time: 27.86527180671692, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 534367, Time: 38.061487674713135, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 28, Nodes: 129470, Time: 7.287034273147583, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 214803, Time: 12.115393161773682, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 422275, Time: 24.981440782546997, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 625608, Time: 36.43815588951111, Sanity Check: True
+
+Test 87
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108646, Time: 7.7613935470581055, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195835, Time: 13.556824684143066, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380869, Time: 26.557382822036743, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565729, Time: 40.4998505115509, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 486203, Time: 28.79408597946167, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 593192, Time: 34.38984966278076, Sanity Check: True
+
+Test 88
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108484, Time: 7.664965867996216, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 215482, Time: 14.891554594039917, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 421387, Time: 29.573246955871582, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 626617, Time: 45.580124378204346, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 25, Nodes: 113100, Time: 6.334504127502441, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 27, Nodes: 246776, Time: 14.264908075332642, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 486245, Time: 28.05947494506836, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 656944, Time: 38.99986004829407, Sanity Check: True
+
+Test 89
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 30, Nodes: 133928, Time: 9.386822700500488, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 32, Nodes: 288106, Time: 19.829766273498535, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 442938, Time: 30.848589658737183, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 658278, Time: 46.94285345077515, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+Starting GBFS Search with N = 3000 and max depth = 40
+
+Test 90
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 108621, Time: 7.630232334136963, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 216028, Time: 14.667522430419922, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 421621, Time: 29.077638626098633, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 625743, Time: 44.880616664886475, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 31, Nodes: 145418, Time: 8.140004396438599, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 29, Nodes: 268021, Time: 15.013230800628662, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 25, Nodes: 442872, Time: 25.805073261260986, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 25, Nodes: 656365, Time: 38.65304636955261, Sanity Check: True
+
+Test 91
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 88148, Time: 6.221884250640869, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 174935, Time: 12.191216468811035, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 339794, Time: 23.624961376190186, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 503724, Time: 35.93891096115112, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 21, Nodes: 182516, Time: 10.566527128219604, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 21, Nodes: 357280, Time: 21.053033113479614, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 21, Nodes: 528312, Time: 31.177305221557617, Sanity Check: True
+
+Test 92
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103814, Time: 7.418755054473877, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205897, Time: 14.258124113082886, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 360827, Time: 25.3927960395813, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 535348, Time: 38.5933735370636, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 28, Nodes: 257575, Time: 14.937194585800171, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 422369, Time: 24.921180725097656, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 22, Nodes: 560685, Time: 32.82358241081238, Sanity Check: True
+
+Test 93
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98544, Time: 6.996233701705933, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195285, Time: 13.440643787384033, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380200, Time: 26.456733465194702, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 564887, Time: 40.25670337677002, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 23, Nodes: 203974, Time: 11.812523126602173, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 23, Nodes: 400040, Time: 23.755472421646118, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 592286, Time: 34.37568664550781, Sanity Check: True
+
+Test 94
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98497, Time: 7.082608699798584, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195075, Time: 13.346368074417114, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380827, Time: 26.45341205596924, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 565523, Time: 40.263646364212036, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 23, Nodes: 400643, Time: 22.95302677154541, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 593483, Time: 35.18935012817383, Sanity Check: True
+
+Test 95
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 29, Nodes: 128850, Time: 9.182810068130493, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 236235, Time: 16.36078429222107, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 421595, Time: 29.32029700279236, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 25, Nodes: 626083, Time: 44.541574001312256, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 31, Nodes: 145698, Time: 8.47768759727478, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 31, Nodes: 298771, Time: 17.617146968841553, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 29, Nodes: 523716, Time: 30.524929523468018, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 31, Nodes: 845315, Time: 49.96837663650513, Sanity Check: True
+
+Test 96
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98088, Time: 7.0272369384765625, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 174738, Time: 12.111074447631836, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 339656, Time: 23.595105171203613, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 21, Nodes: 503961, Time: 36.12381172180176, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 23, Nodes: 102896, Time: 5.77293848991394, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 23, Nodes: 203897, Time: 11.55436396598816, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 23, Nodes: 398676, Time: 23.011804819107056, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 589424, Time: 34.777265548706055, Sanity Check: True
+
+Test 97
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 118661, Time: 8.559032201766968, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 235748, Time: 16.510122776031494, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 461234, Time: 32.37077593803406, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 27, Nodes: 686400, Time: 48.984033823013306, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 29, Nodes: 134370, Time: 7.661631107330322, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 29, Nodes: 268561, Time: 15.855497121810913, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 27, Nodes: 484235, Time: 28.36382031440735, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 27, Nodes: 719248, Time: 44.371469020843506, Sanity Check: True
+
+Test 98
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 98499, Time: 7.030803442001343, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 195040, Time: 13.34914493560791, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 380213, Time: 26.565517902374268, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 23, Nodes: 562305, Time: 40.1293089389801, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+GBFS(batch_size=500, max_depth=40): Success! Solution Length: 23, Nodes: 102797, Time: 5.83776330947876, Sanity Check: True
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 23, Nodes: 203902, Time: 11.600769996643066, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 23, Nodes: 400619, Time: 23.493195056915283, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 23, Nodes: 593912, Time: 34.34475564956665, Sanity Check: True
+
+Test 99
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 26, Nodes: 113944, Time: 8.202902793884277, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205443, Time: 14.157829523086548, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 401058, Time: 27.86406373977661, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 594731, Time: 42.42644953727722, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 36, Nodes: 342115, Time: 19.82540726661682, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 26, Nodes: 463973, Time: 26.926976919174194, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 36, Nodes: 1067982, Time: 65.5409107208252, Sanity Check: True
+
+Test 100
+Starting Beam Search with beam width = 500, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 103303, Time: 7.388793468475342, Sanity Check: True
+Starting Beam Search with beam width = 1000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 24, Nodes: 205025, Time: 14.018028497695923, Sanity Check: True
+Starting Beam Search with beam width = 2000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 359570, Time: 24.887558221817017, Sanity Check: True
+Starting Beam Search with beam width = 3000, max depth = 40, scale factor = 0.5 and adaptive = False
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success! Solution Length: 22, Nodes: 533719, Time: 38.114532470703125, Sanity Check: True
+Starting GBFS Search with N = 500 and max depth = 40
+Starting GBFS Search with N = 1000 and max depth = 40
+GBFS(batch_size=1000, max_depth=40): Success! Solution Length: 24, Nodes: 213641, Time: 13.567197561264038, Sanity Check: True
+Starting GBFS Search with N = 2000 and max depth = 40
+GBFS(batch_size=2000, max_depth=40): Success! Solution Length: 24, Nodes: 420682, Time: 25.00372052192688, Sanity Check: True
+Starting GBFS Search with N = 3000 and max depth = 40
+GBFS(batch_size=3000, max_depth=40): Success! Solution Length: 24, Nodes: 623709, Time: 37.131346464157104, Sanity Check: True
+
+BeamSearch(beam_width=500, max_depth=40, adaptive=False, scale_factor=0.5): Success:97, Average Solution Length: 25.443298969072163, Average Nodes: 110874.13402061856, Average Time: 7.88162777350121
+BeamSearch(beam_width=1000, max_depth=40, adaptive=False, scale_factor=0.5): Success:99, Average Solution Length: 24.282828282828284, Average Nodes: 208363.46464646465, Average Time: 14.374940826435282
+BeamSearch(beam_width=2000, max_depth=40, adaptive=False, scale_factor=0.5): Success:100, Average Solution Length: 23.49, Average Nodes: 390489.95, Average Time: 27.21686939239502
+BeamSearch(beam_width=3000, max_depth=40, adaptive=False, scale_factor=0.5): Success:100, Average Solution Length: 23.19, Average Nodes: 570731.36, Average Time: 40.83604461669922
+GBFS(batch_size=500, max_depth=40): Success:71, Average Solution Length: 27.408450704225352, Average Nodes: 129588.02816901408, Average Time: 7.451014219875067
+GBFS(batch_size=1000, max_depth=40): Success:86, Average Solution Length: 26.24418604651163, Average Nodes: 239526.13953488372, Average Time: 13.850277526434077
+GBFS(batch_size=2000, max_depth=40): Success:90, Average Solution Length: 24.877777777777776, Average Nodes: 440301.8333333333, Average Time: 25.901190567016602
+GBFS(batch_size=3000, max_depth=40): Success:96, Average Solution Length: 24.489583333333332, Average Nodes: 640820.9583333334, Average Time: 38.14231636623541

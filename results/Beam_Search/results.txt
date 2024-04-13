@@ -1,579 +1,2211 @@
-1000 100 (Nvidia RTX 3090 Desktop)
 Test 1
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+1       24      205230  7.8039  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+1       24      303221  11.4373 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+1       24      400774  15.1283 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+1       24      498162  18.8753 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+1       24      595673  22.7384 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+1       24      207137  7.8756  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+1       24      306346  11.5901 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+1       24      405113  15.5195 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+1       24      503345  19.2762 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+1       22      539403  21.0281 True
+
 Test 2
-Success: 1, Sol Length: 30, Num Nodes: 288582, Time Taken: 15.78855586051941, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+1       Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+2       26      334393  12.7797 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+2       26      442002  16.5852 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+2       24      498690  19.1634 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+2       24      596062  22.9285 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+2       26      227957  8.8107  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+2       26      335845  12.8101 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+2       26      444004  17.0117 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+2       22      451697  17.3032 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+2       22      539805  20.7244 True
+
 Test 3
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+2       24      205765  7.6468  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+3       24      303983  11.3846 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+3       24      401630  15.1450 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+3       24      499186  18.9020 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+3       24      596102  22.5707 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+3       24      207740  8.0979  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+3       24      306933  11.7100 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+3       24      404877  15.3518 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+3       24      503217  19.1921 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+3       24      601487  23.4392 True
+
 Test 4
-Success: 2, Sol Length: 27, Num Nodes: 253119, Time Taken: 14.0291588306427, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+3       23      195178  7.2828  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+4       23      287731  10.8941 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+4       23      380018  14.4122 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+4       23      472017  18.0416 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+4       23      564252  21.8104 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+4       23      196807  7.6289  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+4       23      290310  11.1955 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+4       23      383460  14.6404 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+4       23      476639  18.2483 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+4       23      569611  21.8504 True
+
 Test 5
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+4       20      164435  6.2395  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+5       20      242109  9.0608  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+5       20      318994  12.0490 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+5       20      395966  15.3415 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+5       20      472943  18.0037 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+5       20      166422  6.2998  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+5       20      244905  9.2052  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+5       20      322774  12.4152 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+5       20      400536  15.2866 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+5       20      478214  18.5420 True
+
 Test 6
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+5       23      195356  7.2410  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+6       23      288185  10.7400 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+6       23      380418  14.3483 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+6       23      472744  17.9515 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+6       23      565011  21.5642 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+6       23      197210  7.4645  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+6       23      291087  11.0412 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+6       23      384372  14.5134 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+6       23      477387  18.3615 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+6       23      570483  21.9278 True
+
 Test 7
-Success: 3, Sol Length: 30, Num Nodes: 286890, Time Taken: 15.775588274002075, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+6       26      225571  8.4250  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+7       26      333125  12.6750 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+7       26      440972  16.9712 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+7       24      498621  18.8848 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+7       24      595982  23.1936 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+7       24      207257  7.8554  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+7       24      306304  11.6628 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+7       24      404380  15.3125 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+7       24      502595  19.3840 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+7       24      600575  23.1988 True
+
 Test 8
-Success: 4, Sol Length: 26, Num Nodes: 241902, Time Taken: 13.394730567932129, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+7       22      185591  6.8830  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+8       22      273577  10.4274 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+8       22      360924  13.5037 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+8       22      448170  16.9944 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+8       22      535335  20.4384 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+8       22      187335  7.0877  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+8       22      276314  10.4396 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+8       22      364199  13.8005 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+8       22      452493  17.4934 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+8       22      540679  21.2602 True
+
 Test 9
-Success: 5, Sol Length: 25, Num Nodes: 231133, Time Taken: 12.727867603302002, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+8       25      215562  8.0092  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+9       23      288514  10.8158 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+9       23      380830  14.2786 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+9       23      473227  18.1307 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+9       23      565511  21.6484 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+9       23      197663  7.5846  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+9       23      291412  10.9834 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+9       23      384870  14.6707 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+9       23      478231  18.1229 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+9       23      571572  22.0951 True
+
 Test 10
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+8       Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+10      26      334756  12.4704 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+10      26      442514  16.5331 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+10      26      549983  20.6893 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+10      26      657776  25.1636 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+10      24      207765  7.8210  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+10      24      306954  11.5822 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+10      24      405651  15.3776 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+10      24      504085  19.2052 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+10      24      602280  23.1877 True
+
 Test 11
-Success: 6, Sol Length: 22, Num Nodes: 198870, Time Taken: 10.910291910171509, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+9       20      164086  6.1024  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+11      20      241565  8.9953  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+11      20      318489  11.9385 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+11      20      395308  14.9337 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+11      20      472326  17.9131 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+11      20      165841  6.2302  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+11      20      244332  9.1595  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+11      20      322108  12.3597 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+11      20      399779  15.1471 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+11      20      477519  18.2620 True
+
 Test 12
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+10      26      225403  8.3804  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+12      26      333740  12.7499 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+12      26      441694  16.9334 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+12      26      549325  20.7541 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+12      26      656824  25.1046 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+12      26      227604  8.6973  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+12      22      276068  10.3323 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+12      22      364386  13.7675 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+12      22      452735  17.2336 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+12      22      540822  20.7476 True
+
 Test 13
-Success: 7, Sol Length: 24, Num Nodes: 220070, Time Taken: 12.220187187194824, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+11      24      205501  7.8156  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+13      24      303575  11.5928 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+13      24      400961  15.0799 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+13      24      498347  19.1589 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+13      24      595633  22.6827 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+13      24      207195  7.8696  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+13      24      306072  11.5021 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+13      24      404031  15.4384 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+13      24      502354  19.5148 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+13      24      600686  23.3730 True
+
 Test 14
-Success: 8, Sol Length: 25, Num Nodes: 231130, Time Taken: 12.891440391540527, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+12      25      216086  8.1770  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+14      25      319234  12.0847 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+14      25      421807  15.9297 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+14      25      524604  19.7322 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+14      25      626085  24.1796 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+14      23      197565  7.3930  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+14      23      291661  11.0597 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+14      23      385183  14.6514 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+14      23      478440  18.2860 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+14      23      571425  22.0929 True
+
 Test 15
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+13      22      184477  6.8309  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+15      22      271956  10.3644 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+15      22      358719  13.6580 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+15      22      445589  16.7595 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+15      22      532364  20.3797 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+15      22      186086  6.9511  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+15      22      274482  10.3474 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+15      22      361944  13.7885 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+15      22      449602  17.1458 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+15      22      537207  20.5672 True
+
 Test 16
-Success: 9, Sol Length: 26, Num Nodes: 242087, Time Taken: 13.136317014694214, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+14      22      184455  6.8393  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+16      22      272284  10.1300 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+16      22      359435  13.6285 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+16      22      446306  16.9750 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+16      22      533275  20.3055 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+16      22      185877  7.1218  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+16      22      274743  10.3302 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+16      22      362790  13.9186 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+16      22      450317  17.2177 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+16      22      538186  20.6677 True
+
 Test 17
-Success: 10, Sol Length: 26, Num Nodes: 242080, Time Taken: 13.418610572814941, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+15      26      225499  8.4349  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+17      26      333169  12.4890 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+17      26      440934  16.8262 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+17      26      548839  21.0504 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+17      26      656220  25.1373 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+17      24      207677  7.7791  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+17      24      306685  11.5492 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+17      24      404848  15.4711 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+17      24      502635  19.4744 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+17      24      600724  23.3619 True
+
 Test 18
-Success: 11, Sol Length: 25, Num Nodes: 231245, Time Taken: 12.745849609375, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+16      25      215085  8.4065  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+18      25      317856  12.1433 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+18      25      420052  15.9239 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+18      23      472521  17.8006 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+18      23      564932  21.4457 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+18      25      217472  8.2708  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+18      25      321466  12.1711 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+18      25      424654  16.1966 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+18      23      477610  18.1955 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+18      23      570925  22.0604 True
+
 Test 19
-Success: 12, Sol Length: 21, Num Nodes: 187836, Time Taken: 10.207890510559082, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+17      21      174851  6.6071  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+19      21      257605  9.6327  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+19      21      339796  12.9223 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+19      21      421863  16.0251 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+19      21      503967  19.5162 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+19      21      176654  6.7667  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+19      21      260337  9.9326  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+19      21      343491  13.3983 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+19      21      426590  16.6025 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+19      21      509462  19.7343 True
+
 Test 20
-Success: 13, Sol Length: 29, Num Nodes: 276699, Time Taken: 15.093127489089966, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+18      25      215180  8.0128  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+20      25      317505  11.9504 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+20      23      380701  14.2205 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+20      23      472893  17.9085 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+20      23      565093  21.5687 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+20      23      196944  7.4872  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+20      23      290519  11.2961 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+20      23      383469  14.5944 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+20      23      476669  18.1231 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+20      23      569871  21.9542 True
+
 Test 21
-Success: 14, Sol Length: 25, Num Nodes: 231299, Time Taken: 12.755539894104004, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+19      25      215700  8.1705  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+21      23      288790  10.8009 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+21      23      381036  14.3634 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+21      23      473611  17.9388 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+21      23      565971  21.8562 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+21      23      197868  7.4322  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+21      23      291632  11.1331 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+21      23      385021  14.8527 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+21      23      478238  18.3040 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+21      23      571351  22.3481 True
+
 Test 22
-Success: 15, Sol Length: 27, Num Nodes: 253163, Time Taken: 14.01259183883667, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+20      23      195528  7.2781  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+22      23      288500  10.6673 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+22      23      380974  14.3230 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+22      23      472781  18.1488 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+22      23      565042  21.5381 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+22      21      176882  6.7115  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+22      21      260636  9.8385  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+22      21      343703  13.1426 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+22      21      426757  16.8490 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+22      21      509789  19.7802 True
+
 Test 23
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+21      24      205765  7.8628  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+23      24      303983  11.3268 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+23      24      401630  15.2765 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+23      24      499186  18.9020 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+23      24      596102  22.9165 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+23      24      207740  8.0307  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+23      24      306933  11.6014 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+23      24      404877  15.3946 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+23      24      503217  19.2295 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+23      24      601487  23.1410 True
+
 Test 24
-Success: 16, Sol Length: 29, Num Nodes: 275767, Time Taken: 15.235763549804688, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+22      25      216165  8.1383  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+24      25      319047  12.0415 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+24      25      421501  15.9123 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+24      25      524083  20.2149 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+24      25      626337  23.8742 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+24      25      217761  8.2319  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+24      25      321936  12.1908 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+24      25      425335  16.1965 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+24      25      528361  20.2029 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+24      23      572043  21.8466 True
+
 Test 25
-Success: 17, Sol Length: 24, Num Nodes: 220448, Time Taken: 12.143386602401733, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+23      24      205607  7.6013  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+25      24      303661  11.4598 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+25      22      359791  13.7439 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+25      22      447034  16.9022 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+25      22      534115  20.3987 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+25      24      207998  7.8500  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+25      24      307235  11.9085 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+25      22      364134  13.7998 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+25      22      452135  17.2055 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+25      22      540163  20.9886 True
+
 Test 26
-Success: 18, Sol Length: 24, Num Nodes: 220005, Time Taken: 12.261693477630615, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+24      24      205293  7.8675  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+26      24      302893  11.4316 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+26      24      399987  15.3087 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+26      24      497253  19.0528 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+26      24      594486  23.1507 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+26      24      207202  7.8744  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+26      24      305800  12.0816 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+26      24      403510  15.7188 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+26      24      501560  19.3676 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+26      24      599338  23.3480 True
+
 Test 27
-Success: 19, Sol Length: 24, Num Nodes: 220454, Time Taken: 12.269122838973999, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+25      24      204193  7.6611  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+27      24      301282  11.6978 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+27      24      398089  15.3246 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+27      24      494916  19.1063 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+27      24      591976  22.7014 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+27      24      206397  7.8900  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+27      24      304882  11.4939 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+27      24      402210  15.3057 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+27      24      500213  19.3955 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+27      24      598151  23.2927 True
+
 Test 28
-Success: 20, Sol Length: 31, Num Nodes: 295960, Time Taken: 16.295698881149292, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+25      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+27      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+28      23      380966  14.3352 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+28      23      473343  17.9192 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+28      23      565639  21.5490 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+28      21      176760  6.7558  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+28      21      260218  9.9598  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+28      21      343322  13.2974 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+28      21      426346  16.5451 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+28      21      509309  19.5653 True
+
 Test 29
-Success: 21, Sol Length: 25, Num Nodes: 231851, Time Taken: 12.9435453414917, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+26      25      215560  8.1162  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+28      23      288134  10.9170 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+29      23      380200  14.4286 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+29      23      472585  17.8296 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+29      23      564759  21.4012 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+29      23      196851  7.4741  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+29      23      290874  11.0407 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+29      23      383949  14.7658 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+29      23      477018  18.2080 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+29      23      570163  21.7786 True
+
 Test 30
-Success: 22, Sol Length: 30, Num Nodes: 286373, Time Taken: 15.98395586013794, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+26      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+29      24      303251  11.3656 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+30      24      400762  15.0465 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+30      24      498234  19.3257 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+30      24      595274  22.7514 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+30      24      207108  7.8959  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+30      24      306314  11.5342 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+30      24      404889  15.7603 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+30      24      503284  19.6231 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+30      24      601922  23.5195 True
+
 Test 31
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+27      25      215903  8.0727  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+30      25      319161  12.0519 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+31      25      421903  15.8985 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+31      25      524616  19.9187 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+31      25      626839  24.0031 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+31      25      217981  8.3706  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+31      23      291715  11.2105 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+31      23      385073  14.8812 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+31      23      478432  18.5008 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+31      23      571640  21.7654 True
+
 Test 32
-Success: 23, Sol Length: 25, Num Nodes: 231338, Time Taken: 12.77433156967163, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+28      25      215607  8.1162  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+31      25      318589  11.9802 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+32      23      381559  14.2542 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+32      23      473771  17.8569 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+32      23      565997  21.8699 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+32      25      217734  8.3485  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+32      25      321664  12.3445 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+32      23      385070  14.6621 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+32      23      478227  18.2347 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+32      23      571327  22.6258 True
+
 Test 33
-Success: 24, Sol Length: 27, Num Nodes: 252553, Time Taken: 13.852831602096558, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+28      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+32      23      287871  10.9988 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+33      23      379972  14.3524 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+33      23      472103  18.1952 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+33      23      564251  22.0094 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+33      25      217234  8.2052  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+33      23      291274  11.1361 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+33      23      384043  14.6657 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+33      23      476600  18.3839 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+33      23      568674  21.9704 True
+
 Test 34
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+29      26      225272  8.3548  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+33      24      303197  11.4763 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+34      20      319402  12.0559 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+34      20      396452  14.8637 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+34      20      473421  18.1007 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+34      24      207241  8.0983  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+34      20      245293  9.3518  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+34      20      322992  12.2866 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+34      20      400834  15.3164 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+34      20      478589  18.3412 True
+
 Test 35
-Success: 25, Sol Length: 22, Num Nodes: 198612, Time Taken: 10.94997239112854, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+30      22      183641  7.2441  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+34      22      271136  10.5443 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+35      22      357899  13.5747 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+35      22      444854  16.9419 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+35      22      531438  20.3741 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+35      22      185386  7.0886  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+35      22      273485  10.3481 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+35      22      361320  13.9489 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+35      22      448998  17.1843 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+35      22      536518  20.7331 True
+
 Test 36
-Success: 26, Sol Length: 29, Num Nodes: 275151, Time Taken: 15.262463808059692, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+31      25      216093  8.0928  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+35      25      319370  12.1414 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+36      25      422181  15.9733 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+36      25      524704  19.9828 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+36      25      627317  23.8333 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+36      25      217842  8.3191  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+36      25      321900  12.1695 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+36      25      425445  16.2608 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+36      21      427125  16.4485 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+36      21      510156  19.8647 True
+
 Test 37
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+32      24      206172  7.8216  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+36      24      304101  11.5432 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+37      24      401604  15.1862 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+37      24      499086  19.0901 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+37      24      596041  23.1318 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+37      24      207860  7.9080  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+37      24      307092  11.6878 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+37      24      405334  15.6901 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+37      24      503802  19.2844 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+37      24      602106  23.7608 True
+
 Test 38
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+33      25      215494  8.1770  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+37      25      318456  12.2013 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+38      25      420310  16.0356 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+38      25      522591  20.2386 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+38      25      624466  24.1639 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+38      23      196741  7.5032  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+38      23      290773  11.0902 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+38      23      384243  14.8972 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+38      23      477299  18.3921 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+38      23      570167  21.9305 True
+
 Test 39
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+34      24      205765  7.7997  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+38      24      303983  11.4686 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+39      24      401630  15.1664 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+39      24      499186  19.0342 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+39      24      596102  23.1843 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+39      24      207740  7.8454  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+39      24      306933  11.6177 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+39      24      404877  15.5433 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+39      24      503217  19.3271 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+39      24      601487  23.2470 True
+
 Test 40
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+34      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+38      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+39      Failed
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+40      25      523356  20.1912 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+40      25      625718  24.0459 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+40      23      197256  7.5134  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+40      23      290418  11.0596 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+40      23      383633  15.0678 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+40      23      476740  18.5142 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+40      23      569492  22.2041 True
+
 Test 41
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+35      25      216366  8.1280  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+39      25      319174  12.2239 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+40      25      421365  16.1266 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+41      23      473286  17.8489 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+41      23      565579  21.8139 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+41      23      197793  7.5108  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+41      23      291802  11.1915 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+41      23      385135  14.7224 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+41      23      478448  18.2362 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+41      23      571674  22.0100 True
+
 Test 42
-Success: 27, Sol Length: 22, Num Nodes: 197334, Time Taken: 10.84691572189331, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+36      22      183865  6.9276  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+40      22      271354  10.4064 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+41      22      358058  13.5512 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+42      22      444912  16.9341 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+42      22      531614  20.2295 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+42      22      185928  7.1199  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+42      22      273679  10.6326 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+42      22      360952  13.8812 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+42      22      448222  17.2948 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+42      22      535675  20.7203 True
+
 Test 43
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+37      26      227095  8.5147  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+41      26      335615  12.5985 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+42      26      443100  16.7048 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+43      26      550650  21.3485 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+43      26      658374  25.5624 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+43      26      228277  8.7023  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+43      26      337663  13.0089 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+43      26      446345  17.2012 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+43      26      554760  21.3339 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+43      26      663213  25.8600 True
+
 Test 44
-Success: 28, Sol Length: 23, Num Nodes: 209254, Time Taken: 11.572306632995605, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+38      21      174247  6.5197  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+42      19      225938  8.5199  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+43      19      297438  11.5221 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+44      19      368999  14.1657 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+44      19      440426  16.8091 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+44      21      175341  6.7576  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+44      21      257895  9.7983  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+44      19      300965  11.6216 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+44      19      373293  14.3885 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+44      19      445417  17.3928 True
+
 Test 45
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+39      24      204989  7.7978  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+43      24      302685  11.3921 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+44      22      359509  14.0496 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+45      22      446654  16.8645 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+45      22      533625  20.2719 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+45      24      207215  7.8750  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+45      24      305480  11.8815 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+45      24      403497  15.6623 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+45      22      451781  17.4761 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+45      22      539721  20.6089 True
+
 Test 46
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+39      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+43      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+44      Failed
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+46      26      550865  21.0599 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+46      26      658646  25.0793 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+46      26      228214  8.6490  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+46      26      336920  12.8158 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+46      24      405647  15.6428 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+46      24      503922  19.3805 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+46      24      602409  23.4182 True
+
 Test 47
-Success: 29, Sol Length: 31, Num Nodes: 298173, Time Taken: 16.355769872665405, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+40      23      194649  7.3991  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+44      23      287512  10.8883 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+45      23      378503  14.5858 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+47      23      470525  17.9586 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+47      23      562687  21.7483 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+47      23      196767  7.5605  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+47      23      290036  11.1171 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+47      23      382543  14.7093 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+47      23      475461  18.4244 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+47      23      568370  22.1861 True
+
 Test 48
-Success: 30, Sol Length: 21, Num Nodes: 187053, Time Taken: 10.441342830657959, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+41      21      174905  6.6731  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+45      21      257716  9.8618  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+46      21      339861  13.0279 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+48      21      421830  15.8678 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+48      21      503920  19.2586 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+48      21      176831  6.7065  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+48      21      260592  10.0258 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+48      21      343711  13.3507 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+48      21      426633  16.2647 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+48      21      509471  19.3955 True
+
 Test 49
-Success: 31, Sol Length: 28, Num Nodes: 264305, Time Taken: 14.73845648765564, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+42      22      185232  6.9889  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+46      20      242174  9.0170  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+47      20      319143  12.0269 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+49      20      396106  15.0852 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+49      20      472814  18.0845 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+49      20      166483  6.3675  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+49      20      244976  9.3458  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+49      20      322590  12.2917 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+49      20      400521  15.2223 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+49      20      478262  18.5459 True
+
 Test 50
-Success: 32, Sol Length: 26, Num Nodes: 246420, Time Taken: 13.585889101028442, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+43      24      205581  7.6956  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+47      24      303494  11.4781 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+48      24      400817  15.4451 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+50      24      498409  19.3415 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+50      22      534912  20.6059 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+50      22      187209  7.0747  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+50      22      276079  10.3148 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+50      22      364231  13.8693 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+50      22      452375  17.4230 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+50      22      540549  20.7495 True
+
 Test 51
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+44      25      215928  8.0667  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+48      25      319343  11.9109 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+49      25      421764  16.1601 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+51      25      523761  19.9355 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+51      23      565489  21.4861 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+51      21      177152  6.7716  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+51      21      261000  9.8544  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+51      21      344062  13.1072 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+51      21      426896  16.4144 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+51      21      509772  19.5423 True
+
 Test 52
-Success: 33, Sol Length: 31, Num Nodes: 294615, Time Taken: 16.2382709980011, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+44      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+48      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+49      Failed
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+52      23      472827  17.8974 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+52      23      564983  21.6042 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+52      23      197821  7.6613  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+52      23      291739  10.9193 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+52      23      385003  14.6606 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+52      23      477886  18.4593 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+52      23      570777  21.8127 True
+
 Test 53
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+45      24      206053  7.7005  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+49      24      303962  11.4305 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+50      24      401724  15.2029 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+53      24      499115  18.9899 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+53      24      596384  23.1711 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+53      24      207291  8.0101  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+53      24      305878  11.6172 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+53      24      404474  15.5179 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+53      24      502617  19.2940 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+53      24      601073  23.1462 True
+
 Test 54
-Success: 34, Sol Length: 26, Num Nodes: 242485, Time Taken: 13.439046382904053, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+46      26      225514  8.4597  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+50      24      304335  11.5185 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+51      24      402056  15.1550 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+54      24      499536  19.0802 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+54      24      596385  22.6013 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+54      24      208396  7.8638  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+54      24      307202  11.5883 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+54      24      405916  15.5242 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+54      24      504305  19.5593 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+54      24      602263  23.5235 True
+
 Test 55
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+46      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+51      23      288711  10.7317 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+52      23      381392  14.5854 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+55      23      473539  17.9255 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+55      23      565722  21.7273 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+55      23      197680  7.4555  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+55      23      291816  11.2249 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+55      23      385230  14.8438 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+55      23      478485  18.2668 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+55      23      571887  21.9152 True
+
 Test 56
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+47      24      205542  7.6457  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+52      24      303651  11.4216 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+53      24      400615  15.2271 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+56      24      498116  19.0615 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+56      24      595583  23.0485 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+56      24      207018  7.8426  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+56      24      305915  11.6401 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+56      24      403924  15.5007 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+56      22      451535  17.3046 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+56      22      539543  20.6887 True
+
 Test 57
-Success: 35, Sol Length: 27, Num Nodes: 253245, Time Taken: 14.03161072731018, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+48      25      216241  8.0859  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+53      25      319484  12.1681 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+54      25      422066  16.0859 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+57      25      524654  19.8872 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+57      25      626527  23.8153 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+57      25      217759  8.4000  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+57      25      321700  12.1514 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+57      25      425200  16.4140 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+57      25      528871  20.3268 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+57      25      631631  24.4065 True
+
 Test 58
-Success: 36, Sol Length: 29, Num Nodes: 277015, Time Taken: 15.439815282821655, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+49      23      195621  7.3969  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+54      23      288684  10.8520 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+55      23      381064  14.3186 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+58      23      473538  18.0461 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+58      23      565178  21.7002 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+58      23      197425  7.5872  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+58      23      291522  11.1331 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+58      23      385158  14.6578 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+58      23      478553  18.6956 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+58      23      571378  22.0728 True
+
 Test 59
-Success: 37, Sol Length: 26, Num Nodes: 241320, Time Taken: 13.346522331237793, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+50      26      225770  8.3863  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+55      26      334041  12.4863 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+56      26      441607  17.1031 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+59      22      446717  17.2367 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+59      22      533707  20.4895 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+59      22      186464  7.1478  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+59      22      275113  10.6758 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+59      22      363327  14.0391 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+59      22      451306  17.2932 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+59      22      539156  20.9988 True
+
 Test 60
-Success: 38, Sol Length: 31, Num Nodes: 301706, Time Taken: 16.44365429878235, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+51      25      215511  8.0863  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+56      25      318719  12.0425 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+57      25      420610  15.8717 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+60      25      523061  20.0655 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+60      25      625301  23.9265 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+60      25      217486  8.2665  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+60      25      320868  12.2597 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+60      25      424136  16.4203 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+60      25      527258  20.2534 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+60      25      630384  24.7345 True
+
 Test 61
-Success: 39, Sol Length: 24, Num Nodes: 220220, Time Taken: 12.15497374534607, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+52      22      184966  7.0686  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+57      22      272635  10.3094 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+58      22      359663  13.7687 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+61      22      446786  17.1000 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+61      22      533688  20.7030 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+61      24      207274  8.1040  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+61      22      275779  10.5058 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+61      22      363693  13.7623 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+61      22      451306  17.2062 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+61      22      539176  20.5543 True
+
 Test 62
-Success: 40, Sol Length: 24, Num Nodes: 220842, Time Taken: 12.212857484817505, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+53      24      205310  7.6620  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+58      24      303216  11.5708 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+59      24      400491  15.4355 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+62      24      497501  18.9290 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+62      24      594708  22.8150 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+62      20      166221  6.3403  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+62      20      244486  9.2757  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+62      20      322142  12.3730 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+62      20      399717  15.3243 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+62      20      477166  18.5067 True
+
 Test 63
-Success: 41, Sol Length: 19, Num Nodes: 165215, Time Taken: 9.087714672088623, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+54      19      153653  5.7979  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+59      19      226019  8.4931  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+60      19      297602  11.1504 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+63      19      369181  14.1990 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+63      19      440586  16.8883 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+63      19      155535  6.0298  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+63      19      228314  8.6257  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+63      19      300853  11.4489 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+63      19      373259  14.2463 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+63      19      445611  17.0275 True
+
 Test 64
-Success: 42, Sol Length: 30, Num Nodes: 286373, Time Taken: 15.747759580612183, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+54      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+60      24      303251  11.5651 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+61      24      400762  15.1739 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+64      24      498234  19.0640 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+64      24      595274  22.9802 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+64      24      207108  7.8795  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+64      24      306314  11.5721 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+64      24      404889  15.4068 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+64      24      503284  19.2289 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+64      24      601922  23.3603 True
+
 Test 65
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+55      26      226261  8.5797  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+61      26      334777  12.5846 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+62      22      360961  13.5593 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+65      22      448462  17.2036 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+65      22      535870  20.3659 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+65      22      187269  7.0764  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+65      22      276203  10.4447 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+65      22      364524  13.9935 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+65      22      452868  17.1967 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+65      22      541145  21.1364 True
+
 Test 66
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+55      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+61      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+62      Failed
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+66      26      549997  20.9373 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+66      24      596132  23.0352 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+66      24      207589  7.8868  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+66      24      306816  11.5988 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+66      24      405252  15.4660 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+66      24      503814  19.4023 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+66      24      602167  23.3127 True
+
 Test 67
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+56      23      195356  7.4825  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+62      23      288185  11.0290 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+63      23      380418  14.6492 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+67      23      472744  17.9570 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+67      23      565011  21.4964 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+67      23      197210  7.4985  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+67      23      291087  11.0253 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+67      23      384372  14.6309 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+67      23      477387  18.1729 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+67      23      570483  22.1046 True
+
 Test 68
-Success: 43, Sol Length: 23, Num Nodes: 209952, Time Taken: 11.76227879524231, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+57      23      194805  7.2300  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+63      23      287645  10.7796 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+64      23      379875  14.4783 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+68      23      472282  18.2736 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+68      23      564379  21.8363 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+68      23      196432  7.4744  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+68      23      290276  11.0345 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+68      23      383339  15.0353 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+68      23      476541  18.4544 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+68      23      569637  21.9300 True
+
 Test 69
-Success: 44, Sol Length: 23, Num Nodes: 210199, Time Taken: 11.550071239471436, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+58      23      194883  7.2185  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+64      23      287662  10.8797 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+65      23      379898  14.2604 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+69      23      472135  18.4212 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+69      23      564065  21.8222 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+69      23      196108  7.4323  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+69      23      289750  10.9934 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+69      23      383041  14.6457 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+69      23      475817  18.2690 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+69      23      568612  21.8234 True
+
 Test 70
-Success: 45, Sol Length: 24, Num Nodes: 220186, Time Taken: 12.22213339805603, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+59      24      205406  7.6647  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+65      24      303132  11.5172 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+66      24      400351  15.3594 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+70      24      497610  19.6872 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+70      24      594799  22.7982 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+70      24      207206  7.8776  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+70      22      275362  10.4380 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+70      22      363437  13.8928 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+70      22      451284  17.2331 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+70      22      539257  20.8852 True
+
 Test 71
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+60      24      205985  7.6872  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+66      24      304190  11.5839 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+67      24      401627  15.2350 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+71      24      498840  19.3165 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+71      24      595900  22.7579 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+71      24      207822  7.7992  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+71      24      306421  11.6733 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+71      24      404938  15.5355 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+71      24      503490  19.4260 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+71      24      601663  23.1659 True
+
 Test 72
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+61      23      195808  7.2446  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+67      23      288875  10.7659 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+68      23      381331  14.6402 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+72      23      472400  18.2719 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+72      23      564587  22.0914 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+72      23      197602  7.5294  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+72      23      291144  11.2162 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+72      23      384519  14.5594 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+72      21      426240  16.2657 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+72      21      509246  19.6601 True
+
 Test 73
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+61      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+68      25      319910  12.1165 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+69      25      422634  16.2251 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+73      25      525181  20.0064 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+73      25      627773  23.7127 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+73      25      218212  8.2385  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+73      25      322577  12.2071 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+73      25      426257  16.2909 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+73      25      529705  20.5671 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+73      25      633053  24.3860 True
+
 Test 74
-Success: 46, Sol Length: 25, Num Nodes: 231378, Time Taken: 12.699888467788696, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+62      25      214644  8.0548  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+69      25      317294  11.9802 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+70      23      380330  14.3324 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+74      23      472661  17.8233 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+74      23      564389  21.6847 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+74      25      217450  8.2411  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+74      23      291089  10.9796 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+74      23      384519  14.9211 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+74      23      477610  18.1666 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+74      23      570534  21.9202 True
+
 Test 75
-Success: 47, Sol Length: 28, Num Nodes: 264305, Time Taken: 14.590750932693481, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+63      22      185232  6.8808  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+70      20      242174  9.3194  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+71      20      319143  12.0865 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+75      20      396106  15.1033 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+75      20      472814  17.9445 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+75      20      166483  6.2936  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+75      20      244976  9.1549  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+75      20      322590  12.3281 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+75      20      400521  15.4369 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+75      20      478262  18.3827 True
+
 Test 76
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+64      24      205525  7.7181  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+71      24      303343  11.4128 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+72      24      400585  15.4896 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+76      24      497914  19.2735 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+76      24      594889  22.7375 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+76      20      166392  6.3068  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+76      20      244770  9.2815  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+76      20      322591  12.3423 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+76      20      400265  15.2144 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+76      20      477935  18.4610 True
+
 Test 77
-Success: 48, Sol Length: 20, Num Nodes: 176534, Time Taken: 9.841034650802612, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+65      20      164458  6.1563  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+72      20      241994  9.0562  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+73      20      318707  12.2752 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+77      20      395538  15.2748 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+77      20      472386  17.9589 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+77      20      166128  6.3761  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+77      20      244378  9.3245  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+77      20      321952  12.2432 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+77      20      399613  15.2412 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+77      20      477187  18.4018 True
+
 Test 78
-Success: 49, Sol Length: 24, Num Nodes: 220267, Time Taken: 12.320991039276123, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+66      24      204934  7.6695  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+73      22      272801  10.2120 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+74      22      360092  13.5569 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+78      22      447195  17.2956 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+78      22      534312  20.5080 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+78      22      186930  7.3469  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+78      22      275744  10.4348 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+78      22      363900  13.8523 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+78      22      451792  17.3559 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+78      22      539809  21.0230 True
+
 Test 79
-Success: 50, Sol Length: 25, Num Nodes: 231455, Time Taken: 12.891523599624634, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+67      23      195716  7.3878  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+74      23      288741  10.7018 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+75      23      380350  14.1921 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+79      23      472813  17.7602 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+79      23      565314  21.2897 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+79      23      196898  7.3737  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+79      23      290822  10.8822 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+79      23      384353  14.4966 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+79      23      477804  18.0658 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+79      23      571150  21.8479 True
+
 Test 80
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+68      25      215378  7.9233  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+75      25      318837  11.8271 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+76      25      421330  15.8114 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+80      25      524029  20.0019 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+80      25      626377  23.8187 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+80      23      197176  7.6076  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+80      23      291201  11.1600 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+80      23      384534  14.6726 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+80      23      478060  18.1528 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+80      23      571419  21.8085 True
+
 Test 81
-Success: 51, Sol Length: 26, Num Nodes: 240651, Time Taken: 13.422890186309814, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+69      26      226134  8.3653  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+76      26      334358  12.4562 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+77      24      402015  14.9421 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+81      24      499825  18.9857 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+81      24      597017  22.5256 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+81      24      208110  7.7974  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+81      24      306973  11.6198 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+81      24      405577  15.3029 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+81      24      504182  19.1138 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+81      24      602852  23.2385 True
+
 Test 82
-Success: 52, Sol Length: 24, Num Nodes: 220548, Time Taken: 12.416397333145142, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+70      24      204567  7.5571  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+77      24      302174  11.3293 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+78      24      399272  14.9155 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+82      24      496448  18.6578 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+82      24      593663  22.9799 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+82      24      206764  7.7712  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+82      24      305245  11.6344 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+82      24      403488  15.4807 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+82      24      501394  19.1220 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+82      24      599313  23.3545 True
+
 Test 83
-Success: 53, Sol Length: 33, Num Nodes: 319409, Time Taken: 17.71880316734314, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+71      21      175404  6.4675  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+78      21      258295  9.5323  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+79      21      340552  12.6064 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+83      21      422897  15.7390 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+83      21      505231  18.9903 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+83      21      177340  6.5742  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+83      21      261107  9.7774  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+83      21      344206  12.9027 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+83      21      427376  16.0764 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+83      21      510579  19.3412 True
+
 Test 84
-Success: 54, Sol Length: 24, Num Nodes: 219974, Time Taken: 12.272696733474731, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+72      24      204831  7.6387  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+79      24      302873  11.4242 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+80      24      399937  15.0439 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+84      24      496960  18.6809 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+84      24      594150  22.4636 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+84      24      206495  7.7875  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+84      24      304709  11.4946 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+84      24      402207  15.1880 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+84      24      500141  19.0083 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+84      24      597846  22.9479 True
+
 Test 85
-Success: 55, Sol Length: 21, Num Nodes: 187770, Time Taken: 10.519684791564941, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+73      21      174454  6.5496  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+80      21      257212  9.7673  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+81      21      339194  12.9222 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+85      21      421286  15.8168 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+85      21      502733  19.0967 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+85      21      176080  6.5937  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+85      21      259492  9.7621  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+85      21      342066  13.0268 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+85      21      425041  16.1967 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+85      21      507873  19.2578 True
+
 Test 86
-Success: 56, Sol Length: 24, Num Nodes: 220459, Time Taken: 12.349560499191284, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+74      24      205248  7.7261  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+81      24      303211  11.5796 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+82      24      400355  14.9927 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+86      22      447119  16.7647 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+86      22      534281  20.4055 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+86      22      187002  7.0423  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+86      22      275492  10.3018 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+86      22      363577  13.6625 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+86      22      451434  17.0237 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+86      22      539592  20.4238 True
+
 Test 87
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+75      23      195806  7.2189  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+82      23      288414  10.6296 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+83      23      380802  14.1275 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+87      23      473205  18.0000 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+87      23      565628  21.3975 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+87      23      196843  7.3944  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+87      23      290934  11.0053 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+87      23      384344  14.7524 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+87      23      477814  18.1368 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+87      23      571255  21.8236 True
+
 Test 88
-Success: 57, Sol Length: 27, Num Nodes: 253658, Time Taken: 14.577183485031128, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+76      25      215441  8.0310  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+83      25      318670  11.8569 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+84      25      421297  15.8481 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+88      25      523856  19.7145 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+88      25      626474  24.2654 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+88      25      217228  8.1285  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+88      25      321230  12.0856 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+88      25      424586  16.0507 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+88      25      527535  20.2953 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+88      25      630718  24.1496 True
+
 Test 89
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+76      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+83      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+85      26      442861  16.5174 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+89      26      550554  20.8143 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+89      26      658179  25.2171 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+89      26      228179  8.7481  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+89      24      306990  11.7223 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+89      22      364462  13.9330 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+89      22      452733  17.0717 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+89      22      540995  20.3606 True
+
 Test 90
-Success: 58, Sol Length: 31, Num Nodes: 296964, Time Taken: 17.16541886329651, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+77      25      215980  8.0724  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+84      25      319350  11.9302 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+86      25      421530  16.0132 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+90      25      523743  19.7064 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+90      25      625611  24.1844 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+90      25      218041  8.2684  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+90      25      321951  12.2051 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+90      25      425197  16.0688 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+90      25      528653  20.0964 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+90      25      632059  24.2246 True
+
 Test 91
-Success: 59, Sol Length: 21, Num Nodes: 187215, Time Taken: 10.873493432998657, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+78      21      174892  6.5098  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+85      21      257674  9.8382  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+87      21      339726  12.5924 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+91      21      421789  16.2170 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+91      21      503621  19.0860 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+91      21      176697  6.5850  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+91      21      260275  9.7192  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+91      21      343167  12.8716 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+91      21      425892  16.0533 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+91      21      508748  19.2515 True
+
 Test 92
-Success: 60, Sol Length: 28, Num Nodes: 264500, Time Taken: 15.365609407424927, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+79      24      205846  7.5822  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+86      22      273356  10.1642 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+88      22      360750  13.3883 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+92      22      448125  16.7904 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+92      22      535235  20.2836 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+92      24      207408  7.7793  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+92      22      276460  10.3214 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+92      22      364559  13.7041 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+92      22      452752  17.1284 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+92      22      540704  20.9045 True
+
 Test 93
-Success: 61, Sol Length: 23, Num Nodes: 209549, Time Taken: 12.248621225357056, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+80      23      195251  7.1717  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+87      23      287867  10.8371 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+89      23      380143  14.5835 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+93      23      472551  17.8800 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+93      23      564793  21.4352 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+93      23      197035  7.5308  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+93      23      290885  10.9015 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+93      23      384171  14.5892 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+93      23      477513  18.0704 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+93      23      570826  22.0518 True
+
 Test 94
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+81      23      195041  7.2208  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+88      23      288236  10.6830 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+90      23      380773  14.1738 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+94      23      473160  17.7648 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+94      23      565437  21.3521 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+94      23      197310  7.4183  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+94      23      291100  11.1953 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+94      23      384545  14.5437 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+94      23      477503  18.0202 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+94      23      570248  22.0214 True
+
 Test 95
-Success: 62, Sol Length: 29, Num Nodes: 275314, Time Taken: 15.974087715148926, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+81      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+89      25      318770  11.8201 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+91      25      421519  15.7897 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+95      25      523625  19.7271 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+95      25      625952  24.0608 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+95      25      217487  8.1601  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+95      25      320980  12.0307 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+95      25      423625  16.2980 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+95      25      526772  20.4409 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+95      25      629957  24.5641 True
+
 Test 96
-Success: 63, Sol Length: 23, Num Nodes: 209177, Time Taken: 12.256770133972168, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+82      21      174705  6.4711  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+90      21      257449  9.8438  True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+92      21      339593  12.8243 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+96      21      421668  16.0969 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+96      21      503862  19.2715 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+96      21      176429  6.6838  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+96      21      260053  9.8430  True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+96      21      343002  12.8427 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+96      21      426017  16.0547 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+96      21      508853  19.3823 True
+
 Test 97
-Success: 64, Sol Length: 29, Num Nodes: 275623, Time Taken: 16.132275342941284, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+82      Failed
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+90      Failed
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+92      Failed
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+96      Failed
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+96      Failed
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+97      23      197445  7.4041  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+97      23      290751  10.9056 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+97      23      383420  14.4552 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+97      23      476472  18.1503 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+97      23      569608  21.9826 True
+
 Test 98
-Success: 65, Sol Length: 23, Num Nodes: 209197, Time Taken: 12.180160522460938, Check: True
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+83      23      195008  7.2168  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+91      23      287761  10.8785 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+93      23      380140  14.3108 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+97      23      471345  17.6359 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+97      23      562203  21.2866 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+98      23      196864  7.4131  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+98      23      290130  10.9974 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+98      23      382629  14.5748 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+98      23      475418  18.1553 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+98      23      567709  21.8815 True
+
 Test 99
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+84      24      205403  7.6047  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+92      24      303362  11.5478 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+94      24      400990  15.1480 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+98      24      497589  18.7776 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+98      24      594633  22.9945 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+99      24      207560  7.8304  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+99      24      306439  11.5686 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+99      22      364347  13.7049 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+99      22      452278  17.1198 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+99      22      540144  20.5856 True
+
 Test 100
+Starting Beam Search with beam width = 1000, max depth = 26 and adaptive = False
+85      24      204989  7.5848  True
+Starting Beam Search with beam width = 1500, max depth = 26 and adaptive = False
+93      24      302685  11.2431 True
+Starting Beam Search with beam width = 2000, max depth = 26 and adaptive = False
+95      22      359509  13.6410 True
+Starting Beam Search with beam width = 2500, max depth = 26 and adaptive = False
+99      22      446654  16.7894 True
+Starting Beam Search with beam width = 3000, max depth = 26 and adaptive = False
+99      22      533625  20.3519 True
+Starting MBS with beam width = 1000, max depth = 26 and adaptive = False
+100     24      207215  7.7967  True
+Starting MBS with beam width = 1500, max depth = 26 and adaptive = False
+100     24      305480  11.5619 True
+Starting MBS with beam width = 2000, max depth = 26 and adaptive = False
+100     24      403497  15.3457 True
+Starting MBS with beam width = 2500, max depth = 26 and adaptive = False
+100     22      451781  17.0204 True
+Starting MBS with beam width = 3000, max depth = 26 and adaptive = False
+100     22      539721  20.6154 True
 
-
-2500 100 (Nvidia RTX 2060)
-
-
-5000 100 without Adaptive Strategy (Nvidia RTX 3090)
-
-
-10000 100 (Nvidia RTX 3090 Desktop)
-Test 1
-Success: 1, Sol Length: 24, Num Nodes: 2546203, Time Taken: 150.3924217224121, Check: True
-Test 2
-Success: 2, Sol Length: 26, Num Nodes: 2850504, Time Taken: 169.30754399299622, Check: True
-Test 3
-Success: 3, Sol Length: 24, Num Nodes: 2544918, Time Taken: 150.4796757698059, Check: True
-Test 4
-Success: 4, Sol Length: 23, Num Nodes: 2392558, Time Taken: 139.24275374412537, Check: True
-Test 5
-Success: 5, Sol Length: 20, Num Nodes: 1945900, Time Taken: 113.08590316772461, Check: True
-Test 6
-Success: 6, Sol Length: 23, Num Nodes: 2389774, Time Taken: 140.48485326766968, Check: True
-Test 7
-Success: 7, Sol Length: 24, Num Nodes: 2543393, Time Taken: 149.86677432060242, Check: True
-Test 8
-Success: 8, Sol Length: 22, Num Nodes: 2240385, Time Taken: 130.59731459617615, Check: True
-Test 9
-Success: 9, Sol Length: 23, Num Nodes: 2392962, Time Taken: 140.52235436439514, Check: True
-Test 10
-Success: 10, Sol Length: 24, Num Nodes: 2545884, Time Taken: 150.14501643180847, Check: True
-Test 11
-Success: 11, Sol Length: 20, Num Nodes: 1942600, Time Taken: 111.87690734863281, Check: True
-Test 12
-Success: 12, Sol Length: 26, Num Nodes: 2849989, Time Taken: 168.93788313865662, Check: True
-Test 13
-Success: 13, Sol Length: 24, Num Nodes: 2545959, Time Taken: 150.1045024394989, Check: True
-Test 14
-Success: 14, Sol Length: 25, Num Nodes: 2698275, Time Taken: 159.01820921897888, Check: True
-Test 15
-Success: 15, Sol Length: 22, Num Nodes: 2236866, Time Taken: 129.69500541687012, Check: True
-Test 16
-Success: 16, Sol Length: 22, Num Nodes: 2238405, Time Taken: 130.32516312599182, Check: True
-Test 17
-Success: 17, Sol Length: 24, Num Nodes: 2546725, Time Taken: 150.2199809551239, Check: True
-Test 18
-Success: 18, Sol Length: 23, Num Nodes: 2392899, Time Taken: 139.54966688156128, Check: True
-Test 19
-Success: 19, Sol Length: 21, Num Nodes: 2087602, Time Taken: 121.01846051216125, Check: True
-Test 20
-Success: 20, Sol Length: 23, Num Nodes: 2394411, Time Taken: 139.98764562606812, Check: True
-Test 21
-Success: 21, Sol Length: 23, Num Nodes: 2391553, Time Taken: 140.4973020553589, Check: True
-Test 22
-Success: 22, Sol Length: 23, Num Nodes: 2393026, Time Taken: 140.18401336669922, Check: True
-Test 23
-Success: 23, Sol Length: 24, Num Nodes: 2544918, Time Taken: 150.6323001384735, Check: True
-Test 24
-Success: 24, Sol Length: 25, Num Nodes: 2700778, Time Taken: 160.1432328224182, Check: True
-Test 25
-Success: 25, Sol Length: 22, Num Nodes: 2241295, Time Taken: 130.9616208076477, Check: True
-Test 26
-Success: 26, Sol Length: 24, Num Nodes: 2541556, Time Taken: 149.5921812057495, Check: True
-Test 27
-Success: 27, Sol Length: 24, Num Nodes: 2539158, Time Taken: 149.83561730384827, Check: True
-Test 28
-Success: 28, Sol Length: 23, Num Nodes: 2392669, Time Taken: 140.7321527004242, Check: True
-Test 29
-Success: 29, Sol Length: 23, Num Nodes: 2390071, Time Taken: 140.57737731933594, Check: True
-Test 30
-Success: 30, Sol Length: 24, Num Nodes: 2540189, Time Taken: 149.74364805221558, Check: True
-Test 31
-Success: 31, Sol Length: 25, Num Nodes: 2693059, Time Taken: 159.90191888809204, Check: True
-Test 32
-Success: 32, Sol Length: 23, Num Nodes: 2393702, Time Taken: 139.9318118095398, Check: True
-Test 33
-Success: 33, Sol Length: 23, Num Nodes: 2389711, Time Taken: 140.76714777946472, Check: True
-Test 34
-Success: 34, Sol Length: 20, Num Nodes: 1948785, Time Taken: 113.19802808761597, Check: True
-Test 35
-Success: 35, Sol Length: 22, Num Nodes: 2237468, Time Taken: 130.6968400478363, Check: True
-Test 36
-Success: 36, Sol Length: 25, Num Nodes: 2701064, Time Taken: 159.37949466705322, Check: True
-Test 37
-Success: 37, Sol Length: 24, Num Nodes: 2546148, Time Taken: 149.0124797821045, Check: True
-Test 38
-Success: 38, Sol Length: 25, Num Nodes: 2699244, Time Taken: 160.45880150794983, Check: True
-Test 39
-Success: 39, Sol Length: 24, Num Nodes: 2544918, Time Taken: 149.75560665130615, Check: True
-Test 40
-Success: 40, Sol Length: 25, Num Nodes: 2700023, Time Taken: 159.4134485721588, Check: True
-Test 41
-Success: 41, Sol Length: 23, Num Nodes: 2393826, Time Taken: 140.12403178215027, Check: True
-Test 42
-Success: 42, Sol Length: 22, Num Nodes: 2237380, Time Taken: 130.35105347633362, Check: True
-Test 43
-Success: 43, Sol Length: 26, Num Nodes: 2857415, Time Taken: 169.66071701049805, Check: True
-Test 44
-Success: 44, Sol Length: 19, Num Nodes: 1801706, Time Taken: 104.21386551856995, Check: True
-Test 45
-Success: 45, Sol Length: 22, Num Nodes: 2242674, Time Taken: 131.40223288536072, Check: True
-Test 46
-Success: 46, Sol Length: 24, Num Nodes: 2548770, Time Taken: 150.60494661331177, Check: True
-Test 47
-Success: 47, Sol Length: 23, Num Nodes: 2390557, Time Taken: 139.50325298309326, Check: True
-Test 48
-Success: 48, Sol Length: 21, Num Nodes: 2093716, Time Taken: 121.14900469779968, Check: True
-Test 49
-Success: 49, Sol Length: 20, Num Nodes: 1947659, Time Taken: 113.70105385780334, Check: True
-Test 50
-Success: 50, Sol Length: 22, Num Nodes: 2240855, Time Taken: 130.61431574821472, Check: True
-Test 51
-Success: 51, Sol Length: 23, Num Nodes: 2392103, Time Taken: 141.67839336395264, Check: True
-Test 52
-Success: 52, Sol Length: 25, Num Nodes: 2699644, Time Taken: 160.14928126335144, Check: True
-Test 53
-Success: 53, Sol Length: 24, Num Nodes: 2545085, Time Taken: 149.85076761245728, Check: True
-Test 54
-Success: 54, Sol Length: 24, Num Nodes: 2546919, Time Taken: 150.987158536911, Check: True
-Test 55
-Success: 55, Sol Length: 23, Num Nodes: 2389601, Time Taken: 139.94578194618225, Check: True
-Test 56
-Success: 56, Sol Length: 24, Num Nodes: 2541267, Time Taken: 150.0502531528473, Check: True
-Test 57
-Success: 57, Sol Length: 25, Num Nodes: 2700728, Time Taken: 159.56839323043823, Check: True
-Test 58
-Success: 58, Sol Length: 23, Num Nodes: 2394830, Time Taken: 140.672842502594, Check: True
-Test 59
-Success: 59, Sol Length: 22, Num Nodes: 2236802, Time Taken: 130.1795039176941, Check: True
-Test 60
-Success: 60, Sol Length: 25, Num Nodes: 2699270, Time Taken: 159.30123162269592, Check: True
-Test 61
-Success: 61, Sol Length: 22, Num Nodes: 2237644, Time Taken: 130.6851086616516, Check: True
-Test 62
-Success: 62, Sol Length: 24, Num Nodes: 2546814, Time Taken: 149.36202216148376, Check: True
-Test 63
-Success: 63, Sol Length: 19, Num Nodes: 1798160, Time Taken: 103.5379159450531, Check: True
-Test 64
-Success: 64, Sol Length: 24, Num Nodes: 2540189, Time Taken: 148.79802894592285, Check: True
-Test 65
-Success: 65, Sol Length: 22, Num Nodes: 2243492, Time Taken: 131.85144019126892, Check: True
-Test 66
-Success: 66, Sol Length: 26, Num Nodes: 2854373, Time Taken: 170.40193367004395, Check: True
-Test 67
-Success: 67, Sol Length: 23, Num Nodes: 2389774, Time Taken: 140.42329478263855, Check: True
-Test 68
-Success: 68, Sol Length: 23, Num Nodes: 2394292, Time Taken: 140.53163695335388, Check: True
-Test 69
-Success: 69, Sol Length: 23, Num Nodes: 2385209, Time Taken: 139.66554594039917, Check: True
-Test 70
-Success: 70, Sol Length: 24, Num Nodes: 2539936, Time Taken: 149.22537875175476, Check: True
-Test 71
-Success: 71, Sol Length: 24, Num Nodes: 2546684, Time Taken: 149.81007552146912, Check: True
-Test 72
-Success: 72, Sol Length: 21, Num Nodes: 2093521, Time Taken: 121.28052806854248, Check: True
-Test 73
-Success: 73, Sol Length: 25, Num Nodes: 2703191, Time Taken: 159.99190402030945, Check: True
-Test 74
-Success: 74, Sol Length: 23, Num Nodes: 2387582, Time Taken: 139.34448194503784, Check: True
-Test 75
-Success: 75, Sol Length: 20, Num Nodes: 1947659, Time Taken: 112.63445973396301, Check: True
-Test 76
-Success: 76, Sol Length: 24, Num Nodes: 2547010, Time Taken: 149.35952377319336, Check: True
-Test 77
-Success: 77, Sol Length: 20, Num Nodes: 1941911, Time Taken: 112.4730179309845, Check: True
-Test 78
-Success: 78, Sol Length: 22, Num Nodes: 2241855, Time Taken: 130.99434423446655, Check: True
-Test 79
-Success: 79, Sol Length: 23, Num Nodes: 2392560, Time Taken: 139.91643571853638, Check: True
-Test 80
-Success: 80, Sol Length: 23, Num Nodes: 2392183, Time Taken: 140.9674882888794, Check: True
-Test 81
-Success: 81, Sol Length: 24, Num Nodes: 2545150, Time Taken: 150.49388933181763, Check: True
-Test 82
-Success: 82, Sol Length: 24, Num Nodes: 2541551, Time Taken: 149.08097910881042, Check: True
-Test 83
-Success: 83, Sol Length: 21, Num Nodes: 2096336, Time Taken: 122.89620232582092, Check: True
-Test 84
-Success: 84, Sol Length: 24, Num Nodes: 2543168, Time Taken: 150.09113693237305, Check: True
-Test 85
-Success: 85, Sol Length: 21, Num Nodes: 2091068, Time Taken: 121.95763635635376, Check: True
-Test 86
-Success: 86, Sol Length: 22, Num Nodes: 2242772, Time Taken: 130.82773184776306, Check: True
-Test 87
-Success: 87, Sol Length: 23, Num Nodes: 2394301, Time Taken: 140.54164147377014, Check: True
-Test 88
-Success: 88, Sol Length: 25, Num Nodes: 2694809, Time Taken: 159.2472860813141, Check: True
-Test 89
-Success: 89, Sol Length: 22, Num Nodes: 2243229, Time Taken: 131.4989948272705, Check: True
-Test 90
-Success: 90, Sol Length: 25, Num Nodes: 2700211, Time Taken: 160.03221607208252, Check: True
-Test 91
-Success: 91, Sol Length: 21, Num Nodes: 2090574, Time Taken: 121.66300535202026, Check: True
-Test 92
-Success: 92, Sol Length: 22, Num Nodes: 2242643, Time Taken: 130.78435277938843, Check: True
-Test 93
-Success: 93, Sol Length: 23, Num Nodes: 2391339, Time Taken: 139.70301222801208, Check: True
-Test 94
-Success: 94, Sol Length: 21, Num Nodes: 2095724, Time Taken: 121.4561836719513, Check: True
-Test 95
-Success: 95, Sol Length: 25, Num Nodes: 2697170, Time Taken: 159.39984273910522, Check: True
-Test 96
-Success: 96, Sol Length: 21, Num Nodes: 2089629, Time Taken: 121.33023643493652, Check: True
-Test 97
-Success: 97, Sol Length: 27, Num Nodes: 3017191, Time Taken: 179.18511533737183, Check: True
-Test 98
-Success: 98, Sol Length: 23, Num Nodes: 2390057, Time Taken: 139.4095423221588, Check: True
-Test 99
-Success: 99, Sol Length: 24, Num Nodes: 2544140, Time Taken: 148.83701992034912, Check: True
-Test 100
-Success: 100, Sol Length: 22, Num Nodes: 2242674, Time Taken: 130.87133288383484, Check: True
-Success Rate: 1.0, Avg Sol Length: 23.09, Avg Num Nodes: 2407741.29, Avg Time Taken: 141.34543064594268
-
-15000 100 (RTX 3090)
-Test 1
-Success: 1, Sol Length: 24, Num Nodes: 3135706, Time Taken: 180.85067462921143, Check: True
-Test 2
-Success: 2, Sol Length: 24, Num Nodes: 3136187, Time Taken: 180.815691947937, Check: True
-Test 3
-Success: 3, Sol Length: 22, Num Nodes: 2807556, Time Taken: 162.7153856754303, Check: True
-Test 4
-Success: 4, Sol Length: 23, Num Nodes: 2969635, Time Taken: 172.95113062858582, Check: True
-Test 5
-Success: 5, Sol Length: 20, Num Nodes: 2476377, Time Taken: 143.2054259777069, Check: True
-Test 6
-Success: 6, Sol Length: 23, Num Nodes: 2988119, Time Taken: 172.07680916786194, Check: True
-Test 7
-Success: 7, Sol Length: 26, Num Nodes: 3469822, Time Taken: 200.33953833580017, Check: True
-Test 8
-Success: 8, Sol Length: 22, Num Nodes: 2803654, Time Taken: 162.70177578926086, Check: True
-Test 9
-Success: 9, Sol Length: 23, Num Nodes: 2972078, Time Taken: 172.37406015396118, Check: True
-Test 10
-Success: 10, Sol Length: 24, Num Nodes: 3140642, Time Taken: 182.3042857646942, Check: True
-Test 11
-Success: 11, Sol Length: 20, Num Nodes: 2476359, Time Taken: 143.38378500938416, Check: True
-Test 12
-Success: 12, Sol Length: 26, Num Nodes: 3462532, Time Taken: 198.6366264820099, Check: True
-Test 13
-Success: 13, Sol Length: 24, Num Nodes: 3132491, Time Taken: 182.61956882476807, Check: True
-Test 14
-Success: 14, Sol Length: 25, Num Nodes: 3296630, Time Taken: 190.22848677635193, Check: True
-Test 15
-Success: 15, Sol Length: 22, Num Nodes: 2806972, Time Taken: 161.5967559814453, Check: True
-Test 16
-Success: 16, Sol Length: 22, Num Nodes: 2804106, Time Taken: 162.12138032913208, Check: True
-Test 17
-Success: 17, Sol Length: 24, Num Nodes: 3134511, Time Taken: 182.11169052124023, Check: True
-Test 18
-Success: 18, Sol Length: 23, Num Nodes: 2974790, Time Taken: 172.01628017425537, Check: True
-Test 19
-Success: 19, Sol Length: 21, Num Nodes: 2641523, Time Taken: 152.39970517158508, Check: True
-Test 20
-Success: 20, Sol Length: 23, Num Nodes: 2972063, Time Taken: 171.1973955631256, Check: True
-Test 21
-Success: 21, Sol Length: 23, Num Nodes: 2969077, Time Taken: 172.3608467578888, Check: True
-Test 22
-Success: 22, Sol Length: 23, Num Nodes: 2969628, Time Taken: 172.31796550750732, Check: True
-Test 23
-Success: 23, Sol Length: 22, Num Nodes: 2807556, Time Taken: 162.67421650886536, Check: True
-Test 24
-Success: 24, Sol Length: 25, Num Nodes: 3296719, Time Taken: 190.27325820922852, Check: True
-Test 25
-Success: 25, Sol Length: 22, Num Nodes: 2809054, Time Taken: 162.5842592716217, Check: True
-Test 26
-Success: 26, Sol Length: 24, Num Nodes: 3133942, Time Taken: 182.26205587387085, Check: True
-Test 27
-Success: 27, Sol Length: 24, Num Nodes: 3133259, Time Taken: 180.6627893447876, Check: True
-Test 28
-Success: 28, Sol Length: 23, Num Nodes: 2967721, Time Taken: 172.93485379219055, Check: True
-Test 29
-Success: 29, Sol Length: 23, Num Nodes: 2970670, Time Taken: 172.40721464157104, Check: True
-Test 30
-Success: 30, Sol Length: 24, Num Nodes: 3131098, Time Taken: 180.94470953941345, Check: True
-Test 31
-Success: 31, Sol Length: 25, Num Nodes: 3297945, Time Taken: 191.59869647026062, Check: True
-Test 32
-Success: 32, Sol Length: 23, Num Nodes: 2962765, Time Taken: 170.84419631958008, Check: True
-Test 33
-Success: 33, Sol Length: 23, Num Nodes: 2969698, Time Taken: 172.09304547309875, Check: True
-Test 34
-Success: 34, Sol Length: 20, Num Nodes: 2477860, Time Taken: 146.08407878875732, Check: True
-Test 35
-Success: 35, Sol Length: 22, Num Nodes: 2808523, Time Taken: 161.39635133743286, Check: True
-Test 36
-Success: 36, Sol Length: 25, Num Nodes: 3301500, Time Taken: 191.91895818710327, Check: True
-Test 37
-Success: 37, Sol Length: 24, Num Nodes: 3136397, Time Taken: 183.43936848640442, Check: True
-Test 38
-Success: 38, Sol Length: 25, Num Nodes: 3296472, Time Taken: 190.33404994010925, Check: True
-Test 39
-Success: 39, Sol Length: 22, Num Nodes: 2807556, Time Taken: 162.82022786140442, Check: True
-Test 40
-Success: 40, Sol Length: 25, Num Nodes: 3302648, Time Taken: 190.51149249076843, Check: True
-Test 41
-Success: 41, Sol Length: 23, Num Nodes: 2967093, Time Taken: 171.87681651115417, Check: True
-Test 42
-Success: 42, Sol Length: 22, Num Nodes: 2795314, Time Taken: 161.13286709785461, Check: True
-Test 43
-Success: 43, Sol Length: 26, Num Nodes: 3461680, Time Taken: 200.13867664337158, Check: True
-Test 44
-Success: 44, Sol Length: 19, Num Nodes: 2310987, Time Taken: 133.64024877548218, Check: True
-Test 45
-Success: 45, Sol Length: 22, Num Nodes: 2820336, Time Taken: 162.66046357154846, Check: True
-Test 46
-Success: 46, Sol Length: 24, Num Nodes: 3132163, Time Taken: 180.83046436309814, Check: True
-Test 47
-Success: 47, Sol Length: 23, Num Nodes: 2969059, Time Taken: 171.7920377254486, Check: True
-Test 48
-Success: 48, Sol Length: 21, Num Nodes: 2640391, Time Taken: 153.2972912788391, Check: True
-Test 49
-Success: 49, Sol Length: 20, Num Nodes: 2476901, Time Taken: 144.75566577911377, Check: True
-Test 50
-Success: 50, Sol Length: 22, Num Nodes: 2806277, Time Taken: 162.71297645568848, Check: True
-Test 51
-Success: 51, Sol Length: 23, Num Nodes: 2967396, Time Taken: 173.18692684173584, Check: True
-Test 52
-Success: 52, Sol Length: 25, Num Nodes: 3336335, Time Taken: 192.12046885490417, Check: True
-Test 53
-Success: 53, Sol Length: 24, Num Nodes: 3135610, Time Taken: 182.69143104553223, Check: True
-Test 54
-Success: 54, Sol Length: 24, Num Nodes: 3135748, Time Taken: 181.16052317619324, Check: True
-Test 55
-Success: 55, Sol Length: 23, Num Nodes: 2966429, Time Taken: 172.43949580192566, Check: True
-Test 56
-Success: 56, Sol Length: 24, Num Nodes: 3137986, Time Taken: 181.03580713272095, Check: True
-Test 57
-Success: 57, Sol Length: 25, Num Nodes: 3303034, Time Taken: 190.490727186203, Check: True
-Test 58
-Success: 58, Sol Length: 23, Num Nodes: 2973889, Time Taken: 173.5711669921875, Check: True
-Test 59
-Success: 59, Sol Length: 22, Num Nodes: 2802390, Time Taken: 162.902690410614, Check: True
-Test 60
-Success: 60, Sol Length: 25, Num Nodes: 3295744, Time Taken: 189.4059498310089, Check: True
-Test 61
-Success: 61, Sol Length: 22, Num Nodes: 2803455, Time Taken: 162.66794395446777, Check: True
-Test 62
-Success: 62, Sol Length: 24, Num Nodes: 3141606, Time Taken: 181.381530046463, Check: True
-Test 63
-Success: 63, Sol Length: 19, Num Nodes: 2307382, Time Taken: 133.5819206237793, Check: True
-Test 64
-Success: 64, Sol Length: 24, Num Nodes: 3131098, Time Taken: 181.07473587989807, Check: True
-Test 65
-Success: 65, Sol Length: 22, Num Nodes: 2801997, Time Taken: 162.30151081085205, Check: True
-Test 66
-Success: 66, Sol Length: 26, Num Nodes: 3464040, Time Taken: 200.8624448776245, Check: True
-Test 67
-Success: 67, Sol Length: 23, Num Nodes: 2988119, Time Taken: 172.31222486495972, Check: True
-Test 68
-Success: 68, Sol Length: 23, Num Nodes: 2974156, Time Taken: 177.43612957000732, Check: True
-Test 69
-Success: 69, Sol Length: 23, Num Nodes: 2968145, Time Taken: 174.61910033226013, Check: True
-Test 70
-Success: 70, Sol Length: 24, Num Nodes: 3134726, Time Taken: 186.2529022693634, Check: True
-Test 71
-Success: 71, Sol Length: 24, Num Nodes: 3135636, Time Taken: 188.30204129219055, Check: True
-Test 72
-Success: 72, Sol Length: 21, Num Nodes: 2637675, Time Taken: 156.50322699546814, Check: True
-Test 73
-Success: 73, Sol Length: 31, Num Nodes: 4289752, Time Taken: 252.58492803573608, Check: True
-Test 74
-Success: 74, Sol Length: 23, Num Nodes: 2969408, Time Taken: 176.88858270645142, Check: True
-Test 75
-Success: 75, Sol Length: 20, Num Nodes: 2476901, Time Taken: 149.1534240245819, Check: True
-Test 76
-Success: 76, Sol Length: 24, Num Nodes: 3134704, Time Taken: 186.03582978248596, Check: True
-Test 77
-Success: 77, Sol Length: 20, Num Nodes: 2479033, Time Taken: 148.1845371723175, Check: True
-Test 78
-Success: 78, Sol Length: 22, Num Nodes: 2811066, Time Taken: 168.97578382492065, Check: True
-Test 79
-Success: 79, Sol Length: 23, Num Nodes: 2970092, Time Taken: 177.6877739429474, Check: True
-Test 80
-Success: 80, Sol Length: 25, Num Nodes: 3299705, Time Taken: 197.44589805603027, Check: True
-Test 81
-Success: 81, Sol Length: 24, Num Nodes: 3130039, Time Taken: 188.32297110557556, Check: True
-Test 82
-Success: 82, Sol Length: 24, Num Nodes: 3137087, Time Taken: 187.78128743171692, Check: True
-Test 83
-Success: 83, Sol Length: 21, Num Nodes: 2642621, Time Taken: 158.526700258255, Check: True
-Test 84
-Success: 84, Sol Length: 24, Num Nodes: 3133852, Time Taken: 187.87740349769592, Check: True
-Test 85
-Success: 85, Sol Length: 21, Num Nodes: 2638375, Time Taken: 157.6694884300232, Check: True
-Test 86
-Success: 86, Sol Length: 22, Num Nodes: 2805167, Time Taken: 168.79967308044434, Check: True
-Test 87
-Success: 87, Sol Length: 23, Num Nodes: 2968677, Time Taken: 177.4690637588501, Check: True
-Test 88
-Success: 88, Sol Length: 25, Num Nodes: 3300089, Time Taken: 198.52899479866028, Check: True
-Test 89
-Success: 89, Sol Length: 22, Num Nodes: 2807561, Time Taken: 168.26227831840515, Check: True
-Test 90
-Success: 90, Sol Length: 25, Num Nodes: 3297965, Time Taken: 199.21527481079102, Check: True
-Test 91
-Success: 91, Sol Length: 21, Num Nodes: 2639622, Time Taken: 158.60127353668213, Check: True
-Test 92
-Success: 92, Sol Length: 22, Num Nodes: 2806109, Time Taken: 169.52862691879272, Check: True
-Test 93
-Success: 93, Sol Length: 23, Num Nodes: 2963837, Time Taken: 176.85314011573792, Check: True
-Test 94
-Success: 94, Sol Length: 21, Num Nodes: 2641973, Time Taken: 158.8962368965149, Check: True
-Test 95
-Success: 95, Sol Length: 25, Num Nodes: 3296331, Time Taken: 196.28530478477478, Check: True
-Test 96
-Success: 96, Sol Length: 21, Num Nodes: 2640995, Time Taken: 158.77482891082764, Check: True
-Test 97
-Success: 97, Sol Length: 25, Num Nodes: 3300698, Time Taken: 196.55318927764893, Check: True
-Test 98
-Success: 98, Sol Length: 23, Num Nodes: 2968699, Time Taken: 177.48284077644348, Check: True
-Test 99
-Success: 99, Sol Length: 24, Num Nodes: 3136369, Time Taken: 187.11096835136414, Check: True
-Test 100
-Success: 100, Sol Length: 22, Num Nodes: 2820336, Time Taken: 168.30121779441833, Check: True
-Success Rate: 1.0, Avg Sol Length: 23.09, Avg Num Nodes: 2985817.01, Avg Time Taken: 174.74045015096664
+Results:
+BeamSearch(beam_width=1000, max_depth=26, adaptive=False)       0.85    23.63529411764706       201664.6824     7.5577
+BeamSearch(beam_width=1500, max_depth=26, adaptive=False)       0.93    23.49462365591398       295661.0538     11.1500
+BeamSearch(beam_width=2000, max_depth=26, adaptive=False)       0.95    23.28421052631579       386219.5789     14.6251
+BeamSearch(beam_width=2500, max_depth=26, adaptive=False)       0.99    23.21212121212121       478113.2727     18.2099
+BeamSearch(beam_width=3000, max_depth=26, adaptive=False)       0.99    23.151515151515152      569455.4949     21.8088
+MBS(beam_width=1000, max_depth=26, adaptive=False)      1.0     23.15   198649.1700     7.5519
+MBS(beam_width=1500, max_depth=26, adaptive=False)      1.0     22.93   289818.4200     11.0038
+MBS(beam_width=2000, max_depth=26, adaptive=False)      1.0     22.81   380179.9700     14.5317
+MBS(beam_width=2500, max_depth=26, adaptive=False)      1.0     22.63   467775.6500     17.9162
+MBS(beam_width=3000, max_depth=26, adaptive=False)      1.0     22.59   557724.6700     21.5192

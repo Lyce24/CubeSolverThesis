@@ -1,0 +1,787 @@
+Test 1
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:1, Solution Length: 24, Nodes: 792603, Time: 60.1859872341156, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:1, Solution Length: 24, Nodes: 811210, Time: 60.784698247909546, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:1, Solution Length: 24, Nodes: 798705, Time: 60.5552020072937, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:1, Solution Length: 24, Nodes: 797060, Time: 60.920236349105835, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:1, Solution Length: 24, Nodes: 795743, Time: 60.32827591896057, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:1, Solution Length: 24, Nodes: 784288, Time: 60.65720176696777, Sanity Check: True
+
+Test 2
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:2, Solution Length: 22, Nodes: 812653, Time: 60.69839334487915, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:2, Solution Length: 26, Nodes: 811202, Time: 60.94900059700012, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:2, Solution Length: 26, Nodes: 810412, Time: 60.80564498901367, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:2, Solution Length: 26, Nodes: 810070, Time: 60.35817861557007, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:2, Solution Length: 26, Nodes: 799204, Time: 60.879008054733276, Sanity Check: True
+
+Test 3
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:2, Solution Length: 24, Nodes: 811606, Time: 60.90743660926819, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:3, Solution Length: 24, Nodes: 799428, Time: 60.46375751495361, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:3, Solution Length: 24, Nodes: 797589, Time: 60.90017247200012, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:3, Solution Length: 24, Nodes: 795920, Time: 60.87469458580017, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:3, Solution Length: 24, Nodes: 784668, Time: 60.43536138534546, Sanity Check: True
+
+Test 4
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:3, Solution Length: 23, Nodes: 802450, Time: 60.584723472595215, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:3, Solution Length: 23, Nodes: 801054, Time: 60.38872957229614, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:4, Solution Length: 23, Nodes: 809222, Time: 61.48008990287781, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:4, Solution Length: 23, Nodes: 797440, Time: 60.506723165512085, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:4, Solution Length: 23, Nodes: 785663, Time: 60.4112503528595, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:4, Solution Length: 23, Nodes: 784433, Time: 60.827468395233154, Sanity Check: True
+
+Test 5
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:4, Solution Length: 20, Nodes: 801902, Time: 60.715025901794434, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:4, Solution Length: 20, Nodes: 799792, Time: 60.411898374557495, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:5, Solution Length: 20, Nodes: 787959, Time: 60.28262710571289, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:5, Solution Length: 20, Nodes: 776327, Time: 60.28410482406616, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:5, Solution Length: 20, Nodes: 765030, Time: 60.725048780441284, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:5, Solution Length: 20, Nodes: 743951, Time: 60.36284065246582, Sanity Check: True
+
+Test 6
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:5, Solution Length: 23, Nodes: 802850, Time: 60.5355920791626, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:5, Solution Length: 23, Nodes: 800673, Time: 60.49154591560364, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:6, Solution Length: 23, Nodes: 798657, Time: 60.85704183578491, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:6, Solution Length: 23, Nodes: 796969, Time: 60.695292949676514, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:6, Solution Length: 23, Nodes: 786130, Time: 60.19300031661987, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:6, Solution Length: 23, Nodes: 775390, Time: 60.3192241191864, Sanity Check: True
+
+Test 7
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:6, Solution Length: 24, Nodes: 813147, Time: 60.71510052680969, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:6, Solution Length: 24, Nodes: 802027, Time: 60.373894929885864, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:7, Solution Length: 24, Nodes: 811345, Time: 60.857404708862305, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:7, Solution Length: 26, Nodes: 799867, Time: 60.54287600517273, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:7, Solution Length: 26, Nodes: 798549, Time: 60.42741346359253, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:7, Solution Length: 26, Nodes: 796881, Time: 60.537389039993286, Sanity Check: True
+
+Test 8
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:7, Solution Length: 22, Nodes: 801371, Time: 60.52529835700989, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:7, Solution Length: 22, Nodes: 788791, Time: 60.910892486572266, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:8, Solution Length: 22, Nodes: 786183, Time: 60.58453893661499, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:8, Solution Length: 22, Nodes: 774617, Time: 60.720568895339966, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:8, Solution Length: 22, Nodes: 774300, Time: 61.00260353088379, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:8, Solution Length: 22, Nodes: 753645, Time: 60.451390981674194, Sanity Check: True
+
+Test 9
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:8, Solution Length: 23, Nodes: 812225, Time: 60.852489709854126, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:8, Solution Length: 23, Nodes: 800117, Time: 60.77786874771118, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:9, Solution Length: 23, Nodes: 799088, Time: 60.649057149887085, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:9, Solution Length: 25, Nodes: 798005, Time: 60.41429138183594, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:9, Solution Length: 25, Nodes: 796558, Time: 60.43614101409912, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:9, Solution Length: 25, Nodes: 805508, Time: 60.383482933044434, Sanity Check: True
+
+Test 10
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:9, Solution Length: 24, Nodes: 824133, Time: 60.22342324256897, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:9, Solution Length: 24, Nodes: 811721, Time: 60.808107137680054, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:10, Solution Length: 24, Nodes: 809842, Time: 60.748231649398804, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:10, Solution Length: 24, Nodes: 798700, Time: 60.452078342437744, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:10, Solution Length: 24, Nodes: 798657, Time: 60.67550468444824, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:10, Solution Length: 28, Nodes: 809233, Time: 60.61285328865051, Sanity Check: True
+
+Test 11
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:10, Solution Length: 20, Nodes: 769314, Time: 60.29889273643494, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:10, Solution Length: 20, Nodes: 768083, Time: 60.41441774368286, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:11, Solution Length: 20, Nodes: 766461, Time: 60.307827949523926, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:11, Solution Length: 20, Nodes: 765215, Time: 60.802947759628296, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:11, Solution Length: 20, Nodes: 754065, Time: 61.21801471710205, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:11, Solution Length: 20, Nodes: 753134, Time: 60.36770749092102, Sanity Check: True
+
+Test 12
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:11, Solution Length: 26, Nodes: 813665, Time: 60.893887519836426, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:11, Solution Length: 26, Nodes: 802004, Time: 60.73016571998596, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:12, Solution Length: 26, Nodes: 810278, Time: 61.08595156669617, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:12, Solution Length: 26, Nodes: 798410, Time: 60.28456449508667, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:12, Solution Length: 26, Nodes: 797194, Time: 60.39619588851929, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:12, Solution Length: 26, Nodes: 796287, Time: 60.814027309417725, Sanity Check: True
+
+Test 13
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:12, Solution Length: 24, Nodes: 812936, Time: 60.820481300354004, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:12, Solution Length: 24, Nodes: 800866, Time: 60.85201549530029, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:13, Solution Length: 24, Nodes: 798905, Time: 60.52284526824951, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:13, Solution Length: 24, Nodes: 796777, Time: 60.91041827201843, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:13, Solution Length: 24, Nodes: 795249, Time: 60.76785659790039, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:13, Solution Length: 24, Nodes: 773658, Time: 60.37803626060486, Sanity Check: True
+
+Test 14
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:13, Solution Length: 23, Nodes: 813686, Time: 61.078049659729004, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:13, Solution Length: 23, Nodes: 811971, Time: 61.21972703933716, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:14, Solution Length: 23, Nodes: 809897, Time: 60.49301481246948, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:14, Solution Length: 23, Nodes: 808630, Time: 60.67331290245056, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:14, Solution Length: 23, Nodes: 797241, Time: 60.38797616958618, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:14, Solution Length: 23, Nodes: 796194, Time: 60.811357736587524, Sanity Check: True
+
+Test 15
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:14, Solution Length: 22, Nodes: 821385, Time: 61.388649702072144, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:14, Solution Length: 22, Nodes: 809782, Time: 60.53342938423157, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:15, Solution Length: 22, Nodes: 808018, Time: 60.74725890159607, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:15, Solution Length: 22, Nodes: 796753, Time: 60.825016021728516, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:15, Solution Length: 22, Nodes: 795781, Time: 60.27487778663635, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:15, Solution Length: 22, Nodes: 785013, Time: 60.37031006813049, Sanity Check: True
+
+Test 16
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:15, Solution Length: 22, Nodes: 811735, Time: 60.68650007247925, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:15, Solution Length: 22, Nodes: 809421, Time: 60.765742778778076, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:16, Solution Length: 22, Nodes: 797627, Time: 60.65872001647949, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:16, Solution Length: 22, Nodes: 795944, Time: 61.12698197364807, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:16, Solution Length: 22, Nodes: 794852, Time: 60.74475383758545, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:16, Solution Length: 22, Nodes: 783714, Time: 60.49620723724365, Sanity Check: True
+
+Test 17
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:16, Solution Length: 24, Nodes: 813055, Time: 60.30490040779114, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:17, Solution Length: 24, Nodes: 810880, Time: 60.66739320755005, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:17, Solution Length: 24, Nodes: 809142, Time: 60.73272752761841, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:17, Solution Length: 24, Nodes: 807380, Time: 60.38589787483215, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:17, Solution Length: 24, Nodes: 806058, Time: 60.64740347862244, Sanity Check: True
+
+Test 18
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:16, Solution Length: 25, Nodes: 823398, Time: 60.763906955718994, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:17, Solution Length: 25, Nodes: 811404, Time: 60.479331731796265, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:18, Solution Length: 25, Nodes: 809221, Time: 60.4016854763031, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:18, Solution Length: 25, Nodes: 806769, Time: 60.80314660072327, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:18, Solution Length: 25, Nodes: 805430, Time: 60.4629282951355, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:18, Solution Length: 25, Nodes: 804114, Time: 60.899569034576416, Sanity Check: True
+
+Test 19
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:17, Solution Length: 21, Nodes: 811729, Time: 61.2112021446228, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:18, Solution Length: 21, Nodes: 799265, Time: 60.33579754829407, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:19, Solution Length: 21, Nodes: 796769, Time: 60.52452278137207, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:19, Solution Length: 21, Nodes: 785162, Time: 60.34958600997925, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:19, Solution Length: 21, Nodes: 774813, Time: 60.37760090827942, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:19, Solution Length: 21, Nodes: 774398, Time: 60.46953058242798, Sanity Check: True
+
+Test 20
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:18, Solution Length: 23, Nodes: 823166, Time: 60.75958061218262, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:19, Solution Length: 23, Nodes: 810510, Time: 60.78441047668457, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:20, Solution Length: 23, Nodes: 807645, Time: 60.533480167388916, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:20, Solution Length: 23, Nodes: 795850, Time: 60.71057844161987, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:20, Solution Length: 23, Nodes: 804931, Time: 61.3512065410614, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:20, Solution Length: 23, Nodes: 783731, Time: 60.443100929260254, Sanity Check: True
+
+Test 21
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:19, Solution Length: 23, Nodes: 823662, Time: 60.6577832698822, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:20, Solution Length: 25, Nodes: 821997, Time: 60.68928861618042, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:21, Solution Length: 25, Nodes: 810467, Time: 60.70863461494446, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:21, Solution Length: 25, Nodes: 809185, Time: 60.488882064819336, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:21, Solution Length: 25, Nodes: 807853, Time: 60.366947650909424, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:21, Solution Length: 25, Nodes: 806707, Time: 60.78374266624451, Sanity Check: True
+
+Test 22
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:20, Solution Length: 23, Nodes: 823871, Time: 60.728673219680786, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:21, Solution Length: 23, Nodes: 821951, Time: 60.78993368148804, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:22, Solution Length: 23, Nodes: 809485, Time: 60.439330101013184, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:22, Solution Length: 23, Nodes: 807446, Time: 60.75665521621704, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:22, Solution Length: 23, Nodes: 805528, Time: 60.48788619041443, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:22, Solution Length: 23, Nodes: 794780, Time: 60.4125542640686, Sanity Check: True
+
+Test 23
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:22, Solution Length: 24, Nodes: 811606, Time: 60.4029438495636, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:23, Solution Length: 24, Nodes: 809664, Time: 60.41448187828064, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:23, Solution Length: 24, Nodes: 807737, Time: 60.87894105911255, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:23, Solution Length: 24, Nodes: 806145, Time: 60.59913468360901, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:23, Solution Length: 24, Nodes: 794878, Time: 60.21915626525879, Sanity Check: True
+
+Test 24
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:21, Solution Length: 25, Nodes: 824745, Time: 61.37154150009155, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:23, Solution Length: 23, Nodes: 812861, Time: 60.18399667739868, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:24, Solution Length: 23, Nodes: 810629, Time: 60.894887924194336, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:24, Solution Length: 23, Nodes: 808963, Time: 60.91691541671753, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:24, Solution Length: 23, Nodes: 797935, Time: 60.5559766292572, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:24, Solution Length: 23, Nodes: 797245, Time: 60.3317928314209, Sanity Check: True
+
+Test 25
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:24, Solution Length: 24, Nodes: 822408, Time: 60.61046862602234, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:25, Solution Length: 24, Nodes: 811073, Time: 60.45406627655029, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:25, Solution Length: 24, Nodes: 809900, Time: 60.75921416282654, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:25, Solution Length: 24, Nodes: 808494, Time: 60.60928416252136, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:25, Solution Length: 24, Nodes: 807197, Time: 60.3914749622345, Sanity Check: True
+
+Test 26
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:22, Solution Length: 24, Nodes: 812790, Time: 60.46120238304138, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:25, Solution Length: 24, Nodes: 821845, Time: 61.35536432266235, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:26, Solution Length: 24, Nodes: 810038, Time: 60.394893407821655, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:26, Solution Length: 24, Nodes: 808525, Time: 60.565669298172, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:26, Solution Length: 24, Nodes: 807024, Time: 60.46096992492676, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:26, Solution Length: 24, Nodes: 805643, Time: 60.91861081123352, Sanity Check: True
+
+Test 27
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:23, Solution Length: 24, Nodes: 811884, Time: 60.24958562850952, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:26, Solution Length: 22, Nodes: 809054, Time: 60.57024550437927, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:27, Solution Length: 24, Nodes: 817207, Time: 61.19621682167053, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:27, Solution Length: 24, Nodes: 804906, Time: 60.29806447029114, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:27, Solution Length: 24, Nodes: 803758, Time: 60.50520610809326, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:27, Solution Length: 24, Nodes: 792857, Time: 60.24870157241821, Sanity Check: True
+
+Test 28
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:24, Solution Length: 21, Nodes: 812701, Time: 60.64629125595093, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:27, Solution Length: 21, Nodes: 810483, Time: 60.815152406692505, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:28, Solution Length: 21, Nodes: 808618, Time: 60.626288414001465, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:28, Solution Length: 23, Nodes: 797884, Time: 60.31158781051636, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:28, Solution Length: 23, Nodes: 807226, Time: 60.53994822502136, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:28, Solution Length: 23, Nodes: 796641, Time: 60.92639231681824, Sanity Check: True
+
+Test 29
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:25, Solution Length: 23, Nodes: 812299, Time: 60.398518800735474, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:28, Solution Length: 23, Nodes: 810308, Time: 60.534032583236694, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:29, Solution Length: 23, Nodes: 807584, Time: 60.480788469314575, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:29, Solution Length: 23, Nodes: 776104, Time: 60.35533332824707, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:29, Solution Length: 23, Nodes: 785264, Time: 60.54172372817993, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:29, Solution Length: 23, Nodes: 784680, Time: 60.89122796058655, Sanity Check: True
+
+Test 30
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:29, Solution Length: 26, Nodes: 812264, Time: 60.80719614028931, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:30, Solution Length: 26, Nodes: 800796, Time: 60.326733350753784, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:30, Solution Length: 26, Nodes: 799850, Time: 60.71545481681824, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:30, Solution Length: 26, Nodes: 809652, Time: 60.5414719581604, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:30, Solution Length: 26, Nodes: 809224, Time: 60.41797852516174, Sanity Check: True
+
+Test 31
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:26, Solution Length: 23, Nodes: 812253, Time: 60.22943949699402, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:30, Solution Length: 23, Nodes: 810118, Time: 60.42278432846069, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:31, Solution Length: 23, Nodes: 809881, Time: 60.333250999450684, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:31, Solution Length: 23, Nodes: 798662, Time: 60.517733097076416, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:31, Solution Length: 23, Nodes: 797203, Time: 60.72052025794983, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:31, Solution Length: 23, Nodes: 796251, Time: 60.80631613731384, Sanity Check: True
+
+Test 32
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:27, Solution Length: 23, Nodes: 813809, Time: 60.64434289932251, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:31, Solution Length: 23, Nodes: 812161, Time: 60.368406534194946, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:32, Solution Length: 23, Nodes: 810382, Time: 60.61728501319885, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:32, Solution Length: 23, Nodes: 808913, Time: 61.1946063041687, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:32, Solution Length: 23, Nodes: 807422, Time: 60.448185443878174, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:32, Solution Length: 23, Nodes: 806826, Time: 60.85143971443176, Sanity Check: True
+
+Test 33
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:28, Solution Length: 23, Nodes: 811993, Time: 60.53999352455139, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:32, Solution Length: 23, Nodes: 810645, Time: 60.28465700149536, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:33, Solution Length: 23, Nodes: 808666, Time: 60.70133686065674, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:33, Solution Length: 23, Nodes: 796185, Time: 60.892526149749756, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:33, Solution Length: 23, Nodes: 805624, Time: 60.8615300655365, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:33, Solution Length: 23, Nodes: 794460, Time: 60.70803999900818, Sanity Check: True
+
+Test 34
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:29, Solution Length: 24, Nodes: 812412, Time: 60.3370795249939, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:33, Solution Length: 24, Nodes: 821242, Time: 60.86796951293945, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:34, Solution Length: 24, Nodes: 819681, Time: 60.88454270362854, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:34, Solution Length: 24, Nodes: 807674, Time: 61.030627727508545, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:34, Solution Length: 24, Nodes: 805164, Time: 60.19281506538391, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:34, Solution Length: 24, Nodes: 794322, Time: 60.277146339416504, Sanity Check: True
+
+Test 35
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:30, Solution Length: 22, Nodes: 819007, Time: 60.879961013793945, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:34, Solution Length: 22, Nodes: 808255, Time: 60.62421655654907, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:35, Solution Length: 22, Nodes: 817622, Time: 61.029332637786865, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:35, Solution Length: 22, Nodes: 805849, Time: 60.819021224975586, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:35, Solution Length: 22, Nodes: 814612, Time: 60.852214097976685, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:35, Solution Length: 22, Nodes: 803502, Time: 60.82287645339966, Sanity Check: True
+
+Test 36
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:35, Solution Length: 25, Nodes: 822333, Time: 60.7796790599823, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:36, Solution Length: 25, Nodes: 820789, Time: 60.81657695770264, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:36, Solution Length: 25, Nodes: 808574, Time: 60.247928619384766, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:36, Solution Length: 25, Nodes: 817147, Time: 60.91738700866699, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:36, Solution Length: 25, Nodes: 806061, Time: 61.06408905982971, Sanity Check: True
+
+Test 37
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:31, Solution Length: 26, Nodes: 824310, Time: 60.689136266708374, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:36, Solution Length: 24, Nodes: 823330, Time: 60.6734504699707, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:37, Solution Length: 24, Nodes: 821142, Time: 60.800174713134766, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:37, Solution Length: 24, Nodes: 799041, Time: 60.32980489730835, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:37, Solution Length: 24, Nodes: 807694, Time: 60.474653482437134, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:37, Solution Length: 24, Nodes: 806583, Time: 60.78629112243652, Sanity Check: True
+
+Test 38
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:37, Solution Length: 25, Nodes: 822620, Time: 60.4273898601532, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:38, Solution Length: 23, Nodes: 820678, Time: 60.83932852745056, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:38, Solution Length: 23, Nodes: 808629, Time: 61.18145298957825, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:38, Solution Length: 23, Nodes: 806985, Time: 60.34776282310486, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:38, Solution Length: 23, Nodes: 805212, Time: 60.70273685455322, Sanity Check: True
+
+Test 39
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:38, Solution Length: 24, Nodes: 811606, Time: 60.22817397117615, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:39, Solution Length: 24, Nodes: 819885, Time: 60.8831262588501, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:39, Solution Length: 24, Nodes: 807737, Time: 60.83302164077759, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:39, Solution Length: 24, Nodes: 806145, Time: 60.88572955131531, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:39, Solution Length: 24, Nodes: 805089, Time: 60.701552391052246, Sanity Check: True
+
+Test 40
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:32, Solution Length: 23, Nodes: 823612, Time: 60.87204360961914, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:39, Solution Length: 23, Nodes: 822281, Time: 61.092689514160156, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:40, Solution Length: 23, Nodes: 830885, Time: 61.409584760665894, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:40, Solution Length: 23, Nodes: 809296, Time: 60.31904911994934, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:40, Solution Length: 23, Nodes: 818612, Time: 60.31017565727234, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:40, Solution Length: 23, Nodes: 807940, Time: 60.47208595275879, Sanity Check: True
+
+Test 41
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:33, Solution Length: 23, Nodes: 812111, Time: 60.73938989639282, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:40, Solution Length: 23, Nodes: 809209, Time: 60.58752775192261, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:41, Solution Length: 23, Nodes: 808425, Time: 60.233147382736206, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:41, Solution Length: 23, Nodes: 807844, Time: 60.57801151275635, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:41, Solution Length: 23, Nodes: 807460, Time: 60.6995792388916, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:41, Solution Length: 25, Nodes: 806734, Time: 60.27210831642151, Sanity Check: True
+
+Test 42
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:34, Solution Length: 22, Nodes: 808691, Time: 60.521456480026245, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:41, Solution Length: 22, Nodes: 806088, Time: 60.412824869155884, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:42, Solution Length: 22, Nodes: 793755, Time: 60.39350771903992, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:42, Solution Length: 22, Nodes: 782420, Time: 60.481767654418945, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:42, Solution Length: 22, Nodes: 781441, Time: 60.29484272003174, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:42, Solution Length: 22, Nodes: 770260, Time: 60.27108883857727, Sanity Check: True
+
+Test 43
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:35, Solution Length: 24, Nodes: 824173, Time: 60.75899910926819, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:42, Solution Length: 24, Nodes: 822929, Time: 60.820844650268555, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:43, Solution Length: 24, Nodes: 811141, Time: 60.408557653427124, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:43, Solution Length: 24, Nodes: 820237, Time: 60.8572781085968, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:43, Solution Length: 26, Nodes: 809702, Time: 60.32397270202637, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:43, Solution Length: 26, Nodes: 808707, Time: 60.39349603652954, Sanity Check: True
+
+Test 44
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:36, Solution Length: 17, Nodes: 445213, Time: 34.83335304260254, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:43, Solution Length: 17, Nodes: 499515, Time: 39.883718967437744, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:44, Solution Length: 17, Nodes: 593773, Time: 47.71215319633484, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:44, Solution Length: 17, Nodes: 696481, Time: 57.064995765686035, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:44, Solution Length: 17, Nodes: 752378, Time: 60.36420011520386, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:44, Solution Length: 19, Nodes: 772440, Time: 60.269182443618774, Sanity Check: True
+
+Test 45
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:44, Solution Length: 22, Nodes: 811073, Time: 60.30063271522522, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:45, Solution Length: 22, Nodes: 820541, Time: 60.88884091377258, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:45, Solution Length: 24, Nodes: 808816, Time: 60.28393030166626, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:45, Solution Length: 24, Nodes: 817968, Time: 60.65311360359192, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:45, Solution Length: 24, Nodes: 806594, Time: 60.43769550323486, Sanity Check: True
+
+Test 46
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:37, Solution Length: 24, Nodes: 824334, Time: 60.5137836933136, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:45, Solution Length: 24, Nodes: 822774, Time: 60.80116581916809, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:46, Solution Length: 24, Nodes: 821439, Time: 60.50323176383972, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:46, Solution Length: 24, Nodes: 808779, Time: 60.50470042228699, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:46, Solution Length: 24, Nodes: 807928, Time: 60.37847542762756, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:46, Solution Length: 24, Nodes: 807791, Time: 60.966575145721436, Sanity Check: True
+
+Test 47
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:38, Solution Length: 23, Nodes: 813200, Time: 60.17607378959656, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:46, Solution Length: 23, Nodes: 811233, Time: 60.54039645195007, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:47, Solution Length: 23, Nodes: 808504, Time: 60.401904582977295, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:47, Solution Length: 23, Nodes: 806761, Time: 60.26311922073364, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:47, Solution Length: 23, Nodes: 795332, Time: 60.254847288131714, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:47, Solution Length: 23, Nodes: 804653, Time: 61.22780895233154, Sanity Check: True
+
+Test 48
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:39, Solution Length: 21, Nodes: 812357, Time: 60.22246432304382, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:47, Solution Length: 21, Nodes: 799530, Time: 60.61761236190796, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:48, Solution Length: 21, Nodes: 806468, Time: 61.54262852668762, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:48, Solution Length: 21, Nodes: 785485, Time: 60.886188983917236, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:48, Solution Length: 21, Nodes: 785005, Time: 60.756805419921875, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:48, Solution Length: 21, Nodes: 764286, Time: 60.339250802993774, Sanity Check: True
+
+Test 49
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:40, Solution Length: 20, Nodes: 801238, Time: 60.53983926773071, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:48, Solution Length: 20, Nodes: 789450, Time: 60.88995122909546, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:49, Solution Length: 20, Nodes: 777429, Time: 60.317049980163574, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:49, Solution Length: 20, Nodes: 766240, Time: 61.29749631881714, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:49, Solution Length: 20, Nodes: 765243, Time: 61.343640089035034, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:49, Solution Length: 20, Nodes: 754552, Time: 60.39154648780823, Sanity Check: True
+
+Test 50
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:41, Solution Length: 22, Nodes: 822192, Time: 60.820589780807495, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:49, Solution Length: 22, Nodes: 790269, Time: 60.2904212474823, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:50, Solution Length: 24, Nodes: 808460, Time: 60.39900183677673, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:50, Solution Length: 24, Nodes: 806641, Time: 60.389934062957764, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:50, Solution Length: 24, Nodes: 784730, Time: 61.079710483551025, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:50, Solution Length: 24, Nodes: 783901, Time: 60.31655311584473, Sanity Check: True
+
+Test 51
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:42, Solution Length: 21, Nodes: 823632, Time: 60.755176067352295, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:50, Solution Length: 21, Nodes: 811265, Time: 60.76032876968384, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:51, Solution Length: 21, Nodes: 811069, Time: 60.615922689437866, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:51, Solution Length: 25, Nodes: 820504, Time: 60.89715576171875, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:51, Solution Length: 25, Nodes: 809105, Time: 60.513962507247925, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:51, Solution Length: 25, Nodes: 807567, Time: 60.87579154968262, Sanity Check: True
+
+Test 52
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:43, Solution Length: 23, Nodes: 802374, Time: 60.71444606781006, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:51, Solution Length: 23, Nodes: 799982, Time: 60.88689088821411, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:52, Solution Length: 23, Nodes: 798732, Time: 60.60680532455444, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:52, Solution Length: 23, Nodes: 798495, Time: 61.38679766654968, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:52, Solution Length: 25, Nodes: 798093, Time: 60.34678936004639, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:52, Solution Length: 25, Nodes: 786952, Time: 60.39916133880615, Sanity Check: True
+
+Test 53
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:44, Solution Length: 24, Nodes: 803066, Time: 60.5986807346344, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:52, Solution Length: 24, Nodes: 801334, Time: 60.733253955841064, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:53, Solution Length: 24, Nodes: 788820, Time: 60.23266386985779, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:53, Solution Length: 24, Nodes: 797169, Time: 61.38643002510071, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:53, Solution Length: 24, Nodes: 796098, Time: 60.7748646736145, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:53, Solution Length: 24, Nodes: 785130, Time: 60.72774839401245, Sanity Check: True
+
+Test 54
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:53, Solution Length: 24, Nodes: 802224, Time: 60.73968005180359, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:54, Solution Length: 24, Nodes: 799235, Time: 60.8486123085022, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:54, Solution Length: 24, Nodes: 797071, Time: 60.89332389831543, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:54, Solution Length: 24, Nodes: 796129, Time: 60.67823100090027, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:54, Solution Length: 24, Nodes: 795464, Time: 60.778753995895386, Sanity Check: True
+
+Test 55
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:45, Solution Length: 23, Nodes: 812720, Time: 60.6443293094635, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:54, Solution Length: 23, Nodes: 810982, Time: 60.89031434059143, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:55, Solution Length: 23, Nodes: 809642, Time: 60.190300941467285, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:55, Solution Length: 23, Nodes: 808769, Time: 60.611093521118164, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:55, Solution Length: 25, Nodes: 807690, Time: 60.60342073440552, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:55, Solution Length: 25, Nodes: 806820, Time: 60.35670566558838, Sanity Check: True
+
+Test 56
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:46, Solution Length: 22, Nodes: 822851, Time: 61.024126052856445, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:55, Solution Length: 24, Nodes: 821455, Time: 61.18708562850952, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:56, Solution Length: 24, Nodes: 819507, Time: 61.31461191177368, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:56, Solution Length: 24, Nodes: 776891, Time: 60.40257167816162, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:56, Solution Length: 24, Nodes: 785571, Time: 60.492621421813965, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:56, Solution Length: 24, Nodes: 784503, Time: 60.76295709609985, Sanity Check: True
+
+Test 57
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:56, Solution Length: 27, Nodes: 812652, Time: 60.905030727386475, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:57, Solution Length: 25, Nodes: 800700, Time: 60.963738679885864, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:57, Solution Length: 25, Nodes: 799338, Time: 61.20055103302002, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:57, Solution Length: 25, Nodes: 798228, Time: 60.832314014434814, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:57, Solution Length: 25, Nodes: 797087, Time: 60.859824419021606, Sanity Check: True
+
+Test 58
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:47, Solution Length: 23, Nodes: 792364, Time: 60.236525535583496, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:57, Solution Length: 23, Nodes: 800817, Time: 60.899648904800415, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:58, Solution Length: 23, Nodes: 788020, Time: 60.248093605041504, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:58, Solution Length: 23, Nodes: 785937, Time: 60.434314250946045, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:58, Solution Length: 23, Nodes: 785541, Time: 60.30102562904358, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:58, Solution Length: 23, Nodes: 764707, Time: 60.66843509674072, Sanity Check: True
+
+Test 59
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:48, Solution Length: 22, Nodes: 801251, Time: 60.898314476013184, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:58, Solution Length: 22, Nodes: 789489, Time: 60.7796573638916, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:59, Solution Length: 22, Nodes: 798110, Time: 60.91192388534546, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:59, Solution Length: 22, Nodes: 776820, Time: 60.39123606681824, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:59, Solution Length: 22, Nodes: 786549, Time: 60.741127252578735, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:59, Solution Length: 22, Nodes: 786529, Time: 60.79711842536926, Sanity Check: True
+
+Test 60
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:59, Solution Length: 25, Nodes: 780008, Time: 60.52932262420654, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:60, Solution Length: 25, Nodes: 788682, Time: 61.19401669502258, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:60, Solution Length: 25, Nodes: 777191, Time: 60.45245599746704, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:60, Solution Length: 25, Nodes: 775969, Time: 60.23219418525696, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:60, Solution Length: 25, Nodes: 764926, Time: 60.37913799285889, Sanity Check: True
+
+Test 61
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:49, Solution Length: 22, Nodes: 791388, Time: 60.40720891952515, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:60, Solution Length: 22, Nodes: 799899, Time: 60.56579566001892, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:61, Solution Length: 22, Nodes: 798329, Time: 60.48987174034119, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:61, Solution Length: 22, Nodes: 776308, Time: 60.27570700645447, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:61, Solution Length: 22, Nodes: 775215, Time: 60.31444954872131, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:61, Solution Length: 22, Nodes: 774191, Time: 60.86805558204651, Sanity Check: True
+
+Test 62
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:50, Solution Length: 20, Nodes: 809816, Time: 60.836265087127686, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:61, Solution Length: 20, Nodes: 798640, Time: 60.34565329551697, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:62, Solution Length: 20, Nodes: 798187, Time: 60.854196548461914, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:62, Solution Length: 20, Nodes: 797978, Time: 60.34503722190857, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:62, Solution Length: 24, Nodes: 797112, Time: 60.40453791618347, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:62, Solution Length: 22, Nodes: 806642, Time: 61.43738508224487, Sanity Check: True
+
+Test 63
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:51, Solution Length: 19, Nodes: 768632, Time: 60.46828579902649, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:62, Solution Length: 19, Nodes: 746991, Time: 60.57898020744324, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:63, Solution Length: 19, Nodes: 745619, Time: 60.73835897445679, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:63, Solution Length: 19, Nodes: 744443, Time: 60.71180725097656, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:63, Solution Length: 19, Nodes: 743463, Time: 60.68776535987854, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:63, Solution Length: 19, Nodes: 732598, Time: 60.34462904930115, Sanity Check: True
+
+Test 64
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:63, Solution Length: 26, Nodes: 801972, Time: 60.28848934173584, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:64, Solution Length: 26, Nodes: 811072, Time: 60.83779573440552, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:64, Solution Length: 26, Nodes: 799850, Time: 60.18551254272461, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:64, Solution Length: 26, Nodes: 809652, Time: 60.38365626335144, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:64, Solution Length: 26, Nodes: 788851, Time: 60.40079975128174, Sanity Check: True
+
+Test 65
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:52, Solution Length: 22, Nodes: 801959, Time: 60.52623128890991, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:64, Solution Length: 22, Nodes: 799429, Time: 60.73321008682251, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:65, Solution Length: 22, Nodes: 797873, Time: 60.89703607559204, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:65, Solution Length: 22, Nodes: 776722, Time: 60.2538685798645, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:65, Solution Length: 22, Nodes: 797044, Time: 60.927934646606445, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:65, Solution Length: 24, Nodes: 796564, Time: 60.63151526451111, Sanity Check: True
+
+Test 66
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:65, Solution Length: 24, Nodes: 811488, Time: 60.817155838012695, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:66, Solution Length: 24, Nodes: 799448, Time: 60.25382351875305, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:66, Solution Length: 24, Nodes: 797409, Time: 60.830684423446655, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:66, Solution Length: 24, Nodes: 795897, Time: 60.509416580200195, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:66, Solution Length: 24, Nodes: 795114, Time: 60.84913897514343, Sanity Check: True
+
+Test 67
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:53, Solution Length: 23, Nodes: 802850, Time: 60.31864380836487, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:66, Solution Length: 23, Nodes: 810891, Time: 60.91269898414612, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:67, Solution Length: 23, Nodes: 798657, Time: 60.30752491950989, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:67, Solution Length: 23, Nodes: 796969, Time: 60.807772159576416, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:67, Solution Length: 23, Nodes: 796312, Time: 60.73788380622864, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:67, Solution Length: 23, Nodes: 785632, Time: 60.53964304924011, Sanity Check: True
+
+Test 68
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:54, Solution Length: 23, Nodes: 813512, Time: 60.92675447463989, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:67, Solution Length: 23, Nodes: 811857, Time: 60.83635091781616, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:68, Solution Length: 23, Nodes: 800211, Time: 60.326852798461914, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:68, Solution Length: 23, Nodes: 798168, Time: 60.336978912353516, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:68, Solution Length: 23, Nodes: 796409, Time: 60.66992259025574, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:68, Solution Length: 23, Nodes: 795042, Time: 60.78568887710571, Sanity Check: True
+
+Test 69
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:55, Solution Length: 23, Nodes: 812158, Time: 60.821794748306274, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:68, Solution Length: 23, Nodes: 800251, Time: 60.568604707717896, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:69, Solution Length: 23, Nodes: 798307, Time: 60.26495409011841, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:69, Solution Length: 23, Nodes: 796193, Time: 60.62473654747009, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:69, Solution Length: 23, Nodes: 795197, Time: 60.74498438835144, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:69, Solution Length: 23, Nodes: 794532, Time: 60.53964161872864, Sanity Check: True
+
+Test 70
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:69, Solution Length: 24, Nodes: 811447, Time: 60.62685441970825, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:70, Solution Length: 24, Nodes: 808994, Time: 60.26070737838745, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:70, Solution Length: 24, Nodes: 807392, Time: 60.212947845458984, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:70, Solution Length: 24, Nodes: 805892, Time: 60.766751766204834, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:70, Solution Length: 24, Nodes: 804892, Time: 60.48123478889465, Sanity Check: True
+
+Test 71
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:70, Solution Length: 24, Nodes: 771585, Time: 60.236724615097046, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:71, Solution Length: 24, Nodes: 801293, Time: 60.58604979515076, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:71, Solution Length: 24, Nodes: 799252, Time: 60.568145990371704, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:71, Solution Length: 24, Nodes: 787341, Time: 60.23001766204834, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:71, Solution Length: 24, Nodes: 796063, Time: 60.660202503204346, Sanity Check: True
+
+Test 72
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:56, Solution Length: 23, Nodes: 802959, Time: 60.79875302314758, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:71, Solution Length: 23, Nodes: 811448, Time: 60.560490131378174, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:72, Solution Length: 23, Nodes: 819571, Time: 60.808997631073, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:72, Solution Length: 23, Nodes: 797178, Time: 60.53858733177185, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:72, Solution Length: 23, Nodes: 805860, Time: 60.51973342895508, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:72, Solution Length: 23, Nodes: 794687, Time: 60.194863080978394, Sanity Check: True
+
+Test 73
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:57, Solution Length: 25, Nodes: 813911, Time: 60.64990758895874, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:72, Solution Length: 25, Nodes: 812723, Time: 60.50619697570801, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:73, Solution Length: 25, Nodes: 811044, Time: 60.2639799118042, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:73, Solution Length: 25, Nodes: 809306, Time: 60.744306325912476, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:73, Solution Length: 25, Nodes: 818107, Time: 60.83488082885742, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:73, Solution Length: 25, Nodes: 806758, Time: 61.327807903289795, Sanity Check: True
+
+Test 74
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:58, Solution Length: 25, Nodes: 823147, Time: 60.53178358078003, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:73, Solution Length: 25, Nodes: 810867, Time: 60.19122505187988, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:74, Solution Length: 25, Nodes: 818454, Time: 60.73884654045105, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:74, Solution Length: 25, Nodes: 806553, Time: 60.404985189437866, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:74, Solution Length: 25, Nodes: 805423, Time: 60.19733691215515, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:74, Solution Length: 25, Nodes: 804630, Time: 60.5329213142395, Sanity Check: True
+
+Test 75
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:59, Solution Length: 20, Nodes: 790970, Time: 60.3289532661438, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:74, Solution Length: 20, Nodes: 779211, Time: 60.23331379890442, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:75, Solution Length: 20, Nodes: 777429, Time: 60.5691077709198, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:75, Solution Length: 20, Nodes: 756100, Time: 60.68356394767761, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:75, Solution Length: 20, Nodes: 765243, Time: 60.95319700241089, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:75, Solution Length: 20, Nodes: 754552, Time: 60.92027020454407, Sanity Check: True
+
+Test 76
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:60, Solution Length: 20, Nodes: 790897, Time: 60.42308568954468, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:75, Solution Length: 20, Nodes: 799701, Time: 60.714492321014404, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:76, Solution Length: 20, Nodes: 788131, Time: 60.82661747932434, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:76, Solution Length: 20, Nodes: 777944, Time: 60.6199734210968, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:76, Solution Length: 20, Nodes: 776459, Time: 60.551491022109985, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:76, Solution Length: 20, Nodes: 785005, Time: 60.90692496299744, Sanity Check: True
+
+Test 77
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:61, Solution Length: 20, Nodes: 801254, Time: 60.71811246871948, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:76, Solution Length: 20, Nodes: 778283, Time: 60.688637018203735, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:77, Solution Length: 20, Nodes: 766107, Time: 60.22146224975586, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:77, Solution Length: 20, Nodes: 764503, Time: 60.88261914253235, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:77, Solution Length: 20, Nodes: 763280, Time: 60.92491555213928, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:77, Solution Length: 20, Nodes: 752208, Time: 60.301466941833496, Sanity Check: True
+
+Test 78
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:62, Solution Length: 22, Nodes: 811671, Time: 60.67562961578369, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:77, Solution Length: 22, Nodes: 810456, Time: 60.17772078514099, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:78, Solution Length: 24, Nodes: 808701, Time: 60.24636888504028, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:78, Solution Length: 24, Nodes: 807068, Time: 60.920692682266235, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:78, Solution Length: 24, Nodes: 785029, Time: 60.26922798156738, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:78, Solution Length: 24, Nodes: 784213, Time: 60.246201276779175, Sanity Check: True
+
+Test 79
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:63, Solution Length: 23, Nodes: 792385, Time: 60.48640012741089, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:78, Solution Length: 23, Nodes: 800123, Time: 60.654088735580444, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:79, Solution Length: 23, Nodes: 787460, Time: 60.39838624000549, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:79, Solution Length: 23, Nodes: 776451, Time: 60.39015460014343, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:79, Solution Length: 23, Nodes: 785951, Time: 61.42985773086548, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:79, Solution Length: 23, Nodes: 775021, Time: 60.532525062561035, Sanity Check: True
+
+Test 80
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:64, Solution Length: 23, Nodes: 792980, Time: 60.26092600822449, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:79, Solution Length: 23, Nodes: 790968, Time: 60.518932580947876, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:80, Solution Length: 23, Nodes: 788753, Time: 60.288196325302124, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:80, Solution Length: 23, Nodes: 787768, Time: 60.69246029853821, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:80, Solution Length: 23, Nodes: 786477, Time: 60.70361065864563, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:80, Solution Length: 23, Nodes: 775420, Time: 60.29600787162781, Sanity Check: True
+
+Test 81
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:65, Solution Length: 26, Nodes: 793459, Time: 60.27282190322876, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:80, Solution Length: 24, Nodes: 801993, Time: 61.111289978027344, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:81, Solution Length: 24, Nodes: 800759, Time: 60.611868381500244, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:81, Solution Length: 24, Nodes: 788499, Time: 60.36452603340149, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:81, Solution Length: 26, Nodes: 797997, Time: 61.30767583847046, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:81, Solution Length: 26, Nodes: 797063, Time: 60.743019104003906, Sanity Check: True
+
+Test 82
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:66, Solution Length: 24, Nodes: 802580, Time: 60.350207567214966, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:81, Solution Length: 24, Nodes: 789634, Time: 60.182537317276, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:82, Solution Length: 24, Nodes: 787481, Time: 60.19482445716858, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:82, Solution Length: 24, Nodes: 785727, Time: 60.610591888427734, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:82, Solution Length: 24, Nodes: 794382, Time: 60.70622515678406, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:82, Solution Length: 24, Nodes: 783218, Time: 60.2349271774292, Sanity Check: True
+
+Test 83
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:67, Solution Length: 21, Nodes: 802267, Time: 60.957205295562744, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:82, Solution Length: 21, Nodes: 800183, Time: 61.30998659133911, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:83, Solution Length: 21, Nodes: 778063, Time: 60.2110071182251, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:83, Solution Length: 21, Nodes: 766674, Time: 60.61996126174927, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:83, Solution Length: 21, Nodes: 765370, Time: 60.64133977890015, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:83, Solution Length: 21, Nodes: 764491, Time: 60.8876314163208, Sanity Check: True
+
+Test 84
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:68, Solution Length: 24, Nodes: 822609, Time: 60.73375487327576, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:83, Solution Length: 24, Nodes: 811397, Time: 60.57985258102417, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:84, Solution Length: 24, Nodes: 810031, Time: 60.208943605422974, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:84, Solution Length: 24, Nodes: 808563, Time: 60.29191851615906, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:84, Solution Length: 24, Nodes: 806713, Time: 60.353424072265625, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:84, Solution Length: 24, Nodes: 805516, Time: 61.30637216567993, Sanity Check: True
+
+Test 85
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:69, Solution Length: 21, Nodes: 810275, Time: 60.897897481918335, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:84, Solution Length: 21, Nodes: 797295, Time: 60.552096128463745, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:85, Solution Length: 21, Nodes: 785179, Time: 60.75210404396057, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:85, Solution Length: 21, Nodes: 774230, Time: 60.451064348220825, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:85, Solution Length: 21, Nodes: 773848, Time: 60.19656229019165, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:85, Solution Length: 21, Nodes: 763388, Time: 60.90257453918457, Sanity Check: True
+
+Test 86
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:70, Solution Length: 22, Nodes: 823506, Time: 60.605108976364136, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:85, Solution Length: 22, Nodes: 810807, Time: 60.620129346847534, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:86, Solution Length: 22, Nodes: 809587, Time: 60.78091287612915, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:86, Solution Length: 24, Nodes: 809316, Time: 60.42802166938782, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:86, Solution Length: 24, Nodes: 808073, Time: 60.19828510284424, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:86, Solution Length: 24, Nodes: 807082, Time: 60.40364980697632, Sanity Check: True
+
+Test 87
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:71, Solution Length: 23, Nodes: 813022, Time: 60.42908072471619, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:86, Solution Length: 23, Nodes: 810784, Time: 60.31797432899475, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:87, Solution Length: 23, Nodes: 809489, Time: 60.84592390060425, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:87, Solution Length: 23, Nodes: 808210, Time: 61.35240435600281, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:87, Solution Length: 23, Nodes: 807230, Time: 61.38809108734131, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:87, Solution Length: 23, Nodes: 786250, Time: 60.92809844017029, Sanity Check: True
+
+Test 88
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:87, Solution Length: 25, Nodes: 822645, Time: 60.83590888977051, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:88, Solution Length: 25, Nodes: 810649, Time: 60.394941329956055, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:88, Solution Length: 25, Nodes: 808617, Time: 60.447713136672974, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:88, Solution Length: 25, Nodes: 817311, Time: 60.69332766532898, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:88, Solution Length: 25, Nodes: 805976, Time: 60.61171054840088, Sanity Check: True
+
+Test 89
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:72, Solution Length: 24, Nodes: 813715, Time: 60.85405206680298, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:88, Solution Length: 24, Nodes: 811998, Time: 60.51812672615051, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:89, Solution Length: 24, Nodes: 820959, Time: 60.84563899040222, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:89, Solution Length: 24, Nodes: 809674, Time: 60.50766468048096, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:89, Solution Length: 26, Nodes: 819644, Time: 60.893176317214966, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:89, Solution Length: 26, Nodes: 808665, Time: 60.54016590118408, Sanity Check: True
+
+Test 90
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:73, Solution Length: 25, Nodes: 814283, Time: 60.33997297286987, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:89, Solution Length: 25, Nodes: 812559, Time: 60.29854679107666, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:90, Solution Length: 25, Nodes: 810651, Time: 60.57488393783569, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:90, Solution Length: 25, Nodes: 809097, Time: 60.322287797927856, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:90, Solution Length: 25, Nodes: 818231, Time: 60.60924458503723, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:90, Solution Length: 25, Nodes: 796708, Time: 60.26643371582031, Sanity Check: True
+
+Test 91
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:74, Solution Length: 21, Nodes: 811707, Time: 61.49932527542114, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:90, Solution Length: 21, Nodes: 799135, Time: 60.4643988609314, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:91, Solution Length: 21, Nodes: 796364, Time: 60.555402517318726, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:91, Solution Length: 21, Nodes: 784452, Time: 60.50144815444946, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:91, Solution Length: 21, Nodes: 773903, Time: 60.34993362426758, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:91, Solution Length: 21, Nodes: 732915, Time: 60.56896758079529, Sanity Check: True
+
+Test 92
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:75, Solution Length: 22, Nodes: 813115, Time: 60.54504609107971, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:91, Solution Length: 22, Nodes: 812425, Time: 60.42467164993286, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:92, Solution Length: 24, Nodes: 810796, Time: 61.27321767807007, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:92, Solution Length: 24, Nodes: 808394, Time: 60.508135080337524, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:92, Solution Length: 24, Nodes: 806954, Time: 60.515875577926636, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:92, Solution Length: 24, Nodes: 805920, Time: 60.83812165260315, Sanity Check: True
+
+Test 93
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:76, Solution Length: 23, Nodes: 823293, Time: 60.873319149017334, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:92, Solution Length: 23, Nodes: 810434, Time: 60.78991675376892, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:93, Solution Length: 23, Nodes: 808183, Time: 60.418657064437866, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:93, Solution Length: 23, Nodes: 806587, Time: 60.800307273864746, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:93, Solution Length: 23, Nodes: 795566, Time: 60.6884241104126, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:93, Solution Length: 23, Nodes: 784724, Time: 60.398744106292725, Sanity Check: True
+
+Test 94
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:77, Solution Length: 23, Nodes: 822599, Time: 60.72085499763489, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:93, Solution Length: 23, Nodes: 810134, Time: 60.5475537776947, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:94, Solution Length: 23, Nodes: 808101, Time: 60.782060384750366, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:94, Solution Length: 23, Nodes: 796054, Time: 60.65244650840759, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:94, Solution Length: 23, Nodes: 804672, Time: 60.417537689208984, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:94, Solution Length: 23, Nodes: 793817, Time: 60.515141248703, Sanity Check: True
+
+Test 95
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:94, Solution Length: 25, Nodes: 812087, Time: 60.205442667007446, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:95, Solution Length: 25, Nodes: 811262, Time: 60.521278381347656, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:95, Solution Length: 25, Nodes: 819967, Time: 60.66984963417053, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:95, Solution Length: 25, Nodes: 818666, Time: 60.572490215301514, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:95, Solution Length: 25, Nodes: 819260, Time: 61.30352568626404, Sanity Check: True
+
+Test 96
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:78, Solution Length: 21, Nodes: 812415, Time: 60.906994342803955, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:95, Solution Length: 21, Nodes: 788864, Time: 60.263630867004395, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:96, Solution Length: 21, Nodes: 797150, Time: 60.58070492744446, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:96, Solution Length: 21, Nodes: 776329, Time: 60.252527952194214, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:96, Solution Length: 21, Nodes: 775730, Time: 60.246928453445435, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:96, Solution Length: 21, Nodes: 765250, Time: 60.43567085266113, Sanity Check: True
+
+Test 97
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:79, Solution Length: 21, Nodes: 822168, Time: 60.931092262268066, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:96, Solution Length: 23, Nodes: 821545, Time: 60.49555277824402, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:97, Solution Length: 21, Nodes: 820618, Time: 60.71116399765015, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:97, Solution Length: 23, Nodes: 809343, Time: 60.39980673789978, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:97, Solution Length: 23, Nodes: 819507, Time: 60.853758335113525, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:97, Solution Length: 23, Nodes: 809205, Time: 60.508806228637695, Sanity Check: True
+
+Test 98
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:80, Solution Length: 23, Nodes: 822325, Time: 60.29138493537903, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:97, Solution Length: 23, Nodes: 810965, Time: 60.51966738700867, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:98, Solution Length: 23, Nodes: 819771, Time: 60.85192155838013, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:98, Solution Length: 23, Nodes: 808372, Time: 60.831592082977295, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:98, Solution Length: 23, Nodes: 806866, Time: 60.736615896224976, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:98, Solution Length: 23, Nodes: 805690, Time: 60.71062684059143, Sanity Check: True
+
+Test 99
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:81, Solution Length: 22, Nodes: 812883, Time: 60.32559633255005, Sanity Check: True
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:98, Solution Length: 22, Nodes: 811644, Time: 60.770620822906494, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:99, Solution Length: 24, Nodes: 820459, Time: 60.751534938812256, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:99, Solution Length: 24, Nodes: 808076, Time: 60.94133496284485, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:99, Solution Length: 24, Nodes: 806588, Time: 60.591835021972656, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:99, Solution Length: 24, Nodes: 795230, Time: 60.469231605529785, Sanity Check: True
+
+Test 100
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:99, Solution Length: 22, Nodes: 821344, Time: 61.18131113052368, Sanity Check: True
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:100, Solution Length: 22, Nodes: 810327, Time: 60.835612058639526, Sanity Check: True
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:100, Solution Length: 24, Nodes: 798605, Time: 60.29270958900452, Sanity Check: True
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:100, Solution Length: 24, Nodes: 807786, Time: 60.765299797058105, Sanity Check: True
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:100, Solution Length: 24, Nodes: 806594, Time: 60.75015139579773, Sanity Check: True
+
+Results:
+AWA(scale_factor=2.6, batch_size=1000, max_time=60): Success:81, Average Solution Length: 22.604938271604937, Average Nodes: 805952.7530864198, Average Time: 60.32534290537422
+AWA(scale_factor=3, batch_size=1000, max_time=60): Success:99, Average Solution Length: 22.939393939393938, Average Nodes: 803041.4141414141, Average Time: 60.41418373464334
+AWA(scale_factor=3.5, batch_size=1000, max_time=60): Success:100, Average Solution Length: 23.01, Average Nodes: 802044.75, Average Time: 60.50428962469101
+AWA(scale_factor=4, batch_size=1000, max_time=60): Success:100, Average Solution Length: 23.19, Average Nodes: 795729.28, Average Time: 60.598139641284945
+AWA(scale_factor=4.5, batch_size=1000, max_time=60): Success:100, Average Solution Length: 23.33, Average Nodes: 796216.03, Average Time: 60.60172302722931
+AWA(scale_factor=5, batch_size=1000, max_time=60): Success:100, Average Solution Length: 23.41, Average Nodes: 790087.8, Average Time: 60.61509109735489

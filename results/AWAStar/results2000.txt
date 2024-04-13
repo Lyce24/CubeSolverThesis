@@ -1,0 +1,2019 @@
+Test 1
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	0	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	1	True	24	1105505	60.7358	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	1	True	24	1123580	60.5448	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	1	True	24	1101961	60.9324	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	1	True	24	1080935	61.1049	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	1	True	24	1040229	60.7793	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	1	True	24	1059223	60.4256	True
+
+Test 2
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	0	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	1	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	2	True	28	1107366	60.5570	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	2	True	26	1106179	60.4961	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	2	True	26	1144657	60.5698	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	2	True	26	1163801	60.5040	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	2	True	26	1143373	60.2787	True
+
+Test 3
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	0	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	1	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	3	True	24	1166196	61.2069	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	3	True	24	1164755	61.1242	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	3	True	24	1143003	61.0488	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	3	True	24	1141755	61.0004	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	3	True	24	1121261	60.4341	True
+
+Test 4
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	0	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	2	True	23	1148455	60.2719	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	4	True	23	1166268	60.9378	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	4	True	23	1164195	61.1845	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	4	True	23	1142247	60.9480	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	4	True	23	1141169	60.4963	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	4	True	23	1160104	60.8269	True
+
+Test 5
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	1	True	20	1165664	61.0645	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	3	True	20	1124808	60.7006	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	5	True	20	1103272	61.3385	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	5	True	20	1062498	60.3304	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	5	True	20	1061031	61.0601	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	5	True	20	1040125	62.0427	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	5	True	20	1019918	60.7430	True
+
+Test 6
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	1	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	4	True	23	1144885	60.6973	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	6	True	23	1143360	60.6539	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	6	True	23	1161828	60.7956	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	6	True	23	1140315	60.4072	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	6	True	23	1159942	61.0434	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	6	True	23	1139726	60.5257	True
+
+Test 7
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	1	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	5	True	24	1186876	60.5695	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	7	True	24	1145993	60.8328	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	7	True	24	1104871	60.4581	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	7	True	24	1163238	60.4304	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	7	True	24	1142242	60.3814	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	7	True	24	1161242	60.8714	True
+
+Test 8
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	2	True	22	1152821	60.5378	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	6	True	22	1148307	60.9951	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	8	True	22	1124982	60.6599	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	8	True	22	1102695	60.5777	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	8	True	22	1081938	61.2967	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	8	True	22	1081458	61.0347	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	8	True	22	1041487	60.5285	True
+
+Test 9
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	2	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	7	True	23	1166723	60.6423	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	9	True	23	1144041	60.9694	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	9	True	23	1142332	60.9154	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	9	True	23	1121336	61.2253	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	9	True	23	1120337	61.5638	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	9	True	23	1119725	62.1588	True
+
+Test 10
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	3	True	22	1171364	60.2675	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	8	True	22	1167909	60.6822	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	10	True	24	1166112	61.1352	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	10	True	26	1165545	62.2564	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	10	True	26	1144155	60.2711	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	10	True	26	1162922	61.6795	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	10	True	26	1162105	60.5617	True
+
+Test 11
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	4	True	20	1149087	61.0536	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	9	True	20	1107237	60.9946	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	11	True	20	1104686	61.1305	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	11	True	20	1063392	61.0465	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	11	True	20	1042198	60.5029	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	11	True	20	1021885	60.7130	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	11	True	20	1001638	60.3429	True
+
+Test 12
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	4	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	10	True	22	1146143	60.5534	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	12	True	22	1124357	60.5117	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	12	True	22	1102317	60.9858	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	12	True	22	1101179	60.7774	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	12	True	22	1101032	60.8618	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	12	True	22	1120339	60.9959	True
+
+Test 13
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	4	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	11	True	24	1167450	60.4970	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	13	True	24	1185197	61.1167	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	13	True	24	1183238	60.7685	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	13	True	24	1161610	60.3389	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	13	True	24	1101025	60.9639	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	13	True	24	1119868	60.3612	True
+
+Test 14
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	5	True	23	1150101	60.8858	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	12	True	23	1167544	61.2526	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	14	True	23	1145717	61.1067	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	14	True	23	1144421	60.3348	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	14	True	23	1142881	60.6517	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	14	True	23	1121976	61.4340	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	14	True	23	1121401	60.4979	True
+
+Test 15
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	5	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	13	True	22	1185630	61.0858	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	15	True	22	1164029	60.3101	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	15	True	22	1162527	60.6705	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	15	True	22	1141464	60.3450	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	15	True	22	1101125	60.6525	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	15	True	22	1100659	62.2856	True
+
+Test 16
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	6	True	22	1149553	60.8034	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	14	True	22	1146186	61.0650	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	16	True	22	1124474	60.6570	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	16	True	22	1122982	61.1700	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	16	True	22	1101802	60.7514	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	16	True	22	1081174	61.1922	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	16	True	22	1060567	61.2768	True
+
+Test 17
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	6	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	14	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	17	True	24	1187651	60.9471	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	17	True	24	1165574	60.4337	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	17	True	24	1183086	60.6554	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	17	True	24	1161727	60.9933	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	17	True	24	1160591	60.7063	True
+
+Test 18
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	6	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	15	True	25	1188681	60.8170	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	18	True	25	1166647	60.3787	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	18	True	25	1184518	61.0475	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	18	True	25	1162903	60.6573	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	18	True	25	1181188	61.5960	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	18	True	25	1160295	61.0054	True
+
+Test 19
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	7	True	21	1188961	61.7032	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	16	True	21	1166421	60.6341	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	19	True	21	1163782	60.7471	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	19	True	21	1122226	60.3044	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	19	True	21	1121780	61.2010	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	19	True	21	1101427	61.0862	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	19	True	21	1081345	61.2085	True
+
+Test 20
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	8	True	23	1188281	60.5361	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	17	True	23	1185843	61.2476	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	20	True	23	1183522	60.5094	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	20	True	23	1161824	60.3870	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	20	True	23	1141031	60.3141	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	20	True	23	1140291	60.9198	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	20	True	23	1119943	60.8490	True
+
+Test 21
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	9	True	23	1191413	60.3997	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	18	True	23	1188480	61.3731	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	21	True	23	1185844	61.0812	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	21	True	23	1164011	60.9165	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	21	True	23	1162947	61.6847	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	21	True	23	1142353	61.3344	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	21	True	23	1121828	60.6960	True
+
+Test 22
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	10	True	21	1188851	61.2298	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	19	True	21	1165817	60.3451	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	22	True	21	1163153	61.2383	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	22	True	21	1121916	60.3281	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	22	True	21	1100444	60.4221	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	22	True	21	1100368	60.6958	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	22	True	21	1099836	62.2312	True
+
+Test 23
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	10	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	19	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	23	True	24	1186129	60.6030	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	23	True	24	1184610	61.0691	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	23	True	24	1162741	60.8988	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	23	True	24	1181309	61.1613	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	23	True	24	1140975	60.2705	True
+
+Test 24
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	11	True	21	1191279	60.9668	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	20	True	25	1188996	61.1237	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	24	True	23	1187185	60.4068	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	24	True	23	1165119	60.7364	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	24	True	23	1163560	60.5953	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	24	True	23	1142787	61.0749	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	24	True	23	1121974	60.7137	True
+
+Test 25
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	12	True	22	1148343	60.5982	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	21	True	22	1166186	60.3794	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	25	True	22	1164275	61.0914	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	25	True	22	1122834	60.4245	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	25	True	22	1101842	60.2733	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	25	True	22	1100822	60.6696	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	25	True	22	1080355	61.1650	True
+
+Test 26
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	13	True	22	1143040	60.3501	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	22	True	24	1163026	60.9544	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	26	True	24	1162519	61.1608	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	26	True	24	1161370	61.2093	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	26	True	24	1160161	61.0004	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	26	True	24	1139569	60.5127	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	26	True	24	1158791	61.1448	True
+
+Test 27
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	13	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	23	True	22	1166598	60.8850	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	27	True	22	1163811	60.4926	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	27	True	24	1161855	60.3825	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	27	True	24	1139775	60.4550	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	27	True	24	1138576	61.1386	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	27	True	24	1118092	61.4438	True
+
+Test 28
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	14	True	21	1169986	61.1851	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	24	True	21	1167015	61.1729	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	28	True	21	1145081	60.6292	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	28	True	21	1142958	61.0329	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	28	True	21	1142367	60.3811	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	28	True	23	1161583	61.1783	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	28	True	23	1121131	60.5413	True
+
+Test 29
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	15	True	21	1169444	60.3646	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	25	True	21	1166531	60.5346	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	29	True	23	1164050	60.2992	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	29	True	23	1161854	60.8662	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	29	True	23	1141188	60.7081	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	29	True	23	1100898	60.6940	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	29	True	23	1080605	60.2890	True
+
+Test 30
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	15	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	26	True	24	1108065	60.4623	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	30	True	24	1146023	61.2435	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	30	True	24	1104570	60.2526	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	30	True	24	1083097	61.0108	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	30	True	24	1141227	60.3143	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	30	True	24	1081071	60.4023	True
+
+Test 31
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	15	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	27	True	23	1167478	60.6306	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	31	True	23	1165616	61.1201	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	31	True	23	1144784	60.5330	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	31	True	23	1142940	61.2292	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	31	True	23	1141876	60.7854	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	31	True	23	1121770	61.0691	True
+
+Test 32
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	15	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	28	True	23	1147266	60.7645	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	32	True	23	1125351	60.4865	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	32	True	23	1123540	61.1920	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	32	True	23	1142319	61.5045	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	32	True	23	1141584	60.3436	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	32	True	23	1121228	60.3978	True
+
+Test 33
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	16	True	23	1168788	61.2094	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	29	True	23	1126822	60.3406	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	33	True	23	1125391	60.4116	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	33	True	23	1123466	61.1114	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	33	True	23	1121720	60.2865	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	33	True	23	1081165	60.9175	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	33	True	23	1100644	61.1196	True
+
+Test 34
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	17	True	20	1123630	60.5801	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	30	True	20	1101643	61.7835	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	34	True	20	1079752	61.3847	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	34	True	20	1038941	60.5122	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	34	True	20	1057937	62.1585	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	34	True	20	1037776	60.9613	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	34	True	20	1037706	61.4286	True
+
+Test 35
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	True	20	1162593	60.5350	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	31	True	22	1182560	61.6138	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	35	True	22	1181654	61.0315	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	35	True	22	1160486	61.2213	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	35	True	22	1139549	60.4012	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	35	True	22	1158343	60.2721	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	35	True	22	1137907	60.4507	True
+
+Test 36
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	32	True	21	1187424	60.8822	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	36	True	25	1186132	60.7891	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	36	True	25	1184505	61.3176	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	36	True	25	1183344	60.5719	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	36	True	25	1161943	60.9784	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	36	True	25	1161097	60.8518	True
+
+Test 37
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	33	True	26	1169722	60.4274	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	37	True	24	1187447	60.6923	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	37	True	24	1185664	61.0612	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	37	True	24	1164480	60.4096	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	37	True	24	1162920	61.1703	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	37	True	24	1161743	60.6930	True
+
+Test 38
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	33	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	38	True	25	1185425	61.1888	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	38	True	23	1183450	60.5506	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	38	True	23	1162244	60.4142	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	38	True	23	1160864	61.0997	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	38	True	23	1159686	60.7443	True
+
+Test 39
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	33	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	39	True	24	1186129	60.6580	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	39	True	24	1184610	61.7500	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	39	True	24	1182458	61.8210	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	39	True	24	1161540	60.3088	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	39	True	24	1140975	60.3743	True
+
+Test 40
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	34	True	23	1189049	60.6997	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	40	True	23	1166862	60.3304	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	40	True	23	1184711	60.3213	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	40	True	23	1163994	60.3382	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	40	True	23	1163365	60.5991	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	40	True	23	1162682	60.4541	True
+
+Test 41
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	19	True	21	1188464	61.0509	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	35	True	23	1165579	60.3216	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	41	True	23	1183137	60.6507	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	41	True	23	1162474	60.4595	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	41	True	23	1161311	60.5984	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	41	True	23	1160935	60.2748	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	41	True	25	1160254	60.7532	True
+
+Test 42
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	20	True	22	1186386	60.6715	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	36	True	22	1162534	60.5907	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	42	True	22	1159981	61.0204	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	42	True	22	1138520	61.1138	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	42	True	22	1117752	60.7202	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	42	True	22	1097107	61.1512	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	42	True	22	1096401	60.8447	True
+
+Test 43
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	20	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	37	True	24	1188762	60.8476	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	43	True	24	1186918	60.3135	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	43	True	24	1165743	60.3271	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	43	True	24	1185065	60.9351	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	43	True	26	1184635	60.4870	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	43	True	26	1163711	60.4368	True
+
+Test 44
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	21	True	17	516168	30.4951	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	38	True	17	559637	33.5356	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	44	True	17	598335	36.3087	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	44	True	17	597994	36.2847	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	44	True	17	618229	37.6790	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	44	True	17	619132	38.0413	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	44	True	17	620429	38.2870	True
+
+Test 45
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	21	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	38	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	45	True	22	1185572	60.6315	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	45	True	22	1163535	60.6810	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	45	True	22	1161577	60.5752	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	45	True	22	1160318	60.5597	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	45	True	22	1159315	61.4794	True
+
+Test 46
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	21	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	38	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	46	True	24	1186041	60.5770	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	46	True	24	1165166	60.3310	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	46	True	24	1182765	61.1339	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	46	True	24	1162092	60.3862	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	46	True	24	1161786	60.5324	True
+
+Test 47
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	21	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	39	True	23	1185592	60.5304	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	47	True	23	1162419	60.3990	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	47	True	23	1180426	61.4450	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	47	True	23	1159178	60.6887	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	47	True	23	1158295	60.9716	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	47	True	23	1137802	60.7627	True
+
+Test 48
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	22	True	21	1171890	60.6497	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	40	True	21	1168124	60.6796	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	48	True	21	1144591	60.5420	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	48	True	21	1123012	60.4276	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	48	True	21	1102309	61.2351	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	48	True	21	1081765	60.4982	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	48	True	21	1081451	60.6409	True
+
+Test 49
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	23	True	20	1145147	60.5753	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	41	True	20	1123133	60.3033	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	49	True	20	1100793	60.9355	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	49	True	20	1059575	60.8126	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	49	True	20	1058094	61.2008	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	49	True	20	1037842	60.9607	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	49	True	20	1037933	60.5160	True
+
+Test 50
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	24	True	22	1189699	60.9054	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	42	True	22	1166455	61.1676	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	50	True	22	1164769	60.4011	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	50	True	22	1162988	60.9309	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	50	True	24	1181231	61.5379	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	50	True	24	1160164	60.2962	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	50	True	24	1159235	61.2280	True
+
+Test 51
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	24	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	43	True	21	1186573	60.3460	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	51	True	21	1144241	60.2708	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	51	True	21	1143030	60.8678	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	51	True	21	1142420	61.0638	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	51	True	21	1122092	60.4165	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	51	True	21	1141385	61.1006	True
+
+Test 52
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	24	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	44	True	23	1168019	60.8164	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	52	True	23	1185142	61.1787	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	52	True	23	1183420	60.9543	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	52	True	23	1162429	61.1657	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	52	True	23	1142546	60.5615	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	52	True	23	1142131	61.6838	True
+
+Test 53
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	24	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	45	True	24	1187421	60.4508	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	53	True	24	1165863	60.4373	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	53	True	24	1183683	60.7769	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	53	True	24	1161816	60.2769	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	53	True	24	1161132	60.7849	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	53	True	24	1140574	60.9272	True
+
+Test 54
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	24	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	46	True	24	1187482	61.1140	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	54	True	24	1185822	60.6154	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	54	True	24	1183226	61.2891	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	54	True	24	1181711	60.9591	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	54	True	24	1160635	60.6053	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	54	True	24	1159836	60.4112	True
+
+Test 55
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	25	True	23	1190691	61.1375	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	47	True	23	1187020	60.7909	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	55	True	23	1165151	61.0546	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	55	True	23	1162892	60.8157	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	55	True	23	1141818	61.1255	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	55	True	23	1120881	60.5114	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	55	True	23	1120079	61.3959	True
+
+Test 56
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	25	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	48	True	22	1187988	61.3604	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	56	True	24	1185798	60.2934	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	56	True	24	1183429	61.0949	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	56	True	24	1162438	60.8431	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	56	True	24	1161357	61.0546	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	56	True	24	1140812	60.6218	True
+
+Test 57
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	25	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	49	True	23	1185927	60.6501	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	56	False
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	57	True	25	1203859	61.0984	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	57	True	25	1183212	61.1196	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	57	True	25	1181485	61.1205	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	57	True	25	1161145	60.4251	True
+
+Test 58
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	25	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	50	True	23	1187445	60.4621	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	57	True	23	1184702	61.5081	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	58	True	23	1182649	61.4362	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	58	True	23	1161049	60.4360	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	58	True	23	1160536	61.8298	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	58	True	23	1160038	62.0632	True
+
+Test 59
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	26	True	22	1189314	60.9427	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	51	True	22	1186158	61.6791	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	58	True	22	1163582	60.4218	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	59	True	22	1141988	60.2771	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	59	True	22	1140146	60.9236	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	59	True	22	1119214	61.3745	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	59	True	22	1118609	61.1277	True
+
+Test 60
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	26	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	51	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	59	True	25	1185271	60.3976	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	60	True	25	1164095	60.5656	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	60	True	25	1182327	60.6980	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	60	True	25	1161525	60.5947	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	60	True	25	1160372	60.9042	True
+
+Test 61
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	26	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	52	True	22	1166067	60.2712	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	60	True	22	1164246	60.3198	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	61	True	22	1162032	60.8491	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	61	True	22	1140749	60.8767	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	61	True	22	1120001	61.0471	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	61	True	22	1118919	61.1139	True
+
+Test 62
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	26	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	53	True	20	1164192	60.3994	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	61	True	20	1162996	61.0254	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	62	True	20	1162014	61.2600	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	62	True	20	1162317	61.9062	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	62	True	20	1181309	60.8130	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	62	True	22	1160489	60.9513	True
+
+Test 63
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	27	True	19	1125678	62.1981	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	54	True	19	1084602	61.2184	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	62	True	19	1023646	60.3106	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	63	True	19	1022108	61.2430	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	63	True	19	1001159	60.3666	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	63	True	19	1001200	60.6704	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	63	True	19	1001042	60.7049	True
+
+Test 64
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	27	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	55	True	24	1207688	61.1880	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	63	True	24	1185840	60.7863	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	64	True	24	1164067	60.3034	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	64	True	24	1182222	60.8134	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	64	True	24	1160912	60.3877	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	64	True	24	1160389	60.8932	True
+
+Test 65
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	True	22	1192032	60.6170	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	56	True	22	1187147	61.1329	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	64	True	22	1163959	60.8707	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	65	True	22	1143507	60.5244	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	65	True	22	1163480	61.3293	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	65	True	24	1163123	60.3401	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	65	True	26	1182490	60.6840	True
+
+Test 66
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	56	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	65	True	24	1184839	61.0965	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	66	True	24	1183074	60.3313	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	66	True	24	1181503	61.6601	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	66	True	24	1160339	60.4814	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	66	True	24	1159886	60.7678	True
+
+Test 67
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	57	True	23	1204742	61.1348	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	66	True	23	1183177	60.6890	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	67	True	23	1161828	60.4795	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	67	True	23	1160147	60.2897	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	67	True	23	1140142	60.4660	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	67	True	23	1139726	60.3120	True
+
+Test 68
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	58	True	23	1188047	60.5837	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	67	True	23	1186325	61.0302	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	68	True	23	1184561	60.5874	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	68	True	23	1182527	61.8080	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	68	True	23	1181311	60.8590	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	68	True	23	1160292	61.3815	True
+
+Test 69
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	59	True	23	1187266	60.8210	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	68	True	23	1185081	60.8242	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	69	True	23	1163258	60.7433	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	69	True	23	1161215	61.2424	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	69	True	23	1160551	60.3911	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	69	True	23	1140205	60.6805	True
+
+Test 70
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	60	True	22	1206239	61.0062	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	69	True	24	1184608	60.3005	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	70	True	24	1182534	60.8371	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	70	True	24	1181982	60.4515	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	70	True	24	1161101	60.7834	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	70	True	24	1160276	60.5047	True
+
+Test 71
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	60	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	70	True	24	1205744	61.1717	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	71	True	24	1184728	60.3276	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	71	True	24	1183596	61.0483	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	71	True	24	1181912	60.7676	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	71	True	24	1160790	61.0921	True
+
+Test 72
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	29	True	21	1187079	60.9620	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	61	True	23	1206439	61.1726	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	71	True	23	1165013	60.3027	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	72	True	23	1183385	61.1997	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	72	True	23	1161818	60.3088	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	72	True	23	1160738	60.7263	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	72	True	23	1140077	60.3809	True
+
+Test 73
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	29	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	62	True	25	1187825	60.4175	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	72	True	25	1186070	61.1387	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	73	True	25	1184323	60.3796	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	73	True	25	1182821	61.1012	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	73	True	25	1182092	61.0552	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	73	True	25	1161301	60.3049	True
+
+Test 74
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	29	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	63	True	23	1207066	60.9944	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	73	True	23	1164620	60.5692	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	74	True	23	1182110	61.0213	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	74	True	23	1160037	60.7528	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	74	True	23	1139578	60.3311	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	74	True	23	1138635	60.7335	True
+
+Test 75
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	30	True	20	1165009	60.6927	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	64	True	20	1142838	61.1489	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	74	True	20	1100793	60.5701	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	75	True	20	1059575	60.8121	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	75	True	20	1058094	61.0225	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	75	True	20	1037842	60.8432	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	75	True	20	1037933	60.2999	True
+
+Test 76
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	31	True	20	1188557	61.2400	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	65	True	20	1146941	60.8979	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	75	True	20	1125002	61.2039	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	76	True	20	1104050	60.9455	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	76	True	20	1083763	60.3165	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	76	True	20	1081957	60.6786	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	76	True	20	1121449	61.4401	True
+
+Test 77
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	32	True	20	1168734	60.3376	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	66	True	20	1146673	61.1709	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	76	True	20	1104147	60.5979	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	77	True	20	1082499	60.9750	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	77	True	20	1060771	61.0093	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	77	True	20	1060161	60.9450	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	77	True	20	1040100	60.7683	True
+
+Test 78
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	32	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	67	True	22	1184716	60.9813	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	77	True	22	1162916	60.3317	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	78	True	22	1141100	60.4832	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	78	True	22	1140156	61.0180	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	78	True	22	1119385	60.8507	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	78	True	22	1098819	60.6457	True
+
+Test 79
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	33	True	23	1191827	60.7343	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	68	True	23	1187874	60.8919	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	78	True	23	1184887	61.2100	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	79	True	23	1182623	60.8174	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	79	True	23	1141912	60.2789	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	79	True	23	1141145	60.3922	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	79	True	23	1140485	61.1358	True
+
+Test 80
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	33	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	69	True	23	1186631	60.5538	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	79	True	23	1164907	60.3702	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	80	True	23	1183067	61.1728	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	80	True	23	1162224	60.6535	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	80	True	23	1161731	60.5047	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	80	True	23	1141532	60.8288	True
+
+Test 81
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	33	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	70	True	24	1186569	61.0816	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	80	True	24	1184265	60.5118	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	81	True	24	1182027	60.8340	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	81	True	24	1160935	60.9016	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	81	True	24	1160118	61.1612	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	81	True	24	1139800	60.7561	True
+
+Test 82
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	34	True	24	1190087	60.5933	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	71	True	24	1188098	60.5044	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	81	True	24	1185499	61.4690	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	82	True	24	1183901	60.4796	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	82	True	24	1162051	60.6005	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	82	True	24	1160533	60.4884	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	82	True	24	1159483	61.0356	True
+
+Test 83
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	35	True	21	1173534	60.4087	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	72	True	21	1150108	60.8024	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	82	True	21	1127435	61.2285	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	83	True	21	1086017	60.4945	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	83	True	21	1084168	61.7834	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	83	True	21	1063359	61.7528	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	83	True	21	1043235	60.4056	True
+
+Test 84
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	35	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	72	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	83	True	24	1185410	60.3292	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	84	True	24	1184454	60.9275	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	84	True	24	1183108	60.6436	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	84	True	24	1161584	60.4637	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	84	True	24	1180344	61.2073	True
+
+Test 85
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	36	True	21	1188428	60.7529	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	73	True	21	1165116	61.6033	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	84	True	21	1142439	60.3397	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	85	True	21	1121492	61.6390	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	85	True	21	1100508	61.4855	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	85	True	21	1080345	61.1965	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	85	True	21	1080164	61.1781	True
+
+Test 86
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	36	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	74	True	22	1206705	61.0787	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	85	True	22	1184504	61.5616	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	86	True	22	1182312	61.0808	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	86	True	22	1161072	61.5304	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	86	True	22	1160424	61.5991	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	86	True	22	1139913	60.9073	True
+
+Test 87
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	37	True	23	1191529	60.8658	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	75	True	23	1188071	61.1427	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	86	True	23	1165147	60.2999	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	87	True	23	1163569	60.5938	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	87	True	23	1162830	61.6627	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	87	True	23	1142193	61.1140	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	87	True	23	1121758	60.6219	True
+
+Test 88
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	37	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	75	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	87	True	25	1205617	61.0319	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	88	True	25	1184302	60.8880	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	88	True	25	1183110	60.3931	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	88	True	25	1181872	61.5718	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	88	True	25	1161404	60.4215	True
+
+Test 89
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	37	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	76	True	24	1206178	61.1257	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	88	True	24	1184608	60.6968	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	89	True	24	1183749	60.9178	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	89	True	24	1203326	61.1835	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	89	True	26	1183033	60.5248	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	89	True	26	1202313	60.4129	True
+
+Test 90
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	37	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	77	True	25	1187225	60.3923	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	89	True	25	1185468	60.8878	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	90	True	25	1203972	61.0611	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	90	True	25	1182628	61.2542	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	90	True	25	1181342	60.3538	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	90	True	25	1180622	61.2209	True
+
+Test 91
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	38	True	21	1190509	60.9387	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	78	True	21	1186780	61.8102	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	90	True	21	1163518	60.8504	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	91	True	21	1141300	61.7375	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	91	True	21	1120701	60.9958	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	91	True	21	1080235	60.2907	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	91	True	21	1079954	60.9672	True
+
+Test 92
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	39	True	22	1188651	60.8270	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	79	True	22	1185732	60.7021	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	91	True	22	1163840	60.5675	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	92	True	22	1161488	61.9278	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	92	True	22	1140308	61.1193	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	92	True	22	1119512	61.3328	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	92	True	22	1098770	60.5143	True
+
+Test 93
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	39	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	80	True	23	1186333	60.8043	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	92	True	23	1184070	60.8954	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	93	True	23	1162210	60.5165	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	93	True	23	1140925	60.3765	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	93	True	23	1140102	60.3303	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	93	True	23	1119655	60.5903	True
+
+Test 94
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	40	True	21	1187415	60.5742	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	81	True	23	1185352	61.0019	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	93	True	21	1183424	60.8905	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	94	True	23	1162243	60.5231	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	94	True	23	1180346	60.8178	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	94	True	23	1159563	61.4659	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	94	True	23	1139461	60.3330	True
+
+Test 95
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	40	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	81	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	94	True	25	1205688	60.8890	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	95	True	25	1184885	60.8487	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	95	True	25	1183401	60.6710	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	95	True	25	1182166	60.5741	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	95	True	25	1181417	61.1989	True
+
+Test 96
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	41	True	21	1190742	60.5334	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	82	True	21	1167337	61.0698	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	95	True	21	1144333	60.5002	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	96	True	21	1123209	60.4827	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	96	True	21	1102775	61.1510	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	96	True	21	1082101	60.5357	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	96	True	21	1081809	60.8245	True
+
+Test 97
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	42	True	21	1185527	60.6685	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	83	True	21	1184829	61.0672	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	96	True	21	1184364	61.2084	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	97	True	21	1183352	61.4660	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	97	True	21	1182705	61.0353	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	97	True	21	1163247	60.3694	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	97	True	23	1183267	60.8155	True
+
+Test 98
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	43	True	21	1190454	60.9263	True
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	84	True	21	1187857	60.7772	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	97	True	21	1186099	60.7910	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	98	True	21	1164511	60.5317	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	98	True	21	1163014	60.8015	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	98	True	23	1161821	60.4592	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	98	True	23	1180638	61.2532	True
+
+Test 99
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	43	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	85	True	22	1186056	60.8203	True
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	98	True	22	1184829	61.5824	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	99	True	24	1183709	60.2892	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	99	True	24	1162186	60.3665	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	99	True	24	1181184	60.8749	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	99	True	24	1160439	60.9474	True
+
+Test 100
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	43	False
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	85	False
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	99	True	22	1185572	60.7216	True
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	100	True	22	1183327	61.8490	True
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	100	True	22	1181419	60.9686	True
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	100	True	22	1160318	60.7050	True
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	100	True	22	1139521	60.3385	True
+
+Results:
+AWA(scale_factor=2.0, batch_size=2000, max_time=60)	0.43	21.302325581395348	1159226.7442	60.1063
+AWA(scale_factor=2.5, batch_size=2000, max_time=60)	0.85	22.341176470588234	1163911.4000	60.5321
+AWA(scale_factor=3.0, batch_size=2000, max_time=60)	0.99	22.68686868686869	1157193.2727	60.5305
+AWA(scale_factor=3.5, batch_size=2000, max_time=60)	1.0	22.75	1146893.0800	60.5938
+AWA(scale_factor=4.0, batch_size=2000, max_time=60)	1.0	22.77	1138827.8200	60.6403
+AWA(scale_factor=4.5, batch_size=2000, max_time=60)	1.0	22.87	1129429.6800	60.6013
+AWA(scale_factor=5.0, batch_size=2000, max_time=60)	1.0	22.95	1121670.0600	60.6108
+Test 1
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	1	True	22	1052093	60.8483	True	4.119850039482117
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	1	True	24	1071524	60.2767	True	6.119850039482117
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	1	True	24	1068375	60.5553	True	6.119850039482117
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	1	True	24	1065392	60.3879	True	6.119850039482117
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	1	True	24	1042547	60.3402	True	6.119850039482117
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	1	True	24	1040916	60.4332	True	6.119850039482117
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	1	True	24	1019044	60.4529	True	6.119850039482117
+
+Test 2
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	2	True	22	1071497	60.3786	True	4.633673548698425
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	2	True	22	1068294	60.5522	True	4.514705538749695
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	2	True	22	1045794	60.7353	True	4.791890978813171
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	2	True	24	1065604	60.9204	True	6.491815447807312
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	2	True	24	1061731	61.5544	True	6.491815447807312
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	2	True	24	1038674	60.6419	True	6.491815447807312
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	2	True	24	1016919	61.1182	True	6.491815447807312
+
+Test 3
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	3	True	24	1052070	60.2875	True	6.700449824333191
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	3	True	24	1049776	61.3291	True	6.452887415885925
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	3	True	24	1047142	61.2200	True	6.021922945976257
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	3	True	24	1044437	60.4743	True	6.021922945976257
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	3	True	24	1062979	60.8908	True	6.021922945976257
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	3	True	24	1081503	61.1984	True	6.021922945976257
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	3	True	24	1018962	61.3138	True	6.021922945976257
+
+Test 4
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	4	True	23	1009804	60.3433	True	5.402524828910828
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	4	True	23	1070094	61.2637	True	5.402524828910828
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	4	True	23	1066853	61.1525	True	5.402524828910828
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	4	True	23	1022962	60.4460	True	5.402524828910828
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	4	True	23	1061744	61.3200	True	5.402524828910828
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	4	True	23	1019449	60.6921	True	5.402524828910828
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	4	True	23	997781	60.2591	True	5.402524828910828
+
+Test 5
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	5	True	20	1088304	61.3485	True	2.997710108757019
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	5	True	20	1023152	60.7939	True	3.158857226371765
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	5	True	20	1041010	61.1578	True	3.032140612602234
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	5	True	20	1018689	60.9269	True	3.2311218976974487
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	5	True	20	976223	60.4251	True	3.094131350517273
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	5	True	20	995553	60.7357	True	2.836919665336609
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	5	True	20	974541	60.2730	True	2.836919665336609
+
+Test 6
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	6	True	23	1092351	60.5478	True	5.5252074003219604
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	6	True	23	1110721	60.9876	True	5.5252074003219604
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	6	True	23	1087245	60.3204	True	5.5252074003219604
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	6	True	23	1064014	60.3973	True	5.5252074003219604
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	6	True	23	1040806	60.5252	True	5.5252074003219604
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	6	True	23	1039437	60.8281	True	5.5252074003219604
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	6	True	23	1038164	60.3515	True	5.5252074003219604
+
+Test 7
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	7	True	22	1091646	61.2202	True	5.011995196342468
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	7	True	22	1048156	60.9419	True	4.487250208854675
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	7	True	24	1089182	60.8852	True	6.487250208854675
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	7	True	24	1065753	60.2637	True	6.487250208854675
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	7	True	24	1084489	61.1951	True	6.487250208854675
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	7	True	24	1021112	61.2358	True	6.487250208854675
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	7	True	24	1060848	61.0314	True	6.487250208854675
+
+Test 8
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	8	True	22	1071680	60.7309	True	4.840713381767273
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	8	True	22	1066393	60.4828	True	3.944903254508972
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	8	True	22	1042107	60.5198	True	3.944903254508972
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	8	True	22	1039696	61.2866	True	3.944903254508972
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	8	True	22	1037284	60.6725	True	3.944903254508972
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	8	True	22	974843	60.6800	True	3.944903254508972
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	8	True	22	994276	60.9185	True	3.944903254508972
+
+Test 9
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	9	True	23	1094804	60.6534	True	5.093169093132019
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	9	True	23	1090244	61.0227	True	5.15321147441864
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	9	True	23	1044611	60.5982	True	5.093169093132019
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	9	True	23	1062191	60.3895	True	5.093169093132019
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	9	True	23	1040100	60.8943	True	5.093169093132019
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	9	True	23	1018533	60.9561	True	5.093169093132019
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	9	True	23	1017271	61.0586	True	5.093169093132019
+
+Test 10
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	10	True	22	1052124	61.0576	True	4.253850817680359
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	10	True	22	1090318	61.7065	True	4.047036051750183
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	10	True	24	1026768	60.7248	True	6.047036051750183
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	10	True	24	1065083	60.9218	True	6.047036051750183
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	10	True	24	1021410	60.3961	True	6.047036051750183
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	10	True	24	1020064	61.0527	True	6.047036051750183
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	10	True	24	1059503	62.1894	True	6.047036051750183
+
+Test 11
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	11	True	20	1065982	60.5074	True	2.9091395139694214
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	11	True	20	1062511	60.3427	True	2.71345317363739
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	11	True	20	1019172	61.3191	True	2.7113131284713745
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	11	True	20	996158	61.2165	True	3.6568316221237183
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	11	True	20	974846	60.3776	True	2.7113131284713745
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	11	True	20	994438	61.9949	True	2.7113131284713745
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	11	True	20	973481	60.8499	True	2.7113131284713745
+
+Test 12
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	12	True	22	1092712	60.3077	True	4.123032450675964
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	12	True	22	1087517	61.0789	True	4.077712893486023
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	12	True	22	1084274	61.0439	True	4.125664591789246
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	12	True	22	1019930	60.7924	True	4.047235369682312
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	12	True	22	1018118	61.4213	True	4.047235369682312
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	12	True	22	955607	60.9026	True	4.047235369682312
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	12	True	22	975128	60.4256	True	4.047235369682312
+
+Test 13
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	13	True	24	1073914	61.1100	True	6.767442584037781
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	13	True	24	1070831	60.8201	True	6.22296416759491
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	13	True	24	1047314	60.9110	True	6.22296416759491
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	13	True	24	1023064	60.5747	True	6.22296416759491
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	13	True	24	1000331	61.0191	True	6.22296416759491
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	13	True	24	978375	60.3613	True	6.22296416759491
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	13	True	24	997576	61.1449	True	6.22296416759491
+
+Test 14
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	14	True	23	1052581	60.3417	True	6.274923205375671
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	14	True	23	1049600	60.8388	True	5.168911814689636
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	14	True	23	1025965	61.1801	True	5.168911814689636
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	14	True	23	1043933	60.7117	True	5.168911814689636
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	14	True	23	999998	61.4071	True	5.168911814689636
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	14	True	23	999078	60.6103	True	5.168911814689636
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	14	True	23	977716	61.5207	True	5.168911814689636
+
+Test 15
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	15	True	22	1026919	60.7054	True	4.765684008598328
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	15	True	22	1004247	60.7546	True	5.725640177726746
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	15	True	22	1001533	61.1556	True	4.765684008598328
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	15	True	22	1019121	61.4519	True	4.765684008598328
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	15	True	22	1038007	61.0012	True	4.765684008598328
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	15	True	22	1057176	61.3522	True	4.765684008598328
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	15	True	22	1015409	61.7015	True	4.765684008598328
+
+Test 16
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	16	True	22	1070712	60.6041	True	4.412720561027527
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	16	True	22	1065830	60.7608	True	4.363942980766296
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	16	True	22	1041555	60.6194	True	4.363942980766296
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	16	True	22	1060557	62.2643	True	4.363942980766296
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	16	True	22	1059289	61.0976	True	4.40994918346405
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	16	True	22	1037011	60.3198	True	4.363942980766296
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	16	True	22	1015591	60.2837	True	4.363942980766296
+
+Test 17
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	16	False
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	17	True	24	1072637	60.5961	True	6.476275324821472
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	17	True	24	1111319	61.2585	True	7.209067225456238
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	17	True	24	1087353	60.3752	True	6.476275324821472
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	17	True	24	1084633	60.6493	True	6.476275324821472
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	17	True	24	1082930	60.4339	True	6.476275324821472
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	17	True	24	1060751	61.1470	True	6.476275324821472
+
+Test 18
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	17	True	25	1115207	61.5987	True	7.429433703422546
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	18	True	23	1110347	60.8430	True	5.058961749076843
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	18	True	23	1104964	60.8257	True	5.058961749076843
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	18	True	23	1060394	61.1435	True	5.058961749076843
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	18	True	23	1038441	60.9802	True	5.058961749076843
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	18	True	23	1017198	60.8639	True	5.058961749076843
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	18	True	23	995977	61.2296	True	5.058961749076843
+
+Test 19
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	True	21	1069392	60.7541	True	4.068345904350281
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	19	True	21	1044841	60.3279	True	3.786922335624695
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	19	True	21	1042337	60.7640	True	3.4317225217819214
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	19	True	21	1018465	60.5117	True	3.4317225217819214
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	19	True	21	995906	60.5049	True	3.960295557975769
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	19	True	21	994904	60.7097	True	3.4317225217819214
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	19	True	21	973611	60.5473	True	3.4317225217819214
+
+Test 20
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	19	True	23	1094434	61.0322	True	5.330188632011414
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	20	True	23	1110134	60.9154	True	5.330188632011414
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	20	True	23	1085460	60.3864	True	5.330188632011414
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	20	True	23	1081559	60.3176	True	5.330188632011414
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	20	True	23	1079387	60.8066	True	5.330188632011414
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	20	True	23	1057329	60.3847	True	5.330188632011414
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	20	True	23	1056541	61.0626	True	5.330188632011414
+
+Test 21
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	20	True	23	1114494	61.1802	True	5.712924838066101
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	21	True	23	1089505	60.6405	True	5.050957560539246
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	21	True	23	1085812	60.6331	True	5.050957560539246
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	21	True	23	1083184	60.6607	True	5.050957560539246
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	21	True	23	1081665	60.7553	True	5.050957560539246
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	21	True	23	1080524	61.2605	True	5.050957560539246
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	21	True	23	1058840	60.7475	True	5.050957560539246
+
+Test 22
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	21	True	21	1112437	61.2151	True	4.138842463493347
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	22	True	21	1086988	61.0060	True	4.220011591911316
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	22	True	21	1083954	60.9171	True	3.452520251274109
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	22	True	21	1060054	60.6667	True	3.450549006462097
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	22	True	21	1037053	60.3691	True	3.450549006462097
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	22	True	21	1015519	60.5978	True	3.450549006462097
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	22	True	21	1014559	60.3753	True	3.450549006462097
+
+Test 23
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	22	True	24	1114441	60.5047	True	6.089638590812683
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	23	True	24	1112003	60.7810	True	6.021922945976257
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	23	True	24	1109202	61.2440	True	6.021922945976257
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	23	True	24	1106226	60.4729	True	6.021922945976257
+Test 1
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	1	True	22	1093630	60.6694	True	4.207396388053894
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	1	True	24	1133791	60.7301	True	6.119850039482117
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	1	True	24	1151108	60.5336	True	6.119850039482117
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	1	True	24	1168184	60.6688	True	6.119850039482117
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	1	True	24	1145362	61.1984	True	6.119850039482117
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	1	True	24	1122910	60.4478	True	6.119850039482117
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	1	True	24	1141780	61.0125	True	6.119850039482117
+
+Test 2
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	2	True	22	1154565	60.6033	True	4.781932711601257
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	2	True	22	1130305	61.1861	True	4.491815447807312
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	2	True	22	1107563	60.7757	True	4.491815447807312
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	2	True	22	1127068	60.9965	True	4.491815447807312
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	2	True	24	1123489	61.2151	True	6.491815447807312
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	2	True	24	1100316	60.7185	True	6.491815447807312
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	2	True	24	1098838	60.4638	True	6.491815447807312
+
+Test 3
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	3	True	24	1093663	60.2119	True	6.244269251823425
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	3	True	24	1112003	60.6641	True	6.021922945976257
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	3	True	24	1150660	60.4400	True	6.021922945976257
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	3	True	24	1147320	61.2219	True	6.021922945976257
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	3	True	24	1124497	60.9885	True	6.021922945976257
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	3	True	24	1101971	60.6563	True	6.021922945976257
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	3	True	24	1121041	61.1433	True	6.021922945976257
+
+Test 4
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	4	True	23	1134547	60.5147	True	5.715657114982605
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	4	True	23	1111615	61.5586	True	5.402524828910828
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	4	True	23	1128867	61.1239	True	5.402524828910828
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	4	True	23	1105243	60.4994	True	5.402524828910828
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	4	True	23	1123374	61.0072	True	5.402524828910828
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	4	True	23	1121724	61.0495	True	5.402524828910828
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	4	True	23	1099864	61.5465	True	5.402524828910828
+
+Test 5
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	5	True	20	1129505	61.1228	True	2.641921877861023
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	5	True	20	1064319	61.4736	True	3.168022036552429
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	5	True	20	1082057	60.8134	True	2.836919665336609
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	5	True	20	1039206	61.1525	True	3.1401127576828003
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	5	True	20	1016992	62.0424	True	3.8970125913619995
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	5	True	20	1015796	61.1921	True	3.094131350517273
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	5	True	20	994805	60.7709	True	2.836919665336609
+
+Test 6
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	6	True	23	1113165	60.6449	True	5.5252074003219604
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	6	True	23	1090019	60.4887	True	5.5252074003219604
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	6	True	23	1087245	60.2633	True	5.5252074003219604
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	6	True	23	1064014	61.6683	True	5.5252074003219604
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	6	True	23	1061293	61.2339	True	5.5252074003219604
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	6	True	23	1059896	61.1005	True	5.5252074003219604
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	6	True	23	1078954	60.3911	True	5.5252074003219604
+
+Test 7
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	7	True	22	1091646	60.3319	True	5.011995196342468
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	7	True	22	1130895	60.8221	True	4.945377230644226
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	7	True	24	1109870	61.3244	True	6.487250208854675
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	7	True	24	1065753	60.5227	True	6.487250208854675
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	7	True	24	1063963	60.8263	True	6.487250208854675
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	7	True	24	1062157	60.4001	True	6.487250208854675
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	7	True	24	1060848	60.4389	True	6.487250208854675
+
+Test 8
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	8	True	22	1133947	60.9008	True	4.613886713981628
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	8	True	22	1086947	60.6119	True	3.9831990003585815
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	8	True	22	1083054	60.9279	True	3.944903254508972
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	8	True	22	1100925	60.8138	True	3.944903254508972
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	8	True	22	1078089	60.6258	True	3.944903254508972
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	8	True	22	1035729	60.7212	True	3.944903254508972
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	8	True	22	1075204	60.7954	True	3.944903254508972
+
+Test 9
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	9	True	23	1157308	60.2801	True	6.361473917961121
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	9	True	23	1152331	60.5213	True	5.800341486930847
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	9	True	23	1147633	60.5014	True	5.093169093132019
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	9	True	23	1144239	60.9788	True	5.093169093132019
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	9	True	23	1142421	61.8645	True	5.093169093132019
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	9	True	23	1141327	61.9001	True	5.093169093132019
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	9	True	23	1058253	60.7712	True	5.093169093132019
+
+Test 10
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	10	True	22	1114363	60.9346	True	4.047036051750183
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	10	True	22	1110996	61.1528	True	4.112541079521179
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	10	True	24	1088714	60.7109	True	6.047036051750183
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	10	True	24	1065083	60.8854	True	6.047036051750183
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	10	True	24	1041923	60.3961	True	6.047036051750183
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	10	True	24	1040458	60.2416	True	6.047036051750183
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	10	True	24	1039053	60.8930	True	6.047036051750183
+
+Test 11
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	11	True	20	1086556	60.2380	True	2.881621241569519
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	11	True	20	1062511	60.3057	True	2.71345317363739
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	11	True	20	1060061	60.5383	True	4.109746813774109
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	11	True	20	996158	60.2708	True	3.6568316221237183
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	11	True	20	974846	60.3228	True	2.7113131284713745
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	11	True	20	1014675	61.0587	True	2.7113131284713745
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	11	True	20	1014051	61.8571	True	2.7113131284713745
+
+Test 12
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	12	True	22	1113559	61.6658	True	4.329245448112488
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	12	True	22	1128733	60.5327	True	4.572399020195007
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	12	True	22	1063800	60.3674	True	4.047235369682312
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	12	True	22	1060889	61.4300	True	4.047235369682312
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	12	True	22	1099664	60.2797	True	4.047235369682312
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	12	True	22	1077588	61.1022	True	4.047235369682312
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	12	True	22	1056314	61.5323	True	4.047235369682312
+
+Test 13
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	13	True	24	1115517	60.7294	True	6.525291323661804
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	13	True	24	1153969	60.6575	True	6.22296416759491
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	13	True	24	1150560	61.2389	True	6.22296416759491
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	13	True	22	1104872	60.5477	True	4.22296416759491
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	13	True	22	1082081	60.5718	True	4.22296416759491
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	13	True	22	1121299	60.8991	True	4.22296416759491
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	13	True	22	1078757	61.5162	True	4.22296416759491
+
+Test 14
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	14	True	23	1135806	61.0607	True	5.168911814689636
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	14	True	23	1132446	60.6549	True	5.244156718254089
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	14	True	23	1108304	60.9842	True	5.168911814689636
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	14	True	23	1105525	61.0440	True	5.168911814689636
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	14	True	23	1102694	61.6635	True	5.168911814689636
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	14	True	23	1080992	60.9877	True	5.168911814689636
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	14	True	23	1059586	61.7748	True	5.168911814689636
+
+Test 15
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	15	True	22	1151114	60.4941	True	4.841315150260925
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	15	True	22	1128204	61.1908	True	4.941970705986023
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	15	True	22	1104535	61.0587	True	5.1016072034835815
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	15	True	22	1060053	60.8210	True	4.765684008598328
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	15	True	22	1078825	60.7368	True	4.765684008598328
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	15	True	22	1098161	61.8662	True	4.765684008598328
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	15	True	22	1076897	61.0384	True	4.765684008598328
+
+Test 16
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	16	True	22	1132915	61.2945	True	5.143224596977234
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	16	True	22	1148346	60.5212	True	4.363942980766296
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	16	True	22	1062175	60.2681	True	4.363942980766296
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	16	True	22	1081080	61.0893	True	4.363942980766296
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	16	True	22	1038754	60.6640	True	4.363942980766296
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	16	True	22	1037011	60.4963	True	4.363942980766296
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	16	True	22	1035923	60.8274	True	4.363942980766296
+
+Test 17
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	16	False
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	17	True	24	1135059	60.2573	True	6.476275324821472
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	17	True	24	1132040	61.0713	True	6.476275324821472
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	17	True	24	1066663	61.1570	True	6.476275324821472
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	17	True	24	1084633	60.3927	True	6.476275324821472
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	17	True	24	1062366	60.7291	True	6.476275324821472
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	17	True	24	1081319	60.4150	True	6.476275324821472
+
+Test 18
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	17	True	25	1115207	61.0314	True	7.429433703422546
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	18	True	23	1110347	60.9531	True	5.058961749076843
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	18	True	23	1104964	60.9604	True	5.058961749076843
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	18	True	23	1080763	61.2009	True	5.058961749076843
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	18	True	23	1099951	61.2729	True	5.058961749076843
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	18	True	23	1099197	60.7107	True	5.058961749076843
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	18	True	23	1118646	61.2329	True	5.058961749076843
+
+Test 19
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	18	True	21	1131300	60.8228	True	4.103277087211609
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	19	True	21	1086064	60.4670	True	3.5486878156661987
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	19	True	21	1062844	60.6820	True	3.4317225217819214
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	19	True	21	1038900	60.2784	True	3.4317225217819214
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	19	True	21	1056949	61.0083	True	3.4317225217819214
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	19	True	21	1035369	61.4249	True	3.5283936262130737
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	19	True	21	1034457	60.2388	True	3.4317225217819214
+
+Test 20
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	19	True	23	1094434	60.3507	True	5.330188632011414
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	20	True	23	1089443	60.4578	True	5.330188632011414
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	20	True	23	1085460	60.3385	True	5.330188632011414
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	20	True	23	1102052	60.2594	True	5.330188632011414
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	20	True	23	1058933	61.2450	True	5.330188632011414
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	20	True	23	1036846	60.6143	True	5.330188632011414
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	20	True	23	1035982	61.8029	True	5.330188632011414
+
+Test 21
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	20	True	23	1093753	60.9586	True	5.347261309623718
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	21	True	23	1089505	61.6080	True	5.050957560539246
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	21	True	23	1085812	60.3890	True	5.050957560539246
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	21	True	23	1083184	60.4230	True	5.050957560539246
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	21	True	23	1061190	61.2745	True	5.050957560539246
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	21	True	23	1080524	60.5639	True	5.050957560539246
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	21	True	23	1079252	60.5156	True	5.050957560539246
+
+Test 22
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	21	True	21	1133198	60.8256	True	3.555510401725769
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	22	True	21	1107572	61.1688	True	3.6386574506759644
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	22	True	21	1063419	60.4919	True	3.450549006462097
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	22	True	21	1039623	61.0396	True	3.450549006462097
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	22	True	21	1016704	60.3765	True	3.450549006462097
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	22	True	21	1035797	61.2751	True	3.450549006462097
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	22	True	21	994249	60.4151	True	3.450549006462097
+
+Test 23
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	22	True	24	1135265	61.1071	True	6.49705970287323
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	23	True	24	1091218	60.4574	True	6.021922945976257
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	23	True	24	1129975	60.9332	True	6.021922945976257
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	23	True	24	1147320	60.7552	True	6.021922945976257
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	23	True	24	1145026	61.1379	True	6.021922945976257
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	23	True	24	1142846	61.2200	True	6.021922945976257
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	23	True	24	1121041	60.5327	True	6.021922945976257
+
+Test 24
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	23	True	21	1157076	60.2957	True	2.9231613874435425
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	24	True	23	1091176	60.3087	True	4.910361170768738
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	24	True	23	1065829	61.2659	True	4.910361170768738
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	24	True	23	1042592	60.5221	True	4.910361170768738
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	24	True	23	1102345	61.2564	True	4.910361170768738
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	24	True	23	1081369	60.9302	True	4.910361170768738
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	24	True	23	1060461	61.1754	True	4.910361170768738
+
+Test 25
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	24	True	22	1112562	60.4177	True	5.111509203910828
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	25	True	22	1129931	60.2394	True	5.052935481071472
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	25	True	22	1126316	60.3145	True	4.734504580497742
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	25	True	22	1123865	61.2207	True	4.734504580497742
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	25	True	22	1122515	61.2243	True	4.734504580497742
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	25	True	22	1100601	61.0631	True	4.734504580497742
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	25	True	22	1058597	60.5968	True	4.734504580497742
+
+Test 26
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	25	True	22	1092279	60.3703	True	4.56035315990448
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	26	True	24	1091746	61.0144	True	6.11148726940155
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	26	True	24	1088762	61.0409	True	6.11148726940155
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	26	True	24	1105113	61.3058	True	6.11148726940155
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	26	True	24	1103101	61.2999	True	6.11148726940155
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	26	True	24	1080629	60.3719	True	6.11148726940155
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	26	True	24	1120462	60.4904	True	6.11148726940155
+
+Test 27
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	26	True	22	1175607	61.1290	True	4.6251009702682495
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	27	True	22	1150432	60.7002	True	4.434951663017273
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	27	True	22	1145291	60.5389	True	4.434951663017273
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	27	True	22	1141605	60.6903	True	4.434951663017273
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	27	True	22	1118407	61.1337	True	4.434951663017273
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	27	True	22	1116881	60.9366	True	4.434951663017273
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	27	True	22	1095604	60.7105	True	4.434951663017273
+
+Test 28
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	27	True	21	1154019	60.2456	True	3.9240111112594604
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	28	True	21	1149094	61.0827	True	4.06456458568573
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	28	True	21	1124270	60.7639	True	3.6935003995895386
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	28	True	21	1120807	60.9362	True	3.4701002836227417
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	28	True	21	1099502	61.2515	True	3.644920229911804
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	28	True	21	1077932	60.6994	True	3.4701002836227417
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	28	True	21	1056771	60.5020	True	3.4701002836227417
+
+Test 29
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	28	True	21	1154720	60.8037	True	3.9168022871017456
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	29	True	21	1149459	60.7832	True	3.516997218132019
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	29	True	23	1147626	60.7764	True	5.377301096916199
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	29	True	23	1144139	61.2804	True	5.377301096916199
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	29	True	23	1141873	60.9430	True	5.377301096916199
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	29	True	23	1120065	60.6898	True	5.377301096916199
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	29	True	23	1119084	60.4535	True	5.377301096916199
+
+Test 30
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	29	True	24	1155701	60.4372	True	6.213847041130066
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	30	True	24	1174891	61.0088	True	6.250947833061218
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	30	True	24	1151243	60.2652	True	6.124920725822449
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	30	True	24	1168491	60.8888	True	6.124920725822449
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	30	True	24	1145810	60.3740	True	6.124920725822449
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	30	True	24	1164448	61.7061	True	6.124920725822449
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	30	True	24	1162522	61.8891	True	6.124920725822449
+
+Test 31
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	30	True	23	1176430	60.3847	True	5.228866457939148
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	31	True	23	1172176	60.9793	True	5.153047442436218
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	31	True	23	1168636	61.4823	True	5.153047442436218
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	31	True	23	1165548	60.8515	True	5.153047442436218
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	31	True	23	1142242	60.5227	True	5.153047442436218
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	31	True	23	1120399	60.3475	True	5.153047442436218
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	31	True	23	1119489	60.8814	True	5.153047442436218
+
+Test 32
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	31	True	23	1178114	60.4701	True	5.657065272331238
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	32	True	23	1174768	61.0376	True	5.497246623039246
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	32	True	23	1171628	60.9148	True	5.767728686332703
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	32	True	23	1168428	60.8457	True	5.497246623039246
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	32	True	23	1144580	60.8999	True	5.497246623039246
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	32	True	23	1142804	60.5820	True	5.497246623039246
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	32	True	23	1141358	60.8592	True	5.497246623039246
+
+Test 33
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	32	True	23	1175791	61.2222	True	5.368912577629089
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	33	True	23	1172591	60.3403	True	5.368912577629089
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	33	True	23	1169296	60.8820	True	5.368912577629089
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	33	True	23	1166041	61.2350	True	5.368912577629089
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	33	True	23	1163202	61.1379	True	5.368912577629089
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	33	True	23	1140993	60.2560	True	5.368912577629089
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	33	True	23	1139333	61.7367	True	5.368912577629089
+
+Test 34
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	33	True	20	1148606	60.5847	True	3.080133318901062
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	34	True	20	1125028	60.3073	True	2.5160197019577026
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	34	True	20	1100628	61.1247	True	2.5671156644821167
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	34	True	20	1077699	61.2683	True	3.015940546989441
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	34	True	20	1075584	61.8452	True	2.9889830350875854
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	34	True	20	1054191	61.1195	True	2.4650620222091675
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	34	True	20	1053458	60.8469	True	2.4650620222091675
+
+Test 35
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	34	True	20	1166415	60.7721	True	3.019003748893738
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	35	True	22	1168225	61.0771	True	5.064134478569031
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	35	True	22	1166160	60.7867	True	5.215877413749695
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	35	True	22	1143763	60.2894	True	5.002926707267761
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	35	True	22	1141388	60.6610	True	5.002926707267761
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	35	True	22	1139829	60.5549	True	5.002926707267761
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	35	True	22	1138645	60.4646	True	5.002926707267761
+
+Test 36
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	35	True	21	1175170	61.0548	True	3.721032977104187
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	36	True	21	1172377	60.8867	True	3.213718295097351
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	36	True	23	1168715	60.8071	True	5.213718295097351
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	36	True	23	1145538	60.3065	True	5.213718295097351
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	36	True	23	1143096	60.6784	True	5.213718295097351
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	36	True	23	1141999	60.7858	True	5.213718295097351
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	36	True	23	1120580	60.5022	True	5.213718295097351
+
+Test 37
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	36	True	22	1177959	60.7715	True	4.516734957695007
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	37	True	22	1175914	60.5330	True	4.240160822868347
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	37	True	24	1173016	61.0056	True	6.240160822868347
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	37	True	24	1169633	60.5297	True	6.240160822868347
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	37	True	24	1146726	60.5853	True	6.240160822868347
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	37	True	24	1165249	61.1133	True	6.240160822868347
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	37	True	24	1163589	61.8367	True	6.240160822868347
+
+Test 38
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	37	True	23	1176435	60.3957	True	6.847549319267273
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	38	True	23	1174249	60.9661	True	5.930414080619812
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	38	True	23	1171097	60.6440	True	5.577584147453308
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	38	True	23	1167253	61.0509	True	5.577584147453308
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	38	True	23	1144011	60.3393	True	5.577584147453308
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	38	True	23	1141849	60.3884	True	5.577584147453308
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	38	True	23	1140403	61.2476	True	5.577584147453308
+
+Test 39
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	38	True	24	1176984	60.4161	True	6.811460375785828
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	39	True	24	1174233	60.8311	True	6.1865233182907104
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	39	True	24	1171295	60.7799	True	6.021922945976257
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	39	True	24	1167903	60.8549	True	6.021922945976257
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	39	True	24	1165544	61.0167	True	6.021922945976257
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	39	True	24	1142846	60.4620	True	6.021922945976257
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	39	True	24	1141471	61.1584	True	6.021922945976257
+
+Test 40
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	39	True	21	1174921	60.7306	True	4.265701174736023
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	40	True	21	1171642	60.7672	True	3.982737421989441
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	40	True	21	1147962	60.2385	True	3.982737421989441
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	40	True	21	1145508	60.3717	True	3.982737421989441
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	40	True	21	1143479	61.5057	True	3.982737421989441
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	40	True	21	1141920	60.9698	True	3.982737421989441
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	40	True	21	1120450	60.9439	True	3.982737421989441
+
+Test 41
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	40	True	21	1176943	60.7342	True	3.4061955213546753
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	41	True	23	1172267	61.1297	True	5.06216037273407
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	41	True	23	1167445	60.9475	True	5.06216037273407
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	41	True	23	1143708	61.0976	True	5.06216037273407
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	41	True	23	1141763	60.3042	True	5.06216037273407
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	41	True	23	1140343	61.9836	True	5.06216037273407
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	41	True	23	1118523	60.6208	True	5.06216037273407
+
+Test 42
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	41	True	22	1174737	60.7201	True	4.518860697746277
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	42	True	22	1166754	60.9609	True	4.660487055778503
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	42	True	22	1140244	61.1310	True	4.451440691947937
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	42	True	22	1137394	61.2147	True	4.451440691947937
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	42	True	22	1115053	60.4171	True	4.451440691947937
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	42	True	22	1092831	60.8449	True	4.451440691947937
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	42	True	22	1092097	60.9051	True	4.451440691947937
+
+Test 43
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	42	True	24	1178210	60.3251	True	6.094714999198914
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	43	True	22	1175471	60.9995	True	4.094714999198914
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	43	True	24	1172357	60.3987	True	6.094714999198914
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	43	True	24	1167524	60.9611	True	6.094714999198914
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	43	True	24	1166295	61.7146	True	6.094714999198914
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	43	True	24	1164900	61.0281	True	6.094714999198914
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	43	True	24	1143466	60.8897	True	6.094714999198914
+
+Test 44
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	43	True	17	616704	36.0349	True	0
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	44	True	17	640985	37.7486	True	0
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	44	True	17	659974	39.3994	True	0
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	44	True	17	659602	39.2942	True	0
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	44	True	17	680157	40.9550	True	0
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	44	True	17	681060	41.4792	True	0
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	44	True	17	681414	40.9761	True	0
+
+Test 45
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	44	True	24	1173565	61.2966	True	7.2073763608932495
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	45	True	20	1171170	60.7953	True	3.391319155693054
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	45	True	22	1171619	60.9031	True	5.296285510063171
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	45	True	24	1171165	60.3696	True	7.090003848075867
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	45	True	24	1147874	60.3737	True	7.090003848075867
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	45	True	24	1165533	60.5675	True	7.090003848075867
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	45	True	24	1143153	60.2949	True	7.090003848075867
+
+Test 46
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	45	True	22	1177784	61.0861	True	4.65462863445282
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	46	True	24	1176616	60.4444	True	6.279552340507507
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	46	True	24	1173748	60.4669	True	6.279552340507507
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	46	True	24	1150152	60.2416	True	6.279552340507507
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	46	True	24	1168509	60.9820	True	6.279552340507507
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	46	True	24	1166369	61.5365	True	6.279552340507507
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	46	True	24	1144253	60.6156	True	6.279552340507507
+
+Test 47
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	46	True	23	1177864	60.4010	True	5.877875208854675
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	47	True	23	1173478	60.6250	True	5.435829043388367
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	47	True	23	1168594	61.0274	True	5.435829043388367
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	47	True	23	1143722	60.2486	True	5.435829043388367
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	47	True	23	1140512	60.3286	True	5.435829043388367
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	47	True	23	1138756	61.0477	True	5.435829043388367
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	47	True	23	1137340	60.7933	True	5.435829043388367
+
+Test 48
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	47	True	21	1174365	60.9861	True	3.47846782207489
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	48	True	21	1149323	60.5706	True	3.9084852933883667
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	48	True	21	1145672	60.7897	True	3.47846782207489
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	48	True	21	1120714	60.5670	True	3.47846782207489
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	48	True	21	1118100	61.1879	True	3.47846782207489
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	48	True	21	1096456	60.9256	True	3.47846782207489
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	48	True	21	1096065	61.1203	True	3.47846782207489
+
+Test 49
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	48	True	20	1149329	60.6897	True	3.5064972639083862
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	49	True	20	1125549	60.8634	True	3.263778567314148
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	49	True	20	1101038	60.9816	True	3.0716456174850464
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	49	True	20	1077921	60.4783	True	3.3395813703536987
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	49	True	20	1055731	60.5742	True	2.477422595024109
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	49	True	20	1054553	60.4502	True	2.9898890256881714
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	49	True	20	1053704	61.1083	True	2.477422595024109
+
+Test 50
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	49	True	22	1173858	60.9998	True	4.910090327262878
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	50	True	22	1148556	60.4846	True	3.8361376523971558
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	50	True	22	1144992	61.4168	True	4.051778674125671
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	50	True	22	1121506	60.6875	True	4.0775288343429565
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	50	True	22	1118667	61.1006	True	3.8361376523971558
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	50	True	22	1096811	60.9200	True	3.8361376523971558
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	50	True	22	1095826	60.9187	True	3.8361376523971558
+
+Test 51
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	50	True	21	1153755	60.4203	True	4.043353915214539
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	51	True	21	1148264	60.5124	True	3.292486071586609
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	51	True	21	1144775	60.9739	True	3.2896393537521362
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	51	True	21	1120844	60.9292	True	3.493256449699402
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	51	True	21	1099068	61.5600	True	3.649185061454773
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	51	True	21	1057394	60.4026	True	3.2896393537521362
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	51	True	21	1036468	60.2175	True	3.2896393537521362
+
+Test 52
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	51	True	23	1155917	60.6225	True	5.1965636014938354
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	52	True	23	1152013	61.1478	True	5.1965636014938354
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	52	True	23	1086012	61.0308	True	5.1965636014938354
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	52	True	23	1083588	60.7247	True	5.1965636014938354
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	52	True	23	1081035	60.3765	True	5.1965636014938354
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	52	True	23	1080203	61.1459	True	5.1965636014938354
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	52	True	23	1120212	61.8892	True	5.1965636014938354
+
+Test 53
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	52	True	24	1137195	60.3437	True	6.094193339347839
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	53	True	24	1153552	61.0277	True	5.931891322135925
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	53	True	24	1107856	60.4716	True	5.931891322135925
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	53	True	24	1083987	60.6905	True	5.931891322135925
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	53	True	24	1102068	61.0726	True	5.931891322135925
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	53	True	24	1100474	61.0621	True	5.931891322135925
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	53	True	24	1078409	60.4483	True	5.931891322135925
+
+Test 54
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	53	True	24	1137596	60.6383	True	6.301793932914734
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	54	True	24	1134669	61.1471	True	6.301793932914734
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	54	True	24	1130751	60.6641	True	6.301793932914734
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	54	True	24	1087417	60.2899	True	6.301793932914734
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	54	True	24	1106116	61.3140	True	6.301793932914734
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	54	True	24	1083318	60.9650	True	6.301793932914734
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	54	True	24	1081917	60.8466	True	6.301793932914734
+
+Test 55
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	54	True	23	1114665	60.4681	True	5.230913043022156
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	55	True	23	1109856	60.3117	True	4.885781168937683
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	55	True	23	1126418	60.8296	True	4.976996302604675
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	55	True	23	1103730	60.9250	True	4.885781168937683
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	55	True	23	1101905	61.5421	True	4.885781168937683
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	55	True	23	1079848	62.0523	True	4.885781168937683
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	55	True	23	1058080	60.8586	True	4.885781168937683
+
+Test 56
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	55	True	22	1133485	60.8143	True	4.470752596855164
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	56	True	22	1130348	60.6693	True	4.24653422832489
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	56	True	24	1128352	61.0947	True	6.24653422832489
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	56	True	24	1125138	60.4502	True	6.24653422832489
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	56	True	24	1102300	60.2539	True	6.24653422832489
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	56	True	24	1100342	60.8658	True	6.24653422832489
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	56	True	24	1099244	61.0066	True	6.24653422832489
+
+Test 57
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	56	True	23	1135687	60.4434	True	5.212152361869812
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	57	True	23	1112064	60.4140	True	5.300189852714539
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	57	True	23	1110000	61.0528	True	5.0659273862838745
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	57	True	25	1109012	60.7782	True	7.0659273862838745
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	57	True	25	1127042	61.6022	True	7.0659273862838745
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	57	True	25	1104586	60.2198	True	7.0659273862838745
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	57	True	25	1123724	60.7464	True	7.0659273862838745
+
+Test 58
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	57	True	23	1114596	60.4972	True	6.214924693107605
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	58	True	23	1110819	60.3051	True	5.384793162345886
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	58	True	23	1107734	60.4432	True	5.950936198234558
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	58	True	23	1084237	60.9634	True	5.384793162345886
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	58	True	23	1102475	61.3028	True	5.384793162345886
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	58	True	23	1080609	60.9057	True	5.384793162345886
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	58	True	23	1119923	61.7945	True	5.384793162345886
+
+Test 59
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	58	True	22	1112537	60.2527	True	4.439311861991882
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	59	True	22	1107985	60.6806	True	5.380696177482605
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	59	True	22	1084266	60.2539	True	4.198933482170105
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	59	True	22	1102740	60.7500	True	4.198933482170105
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	59	True	22	1100276	60.8978	True	4.198933482170105
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	59	True	22	1057298	60.8023	True	4.198933482170105
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	59	True	22	1076780	61.7486	True	4.198933482170105
+
+Test 60
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	59	True	23	1134536	61.2429	True	4.978763461112976
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	60	True	23	1108987	60.6169	True	5.112774729728699
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	60	True	23	1145145	60.9854	True	4.978763461112976
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	60	True	23	1101367	60.2438	True	4.978763461112976
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	60	True	23	1017349	60.3536	True	5.06684672832489
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	60	True	23	1078391	60.9205	True	4.978763461112976
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	60	True	23	1057587	60.4442	True	4.978763461112976
+
+Test 61
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	60	True	22	1113530	60.2842	True	4.631405711174011
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	61	True	22	1108031	60.2921	True	4.423178553581238
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	61	True	22	1063590	60.8631	True	4.653074145317078
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	61	True	22	1000159	61.5022	True	4.423178553581238
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	61	True	22	1039829	60.7400	True	4.423178553581238
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	61	True	22	1058598	61.0379	True	4.423178553581238
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	61	True	22	996161	61.2846	True	4.423178553581238
+
+Test 62
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	61	True	20	1045022	61.0602	True	4.433372378349304
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	62	True	20	1042313	61.3366	True	3.5406750440597534
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	62	True	20	1019626	60.9578	True	3.5406750440597534
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	62	True	20	997395	60.2757	True	3.764483332633972
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	62	True	20	995267	60.8293	True	3.5406750440597534
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	62	True	20	994245	62.0104	True	3.5406750440597534
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	62	True	20	993329	61.6121	True	3.5406750440597534
+
+Test 63
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	62	True	19	1020153	62.1407	True	2.185089945793152
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	63	True	19	977334	61.1864	True	1.9502085447311401
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	63	True	19	934032	61.6450	True	2.5643213987350464
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	63	True	19	932352	61.0640	True	2.017804980278015
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	63	True	19	910651	60.6357	True	2.03274142742157
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	63	True	19	910198	60.7873	True	1.837427020072937
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	63	True	19	909756	60.3100	True	1.837427020072937
+
+Test 64
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	63	True	24	1051566	60.7885	True	6.39700973033905
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	64	True	24	1050351	61.2059	True	6.124920725822449
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	64	True	24	985646	60.4663	True	6.124920725822449
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	64	True	24	1024453	60.8519	True	6.124920725822449
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	64	True	24	1084134	61.0352	True	6.124920725822449
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	64	True	24	1082368	61.2245	True	6.124920725822449
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	64	True	24	1101307	60.8145	True	6.124920725822449
+
+Test 65
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	64	True	22	1072714	60.3382	True	4.467000842094421
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	65	True	22	1026327	61.0755	True	4.112693667411804
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	65	True	22	1022744	61.1320	True	4.112693667411804
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	65	True	22	1019336	61.2358	True	4.112693667411804
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	65	True	22	1037512	61.0136	True	4.112693667411804
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	65	True	22	975035	61.0128	True	4.112693667411804
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	65	True	22	974302	60.9686	True	4.112693667411804
+
+Test 66
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	65	True	24	1052129	60.8997	True	7.0180405378341675
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	66	True	24	1029105	60.4671	True	6.163372874259949
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	66	True	24	1047211	60.6626	True	6.163372874259949
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	66	True	24	1024159	60.2956	True	6.163372874259949
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	66	True	24	1022021	60.5457	True	6.163372874259949
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	66	True	24	1020445	61.1657	True	6.163372874259949
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	66	True	24	998804	60.3471	True	6.163372874259949
+
+Test 67
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	66	True	23	1113165	60.9411	True	5.5252074003219604
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	67	True	23	1110721	60.7978	True	5.5252074003219604
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	67	True	23	1107896	60.5596	True	5.5252074003219604
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	67	True	23	1105149	60.7811	True	5.5252074003219604
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	67	True	23	1102182	60.9226	True	5.5252074003219604
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	67	True	23	1100693	60.9965	True	5.5252074003219604
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	67	True	23	1119777	60.9667	True	5.5252074003219604
+
+Test 68
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	67	True	21	1132967	60.9244	True	4.044452548027039
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	68	True	21	1129792	61.2081	True	3.7662047147750854
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	68	True	21	1106628	60.5727	True	3.7662047147750854
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	68	True	21	1104372	60.9210	True	3.993057131767273
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	68	True	21	1082267	60.7013	True	3.7662047147750854
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	68	True	21	1081018	60.3331	True	3.7662047147750854
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	68	True	23	1100482	60.5609	True	5.7662047147750854
+
+Test 69
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	68	True	23	1153851	61.1643	True	5.916535258293152
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	69	True	23	1109148	60.2586	True	5.793796420097351
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	69	True	23	1127009	60.5964	True	5.645148158073425
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	69	True	23	1103100	61.1659	True	5.535411715507507
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	69	True	23	1100663	60.4079	True	5.535411715507507
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	69	True	23	1078489	60.4307	True	5.535411715507507
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	69	True	23	1097387	60.6402	True	5.535411715507507
+
+Test 70
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	69	True	22	1132745	61.0897	True	4.539275050163269
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	70	True	22	1087760	60.6635	True	5.2664555311203
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	70	True	22	1084332	60.8460	True	4.634763598442078
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	70	True	22	1081381	61.2143	True	4.634763598442078
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	70	True	22	1079739	60.8879	True	4.634763598442078
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	70	True	22	1037385	60.4981	True	4.634763598442078
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	70	True	22	1015885	60.5638	True	4.634763598442078
+
+Test 71
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	70	True	22	1093615	61.0838	True	4.962174296379089
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	71	True	22	1132869	60.9689	True	4.857956767082214
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	71	True	22	1088944	61.0441	True	4.665571093559265
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	71	True	22	1045408	60.3177	True	4.665571093559265
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	71	True	22	1083915	61.2486	True	4.692294955253601
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	71	True	22	1062348	60.3740	True	4.665571093559265
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	71	True	22	1102652	61.0458	True	4.665571093559265
+
+Test 72
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	71	True	21	1112058	60.4299	True	3.564522624015808
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	72	True	23	1111923	60.9964	True	5.564522624015808
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	72	True	23	1108265	60.9120	True	5.564522624015808
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	72	True	23	1084943	60.9994	True	5.564522624015808
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	72	True	23	1123150	60.9015	True	5.564522624015808
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	72	True	23	1101095	60.7137	True	5.564522624015808
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	72	True	23	1079181	60.8183	True	5.564522624015808
+
+Test 73
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	72	True	25	1116152	60.5863	True	6.854807734489441
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	73	True	25	1114050	61.1920	True	6.854807734489441
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	73	True	25	1111119	60.9413	True	6.854807734489441
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	73	True	25	1129167	60.8034	True	6.854807734489441
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	73	True	25	1086079	60.8193	True	6.854807734489441
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	73	True	25	1104702	60.4405	True	6.854807734489441
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	73	True	25	1082657	60.6886	True	6.854807734489441
+
+Test 74
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	73	True	23	1135100	60.6413	True	5.779441714286804
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	74	True	23	1090114	60.4245	True	5.372397303581238
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	74	True	23	1107356	61.6012	True	5.372397303581238
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	74	True	23	1104274	60.3794	True	5.372397303581238
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	74	True	23	1101634	61.3040	True	5.372397303581238
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	74	True	23	1079536	60.7741	True	5.372397303581238
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	74	True	23	1077806	60.6796	True	5.372397303581238
+
+Test 75
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	74	True	20	1108023	60.6843	True	3.1600579023361206
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	75	True	20	1084426	60.7879	True	2.7072657346725464
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	75	True	20	1019169	60.8685	True	3.5241774320602417
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	75	True	20	1016583	61.3384	True	2.5583142042160034
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	75	True	20	954424	60.3492	True	2.477422595024109
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	75	True	20	973609	60.4122	True	2.477422595024109
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	75	True	20	992990	60.5293	True	2.477422595024109
+
+Test 76
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	75	True	20	1086325	61.0824	True	3.3286322355270386
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	76	True	20	1083987	61.2804	True	3.2999123334884644
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	76	True	20	1060700	61.2174	True	2.744078516960144
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	76	True	20	1017806	61.3893	True	2.897117495536804
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	76	True	20	995918	60.6826	True	3.1500452756881714
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	76	True	20	974655	61.4312	True	2.6159971952438354
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	76	True	20	973846	61.1825	True	2.759963870048523
+
+Test 77
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	76	True	20	1066986	60.8717	True	2.8137634992599487
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	77	True	20	1043754	62.1498	True	2.8375195264816284
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	77	True	20	1039759	60.3046	True	2.6033037900924683
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	77	True	20	996236	60.5614	True	2.89497172832489
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	77	True	20	953730	60.6852	True	2.6033037900924683
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	77	True	20	952775	61.1756	True	2.8337944746017456
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	77	True	20	972195	60.8350	True	2.6033037900924683
+
+Test 78
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	77	True	22	1112607	62.1198	True	4.814049601554871
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	78	True	22	1087652	61.0705	True	4.685539126396179
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	78	True	22	1063442	60.5066	True	4.587674975395203
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	78	True	22	1102612	60.6074	True	4.587674975395203
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	78	True	22	1039435	60.3838	True	4.587674975395203
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	78	True	22	1037703	61.0975	True	4.587674975395203
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	78	True	22	995963	60.4198	True	4.587674975395203
+
+Test 79
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	78	True	23	1094433	60.8414	True	5.366723895072937
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	79	True	23	1089872	60.4232	True	5.237682223320007
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	79	True	23	1065801	60.3508	True	5.237682223320007
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	79	True	23	1062485	60.9367	True	5.237682223320007
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	79	True	23	1039809	60.3566	True	5.237682223320007
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	79	True	23	1038180	60.5672	True	5.237682223320007
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	79	True	23	1057484	61.9152	True	5.237682223320007
+
+Test 80
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	79	True	23	1074177	60.7578	True	5.379579424858093
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	80	True	23	1090816	61.1752	True	5.569626688957214
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	80	True	23	1108215	60.4643	True	5.239434123039246
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	80	True	23	1084448	60.3618	True	5.239434123039246
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	80	True	23	1102724	60.3141	True	5.239434123039246
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	80	True	23	1101433	61.1663	True	5.239434123039246
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	80	True	23	1059428	61.0863	True	5.239434123039246
+
+Test 81
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	80	True	24	1137687	60.4623	True	5.892612338066101
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	81	True	24	1132281	61.2180	True	5.82618510723114
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	81	True	24	1107841	60.3529	True	5.82618510723114
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	81	True	24	1104454	60.4733	True	5.82618510723114
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	81	True	24	1081778	61.2713	True	5.82618510723114
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	81	True	24	1100517	61.1608	True	5.82618510723114
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	81	True	24	1078911	60.7577	True	5.82618510723114
+
+Test 82
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	81	True	24	1156481	61.0722	True	6.890240550041199
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	82	True	22	1110142	60.2269	True	4.483155131340027
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	82	True	22	1086164	60.3861	True	5.30760657787323
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	82	True	24	1105208	61.0308	True	6.483155131340027
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	82	True	24	1082599	61.3077	True	6.483155131340027
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	82	True	24	1059124	60.2325	True	6.483155131340027
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	82	True	24	1097942	61.2375	True	6.483155131340027
+
+Test 83
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	82	True	21	1091570	60.8873	True	3.4606274366378784
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	83	True	21	1065311	61.0111	True	3.9738529920578003
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	83	True	21	1062575	61.6050	True	3.2769135236740112
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	83	True	21	1060659	60.5451	True	3.1782044172286987
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	83	True	21	1038627	60.7872	True	3.539546847343445
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	83	True	21	1037545	60.2228	True	3.1782044172286987
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	83	True	21	1016492	61.9607	True	3.741860270500183
+
+Test 84
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	83	True	24	1133195	61.1570	True	6.824969172477722
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	84	True	24	1132608	60.8216	True	6.785987734794617
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	84	True	24	1129348	60.3209	True	6.854483485221863
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	84	True	24	1126519	60.5419	True	6.785987734794617
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	84	True	24	1102640	60.3110	True	6.785987734794617
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	84	True	24	1100427	60.5936	True	6.785987734794617
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	84	True	24	1098905	60.3664	True	6.785987734794617
+
+Test 85
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	84	True	21	1110349	61.7735	True	3.8943270444869995
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	85	True	21	1084015	60.8008	True	3.278304934501648
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	85	True	21	1059926	61.0385	True	3.759757876396179
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	85	True	21	1036452	60.4920	True	3.4108246564865112
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	85	True	21	1013902	60.4690	True	3.278304934501648
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	85	True	21	1013169	60.8970	True	3.278304934501648
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	85	True	21	992465	60.6451	True	3.278304934501648
+
+Test 86
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	85	True	22	1072411	60.4640	True	5.104497790336609
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	86	True	22	1111996	60.4538	True	5.4274948835372925
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	86	True	22	1128866	60.4948	True	4.78294837474823
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	86	True	22	1104332	61.1381	True	4.78294837474823
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	86	True	22	1101921	61.0089	True	4.78294837474823
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	86	True	22	1100033	61.2120	True	4.78294837474823
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	86	True	22	1098296	60.4430	True	4.78294837474823
+
+Test 87
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	86	True	21	1090705	61.0778	True	3.0620583295822144
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	87	True	21	1084994	60.3725	True	3.0620583295822144
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	87	True	21	1041325	61.0246	True	3.0620583295822144
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	87	True	21	1059966	60.4924	True	3.3756760358810425
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	87	True	21	1038427	61.9753	True	3.0620583295822144
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	87	True	21	1017145	60.4868	True	3.0620583295822144
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	87	True	21	1036389	60.3248	True	3.2455261945724487
+
+Test 88
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	86	False
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	88	True	25	1113883	61.2182	True	7.340405344963074
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	88	True	25	1132272	60.2739	True	7.340405344963074
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	88	True	25	1128702	61.3021	True	7.340405344963074
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	88	True	25	1064106	60.9584	True	7.340405344963074
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	88	True	25	1082842	60.5331	True	7.340405344963074
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	88	True	25	1060807	61.3870	True	7.340405344963074
+
+Test 89
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	87	True	22	1114435	60.8339	True	4.603295207023621
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	89	True	22	1108677	60.8312	True	4.337119936943054
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	89	True	22	1064038	60.9014	True	4.337119936943054
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	89	True	22	1102045	60.9962	True	4.337119936943054
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	89	True	22	1058970	61.0924	True	4.337119936943054
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	89	True	22	1036920	60.7545	True	4.337119936943054
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	89	True	22	994982	60.8782	True	4.337119936943054
+
+Test 90
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	88	True	23	1095212	60.6621	True	5.595593333244324
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	90	True	23	1091669	60.3095	True	5.358610033988953
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	90	True	23	1128947	60.8826	True	5.094619631767273
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	90	True	23	1084796	61.3051	True	5.094619631767273
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	90	True	23	1062233	60.3680	True	5.094619631767273
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	90	True	23	1081172	61.0462	True	5.094619631767273
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	90	True	23	1059851	60.5227	True	5.094619631767273
+
+Test 91
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	89	True	21	1091510	61.4348	True	3.8716572523117065
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	91	True	21	1087068	61.0660	True	3.7314728498458862
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	91	True	21	1062865	61.2281	True	3.6692341566085815
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	91	True	21	1018535	60.3505	True	3.6692341566085815
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	91	True	21	1036306	60.4938	True	3.6692341566085815
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	91	True	21	1014377	60.9071	True	3.6692341566085815
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	91	True	21	1013763	60.2647	True	3.6692341566085815
+
+Test 92
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	90	True	22	1093827	60.6390	True	4.57841956615448
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	92	True	22	1089317	60.6301	True	4.342756152153015
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	92	True	22	1127138	61.1831	True	4.342756152153015
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	92	True	22	1062958	60.8046	True	4.342756152153015
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	92	True	22	1060675	60.4964	True	4.342756152153015
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	92	True	22	1079318	61.2686	True	4.348627924919128
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	92	True	22	1057622	60.8826	True	4.342756152153015
+
+Test 93
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	91	True	23	1115271	61.1532	True	5.396011233329773
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	93	True	23	1090660	60.7727	True	5.275112986564636
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	93	True	23	1107042	61.1413	True	5.275112986564636
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	93	True	23	1083087	61.0348	True	5.275112986564636
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	93	True	23	1121411	61.6343	True	5.275112986564636
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	93	True	23	1099803	60.9505	True	5.275112986564636
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	93	True	23	1078227	60.9496	True	5.275112986564636
+
+Test 94
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	92	True	21	1111153	60.9717	True	4.2801254987716675
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	94	True	21	1086155	60.4597	True	4.634618639945984
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	94	True	21	1062580	60.5768	True	3.6108521223068237
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	94	True	21	1039864	60.5273	True	3.553298830986023
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	94	True	21	1039276	60.6005	True	3.553298830986023
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	94	True	21	1079136	61.1882	True	3.553298830986023
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	94	True	21	1078184	61.8469	True	3.553298830986023
+
+Test 95
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	93	True	25	1135729	61.3705	True	7.875216364860535
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	95	True	25	1112593	60.9198	True	7.1520527601242065
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	95	True	25	1130829	60.6380	True	7.1520527601242065
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	95	True	25	1107230	60.5858	True	7.1520527601242065
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	95	True	25	1062987	60.7428	True	7.1520527601242065
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	95	True	25	1081541	61.0462	True	7.1520527601242065
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	95	True	25	1038862	60.2074	True	7.1520527601242065
+
+Test 96
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	94	True	21	1112040	61.6257	True	4.149455904960632
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	96	True	21	1066296	61.0258	True	3.500264048576355
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	96	True	21	1063099	61.5461	True	3.720093607902527
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	96	True	21	1059147	61.0927	True	3.697158694267273
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	96	True	21	1036409	61.1209	True	3.786875605583191
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	96	True	21	1035519	60.4325	True	3.4546860456466675
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	96	True	21	1035303	60.8723	True	3.453069567680359
+
+Test 97
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	95	True	21	1130515	61.6137	True	4.010509371757507
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	97	True	21	1087429	60.3719	True	4.034644961357117
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	97	True	21	1106549	60.5496	True	4.1977070569992065
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	97	True	21	1146599	61.9130	True	4.034644961357117
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	97	True	23	1083954	60.7363	True	6.034644961357117
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	97	True	23	1102517	60.5093	True	6.034644961357117
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	97	True	23	1080857	60.5776	True	6.034644961357117
+
+Test 98
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	96	True	23	1113941	61.2201	True	5.876790881156921
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	98	True	21	1130792	60.9481	True	4.327796816825867
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	98	True	21	1126224	60.2651	True	3.8767908811569214
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	98	True	21	1102476	60.4693	True	3.8767908811569214
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	98	True	21	1100376	61.9652	True	3.8767908811569214
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	98	True	21	1078511	60.2341	True	3.8767908811569214
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	98	True	21	1056581	60.4207	True	3.8767908811569214
+
+Test 99
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	97	True	22	1093274	60.5443	True	5.245146632194519
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	99	True	22	1088782	61.0963	True	4.613141894340515
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	99	True	22	1064361	60.4523	True	4.364538073539734
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	99	True	22	1082942	60.5619	True	4.364538073539734
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	99	True	22	1101589	61.2450	True	4.512609362602234
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	99	True	22	1079567	61.1301	True	4.7227171659469604
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	99	True	22	1078551	60.5449	True	4.364538073539734
+
+Test 100
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	98	True	24	1111301	60.5167	True	7.064571261405945
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	100	True	20	1088888	61.2668	True	3.608718752861023
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	100	True	22	1089009	60.5210	True	5.090003848075867
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	100	True	24	1088363	60.5317	True	7.090003848075867
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	100	True	24	1106579	60.7281	True	7.090003848075867
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	100	True	24	1082974	60.2265	True	7.090003848075867
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	100	True	24	1081393	60.9797	True	7.090003848075867
+
+Results:
+MAWA(scale_factor=2.0, batch_size=2000, max_time=60)	98	22.183673469387756	1121275.5510	60.5563	4.8856
+MAWA(scale_factor=2.5, batch_size=2000, max_time=60)	100	22.21	1111371.9700	60.5754	4.7396
+MAWA(scale_factor=3.0, batch_size=2000, max_time=60)	100	22.39	1101779.6400	60.5752	4.8573
+MAWA(scale_factor=3.5, batch_size=2000, max_time=60)	100	22.45	1089936.6300	60.5927	4.8839
+MAWA(scale_factor=4.0, batch_size=2000, max_time=60)	100	22.49	1081872.0100	60.7131	4.9111
+MAWA(scale_factor=4.5, batch_size=2000, max_time=60)	100	22.49	1075457.0100	60.6716	4.8877
+MAWA(scale_factor=5.0, batch_size=2000, max_time=60)	100	22.51	1069013.5100	60.6980	4.9020
