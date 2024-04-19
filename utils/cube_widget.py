@@ -1,9 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIntValidator
-from utils.validate import validate
 from cube import Cube, Move
 from PyQt5.QtWidgets import QApplication
-
 from search import MAWAStar, MBS, MWAStar
 
 # write the number in scientific notation => 1000 -> 1.0 x 10^3
@@ -301,7 +299,7 @@ class Ui_MainWindow(object):
         self.btn_down_reverse.setObjectName("btn_down_reverse")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.btn_down_reverse)
         
-        ### Ret
+        ### Reset
         self.verticalLayout_11.addLayout(self.formLayout)
         self.horizontalLayout_26 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
@@ -498,31 +496,34 @@ class Ui_MainWindow(object):
         self.btn_config.setObjectName("btn_config")
         
         
-        self.spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.spacerItem100 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
 
         self.scramble_section.addLayout(self.randomize_option, 1)       
-        self.scramble_section.addItem(self.spacerItem)
+        self.scramble_section.addItem(self.spacerItem100)
         self.scramble_section.addLayout(self.config_options, 1)
-        
+        self.spacerItem101 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+
         self.scramble_section.setStretch(1, 1)
         self.scramble_section.setStretch(2, 20)
         self.scramble_section.setStretch(3, 1)
         
         self.scramble_buttons.addWidget(self.btn_scramble)
-        self.scramble_buttons.addItem(self.spacerItem)
+        self.scramble_buttons.addItem(self.spacerItem101)
         self.scramble_buttons.addWidget(self.btn_config)
         
         self.scramble_buttons.setStretch(0, 1)
         self.scramble_buttons.setStretch(1, 20)
         self.scramble_buttons.setStretch(2, 1)
         
-    
-        self.lowerHorizontalLayout.addItem(self.spacerItem)
+        self.spacerItem102 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+
+        self.lowerHorizontalLayout.addItem(self.spacerItem102)
         # Add left layout with stretch factor 3
         self.lowerHorizontalLayout.addLayout(self.scramble_section)
         self.lowerHorizontalLayout.addLayout(self.scramble_buttons)
+        self.spacerItem103 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
 
-        self.lowerHorizontalLayout.addItem(self.spacerItem)
+        self.lowerHorizontalLayout.addItem(self.spacerItem103)
         
         self.rightVerticalLayout = QtWidgets.QVBoxLayout()        
 
@@ -620,9 +621,10 @@ class Ui_MainWindow(object):
         self.btn_solve.setObjectName("btn_solve")
         self.rightVerticalLayout.addWidget(self.btn_solve)
         
- 
+        self.spacerItem103 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+
         self.lowerHorizontalLayout.addLayout(self.rightVerticalLayout)
-        self.lowerHorizontalLayout.addItem(self.spacerItem)
+        self.lowerHorizontalLayout.addItem(self.spacerItem103)
         
         """
         
@@ -702,6 +704,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
+    
+        
     def setupsubfaces(self, color, subface_name, face, row, col):
         self.subface_name = QtWidgets.QLineEdit(self.centralwidget)
         self.subface_name.setEnabled(False)
@@ -768,12 +772,12 @@ class Ui_MainWindow(object):
             scalar_factor = self.astar_scalar_factor.text()
             batch_size = self.astar_batch_size.text()
             if scalar_factor == "":
-                scalar_factor = 3.5
+                scalar_factor = 3.0
             else:
                 scalar_factor = float(scalar_factor)
             
             if batch_size == "":
-                batch_size = 1500
+                batch_size = 1000
             else:
                 batch_size = int(batch_size)
                 
@@ -785,7 +789,7 @@ class Ui_MainWindow(object):
         elif beam_search_option:
             beam_width = self.beam_width_options.text()
             if beam_width == "":
-                beam_width = 2300
+                beam_width = 1000
             else:
                 beam_width = int(beam_width)
                 
@@ -805,7 +809,7 @@ class Ui_MainWindow(object):
                 scalar_factor = float(scalar_factor)
             
             if batch_size == "":
-                batch_size = 2000
+                batch_size = 1000
             else:
                 batch_size = int(batch_size)
                 
@@ -831,7 +835,7 @@ class Ui_MainWindow(object):
             self.sol.setText(f"Solution: {self.cube.move_to_string(result['solutions'])}")
             self.sol_status.setText(f"Solved in {result['length']} steps, {result['time_taken']:.2f}s, {scientific_notation(result['num_nodes'])} states explored, {result['num_nodes'] / result['time_taken']:.2f} states/s.")
         else:
-            self.sol.setText("The cube couldn't be solved. You can increase the time, batch size, or scalar factor.")
+            self.sol.setText("The cube couldn't be solved. You can increase the time, batch/beam size, or scalar factor.")
         self.btn_reset.setEnabled(True)
         self.btn_scramble.setEnabled(True)
         self.btn_solve.setEnabled(True)
@@ -898,7 +902,7 @@ class Ui_MainWindow(object):
             self.line_actions.setText("Please enter 9 colors for each face.")
             return
         
-        validation_result = validate(scramble_string)
+        validation_result = scramble_string
         if validation_result["success"] == False:
             self.line_actions.setVisible(True)
             self.line_actions.setText(validation_result["error"])
@@ -952,12 +956,12 @@ class Ui_MainWindow(object):
         self.beam_search_option.setText(_translate("MainWindow", "EBS"))
         self.eawastar_option.setText(_translate("MainWindow", "EAWA* Search"))
         
-        self.astar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.5"))
-        self.astar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 1500"))
+        self.astar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.0"))
+        self.astar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 1000"))
         self.eawastar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.0"))
-        self.eawastar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 2000"))
+        self.eawastar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 1000"))
         self.eawastar_time_limit.setPlaceholderText(_translate("MainWindow", "Time limit : 60s"))
-        self.beam_width_options.setPlaceholderText(_translate("MainWindow", "Beam width : 2300"))
+        self.beam_width_options.setPlaceholderText(_translate("MainWindow", "Beam width : 1000"))
         
         
         self.btn_scramble.setText(_translate("MainWindow", "Randomly Scramble with Depth"))

@@ -1,0 +1,2 @@
+Test 1
+MBS(beam_width=500, max_depth=26)	1	True	24	104514	6.50	True
