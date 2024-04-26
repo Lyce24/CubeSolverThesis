@@ -1,0 +1,9 @@
+This is an implementation of the thesis "Suboptimal Multi-Heuristic Approaches for Solving the Rubik’s Cube Incorporating Deep Learning and Group Theory"
+
+## Abstract
+This thesis explores efficient algorithms for solving the Rubik's Cube by balancing solution quality with computational constraints. The study integrates group theory and deep learning to enhance heuristic algorithms, aiming for suboptimal solutions under specific conditions: rapid solving within 26 moves and finding the shortest solution within a 60-second computational limit. Additionally, this research introduces a robust algorithm designed to validate the solvability of Rubik's Cube states, employing group theory to analytically dissect and understand the cube's theoretical structures.
+
+The thesis reviews heuristic search methods and proposes a novel model combining deep reinforcement learning with supervised learning approaches. This model serves as an advanced heuristic function to direct informed search algorithms toward more efficient solutions faster. Using the improved heuristic function and group theory along with other improvements to A* search and beam search, this thesis implements Multi-Heuristic Batched Weighted A* Search (MBWA*), Multi-Heuristic Beam Search (MBS), and Anytime Variation of MBWA* (MAWA*) for different objectives. These methods are tested through comparative studies to assess their effectiveness in solving the cube under the stated constraints.
+    
+This work contributes to computational theory and algorithm design by demonstrating the potential of merging theoretical mathematics with practical computational techniques to address complex problems. The findings could lead to more sophisticated algorithms that might be applicable in other complex systems beyond Rubik’s Cube, pushing the boundaries of what can be achieved within stringent computational and time constraints.
+    
