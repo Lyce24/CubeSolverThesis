@@ -38,10 +38,11 @@ def compute_prob(states):
     return batch_p1
 
 class WAStar:
-    def __init__(self, start_cube : Union[None, Cube] = None, scale_factor=1.5, batch_size=1):
+    def __init__(self, start_cube : Union[None, Cube] = None, scale_factor=3.0, batch_size=1000, max_sol_length=26):
         self.scale_factor = scale_factor
         self.start_cube = start_cube
         self.batch_size = batch_size
+        self.max_sol_length = max_sol_length
         
     def search(self) -> dict:
         print(f"Starting BWA* Search with scale factor = {self.scale_factor} and batch size = {self.batch_size}")
@@ -84,7 +85,7 @@ class WAStar:
                     tempcube.move(move)
 
                     if tempcube.is_solved():
-                        if len(new_moves) > 26:
+                        if len(new_moves) > self.max_sol_length:
                             continue
                         return {"success": True, "solutions": new_moves, "length": len(new_moves), "num_nodes": node_explored, "time_taken": time.time() - time_start}
 
@@ -114,10 +115,11 @@ class WAStar:
         return f"BWA*(scale_factor={self.scale_factor}, batch_size={self.batch_size})"
 
 class MWAStar:
-    def __init__(self, start_cube : Union[None, Cube] = None, scale_factor=1.5, batch_size=1):
+    def __init__(self, start_cube : Union[None, Cube] = None, scale_factor=3.0, batch_size=1000, max_sol_length=26):
         self.scale_factor = scale_factor
         self.start_cube = start_cube
         self.batch_size = batch_size
+        self.max_sol_length = max_sol_length
         
     def search(self) -> dict:
         print(f"Starting MWA* Search with scale factor = {self.scale_factor} and batch size = {self.batch_size}")
@@ -165,7 +167,90 @@ class MWAStar:
                         tempcube.move(move)
 
                         if tempcube.is_solved():
-                            if len(new_moves) > 26:
+                            if len(new_moves) > self.max_sol_length:
+                                continue
+                            return {"success": True, "solutions": new_moves, "length": len(new_moves), "num_nodes": node_explored, "time_taken": time.time() - time_start}
+
+                        batch_states.append(tempcube.state)
+                        batch_info.append((tempcube.state, new_moves, node.g, tempcube.__hash__(), p))
+
+                        del tempcube
+                        
+            # Compute fitness for batch states
+            fitness_scores = compute_fitness(batch_states)
+
+            for ((cube_str, new_moves, g, cube_hash, p), fitness) in zip(batch_info, fitness_scores):
+                updated_g = g + 1
+                updated_f = updated_g + (self.scale_factor * (fitness[0] - p))
+                new_node = Node(updated_g, new_moves, cube_str, updated_f, False, 0)
+
+                score = cube_to_steps.get(cube_hash)
+                
+                if not score or score > new_node.g:
+                    cube_to_steps[cube_hash] = new_node.g
+                    heappush(open_list, (updated_f, new_node))
+                    node_explored += 1
+
+        return {"success": False}
+    
+    def __str__(self) -> str:
+        return f"MWA*(scale_factor={self.scale_factor}, batch_size={self.batch_size})"
+
+class SpeedyMWAStar:
+    def __init__(self, start_cube : Union[None, Cube] = None, scale_factor=3.0, batch_size=1000, max_sol_length=26, max_search_time=15):
+        self.scale_factor = scale_factor
+        self.start_cube = start_cube
+        self.batch_size = batch_size
+        self.max_sol_length = max_sol_length
+        self.max_search_time = max_search_time
+        
+    def search(self) -> dict:
+        print(f"Starting MWA* Search with scale factor = {self.scale_factor} and batch size = {self.batch_size}")
+        
+        assert self.start_cube is not None, "Start cube is not set"
+        
+        time_start = time.time()
+        node_explored = 1
+        open_list = []
+        cube_to_steps = {} # open union close with g value
+
+        if self.start_cube.is_solved():
+            return {"success": True, "solutions": [], "num_nodes": 1, "time_taken": 0}
+
+        initial_g = 0
+        initial_f = (compute_fitness([self.start_cube.state])[0] * self.scale_factor) + initial_g
+        start_node = Node(initial_g, [], self.start_cube.state, initial_f, self.start_cube.is_solved(), 0)
+
+        heappush(open_list, (initial_f, start_node))
+                
+        while open_list and time.time() - time_start < self.max_search_time:
+            batch_info = []
+            batch_states = []
+
+            prob_info = []
+            prob_states = []
+
+            # Collect batch
+            while open_list and len(prob_states) < self.batch_size:
+                _, current_node = heappop(open_list)
+                cube_to_steps[hash(tuple(current_node.cube))] = current_node.g
+                prob_states.append(current_node.cube)
+                prob_info.append(current_node)
+
+            # Compute probability for batch states
+            move_probs = compute_prob(prob_states)
+            
+            for (node, prob) in zip(prob_info, move_probs):
+                allowed_moves = get_allowed_moves(node.moves)
+                for move, p in zip(list(Move), prob):
+                    if move in allowed_moves:
+                        new_moves = node.moves + [move]
+                        tempcube = Cube()
+                        tempcube.from_state(node.cube)
+                        tempcube.move(move)
+
+                        if tempcube.is_solved():
+                            if len(new_moves) > self.max_sol_length:
                                 continue
                             return {"success": True, "solutions": new_moves, "length": len(new_moves), "num_nodes": node_explored, "time_taken": time.time() - time_start}
 
@@ -195,7 +280,7 @@ class MWAStar:
         return f"MWA*(scale_factor={self.scale_factor}, batch_size={self.batch_size})"
 
 class AWAStar:
-    def __init__(self, start_cube : Union[Cube, None] = None, scale_factor = 2.5, batch_size = 1, max_time = 60):
+    def __init__(self, start_cube : Union[Cube, None] = None, scale_factor = 3.0, batch_size = 1000, max_time = 60):
         self.start_cube = start_cube
         self.scale_factor = scale_factor
         self.batch_size = batch_size
@@ -290,7 +375,7 @@ class AWAStar:
         return f"AWA(scale_factor={self.scale_factor}, batch_size={self.batch_size}, max_time={self.max_time})"
 
 class MAWAStar:
-    def __init__(self, start_cube : Union[Cube, None] = None, scale_factor = 2.5, batch_size = 1, max_time = 60):
+    def __init__(self, start_cube : Union[Cube, None] = None, scale_factor = 3.0, batch_size = 1000, max_time = 60):
         self.start_cube = start_cube
         self.scale_factor = scale_factor
         self.batch_size = batch_size
@@ -667,8 +752,113 @@ def test(search_algos : list, test_file = None):
                 
             print(f"{str(algo)}\t{vals[str(algo)]['success'] / 100}\t{vals[str(algo)]['avg_sol_length']}\t{vals[str(algo)]['avg_nodes']:.2f}\t{vals[str(algo)]['avg_time']:.2f}")
 
+def test_1000(search_algos : list, test_file = None):
+    from scramble100 import scrambles
+    # setting up the initial values
+    vals = {}
+    for algo in search_algos:
+        vals[str(algo)] = {"success": 0, "total_sol_length": 0, "total_nodes": 0, "total_time": 0, "total_error": 0}
+        
+    if test_file is not None:
+        with open(test_file, "a") as f:
+            for i, scramble in enumerate(scrambles):
+                print(f"Test {i + 1}")
+                f.write(f"Test {i + 1}\n")
+                for algo in search_algos:
+                    cube = Cube()
+                    cube.move_list(cube.convert_move(scramble))
+                    
+                    algo.start_cube = cube.copy()
+                    
+                    result = algo.search()
+                    
+                    if result["success"]:
+                        vals[str(algo)]["success"] += 1
+                        vals[str(algo)]["total_sol_length"] += len(result["solutions"])
+                        vals[str(algo)]["total_nodes"] += result["num_nodes"]
+                        vals[str(algo)]["total_time"] += result["time_taken"]
+                        
+                        cube.move_list(result["solutions"])
+
+                        # if algo is AWAStar or MAWAStar:
+                        if "error" in result:
+                            vals[str(algo)]["total_error"] += result["error"]
+                            print(f"{vals[str(algo)]['success']}\t{result['success']}\t{len(result['solutions'])}\t{result['num_nodes']}\t{result['time_taken']:.2f}\t{result['error']}\t{cube.is_solved()}")
+                            f.write(f"{str(algo)}\t{vals[str(algo)]['success']}\t{result['success']}\t{len(result['solutions'])}\t{result['num_nodes']}\t{result['time_taken']:.2f}\t{result['error']}\t{cube.is_solved()}\n")
+                        else:
+                            print(f"{vals[str(algo)]['success']}\t{result['success']}\t{len(result['solutions'])}\t{result['num_nodes']}\t{result['time_taken']:.2f}\t{cube.is_solved()}")
+                            f.write(f"{str(algo)}\t{vals[str(algo)]['success']}\t{result['success']}\t{len(result['solutions'])}\t{result['num_nodes']}\t{result['time_taken']:.2f}\t{cube.is_solved()}\n")
+                        
+                    else:
+                        print(f"{vals[str(algo)]['success']}\t{result['success']}")
+                        f.write(f"{str(algo)}\t{vals[str(algo)]['success']}\t{result['success']}\n")
+                        
+                f.write("\n")
+                print()
+
+            f.write("Results:\n")
+            print("Results:")
+            
+            # calculate the average values
+            for algo in search_algos:
+                if vals[str(algo)]["success"] > 0:
+                    vals[str(algo)]["avg_sol_length"] = vals[str(algo)]["total_sol_length"] / vals[str(algo)]["success"]
+                    vals[str(algo)]["avg_nodes"] = vals[str(algo)]["total_nodes"] / vals[str(algo)]["success"]
+                    vals[str(algo)]["avg_time"] = vals[str(algo)]["total_time"] / vals[str(algo)]["success"]
+                    
+                    if vals[str(algo)]["total_error"] > 0:
+                        vals[str(algo)]["avg_error"] = vals[str(algo)]["total_error"] / vals[str(algo)]["success"]
+                else:
+                    vals[str(algo)]["avg_sol_length"] = 0
+                    vals[str(algo)]["avg_nodes"] = 0
+                    vals[str(algo)]["avg_time"] = 0
+                    
+                if "avg_error" in vals[str(algo)]:
+                    f.write(f"{str(algo)}\t{vals[str(algo)]['success']}\t{vals[str(algo)]['avg_sol_length']}\t{vals[str(algo)]['avg_nodes']:.2f}\t{vals[str(algo)]['avg_time']:.2f}\t{vals[str(algo)]['avg_error']:.2f}\n")
+                    print(f"{str(algo)}\t{vals[str(algo)]['success']}\t{vals[str(algo)]['avg_sol_length']}\t{vals[str(algo)]['avg_nodes']:.2f}\t{vals[str(algo)]['avg_time']:.2f}\t{vals[str(algo)]['avg_error']:.2f}")
+                else:
+                    f.write(f"{str(algo)}\t{vals[str(algo)]['success'] / len(scrambles)}\t{vals[str(algo)]['avg_sol_length']}\t{vals[str(algo)]['avg_nodes']:.2f}\t{vals[str(algo)]['avg_time']:.2f}\n")
+                    print(f"{str(algo)}\t{vals[str(algo)]['success'] / len(scrambles)}\t{vals[str(algo)]['avg_sol_length']}\t{vals[str(algo)]['avg_nodes']:.2f}\t{vals[str(algo)]['avg_time']:.2f}")
+    else:
+        for i, scramble in enumerate(scrambles):
+            print(f"Test {i + 1}")
+            for algo in search_algos:
+                cube = Cube()
+                cube.move_list(cube.convert_move(scramble))
+                
+                algo.start_cube = cube.copy()
+                
+                result = algo.search()
+                
+                if result["success"]:
+                    vals[str(algo)]["success"] += 1
+                    vals[str(algo)]["total_sol_length"] += len(result["solutions"])
+                    vals[str(algo)]["total_nodes"] += result["num_nodes"]
+                    vals[str(algo)]["total_time"] += result["time_taken"]
+                    
+                    cube.move_list(result["solutions"])
+                    
+                    print(f"{vals[str(algo)]['success']}\t{len(result['solutions'])}\t{result['num_nodes']}\t{result['time_taken']:.2f}\t{cube.is_solved()}")
+                else:
+                    print(f"{vals[str(algo)]['success']}\tFailed")
+            print()
+        
+        print("Results:")
+        # calculate the average values
+        for algo in search_algos:
+            if vals[str(algo)]["success"] > 0:
+                vals[str(algo)]["avg_sol_length"] = vals[str(algo)]["total_sol_length"] / vals[str(algo)]["success"]
+                vals[str(algo)]["avg_nodes"] = vals[str(algo)]["total_nodes"] / vals[str(algo)]["success"]
+                vals[str(algo)]["avg_time"] = vals[str(algo)]["total_time"] / vals[str(algo)]["success"]
+            else:
+                vals[str(algo)]["avg_sol_length"] = 0
+                vals[str(algo)]["avg_nodes"] = 0
+                vals[str(algo)]["avg_time"] = 0
+                
+            print(f"{str(algo)}\t{vals[str(algo)]['success'] / len(scrambles)}\t{vals[str(algo)]['avg_sol_length']}\t{vals[str(algo)]['avg_nodes']:.2f}\t{vals[str(algo)]['avg_time']:.2f}")
+
 if __name__ == "__main__":
-    test_file = "results/MWAStar/results3000.txt"
+    test_file = "results/SpeedyMWAStar/results1000.txt"
     
     search_list = [
         # BeamSearch(beam_width=1000, max_depth=26, adaptive=False),
@@ -677,13 +867,13 @@ if __name__ == "__main__":
         # BeamSearch(beam_width=2500, max_depth=26, adaptive=False),
         # BeamSearch(beam_width=3000, max_depth=26, adaptive=False),
         
-        MBS(beam_width=500, max_depth=26),
-        MBS(beam_width=700, max_depth=26),
-        MBS(beam_width=1000, max_depth=26),
-        MBS(beam_width=1500, max_depth=26),
-        MBS(beam_width=2000, max_depth=26),
-        MBS(beam_width=2500, max_depth=26),
-        MBS(beam_width=3000, max_depth=26),
+        # MBS(beam_width=500, max_depth=26),
+        # MBS(beam_width=700, max_depth=26),
+        # MBS(beam_width=1000, max_depth=26),
+        # MBS(beam_width=1500, max_depth=26),
+        # MBS(beam_width=2000, max_depth=26),
+        # MBS(beam_width=2500, max_depth=26),
+        # MBS(beam_width=3000, max_depth=26),
         
         # WAStar(scale_factor=1.8, batch_size=1500),
         # WAStar(scale_factor=2.0, batch_size=1500),
@@ -705,10 +895,32 @@ if __name__ == "__main__":
         # MWAStar(scale_factor=2.4, batch_size=3000),
         # MWAStar(scale_factor=2.6, batch_size=3000),
         # MWAStar(scale_factor=2.8, batch_size=3000),
-        # MWAStar(scale_factor=3.0, batch_size=3000),
-        # MWAStar(scale_factor=5.0, batch_size=3000),
-        # MWAStar(scale_factor=8.0, batch_size=3000),
         
+        SpeedyMWAStar(scale_factor=2.4, batch_size=70, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=70, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.4, batch_size=100, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.6, batch_size=100, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=100, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=100, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.4, batch_size=150, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.6, batch_size=150, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=150, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=150, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.6, batch_size=200, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=200, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=200, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.6, batch_size=300, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=300, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=300, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=400, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=400, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=600, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=600, max_search_time=15),
+        SpeedyMWAStar(scale_factor=2.8, batch_size=800, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.0, batch_size=800, max_search_time=15),
+        SpeedyMWAStar(scale_factor=3.5, batch_size=800, max_search_time=15),
+        SpeedyMWAStar(scale_factor=4.0, batch_size=800, max_search_time=15),
+
         # AWAStar(scale_factor=2.0, batch_size=2500, max_time=60),
         # AWAStar(scale_factor=2.5, batch_size=2500, max_time=60),
         # AWAStar(scale_factor=3.0, batch_size=2500, max_time=60),
@@ -725,4 +937,22 @@ if __name__ == "__main__":
         # MAWAStar(scale_factor=3.0, batch_size=2000, max_time=60),
     ]
 
-    test(search_list, test_file)
+    # test_1000(search_list, test_file)
+    
+    batch = []
+    
+    cube = Cube()
+    for i in range(30000):
+        cube.randomize_n(15)
+        batch.append(cube.state)
+        cube.reset()
+    
+    start_time = time.time()
+    fitness_scores = compute_fitness(batch) 
+    print(f"Time taken: {time.time() - start_time:.2f}")
+    
+    batch_1 = batch[1]
+    start_time = time.time()
+    fitness_scores = compute_fitness([batch_1])
+    print(f"Time taken: {time.time() - start_time:.2f}")   
+    

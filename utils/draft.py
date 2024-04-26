@@ -400,7 +400,125 @@ class MAWAStar:
     def __str__(self) -> str:
         return f"AWA(scale_factor={self.scale_factor}, batch_size={self.batch_size}, max_time={self.max_time})"
     
+    
+from cube import Cube, inverse_moves, move_dict
+
+scramble_list_test = [
+  "U R L D R' B U2 R B' U F' D' B' D2 R' L' B' F' U' R L U B U R D R B2 U B D2 R L' U2 B2 U L' F' R2 L F2 R U2 B D R' F R L U2 B' R' B U L2 F2 R U R2 L D2 U2 F2 R' L' D2 U B2 F U2 R' U2 R' L2 D L' D2 B2 U' B2 U2 R' D L' D' R' F D F R2 L2 D2 B' U2 B D U' B R2 U",
+  "U R' B' F' R' D2 B2 D2 U B2 F D U2 F2 D' L2 U2 F' L2 F U B2 D R2 D2 U2 R2 L2 D R2 D' L' B2 D2 F2 L2 D F2 R2 U' F2 D2 F' D' B L' D F U' B U' F2 L' B' L2 D' R L B F U' L' B D B R2 D B' U' L F' R2 L2 D' F2 D U' L' B R2 F R U' F D U2 L B2 U2 F' L F' U' F' L2 U F R2 U2 B'",
+  "B2 R B' D2 F R' B' F' U2 L B U B L' U2 L B2 R' F' L2 B2 L2 B2 U L2 U' B' R L B' F2 L' U' F' U B' U' F' D' R F R' U' L' U2 F' R U R' L' F2 R2 F' L2 U B L' B F' D L2 U B F U B' D2 F2 U B U' L' U L2 B2 R' U2 R2 D2 B2 D' R U2 F2 D R' F2 L2 B L' B2 U' R2 D L2 F2 D2 F2 L' D'",
+  "F' R L' D' L' F D' B' F' D' F L' B U' B' D F2 D' L' F U' L2 D' B2 U B R' U2 L' B2 D F' L D F2 U2 B2 U' R' F' L B' U' L' U2 R D2 L F U2 L2 U' L F2 U' L' F2 R' D2 F2 L' D L2 U2 R D2 U F' U2 R2 L U2 L D U B F R2 U2 R F' L B U' L D U2 L D' U2 L' B' L' U2 L2 U F2 R F' D'",
+  "L2 F2 L F D2 F2 U2 R' D F U L' F' R2 F2 L F L2 U2 L U' B U2 L U2 L D R2 L' D' F2 D2 L2 B F' U2 R' F U2 F D F' D' R' B2 U' L2 D' U F D2 F2 D B F2 D2 L' U B2 F2 L' B2 L' D' L2 U B' R L D2 L2 B' U2 R F L D L' F2 D L F R' F D2 F' U2 R U' L2 F' U2 R' U' B2 L2 U R' B2 F'",
+  "B L' D R' F R' L' B' R2 U2 B' U R L2 D2 F2 L' F' D F2 D U2 F2 D' L2 B2 L' F L U B U2 R' L2 F' R2 U' B' D L2 D R' D R U R B2 D' L F D' U F' L2 F2 U2 R' B' F' U' F' U L' D2 F2 L' F2 R' B2 F L2 D' L' B2 D2 R2 D' L' B' L2 D2 U' B2 D' B F U2 R' F U2 F2 U2 F L' D2 F L' F2 D F'",
+  "F2 D2 B2 L2 D' B2 L2 U2 B' L' U2 B2 U F R U' F D2 L' F' L' B D F2 R2 U2 R2 D' U' L F U B2 R2 L' B D U' L2 D F2 L2 D U F' D2 L2 U L F D' F' D2 B U' L2 F2 R' U2 R2 B U' B' D R' B2 F' U' B' U L2 F' L B' D2 B2 R2 D2 R2 F U' R' L2 D' F2 U B' D B R' F' U B' D2 U' L2 U2 L' D L'",
+  "L' U B D' L' F' D2 F2 R2 U' L' F' D R' L F2 D R2 D B U' B2 D2 R D2 F U2 L' B2 U2 R' L2 U2 B2 L' B2 D' U' F2 U' F' D R B' L' B2 L2 D' U L B' D U2 F2 L2 B D2 L' D2 U' L' F' U' F2 D L2 B2 R' F' U R D B' F' U' L' F2 U F2 D' F2 L2 B' U' L U L' B D2 L' D R' U2 F2 D' U' L U R2 L'",
+  "F' D U2 R' L B2 U2 L' B' D' L2 D R D F R L B' U2 L D F R' B' D2 R B2 L' U' F2 U2 F2 U' B R D B' R' U F L' U L2 B2 U' F L' D' U' F' D2 U2 L' B L' F' U L F2 R D' L U2 R2 F' L' U F' L U2 R2 D' B2 L D' R D L U F L B' D F2 L2 B L U L2 U2 B2 R L2 U' F' L' F2 R' B' U2",
+  "B F' L' F2 D B R' U2 L2 U' F' L2 B' R' U B' U2 F2 U F2 L U2 B' R' F2 D' B2 R2 L2 B2 D' B U2 R2 L' B2 U F2 R2 D' L B2 R' U2 R' L U2 B' L2 D' L' F L B U F' L' F D' U L2 U' B2 R' D F R2 U F2 U2 F D2 L2 U R2 U2 F2 U F' D B2 F2 R U R' F D' U L F R D U' L2 F2 D' F2 L B2 L"
+]
+
+f01 = 'FLLUUBUUDLDUFRRBRLRFFUFDRLUDBRLDBRDBLBFFLLDFFBDUUBRDRB'
+f02 = 'BRBBUFFLLFLDBRDFLFRDDFFRBFRDDULDBBUURDDULULURLFURBRLBU'
+f03 = 'DBLRUULUUFFBLRDFLBBRLUFFDFRFDUDDUBBRLFURLBUBRDRFLBDDLR'
+f04 = 'UFBDULRLULDDRRRFDUBBBLFFLFLUUDRDFRBRRBDRLUFBFLLFUBDBUD'
+f05 = 'BLURULUBBDFRRRBDDDRDRRFFFURLFFUDLDDLUUFLLDFBUBBLRBUBFL'
+f06 = 'FRRRUFDBFLLBURBRBDLUUUFRDDFBRDDDDLDBUBFLLFULLUFRLBURFB'
+f07 = 'FBBDUFRDDBUURRRLFUDBLRFBBLUDFBUDRDULUFFDLUFLRRLRDBLFBL'
+f08 = 'UDFDULRFRBUUDRRLLLFRDRFBFRBDBDBDFDUUBFULLDRULLLRUBBBFF'
+f09 = 'BDFBURLUDFBLRRUBDFDLRRFDRRRUFDFDLLBRULBULUFLBDFLFBBUDU'
+f10 = 'RUUFUBFRRFUBBRRBLLRFULFDFDRLFDLDDFRBUUDULBLFULLBBBRDDD'
+
+scramble_str_list = [f01, f02, f03, f04, f05, f06, f07, f08, f09, f10]
+
+solution_list = [
+    "R B U U L L U F F R R F F U F' U U R R F' U' F F L B L'",
+    "B' L L R' F U' B' R F' D D B U U D R U F B' L B U U",
+    "U U B' U F B U' R F' R R F' U' R B' L D' L L R U U",
+    "R F U' D' B B R B B D D F' R' B U U F R D D R R U U D'",
+    "U U B L R' F F U U L' F F R U' L L F' L R' U L' R R D'",
+    "B L U' L' U' B R U' B' U' L L U' F R F B R U",
+    "D' F F U' R R U L U U B' L' R' U U B' R' F F U' F B B R'",
+    "L' R R D L' R R B' D' F' R B R' U U D' B B L' F F R'",
+    "D' B B L F F R' B B L D D F F U F' U' R F' D L' U L L",
+    "F D D F' B D F L F U' F F L L B' L B R' F F L' R'",
+    "R U U L U U L L B B R R D L' B B U F' B D R' L F' U",
+    "U R' B' R R F' R R L' D D B D F F L' B' D' L F F D' L L",
+    "U D D B L L B' L L B B R' D F' U' R' D L' F' L F' B'",
+    "R F R R L L U B D B B L F' U U L' F F L D F F U'",
+    "L D L L U U F U D D F F U R F B R R U' R F U' F'",
+    "U F F U' D F F L B' D D F R D' L L D F F D B' U' F'",
+    "U D D R' L' B B R R D L D F' U U D D R B U D F F D D",
+    "L' B B D B B U L' U L L U R U U B D L' F F R F' R'",
+    "L B B U D R F B D D L' U U D F' U U F' U R B B",
+    "U' R R B B U U B' D' L D L L U U D D R' U D R' D B' U"
+]
+
+
+scramble_list = [
+    "L B' L' F' F' U F R' R' U' U' F U' F' F' R' R' F' F' U' L' L' U' U' B' R'",
+    "U' U' B' L' B F' U' R' D' U' U' B' D' D' F R' B U F' R L' L' B",
+    "U' U' R' L' L' D L' B R' U F R' R' F R' U B' F' U' B U' U'",
+    "D U' U' R' R' D' D' R' F' U' U' B' R F D' D' B' B' R' B' B' D U F' R'",
+    "D R' R' L U' R L' F L' L' U R' F' F' L U' U' F' F' R L' B' U' U'",
+    "U' R' B' F' R' F' U L' L' U B U R' B' U L U L' B'",
+    "R B' B' F' U F' F' R B U' U' R L B U' U' L' U' R' R' U F' F' D",
+    "R F' F' L B' B' D U' U' R B' R' F D B R' R' L D' R' R' L",
+    "L' L' U' L D' F R' U F U' F' F' D' D' L' B' B' R F' F' L' B' B' D",
+    "R L F' F' R B' L' B L' L' F' F' U F' L' F' D' B' F D' D' F'",
+    "U' F L' R D' B' F U' B' B' L D' R' R' B' B' L' L' U' U' L' U' U' R'",
+    "L' L' D F' F' L' D B L F' F' D' B' D' D' L R' R' F R' R' B R U'",
+    "B F L' F L D' R U F D' R B' B' L' L' B L' L' B' D' D' U'",
+    "U F' F' D' L' F' F' L U' U' F L' B' B' D' B' U' L' L' R' R' F' R'",
+    "F U F' R' U R' R' B' F' R' U' F' F' D' D' U' F' U' U' L' L' D' L'",
+    "F U B D' F' F' D' L' L' D R' F' D' D' B L' F' F' D' U F' F' U'",
+    "D' D' F' F' D' U' B' R' D' D' U' U' F D' L' D' R' R' B' B' L R D' D' U'",
+    "R F R' F' F' L D' B' U' U' R' U' L' L' U' L U' B' B' D' B' B' L",
+    "B' B' R' U' F U' U' F D' U' U' L D' D' B' F' R' D' U' B' B' L'",
+    "U' B D' R D' U' R D' D' U' U' L' L' D' L' D B U' U' B' B' R' R' U"
+]
+
+validation_states = [
+    [0, 1, 0, 2, 0, 0, 4, 5, 2, 0, 1, 3, 2, 1, 0, 3, 2, 1, 4, 3, 3, 5, 2, 3, 0, 2, 2, 4, 1, 2, 0, 3, 3, 1, 5, 1, 5, 0, 5, 5, 4, 3, 2, 4, 5, 4, 4, 5, 4, 5, 1, 3, 4, 1],
+    [2, 3, 1, 5, 0, 2, 4, 3, 0, 3, 0, 0, 2, 1, 3, 0, 1, 4, 5, 4, 4, 4, 2, 0, 3, 2, 1, 3, 0, 3, 5, 3, 5, 5, 4, 4, 2, 1, 2, 5, 4, 1, 1, 3, 2, 5, 4, 5, 1, 5, 0, 1, 2, 0],
+    [3, 2, 0, 0, 0, 0, 3, 0, 4, 2, 5, 2, 2, 1, 3, 0, 1, 3, 5, 4, 2, 2, 2, 0, 5, 5, 4, 1, 5, 1, 4, 3, 5, 3, 1, 1, 5, 3, 2, 1, 4, 3, 0, 2, 4, 1, 3, 0, 4, 5, 4, 4, 1, 5],
+    [0, 0, 0, 1, 0, 5, 3, 0, 2, 5, 3, 0, 5, 1, 2, 0, 5, 5, 2, 2, 4, 4, 2, 4, 2, 2, 5, 1, 4, 4, 1, 3, 3, 5, 1, 4, 2, 4, 1, 0, 4, 3, 1, 0, 3, 4, 1, 3, 5, 5, 3, 3, 2, 1],
+    [5, 2, 5, 5, 0, 4, 1, 0, 4, 1, 0, 5, 1, 1, 1, 4, 5, 3, 5, 1, 3, 2, 2, 5, 0, 5, 0, 4, 4, 3, 3, 3, 4, 0, 3, 1, 2, 0, 2, 2, 4, 3, 2, 3, 1, 3, 1, 2, 4, 5, 0, 0, 2, 4],
+    [3, 0, 2, 1, 0, 3, 3, 2, 1, 0, 3, 0, 3, 1, 0, 4, 5, 5, 2, 1, 1, 4, 2, 4, 4, 1, 0, 2, 5, 1, 2, 3, 4, 0, 0, 4, 2, 5, 3, 0, 4, 1, 5, 5, 4, 3, 4, 5, 2, 5, 2, 1, 3, 5],
+    [5, 5, 2, 5, 0, 4, 1, 2, 3, 0, 2, 4, 1, 1, 5, 4, 4, 0, 3, 3, 5, 1, 2, 0, 0, 3, 0, 5, 1, 5, 0, 3, 0, 2, 2, 1, 1, 4, 4, 3, 4, 1, 4, 4, 1, 2, 0, 2, 2, 5, 3, 3, 5, 3],
+    [4, 2, 5, 2, 0, 2, 0, 4, 3, 1, 5, 0, 3, 1, 5, 2, 2, 4, 5, 4, 0, 3, 2, 4, 4, 3, 1, 3, 1, 2, 5, 3, 3, 0, 0, 5, 5, 5, 1, 1, 4, 1, 2, 0, 3, 3, 0, 2, 1, 5, 0, 1, 4, 4],
+    [2, 1, 5, 4, 0, 0, 3, 5, 4, 0, 4, 4, 5, 1, 1, 4, 5, 3, 4, 3, 2, 0, 2, 5, 3, 2, 1, 0, 1, 1, 0, 3, 3, 2, 4, 3, 1, 3, 1, 2, 4, 3, 2, 1, 0, 0, 0, 5, 4, 5, 2, 5, 2, 5],
+    [3, 2, 1, 1, 0, 5, 3, 0, 0, 2, 2, 3, 3, 1, 0, 2, 3, 5, 0, 5, 4, 4, 2, 0, 1, 2, 1, 3, 3, 0, 1, 3, 4, 5, 4, 2, 1, 1, 5, 4, 4, 0, 4, 2, 2, 5, 1, 4, 3, 5, 5, 0, 5, 4],
+    [1, 3, 0, 5, 0, 3, 1, 3, 1, 3, 4, 0, 5, 1, 1, 4, 2, 4, 0, 0, 5, 0, 2, 1, 2, 0, 5, 1, 2, 3, 4, 3, 5, 3, 1, 3, 0, 2, 5, 0, 4, 4, 5, 2, 2, 4, 3, 2, 4, 5, 1, 2, 5, 4],
+    [4, 5, 5, 4, 0, 5, 1, 0, 1, 5, 4, 0, 1, 1, 3, 2, 5, 1, 1, 3, 0, 2, 2, 2, 2, 1, 0, 2, 2, 3, 0, 3, 4, 0, 3, 5, 5, 0, 2, 2, 4, 3, 3, 1, 3, 4, 5, 3, 4, 5, 1, 4, 0, 4],
+    [1, 4, 4, 2, 0, 2, 5, 1, 1, 0, 0, 2, 4, 1, 0, 5, 4, 5, 4, 1, 3, 3, 2, 3, 5, 0, 2, 0, 3, 3, 2, 3, 5, 0, 0, 4, 3, 4, 3, 1, 4, 5, 2, 3, 0, 1, 5, 4, 2, 5, 1, 2, 5, 1],
+    [0, 3, 5, 1, 0, 0, 3, 2, 5, 5, 3, 1, 4, 1, 4, 1, 4, 0, 2, 2, 2, 4, 2, 0, 5, 5, 3, 4, 3, 4, 1, 3, 0, 4, 5, 3, 2, 3, 0, 0, 4, 5, 1, 5, 0, 3, 1, 4, 2, 5, 2, 2, 1, 1],
+    [0, 4, 1, 3, 0, 4, 0, 5, 1, 3, 4, 1, 0, 1, 1, 0, 0, 3, 0, 1, 4, 2, 2, 1, 3, 5, 2, 5, 4, 4, 5, 3, 2, 2, 2, 5, 4, 0, 2, 3, 4, 3, 5, 5, 2, 4, 3, 5, 2, 5, 1, 1, 0, 3],
+    [3, 3, 3, 1, 0, 4, 2, 3, 4, 5, 4, 0, 4, 1, 4, 5, 0, 5, 3, 3, 4, 0, 2, 1, 4, 1, 5, 0, 2, 1, 5, 3, 5, 1, 0, 2, 2, 2, 0, 3, 4, 2, 0, 0, 1, 3, 5, 1, 1, 5, 2, 2, 5, 4],
+    [1, 3, 0, 4, 0, 1, 4, 3, 2, 5, 3, 3, 1, 1, 0, 0, 4, 2, 2, 5, 4, 0, 2, 1, 1, 3, 2, 5, 4, 1, 1, 3, 5, 3, 2, 0, 5, 5, 4, 2, 4, 5, 1, 0, 3, 5, 4, 4, 2, 5, 2, 0, 0, 3],
+    [5, 3, 4, 0, 0, 3, 4, 2, 5, 2, 4, 1, 3, 1, 5, 5, 0, 2, 5, 0, 3, 0, 2, 1, 3, 1, 3, 4, 2, 0, 3, 3, 5, 3, 4, 2, 1, 1, 1, 4, 4, 5, 0, 5, 0, 4, 2, 0, 1, 5, 2, 1, 4, 2],
+    [4, 5, 5, 4, 0, 0, 1, 4, 4, 5, 0, 5, 5, 1, 2, 0, 3, 3, 2, 0, 3, 3, 2, 2, 2, 1, 2, 4, 5, 3, 1, 3, 2, 3, 5, 1, 5, 3, 2, 1, 4, 4, 1, 2, 1, 0, 4, 0, 1, 5, 3, 0, 0, 4],
+    [2, 2, 4, 1, 0, 3, 3, 5, 2, 3, 2, 1, 5, 1, 5, 3, 3, 2, 5, 4, 3, 4, 2, 0, 4, 5, 5, 1, 0, 4, 0, 3, 0, 5, 2, 0, 0, 1, 4, 3, 4, 4, 1, 1, 0, 2, 1, 0, 2, 5, 3, 5, 4, 1]
+]
+
+
 if __name__ == "__main__":
+    cube = Cube()
+    for i, scramble in enumerate(scramble_list):
+        cube.move_list(cube.convert_move(scramble))
+        
+        cube.move_list(cube.convert_move(solution_list[i]))
+        print(cube.is_solved())
+        cube.reset()
+        
+    # find the max length of the scramble
+    max_length = 100
+    for scramble in scramble_list:
+        list_move = cube.convert_move(scramble)
+        max_length = min(max_length, len(list_move))
+        
+    print(max_length)
+        
+
+  
     from scramble100 import selected_scrambles
     
     test_str = selected_scrambles[0]
@@ -412,3 +530,5 @@ if __name__ == "__main__":
     
     result, error = awa.search()
     print(result, error)
+    
+    

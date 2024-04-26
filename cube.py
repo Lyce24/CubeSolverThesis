@@ -568,8 +568,11 @@ class Cube:
 if __name__ == '__main__':
     from scramble100 import scrambles
     
-    for i in range(100000):
-        temp = Cube()
-        (temp.randomize_n(20))
-        print(validate(temp.to_string()))
-        
+    batch = []
+    for i in range(30000):
+        str = "U R F"
+        cube = Cube()
+        cube.move_list(cube.convert_move(str))
+        print(cube.state)
+    
+  

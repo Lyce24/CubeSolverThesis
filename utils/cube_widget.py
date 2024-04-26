@@ -3,6 +3,7 @@ from PyQt5.QtGui import QIntValidator
 from cube import Cube, Move
 from PyQt5.QtWidgets import QApplication
 from search import MAWAStar, MBS, MWAStar
+from utils.validate import validate
 
 # write the number in scientific notation => 1000 -> 1.0 x 10^3
 def scientific_notation(num):
@@ -777,7 +778,7 @@ class Ui_MainWindow(object):
                 scalar_factor = float(scalar_factor)
             
             if batch_size == "":
-                batch_size = 1000
+                batch_size = 500
             else:
                 batch_size = int(batch_size)
                 
@@ -902,7 +903,7 @@ class Ui_MainWindow(object):
             self.line_actions.setText("Please enter 9 colors for each face.")
             return
         
-        validation_result = scramble_string
+        validation_result = validate(scramble_string)
         if validation_result["success"] == False:
             self.line_actions.setVisible(True)
             self.line_actions.setText(validation_result["error"])
@@ -952,12 +953,12 @@ class Ui_MainWindow(object):
         self.btn_down_reverse.setText(_translate("MainWindow", "D\'"))
         self.btn_reset.setText(_translate("MainWindow", "RESET"))
         self.btn_solve.setText(_translate("MainWindow", "Solve with Selected Algorithm"))
-        self.astar_option.setText(_translate("MainWindow", "EBWA* Search"))
-        self.beam_search_option.setText(_translate("MainWindow", "EBS"))
-        self.eawastar_option.setText(_translate("MainWindow", "EAWA* Search"))
+        self.astar_option.setText(_translate("MainWindow", "MBWA* Search"))
+        self.beam_search_option.setText(_translate("MainWindow", "MBS"))
+        self.eawastar_option.setText(_translate("MainWindow", "MAWA* Search"))
         
         self.astar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.0"))
-        self.astar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 1000"))
+        self.astar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 500"))
         self.eawastar_scalar_factor.setPlaceholderText(_translate("MainWindow", "Scalar factor : 3.0"))
         self.eawastar_batch_size.setPlaceholderText(_translate("MainWindow", "Batch size : 1000"))
         self.eawastar_time_limit.setPlaceholderText(_translate("MainWindow", "Time limit : 60s"))
